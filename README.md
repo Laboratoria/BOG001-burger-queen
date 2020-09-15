@@ -184,7 +184,7 @@ A continuación puedes ver los objetivos de aprendizaje de este proyecto:
 
 ## 4. Consideraciones generales
 
-Este proyecto se debe "resolver" de forma individual.
+Este proyecto se debe "resolver" en grupos de 2 a 3 personas.
 
 Trabaja en una historia hasta terminarla antes de pasar a la siguiente. Trabaja
 hasta la historia que puedas en el tiempo especificado.
