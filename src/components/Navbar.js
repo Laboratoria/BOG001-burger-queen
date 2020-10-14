@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link  } from 'react-router-dom';
-import {P, H2, H3} from './Styling'
+import { Link, NavLink} from 'react-router-dom';
+import {P} from './Styling'
 import './Navbar.scss';
 
 const menuItems = [
@@ -30,25 +30,22 @@ export default function Navbar() {
      </div>
      <ul className ='nav-menu'>
        <li className='nav-item'>
-         <Link to='/' className='nav-links' >
+         <NavLink to='/' className='nav-links' exact>
            <P>Home</P>
-         </Link>
+         </NavLink>
        </li>
-        {menuItems.map((item, index)=> {
-           if(item.user === 'mesero'){
+        {menuItems.map((item, index) => {
+           if(item.user === 'mesero') {
              return (
             <li  key={index} className='nav-item'>
-            <Link to={item.path} className='nav-links'>
+            <NavLink to={item.path} className='nav-links' exact activeClassName="active">
               <P>{item.name}</P>
-            </Link>
+            </NavLink>
           </li>
-             )
-           }
-        }
-        )}
+            )}
+             })
+            }
      </ul>
    </nav>
   )
-}
-
-
+};

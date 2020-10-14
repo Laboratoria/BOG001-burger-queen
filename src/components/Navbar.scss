@@ -3,15 +3,21 @@
 
 .nav-menu{
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   background-color:$omega;
 }
 
 .nav-item{
-  padding:20px;
   list-style: none;
-}
-.nav-links{
-  text-decoration: none;
+
+  .nav-links {
+    display: block;
+    padding:20px;
+    text-decoration: none;
+    margin: auto;
+    &.active{
+      border-bottom: 3px solid $gamma;
+  }
+  }
 }
