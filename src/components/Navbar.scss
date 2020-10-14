@@ -1,0 +1,17 @@
+@import 'src/App.scss';
+
+
+.nav-menu{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  background-color:$omega;
+}
+
+.nav-item{
+  padding:20px;
+  list-style: none;
+}
+.nav-links{
+  text-decoration: none;
+}
