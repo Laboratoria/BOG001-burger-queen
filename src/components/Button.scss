@@ -1,0 +1,11 @@
+
+@import "src/App.scss";
+
+.btn-default {
+  width: 120px;
+  height: 40px;
+  color: $sigma;
+  border: 2px solid $sigma;
+  border-radius: 5px;
+  margin: auto;
+}
