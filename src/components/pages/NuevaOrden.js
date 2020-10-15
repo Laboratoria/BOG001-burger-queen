@@ -18,17 +18,8 @@ const getmenu = async () => {
     const docs = [];
     querySnapshot.forEach((doc) => {
       docs.push({ ...doc.data(), id: doc.id });
-      // console.log(docs)
+      console.log(docs)
     });
-
-
-//     let desayunos = Object.keys( docs[0])
-//   console.log(desayunos)
-//   let almuerzo = Object.keys( docs[1])
-//   console.log(almuerzo)
-// desayunos.forEach(item => {
-//   console.log(docs[0][item])
-// })
 
 let lunch = Object.values( docs[2])
 console.log(lunch)
