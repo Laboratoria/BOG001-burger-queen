@@ -34,15 +34,14 @@ export default function Navbar() {
            <P>Home</P>
          </NavLink>
        </li>
-        {menuItems.map((item, index) => {
-           if(item.user === 'mesero') {
-             return (
+        {menuItems.filter(item => item.user === 'mesero').map((item, index) => {
+            return (
             <li  key={index} className='nav-item'>
             <NavLink to={item.path} className='nav-links' exact activeClassName="active">
               <P>{item.name}</P>
             </NavLink>
           </li>
-            )}
+            )
              })
             }
      </ul>

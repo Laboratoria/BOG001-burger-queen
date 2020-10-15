@@ -1,11 +1,11 @@
 
 import React from 'react'
+import Tab from '../Tab'
 
 export default function NuevaOrden() {
   return (
     <div>
-      <h1>Nueva Orden</h1>
-
+      <Tab></Tab>
     </div>
   )
 }
