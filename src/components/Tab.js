@@ -7,22 +7,23 @@ const menu = [
   { type: "fuerte", cards: "hambuergesa" },
 ];
 
-export default function Tab() {
-  const [click, setClick] = useState({ active: "desayuno" });
+export default function Tab(props) {
+
+  const [click, setClick] = useState({ active: "Desayuno" });
   const handleClick = (e) => {
     setClick({ active: e.target.id });
   };
   let content;
-  const tabs = menu.map((section, index) => {
-    content = click.active === section.type ? section.cards : content;
+  const tabs = props.menu.map((section, index) => {
+    content = click.active === section.id ? section.menu.map((content, i) => <Card name={content.name} price={content.price} key={i}></Card>) : content;
     return (
       <li
-        className={click.active === section.type ? "tab active" : "tab"}
+        className={click.active === section.id ? "tab active" : "tab"}
         key={index}
-        id={section.type}
+        id={section.id}
         onClick={handleClick}
       >
-        {section.type}
+        {section.id}
       </li>
     );
   });
