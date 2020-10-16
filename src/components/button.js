@@ -4,9 +4,7 @@ import './Button.scss'
 
 const Button = props => {
   return (
-	<div>
-	  <button  className=  {props.cName + "btn-default"} type="button">{props.text}</button>
-	</div>
+	  <button  className=  {props.cName + " btn-default"} type="button">{props.text}</button>
   );
 };
 

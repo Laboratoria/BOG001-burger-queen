@@ -1,7 +1,7 @@
 
 import React from 'react'
 import Tab from '../Tab'
-import db from '/Users/albalucia/Desktop/BURGER QUEEN/Burger-queen/src/firebaseConfig.js'
+import db from '../../firebaseConfig.js'
 
 
 export default function NuevaOrden() {

@@ -4,8 +4,14 @@
 .btn-default {
   width: 120px;
   height: 40px;
-  color: $sigma;
-  border: 2px solid $sigma;
   border-radius: 5px;
   margin: auto;
+  &.confirm{
+    color: $sigma;
+    border: 2px solid $sigma;
+  }
+  &.abort{
+    color: $epsylon;
+    border: 2px solid $epsylon;
+  }
 }

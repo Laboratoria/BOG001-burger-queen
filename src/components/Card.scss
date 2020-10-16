@@ -4,18 +4,17 @@
   width: 237px;
   height: 133px;
   border-radius: 5px;
-  padding: 5px 15px;
+  padding: 10px 15px;
   background: $beta;
   margin-top: 40px;
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr 1.6fr 0.4fr;
-  grid-template-rows: 1fr 0.9fr 1.1fr 1fr;
+  grid-template-columns: 50px 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   gap: 10px 10px;
   grid-template-areas:
-    "Producto Producto Producto Producto"
-    "Imagen Imagen . ."
-    "Imagen Imagen Imput ."
-    "Precio Precio Boton .";
+  "Producto Producto Producto ."
+  "Imagen Input Input ."
+  "Precio Button Button .";
 }
 
 .card-name {
@@ -28,22 +27,17 @@
   height: 37px;
 }
 .card-info-input {
-  grid-area: Imput;
+  grid-area: Input;
   width: 74px;
   height: 30px;
   margin: auto;
   border: none;
 }
 .card-btn {
-  grid-area: Boton;
-  // width: 120px;
-  // height: 40px;
-  // color: $sigma;
-  // border: 2px solid $sigma;
-  // border-radius: 5px;
-  // margin: auto;
+  grid-area: Button;
 }
 .card-info-price {
   grid-area: Precio;
   text-align: center;
+  line-height: 2;
 }

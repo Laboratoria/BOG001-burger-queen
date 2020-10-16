@@ -14,7 +14,7 @@ function Card() {
 
 
       <input type="number" className='card-info-input' />
-      <Button cName='card-btn ' text='Agregar'> </Button>
+      <Button cName='card-btn confirm' text='Agregar'> </Button>
 
 
 
