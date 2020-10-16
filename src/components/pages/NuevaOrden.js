@@ -8,7 +8,6 @@ export default function NuevaOrden() {
   const [menu,setMenu] = useState([]);
 
   const getMenu = async () => {
-    console.log(123)
     db.collection("Menu").get()
     .then(querySnapshot => {
   
