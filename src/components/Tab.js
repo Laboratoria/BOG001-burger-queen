@@ -15,7 +15,7 @@ export default function Tab(props) {
   };
   let content;
   const tabs = props.menu.map((section, index) => {
-    content = click.active === section.id ? section.menu.map((content, i) => <Card name={content.name} price={content.price} key={i}></Card>) : content;
+    content = click.active === section.id ? section.menu.map((content, i) => <Card name={content.name} price={content.price} img={content.img}key={i}></Card>) : content;
     return (
       <li
         className={click.active === section.id ? "tab active" : "tab"}
