@@ -10,6 +10,11 @@
     color: $sigma;
     border: 2px solid $sigma;
   }
+  &.send{
+    color: $alfa;
+    border: 2px solid $sigma;
+    background-color: $sigma;
+  }
   &.abort{
     color: $epsylon;
     border: 2px solid $epsylon;
