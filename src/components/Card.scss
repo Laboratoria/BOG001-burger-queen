@@ -1,13 +1,12 @@
 @import "src/App.scss";
 
 .card {
+  margin: 20px auto;
   width: 237px;
   height: 133px;
   border-radius: 5px;
   padding: 10px 15px;
   background: $beta;
-  margin-bottom: 20px;
-  margin-right:20px;
   display: grid;
   grid-template-columns: 50px 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;

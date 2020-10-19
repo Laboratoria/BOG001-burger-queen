@@ -1,35 +1,45 @@
-@import 'src/App.scss';
+@import "src/App.scss";
 
 .menu-container {
-    padding: 50px;
+  padding: 50px;
 }
-.tab-list{
-    display: flex;
-    justify-content: flex-start;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    padding: 0;
-    margin: 0;
+.tab-list {
+  display: flex;
+  justify-content: flex-start;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.05));
+  padding: 0;
+  margin: 0;
 }
-.tab{
-    display: inline-block;
-    width: 190px;
-    height: 50px;
-    border-radius: 10px 10px 0 0;
-    text-align: center;
-    line-height: 2.5;
-    background-color: $alfa;
+.tab {
+  display: inline-block;
+  width: 190px;
+  height: 50px;
+  border-radius: 10px 10px 0 0;
+  text-align: center;
+  line-height: 2.5;
+  background-color: $alfa;
 
-    @extend p;
+  @extend p;
 
-    &.active{
-        background-color: $omega;
-    }
+  &.active {
+    background-color: $omega;
+  }
 }
 
-.container-card{
+.container-card {
   width: 521px;
-  height:518px;
+  height: 518px;
   display: flex;
   flex-wrap: wrap;
-  margin:36px 36px 70px 20px ;
+  background-color: $alfa;
+  overflow-y: scroll;
+  box-shadow: 3px 5px 3px 0px rgba(0, 0, 0, 0.15);
+  &::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+    &::-webkit-scrollbar-thumb {
+      background-color: $zeta;
+    }
+
 }
