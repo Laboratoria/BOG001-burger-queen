@@ -1,9 +1,9 @@
 @import 'src/App.scss';
 
-.menuContainer {
+.menu-container {
     padding: 50px;
 }
-.tabList{
+.tab-list{
     display: flex;
     justify-content: flex-start;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -24,4 +24,12 @@
     &.active{
         background-color: $omega;
     }
+}
+
+.container-card{
+  width: 521px;
+  height:518px;
+  display: flex;
+  flex-wrap: wrap;
+  margin:36px 36px 70px 20px ;
 }

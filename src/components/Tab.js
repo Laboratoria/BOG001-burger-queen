@@ -2,10 +2,6 @@ import React, { useState } from "react";
 import "./Tab.scss";
 import Card from './Card'
 
-const menu = [
-  { type: "desayuno", cards: <Card></Card> },
-  { type: "fuerte", cards: "hambuergesa" },
-];
 
 export default function Tab(props) {
 
@@ -29,9 +25,9 @@ export default function Tab(props) {
   });
 
   return (
-    <div className="menuContainer">
-      <ul className="tabList">{tabs}</ul>
-      <section>{content}</section>
+    <div className="menu-container">
+      <ul className="tab-list">{tabs}</ul>
+      <section className="container-card">{content}</section>
     </div>
   );
 }
