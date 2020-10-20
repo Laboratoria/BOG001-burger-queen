@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Tab from "../Tab";
 import db from "../../firebaseConfig.js";
-import Modal from "../Modal"
+import Modal from "../Modal";
 
 const NuevaOrden = () => {
-  const [menu, setMenu] = useState([]);;
+  const [menu, setMenu] = useState([]);
   const [modal, setModal] = useState([]);
 
   useEffect(() => {
@@ -21,12 +21,11 @@ const NuevaOrden = () => {
               id: doc.id === "Breakfast" ? "Desayuno" : "Fuerte",
             });
           } else {
-             modalMenu.push({
+            modalMenu.push({
               menu: Object.values(doc.data()),
               id: doc.id === "Options" ? "Carne" : "Adicionales",
-
             });
-            localStorage.setItem('info', modalMenu)
+            localStorage.setItem("info", modalMenu);
           }
         });
         setMenu(tabMenu);
@@ -34,14 +33,11 @@ const NuevaOrden = () => {
       });
   }, []);
   return (
-
     <div>
       <Tab menu={menu}></Tab>
-      <Modal info={modal} ></Modal>
-       {console.log(modal)}
+      <Modal info={modal}></Modal>
     </div>
   );
 };
 
 export default NuevaOrden;
-

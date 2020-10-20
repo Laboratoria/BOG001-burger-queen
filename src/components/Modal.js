@@ -14,9 +14,7 @@ export default function Modal({ info, open, children, onClose }) {
     .filter((section) => section.id === title[1])
     .map((section) => section.menu)
     .flat();
-
-  // if (!open) return null;
-
+  if (!open) return null;
   return ReactDom.createPortal(
     <section className="overlay">
       <div className="modal">

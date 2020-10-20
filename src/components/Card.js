@@ -2,19 +2,22 @@ import React, { useState } from "react";
 import { H2 } from "./Styling";
 import Button from "./button";
 import "./Card.scss";
+import Modal from "./Modal";
 
 function Card(props) {
+  const [isOpen, setIsOpen] = useState(false);
   const initialStateValues = {
     name: "",
-    value: 0,
+    value: "",
   };
 
   const [values, setCount] = useState(initialStateValues);
   const burgerCard = () => (props.name.includes("Hamburguesa") ? true : false);
   const handleInputChanges = (e) => {
     const { name, value } = e.target;
-    setCount(name, value);
-    return { name, value };
+    setCount((prev) => {
+      return { ...prev, name, value };
+    });
   };
 
   // const handleClick = () => {};
@@ -27,23 +30,29 @@ function Card(props) {
         <img className="card-info-item" src={props.img} alt="food" />
         <H2 className="card-info-price">{"$ " + props.price}</H2>
         {burgerCard() ? (
-          <Button
-            cName="card-btn confirm card-options"
-            text="Opciones"
-          ></Button>
+          <>
+            <Button
+              cName="card-btn confirm card-options"
+              text="Opciones"
+              onClick={() => setIsOpen(true)}
+            ></Button>
+            <Modal open={isOpen} onClose={() => setIsOpen(false)}>
+              Fancy Modal
+            </Modal>
+          </>
         ) : (
           <>
             <input
-              min="1"
+              defaultValue={values.value}
               name={props.name}
-              defaultValue="1"
-              type="number"
+              type="text"
               className="card-info-input"
               onChange={handleInputChanges}
             ></input>
             <Button cName="card-btn confirm" text="Agregar"></Button>
           </>
         )}
+        <p>{values.value}</p>
       </div>
     </>
   );
