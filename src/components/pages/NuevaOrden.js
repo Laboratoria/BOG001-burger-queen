@@ -6,6 +6,9 @@ import Modal from "../Modal";
 const NuevaOrden = () => {
   const [menu, setMenu] = useState([]);
   const [modal, setModal] = useState([]);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const clickToOpen = () => setIsOpen(true)
 
   useEffect(() => {
     db.collection("Menu")
@@ -32,10 +35,11 @@ const NuevaOrden = () => {
         setModal(modalMenu);
       });
   }, []);
+
   return (
     <div>
-      <Tab menu={menu}></Tab>
-      <Modal info={modal}></Modal>
+      <Tab menu={menu} clickToOpen={clickToOpen}></Tab>
+     <Modal info={modal} open={isOpen} onClose={() => setIsOpen(false)}></Modal>
     </div>
   );
 };

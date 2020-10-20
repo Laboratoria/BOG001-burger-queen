@@ -4,6 +4,9 @@ import Button from "./button";
 import "./Modal.scss";
 import ReactDom from "react-dom";
 
+
+
+
 export default function Modal({ info, open, children, onClose }) {
   const title = info.map((section) => section.id);
   const options = info

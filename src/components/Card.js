@@ -5,7 +5,7 @@ import "./Card.scss";
 import Modal from "./Modal";
 
 function Card(props) {
-  const [isOpen, setIsOpen] = useState(false);
+  // const [isOpen, setIsOpen] = useState(false);
   const initialStateValues = {
     name: "",
     value: "",
@@ -34,11 +34,10 @@ function Card(props) {
             <Button
               cName="card-btn confirm card-options"
               text="Opciones"
-              onClick={() => setIsOpen(true)}
+              onClick={props.clickToOpen}
             ></Button>
-            <Modal open={isOpen} onClose={() => setIsOpen(false)}>
-              Fancy Modal
-            </Modal>
+            {/* <Modal open={isOpen} onClose={() => setIsOpen(false)}>
+            </Modal> */}
           </>
         ) : (
           <>
