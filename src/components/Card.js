@@ -34,8 +34,6 @@ function Card(props) {
    console.log(hello)
 
 
-
-
   return (
     <>
       <div className="card">

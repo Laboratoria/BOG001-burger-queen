@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Tab from "../Tab";
 import db from "../../firebaseConfig.js";
 import Modal from "../Modal";
+import Bill from "../Bill"
 
 const NuevaOrden = () => {
   const [menu, setMenu] = useState([]);
@@ -40,6 +41,7 @@ const NuevaOrden = () => {
     <div>
       <Tab menu={menu} clickToOpen={clickToOpen}></Tab>
      <Modal info={modal} open={isOpen} onClose={() => setIsOpen(false)}></Modal>
+     <Bill></Bill>
     </div>
   );
 };
