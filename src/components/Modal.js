@@ -1,9 +1,22 @@
 import React from "react";
 import { H1, H2 } from "../components/Styling";
+<<<<<<< Updated upstream
 import Button from "./Button";
+=======
+import Button from "./button";
+>>>>>>> Stashed changes
 import "./Modal.scss";
 import ReactDom from "react-dom";
 
+<<<<<<< Updated upstream
+=======
+export default function Modal(props) {
+
+const title = props.info.map(section => section.id);
+const options = props.info.filter(section => section.id === title[0]).map(section => section.menu).flat();
+const toppings = props.info.filter(section => section.id === title[1]).map(section => section.menu).flat();
+console.log(props.info)
+>>>>>>> Stashed changes
 
 
 
