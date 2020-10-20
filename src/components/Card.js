@@ -2,25 +2,39 @@ import React, { useState } from "react";
 import { H2 } from "./Styling";
 import Button from "./button";
 import "./Card.scss";
-import Modal from "./Modal";
+
 
 function Card(props) {
+
+
   // const [isOpen, setIsOpen] = useState(false);
   const initialStateValues = {
     name: "",
-    value: "",
+    value: 1,
+    price: 0,
   };
 
   const [values, setCount] = useState(initialStateValues);
   const burgerCard = () => (props.name.includes("Hamburguesa") ? true : false);
   const handleInputChanges = (e) => {
-    const { name, value } = e.target;
+
+    const { name, value, dataset} = e.target;
+
     setCount((prev) => {
-      return { ...prev, name, value };
+      return { ...prev, name, value, "price":dataset["price"] };
     });
   };
 
-  // const handleClick = () => {};
+
+  const handleClick = () => {
+    localStorage.setItem("values", JSON.stringify(values))
+  };
+   const hola= localStorage.getItem("values");
+   const hello = JSON.parse(hola)
+   console.log(hello)
+
+
+
 
   return (
     <>
@@ -36,22 +50,22 @@ function Card(props) {
               text="Opciones"
               onClick={props.clickToOpen}
             ></Button>
-            {/* <Modal open={isOpen} onClose={() => setIsOpen(false)}>
-            </Modal> */}
+
           </>
         ) : (
           <>
             <input
-              defaultValue={values.value}
+            id="input-card"
+              defaultValue= "1"
               name={props.name}
-              type="text"
+              data-price={props.price}
+              type="number"
               className="card-info-input"
               onChange={handleInputChanges}
             ></input>
-            <Button cName="card-btn confirm" text="Agregar"></Button>
+            <Button cName="card-btn confirm" text="Agregar" onClick={handleClick}></Button>
           </>
         )}
-        <p>{values.value}</p>
       </div>
     </>
   );
