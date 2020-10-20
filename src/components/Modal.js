@@ -1,16 +1,22 @@
 import React from "react";
 import { H1, H2 } from "../components/Styling";
-import Button from "../components/Button";
+import Button from "./Button";
 import "./Modal.scss";
+import ReactDom from "react-dom";
 
-export default function Modal(props) {
-    
-const title = props.info.map(section => section.id);
-const options = props.info.filter(section => section.id === title[0]).map(section => section.menu).flat();
-const toppings = props.info.filter(section => section.id === title[1]).map(section => section.menu).flat();
-console.log(props.info)
 
-  return (
+
+
+export default  function Modal({info, open, children , onClose}) {
+
+const title = info.map(section => section.id);
+const options = info.filter(section => section.id === title[0]).map(section => section.menu).flat();
+const toppings = info.filter(section => section.id === title[1]).map(section => section.menu).flat();
+
+// if (!open) return null;
+// ReactDom.createPortal
+  return   (
+
     <section className="overlay">
       <div className="modal">
         <H1 className="modal-title">Escoge la {title[0]}</H1>
@@ -25,7 +31,7 @@ console.log(props.info)
             );
         })}
         </div>
-        
+
         <H1 className="modal-title">Escoge adicionales</H1>
         <div className="modal-options">
         { toppings.map((item, i) => {
@@ -39,10 +45,12 @@ console.log(props.info)
         })}
         </div>
         <div className="modal-options" >
-        <Button cName="btn-cancel abort" text="Cancelar"></Button>
+        <Button cName="btn-cancel abort" text="Cancelar" onClick={onClose}></Button>
         <Button cName="btn-send send" text="Enviar"></Button>
+        {children}
         </div>
       </div>
     </section>
+    // document.getElementById("portal")
   );
 }
