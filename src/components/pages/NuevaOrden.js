@@ -3,13 +3,12 @@ import Tab from "../Tab";
 import db from "../../firebaseConfig.js";
 import Modal from "../Modal";
 import Bill from "../Bill"
+import { WeiterProvider} from '../../WeiterContext'
 
 const NuevaOrden = () => {
   const [menu, setMenu] = useState([]);
   const [modal, setModal] = useState([]);
-  const [isOpen, setIsOpen] = useState(false);
 
-  const clickToOpen = () => setIsOpen(true)
 
   useEffect(() => {
     db.collection("Menu")
@@ -38,10 +37,12 @@ const NuevaOrden = () => {
   }, []);
 
   return (
-    <div>
-      <Tab menu={menu} clickToOpen={clickToOpen}></Tab>
-     <Modal info={modal} open={isOpen} onClose={() => setIsOpen(false)}></Modal>
-     <Bill></Bill>
+    <div style={{display: 'flex'}}>
+      <WeiterProvider>
+        <Tab menu={menu}></Tab>
+      <Modal info={modal}></Modal>
+      <Bill></Bill>
+     </WeiterProvider>
     </div>
   );
 };

@@ -1,13 +1,15 @@
-import React from "react";
+import React, {useContext} from "react";
 import { H1, H2 } from "../components/Styling";
 import Button from "./button";
 import "./Modal.scss";
 import ReactDom from "react-dom";
+import { WeiterContext } from '../WeiterContext'
 
 
 
-
-export default function Modal({ info, open, children, onClose }) {
+export default function Modal({ info }) {
+  let {isOpen, clickToOpen}= useContext(WeiterContext);
+  
   const title = info.map((section) => section.id);
   const options = info
     .filter((section) => section.id === title[0])
@@ -17,7 +19,7 @@ export default function Modal({ info, open, children, onClose }) {
     .filter((section) => section.id === title[1])
     .map((section) => section.menu)
     .flat();
-  if (!open) return null;
+  if (!isOpen) return null;
   return ReactDom.createPortal(
     <section className="overlay">
       <div className="modal">
@@ -58,10 +60,9 @@ export default function Modal({ info, open, children, onClose }) {
           <Button
             cName="btn-cancel abort"
             text="Cancelar"
-            onClick={onClose}
+            onClick={clickToOpen}
           ></Button>
           <Button cName="btn-send send" text="Enviar"></Button>
-          {children}
         </div>
       </div>
     </section>,

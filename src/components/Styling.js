@@ -21,12 +21,12 @@ color: black;
 font-weight: bold;
 `
 
-const H3 = styled.h3`
+const P2 = styled.p`
 font-family: 'Roboto' , sans-serif;
 font-size: 16px;
 color: black;
 `
-export { H1,P, H2, H3 }
+export { H1,P, H2, P2 }
 
 
 

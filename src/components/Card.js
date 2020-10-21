@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { H2 } from "./Styling";
 import Button from "./button";
 import "./Card.scss";
-
+import { WeiterContext } from '../WeiterContext'
 
 function Card(props) {
-
+  let {clickToOpen, addProduct} = useContext(WeiterContext);
 
   // const [isOpen, setIsOpen] = useState(false);
   const initialStateValues = {
@@ -24,10 +24,10 @@ function Card(props) {
 
 
   const handleClick = () => {
-    console.log(count)
     setValues((prev) => {
       return { ...prev, 'quantity': count };
     })
+    addProduct(values)
     //localStorage.setItem("values", JSON.stringify(values))
   };
   return (
@@ -42,7 +42,7 @@ function Card(props) {
             <Button
               cName="card-btn confirm card-options"
               text="Opciones"
-              onClick={props.clickToOpen}
+              onClick={clickToOpen}
             ></Button>
 
           </>
