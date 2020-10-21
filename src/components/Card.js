@@ -9,31 +9,27 @@ function Card(props) {
 
   // const [isOpen, setIsOpen] = useState(false);
   const initialStateValues = {
-    name: "",
-    value: 1,
-    price: 0,
+    name: props.name,
+    quantity: 1,
+    price: props.price,
   };
 
-  const [values, setCount] = useState(initialStateValues);
+  const [values, setValues] = useState(initialStateValues);
+  const[count, setCount] = useState(1);
   const burgerCard = () => (props.name.includes("Hamburguesa") ? true : false);
+
   const handleInputChanges = (e) => {
-
-    const { name, value, dataset} = e.target;
-
-    setCount((prev) => {
-      return { ...prev, name, value, "price":dataset["price"] };
-    });
+    setCount(e.currentTarget.value);
   };
 
 
   const handleClick = () => {
-    localStorage.setItem("values", JSON.stringify(values))
+    console.log(count)
+    setValues((prev) => {
+      return { ...prev, 'quantity': count };
+    })
+    //localStorage.setItem("values", JSON.stringify(values))
   };
-   const hola= localStorage.getItem("values");
-   const hello = JSON.parse(hola)
-   console.log(hello)
-
-
   return (
     <>
       <div className="card">
@@ -53,13 +49,12 @@ function Card(props) {
         ) : (
           <>
             <input
-            id="input-card"
-              defaultValue= "1"
+              value={count}
               name={props.name}
               data-price={props.price}
               type="number"
               className="card-info-input"
-              onChange={handleInputChanges}
+              onChange={(e) => handleInputChanges(e)}
             ></input>
             <Button cName="card-btn confirm" text="Agregar" onClick={handleClick}></Button>
           </>

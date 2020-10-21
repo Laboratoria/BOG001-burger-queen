@@ -1,6 +1,7 @@
 @import "src/App.scss";
 
 .overlay {
+  display: flex;
   position: fixed;
   top: 0;
   bottom: 0;
