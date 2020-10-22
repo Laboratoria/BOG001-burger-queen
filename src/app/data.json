@@ -1,0 +1,107 @@
+{
+    "menu":[
+        {
+            "id": "m1",
+            "type": "breakfast",
+            "name": "american coffee",
+            "price": 5  
+        },
+        {
+            "id": "m2",
+            "type": "breakfast",
+            "name": "latte",
+            "price": 7
+        },
+        {
+            "id": "m3",
+            "type": "breakfast",
+            "name": "cheese and ham sandwich",
+            "price": 10
+        },
+        {
+            "id": "m4",
+            "type": "breakfast",
+            "name": "fruit juice",
+            "price": 7
+        },
+        {
+            "id": "m5",
+            "type": "lunch",
+            "name": "simple burquer",
+            "price": 10,
+            "Additions":[
+                {
+                    "add1": "chesse",
+                    "price": 1
+                },
+                {
+                    "add2": "egg",
+                    "price": 1
+                }
+            ],
+            "options":[
+                "meet",
+                "chicken",
+                "veggie"
+            ]
+        },
+        {
+            "id": "m6",
+            "type": "lunch",
+            "name": "double burquer",
+            "price": 15,
+            "Additions":[
+                {
+                    "name": "chesse",
+                    "price": 1
+                },
+                {
+                    "name": "egg",
+                    "price": 1
+                }
+            ],
+            "options":[
+                "meet",
+                "chicken",
+                "veggie"
+            ]
+        },
+        {
+            "id": "m7",
+            "type": "lunch",
+            "name": "fries",
+            "price":  5
+        },
+        {
+            "id": "m8",
+            "type": "lunch",
+            "name": "onion rings",
+            "price": 5
+        },
+        {
+            "id": "m9",
+            "type": "lunch",
+            "name": "water 500ml",
+            "price": 5
+        },
+        {
+            "id": "m10",
+            "type": "lunch",
+            "name": "water 750ml",
+            "price": 7
+        },
+        {
+            "id": "m11",
+            "type": "lunch",
+            "name": "soda 500ml",
+            "price": 7
+        },
+        {
+            "id": "m12",
+            "type": "lunch",
+            "name": "soda 750ml",
+            "price": 10
+        }
+    ]
+
+}
