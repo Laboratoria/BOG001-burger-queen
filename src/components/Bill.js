@@ -9,7 +9,7 @@ import  './Bill.scss'
 export default function Bill() {
   let {bill}= useContext(WeiterContext);
   console.log(bill)
-  let productos = bill.map(prod => <p>product.map</p>)
+  //let productos = bill.map((prod, i) => <Item key={i} m></i>)
 
   return (
     <section className="order">
@@ -25,8 +25,11 @@ export default function Bill() {
        <P>Cant</P>
        <P>Producto</P>
        <P>Precio</P>
+     <Item grid='box-grid'/>
+     <Item grid='box-grid'/>
+     <Item grid='box-grid'/>
+
      </div>
-     <Item></Item>
      <div className="bill-total">
      <P2>IVA(10%)</P2>
       <P2>$4</P2>
