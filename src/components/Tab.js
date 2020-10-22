@@ -9,13 +9,15 @@ export default function Tab(props) {
   const handleClick = (e) => {
     setClick({ active: e.target.id });
   };
-  let content;
+  let menu;
   const tabs = props.menu.map((section, index) => {
-    content = click.active === section.id ? section.menu.map((content, i) => <Card name={content.name} price={content.price} img={content.img}key={i}></Card>) : content;
+    if(click.active === section.id) {
+      menu = section.menu.map((content, i) => <Card name={content.name} price={content.price} img={content.img} key={content.name  + i}></Card>)
+    }
     return (
       <li
         className={click.active === section.id ? "tab active" : "tab"}
-        key={index}
+        key={section.id + index }
         id={section.id}
         onClick={handleClick}
       >
@@ -27,7 +29,7 @@ export default function Tab(props) {
   return (
     <div className="menu-container">
       <ul className="tab-list">{tabs}</ul>
-      <section className="container-card">{content}</section>
+      <section className="container-card">{menu}</section>
     </div>
   );
 }

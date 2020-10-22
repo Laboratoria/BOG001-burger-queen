@@ -9,7 +9,7 @@ import  './Bill.scss'
 export default function Bill() {
   let {bill}= useContext(WeiterContext);
   console.log(bill)
-  //let productos = bill.map((prod, i) => <Item key={i} m></i>)
+  let productos = bill.map((prod, i) => <Item key={i} name ></i>)
 
   return (
     <section className="order">

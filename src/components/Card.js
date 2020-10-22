@@ -25,8 +25,9 @@ function Card(props) {
 
   const handleClick = () => {
     setValues((prev) => {
-      return { ...prev, 'quantity': count };
+      return { ...prev, 'quantity': Number(count), 'price':(props.price *  count) };
     })
+    console.log(values)
     addProduct(values)
     //localStorage.setItem("values", JSON.stringify(values))
   };
