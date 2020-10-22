@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import React, {useContext, useState} from "react";
 import { H1, H2 } from "../components/Styling";
 import Button from "./button";
 import "./Modal.scss";
@@ -9,7 +9,16 @@ import { WeiterContext } from '../WeiterContext'
 
 export default function Modal({ info }) {
   let {isOpen, clickToOpen}= useContext(WeiterContext);
-  
+
+const [ burger , setBurgerState] = useState({})
+
+  const handleInputChanges = (e) => {
+    setCount(e.currentTarget.value);
+  };
+
+
+ 
+
   const title = info.map((section) => section.id);
   const options = info
     .filter((section) => section.id === title[0])
@@ -33,7 +42,7 @@ export default function Modal({ info }) {
                   alt="Carne de pollo"
                   className="modal-label-img"
                 />
-                <input type="radio" className="modal-label-input" />
+                <input type="radio" className="modal-label-input" name="meat" value={item.name}/>
                 <H2>{item.name}</H2>
               </label>
             );
@@ -44,14 +53,16 @@ export default function Modal({ info }) {
         <div className="modal-options">
           {toppings.map((item, i) => {
             return (
-              <label htmlFor="" className="modal-label" key={i}>
+              <label htmlFor={item.name} className="modal-label" key={i}>
                 <img
                   src={item.img}
                   alt="Carne de pollo"
                   className="modal-label-img"
                 />
-                <input type="radio" className="modal-label-input" />
+                <form action="">
+                <input type="radio" className="modal-label-input"  name={item.name} value={item.name} data-price={item.price}/>
                 <H2>{item.name + " $ " + item.price}</H2>
+                </form>
               </label>
             );
           })}

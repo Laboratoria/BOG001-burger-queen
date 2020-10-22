@@ -10,9 +10,13 @@ export default function WeiterProvider({children}) {
     const [bill, setBill] = useState([]);
     const addProduct = (values) => setBill([...bill, values]);
 
+    const deleteProduct = (name) =>{
+     let filtered = bill.filter(function(el) { return el.name !==  name})
+     setBill(filtered)
+    }
 
     return (
-        <Provider value={{isOpen, clickToOpen, bill, addProduct}}>
+        <Provider value={{isOpen, clickToOpen, bill, addProduct, deleteProduct}}>
             {children}
         </Provider>
     )

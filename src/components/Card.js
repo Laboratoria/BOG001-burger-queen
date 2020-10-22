@@ -8,13 +8,7 @@ function Card(props) {
   let {clickToOpen, addProduct} = useContext(WeiterContext);
 
   // const [isOpen, setIsOpen] = useState(false);
-  const initialStateValues = {
-    name: props.name,
-    quantity: 1,
-    price: props.price,
-  };
-
-  const [values, setValues] = useState(initialStateValues);
+ 
   const[count, setCount] = useState(1);
   const burgerCard = () => (props.name.includes("Hamburguesa") ? true : false);
 
@@ -24,12 +18,11 @@ function Card(props) {
 
 
   const handleClick = () => {
-    setValues((prev) => {
-      return { ...prev, 'quantity': Number(count), 'price':(props.price *  count) };
-    })
-    console.log(values)
-    addProduct(values)
-    //localStorage.setItem("values", JSON.stringify(values))
+    addProduct({
+      name: props.name,
+      quantity: parseInt(count),
+      price: props.price * count,
+    });
   };
   return (
     <>
@@ -57,7 +50,7 @@ function Card(props) {
               className="card-info-input"
               onChange={(e) => handleInputChanges(e)}
             ></input>
-            <Button cName="card-btn confirm" text="Agregar" onClick={handleClick}></Button>
+            <Button cName="card-btn confirm" text="Agregar" onClick={handleClick}> </Button>
           </>
         )}
       </div>
