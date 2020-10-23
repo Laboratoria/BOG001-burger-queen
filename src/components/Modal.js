@@ -8,15 +8,27 @@ import { WeiterContext } from '../WeiterContext'
 
 
 export default function Modal({ info }) {
-  let {isOpen, clickToOpen}= useContext(WeiterContext);
+  let {isOpen, clickToClose , addProduct }= useContext(WeiterContext);
 
-const [ burger , setBurgerState] = useState({})
+const [meat, setMeat]=useState('')
+const [ extras, setExtras]=useState('')
 
   const handleInputChanges = (e) => {
-    console.log(e.currentTarget.id, e.currentTarget.value );
+    if(e.currentTarget.name === "meat") {
+   setMeat(e.currentTarget.id)
+    }else{
+      setExtras([...extras,  e.currentTarget.id])
+
+
+    }
   };
 
+const handleClick = () => {
+  console.log(meat, extras)
 
+}
+
+console.log()
 
 
 
@@ -32,19 +44,23 @@ const [ burger , setBurgerState] = useState({})
   if (!isOpen) return null;
   return ReactDom.createPortal(
     <section className="overlay"  >
-      <div className="modal" id ={Math.floor(Math.random() * 2)+1}>
+      <div className="modal">
+        <form action="">
         <H1 className="modal-title">Escoge la {title[0]}</H1>
         <div className="modal-options">
           {options.map((item, i) => {
             return (
+
               <label htmlFor={item.name} className="modal-label" key={i}>
                 <img
                   src={item.img}
                   alt="Carne de pollo"
                   className="modal-label-img"
                 />
-                <input type="radio" className="modal-label-input"  name="meat" id={item.name} value={item.price} onChange={(e) => handleInputChanges(e)}/>
+
+                <input type="checkbox" className="modal-label-input"  name="meat" id={item.name}  onChange={(e) => handleInputChanges(e)}/>
                 <H2>{item.name}</H2>
+
               </label>
             );
           })}
@@ -61,7 +77,7 @@ const [ burger , setBurgerState] = useState({})
                   className="modal-label-img"
                 />
                 <form action="">
-                <input type="radio" className="modal-label-input"  id={item.name} name={item.name} value={item.price}  onChange={(e) => handleInputChanges(e)}/>
+                <input type="checkbox" className="modal-label-input"  id={item.name} name={item.name} value={item.price}  onChange={(e) => handleInputChanges(e)}/>
                 <H2>{item.name + " $ " + item.price}</H2>
                 </form>
               </label>
@@ -72,10 +88,11 @@ const [ burger , setBurgerState] = useState({})
           <Button
             cName="btn-cancel abort"
             text="Cancelar"
-            onClick={clickToOpen}
+            onClick={clickToClose}
           ></Button>
-          <Button cName="btn-send send" onClick={handleInputChanges} text="Enviar"></Button>
+          <Button cName="btn-send send" onClick={handleClick} text="Enviar" type="submit"></Button>
         </div>
+        </form>
       </div>
     </section>,
     document.getElementById("portal")

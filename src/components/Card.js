@@ -15,7 +15,11 @@ function Card(props) {
   const handleInputChanges = (e) => {
     setCount(e.currentTarget.value);
   };
+ const handleModal = () => {
+   clickToOpen(props.name, props.price)
 
+
+ }
 
   const handleClick = () => {
     addProduct({
@@ -38,7 +42,7 @@ function Card(props) {
               id={props.name}
               cName="card-btn confirm card-options"
               text="Opciones"
-              onClick={clickToOpen}
+              onClick={handleModal}
             ></Button>
 
           </>

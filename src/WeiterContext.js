@@ -5,7 +5,9 @@ let { Provider, Consumer} = WeiterContext;
 
 export default function WeiterProvider({children}) {
     const [isOpen, setIsOpen] = useState(false);
-    const clickToOpen = () => setIsOpen(!isOpen);
+    const [burger, stateBurger] = useState({})
+    const clickToOpen = (name, price) => {  stateBurger({name:name, price:price}) ; setIsOpen(true)};
+    const clickToClose = () => setIsOpen(false);
 
     const [bill, setBill] = useState([]);
     const addProduct = (values) => setBill([...bill, values]);
@@ -15,8 +17,10 @@ export default function WeiterProvider({children}) {
      setBill(filtered)
     }
 
+
+
     return (
-        <Provider value={{isOpen, clickToOpen, bill, addProduct, deleteProduct}}>
+        <Provider value={{isOpen, clickToOpen,clickToClose, bill, addProduct, deleteProduct, burger, stateBurger}}>
             {children}
         </Provider>
     )
