@@ -8,10 +8,10 @@ import { WeiterContext } from '../WeiterContext'
 
 
 export default function Modal({ info }) {
-  let {isOpen, clickToClose , addProduct }= useContext(WeiterContext);
+  let {isOpen, clickToClose , addProduct , burger }= useContext(WeiterContext);
 
 const [meat, setMeat]=useState('')
-const [ extras, setExtras]=useState('')
+const [ extras, setExtras]=useState([])
 
   const handleInputChanges = (e) => {
     if(e.currentTarget.name === "meat") {
@@ -24,11 +24,19 @@ const [ extras, setExtras]=useState('')
   };
 
 const handleClick = () => {
-  console.log(meat, extras)
+ addProduct ( {
+  name: `${burger.name}  ${meat}  ${extras.join(' ')}`,
+  quantity: 1,
+  price: extras.length > 0 ? (burger.price+ extras.length) :burger.price,
+  id :Math.floor(Math.random() * 100)
 
+ } )
+ setMeat('');
+ setExtras([]);
+ clickToClose()
 }
 
-console.log()
+
 
 
 
@@ -45,7 +53,7 @@ console.log()
   return ReactDom.createPortal(
     <section className="overlay"  >
       <div className="modal">
-        <form action="">
+
         <H1 className="modal-title">Escoge la {title[0]}</H1>
         <div className="modal-options">
           {options.map((item, i) => {
@@ -76,10 +84,10 @@ console.log()
                   alt="Carne de pollo"
                   className="modal-label-img"
                 />
-                <form action="">
+
                 <input type="checkbox" className="modal-label-input"  id={item.name} name={item.name} value={item.price}  onChange={(e) => handleInputChanges(e)}/>
                 <H2>{item.name + " $ " + item.price}</H2>
-                </form>
+
               </label>
             );
           })}
@@ -92,7 +100,7 @@ console.log()
           ></Button>
           <Button cName="btn-send send" onClick={handleClick} text="Enviar" type="submit"></Button>
         </div>
-        </form>
+
       </div>
     </section>,
     document.getElementById("portal")

@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import Item from "./Item";
 import { P, P2, H2 } from "./Styling";
 import Button from "./button";
@@ -7,7 +7,8 @@ import "./Bill.scss";
 
 export default function Bill() {
   let { bill } = useContext(WeiterContext);
-  console.log(bill);
+  const [sum, setTotal] = useState(0);
+
   let products = bill.map((prod, i) => (
     <Item
       grid="box-grid"
@@ -15,9 +16,19 @@ export default function Bill() {
       name={prod.name}
       price={prod.price}
       quantity={prod.quantity}
-      id ={prod.id}
+      id={prod.id}
     />
   ));
+
+  const getTotal = () => {
+    const totalBill = bill.reduce((acc, el) => acc + el.price, 0);
+    return totalBill;
+  };
+
+  const iva = getTotal() * 0.1;
+  const tax = iva.toString(2)
+  const totalWithIva = iva + getTotal();
+  console.log(iva);
 
   return (
     <section className="order">
@@ -37,11 +48,11 @@ export default function Bill() {
         </div>
         <div className="bill-total">
           <P2>IVA(10%)</P2>
-          <P2>$4</P2>
+          <P2>${tax}</P2>
         </div>
         <div className="bill-total">
           <H2>TOTAL</H2>
-          <H2>$39</H2>
+          <H2>${totalWithIva}</H2>
         </div>
       </div>
       <div className="bill-botton">
