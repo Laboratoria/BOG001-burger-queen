@@ -10,8 +10,8 @@ export default function WeiterProvider({children}) {
     const [bill, setBill] = useState([]);
     const addProduct = (values) => setBill([...bill, values]);
 
-    const deleteProduct = (name) =>{
-     let filtered = bill.filter(function(el) { return el.name !==  name})
+    const deleteProduct = (id) =>{
+     let filtered = bill.filter(function(el) { return el.id !==  id})
      setBill(filtered)
     }
 

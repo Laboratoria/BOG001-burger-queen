@@ -13,11 +13,12 @@ export default function Modal({ info }) {
 const [ burger , setBurgerState] = useState({})
 
   const handleInputChanges = (e) => {
-    setCount(e.currentTarget.value);
+    console.log(e.currentTarget.id, e.currentTarget.value );
   };
 
 
- 
+
+
 
   const title = info.map((section) => section.id);
   const options = info
@@ -30,19 +31,19 @@ const [ burger , setBurgerState] = useState({})
     .flat();
   if (!isOpen) return null;
   return ReactDom.createPortal(
-    <section className="overlay">
-      <div className="modal">
+    <section className="overlay"  >
+      <div className="modal" id ={Math.floor(Math.random() * 2)+1}>
         <H1 className="modal-title">Escoge la {title[0]}</H1>
         <div className="modal-options">
           {options.map((item, i) => {
             return (
-              <label htmlFor="" className="modal-label" key={i}>
+              <label htmlFor={item.name} className="modal-label" key={i}>
                 <img
                   src={item.img}
                   alt="Carne de pollo"
                   className="modal-label-img"
                 />
-                <input type="radio" className="modal-label-input" name="meat" value={item.name}/>
+                <input type="radio" className="modal-label-input"  name="meat" id={item.name} value={item.price} onChange={(e) => handleInputChanges(e)}/>
                 <H2>{item.name}</H2>
               </label>
             );
@@ -60,7 +61,7 @@ const [ burger , setBurgerState] = useState({})
                   className="modal-label-img"
                 />
                 <form action="">
-                <input type="radio" className="modal-label-input"  name={item.name} value={item.name} data-price={item.price}/>
+                <input type="radio" className="modal-label-input"  id={item.name} name={item.name} value={item.price}  onChange={(e) => handleInputChanges(e)}/>
                 <H2>{item.name + " $ " + item.price}</H2>
                 </form>
               </label>
@@ -73,7 +74,7 @@ const [ burger , setBurgerState] = useState({})
             text="Cancelar"
             onClick={clickToOpen}
           ></Button>
-          <Button cName="btn-send send" text="Enviar"></Button>
+          <Button cName="btn-send send" onClick={handleInputChanges} text="Enviar"></Button>
         </div>
       </div>
     </section>,

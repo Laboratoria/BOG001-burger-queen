@@ -8,7 +8,7 @@ function Card(props) {
   let {clickToOpen, addProduct} = useContext(WeiterContext);
 
   // const [isOpen, setIsOpen] = useState(false);
- 
+
   const[count, setCount] = useState(1);
   const burgerCard = () => (props.name.includes("Hamburguesa") ? true : false);
 
@@ -22,6 +22,7 @@ function Card(props) {
       name: props.name,
       quantity: parseInt(count),
       price: props.price * count,
+      id :Math.floor(Math.random() * 100)
     });
   };
   return (
@@ -34,6 +35,7 @@ function Card(props) {
         {burgerCard() ? (
           <>
             <Button
+              id={props.name}
               cName="card-btn confirm card-options"
               text="Opciones"
               onClick={clickToOpen}

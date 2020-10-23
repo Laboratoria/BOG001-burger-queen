@@ -4,11 +4,11 @@ import "./Item.scss";
 import { WeiterContext } from '../WeiterContext'
 
 
-export default function Item({ name, price, quantity, grid }) {
+export default function Item({ name, price, quantity, grid , id}) {
   let {bill , setBill, deleteProduct}= useContext(WeiterContext);
 
   const handleDelete =() =>{
-    deleteProduct(name)
+    deleteProduct(id)
   }
 
 
