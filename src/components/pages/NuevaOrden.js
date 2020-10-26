@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Tab from "../Tab";
-import db from "../../firebaseConfig.js";
+import { db } from "../../firebaseConfig.js";
 import Modal from "../Modal";
 import Bill from "../Bill"
 import { WeiterProvider} from '../../WeiterContext'

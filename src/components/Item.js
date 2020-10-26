@@ -5,14 +5,11 @@ import { WeiterContext } from '../WeiterContext'
 
 
 export default function Item({ name, price, quantity, grid , id}) {
-  let {bill , setBill, deleteProduct}= useContext(WeiterContext);
+  let { deleteProduct}= useContext(WeiterContext);
 
   const handleDelete =() =>{
     deleteProduct(id)
-  }
-
-
-
+  };
 
   return (
     <div className={"bill-box " + grid}>

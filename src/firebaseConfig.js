@@ -15,4 +15,9 @@ firebase.initializeApp(firebaseConfig);
 
 const db = firebase.firestore();
 
-export  default db;
+
+function addBill (data) {
+  db.collection('orders').add(data);
+} 
+
+export {db, addBill, firebase }

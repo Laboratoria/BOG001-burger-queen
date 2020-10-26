@@ -98,7 +98,7 @@ const handleClick = () => {
             text="Cancelar"
             onClick={clickToClose}
           ></Button>
-          <Button cName="btn-send send" onClick={handleClick} text="Enviar" type="submit"></Button>
+          <Button cName="btn-send send" onClick={handleClick} text="Agregar" type="submit"></Button>
         </div>
 
       </div>

@@ -12,7 +12,7 @@ export default function WeiterProvider({children}) {
     const [bill, setBill] = useState([]);
     const addProduct = (values) => setBill([...bill, values]);
 
-    const deleteProduct = (id) =>{
+    const deleteProduct = (id) => {
      let filtered = bill.filter(function(el) { return el.id !==  id})
      setBill(filtered)
     }
@@ -20,7 +20,7 @@ export default function WeiterProvider({children}) {
 
 
     return (
-        <Provider value={{isOpen, clickToOpen,clickToClose, bill, addProduct, deleteProduct, burger, stateBurger}}>
+        <Provider value={{isOpen, clickToOpen,clickToClose, bill, setBill, addProduct, deleteProduct, burger, stateBurger}}>
             {children}
         </Provider>
     )

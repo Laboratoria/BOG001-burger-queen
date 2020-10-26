@@ -3,11 +3,12 @@ import Item from "./Item";
 import { P, P2, H2 } from "./Styling";
 import Button from "./button";
 import { WeiterContext } from "../WeiterContext";
+import { firebase, addBill} from '../firebaseConfig'
 import "./Bill.scss";
 
 export default function Bill() {
-  let { bill } = useContext(WeiterContext);
-  const [sum, setTotal] = useState(0);
+  let { bill, setBill } = useContext(WeiterContext);
+  const [client, setClient] = useState(' ');
 
   let products = bill.map((prod, i) => (
     <Item
@@ -26,16 +27,41 @@ export default function Bill() {
   };
 
   const iva = getTotal() * 0.1;
-  const tax = iva.toString(2)
+  const tax = iva.toFixed(2)
   const totalWithIva = iva + getTotal();
-  console.log(iva);
+
+  const handleClient = (e)=> setClient(e.currentTarget.value);
+  
+
+  const handleSend = () => {
+  if (client !== ' '){
+    const order = {
+      client: client,
+      products: bill,
+      total: totalWithIva,
+      isDone: false,
+      isDeliver: false,
+      date: firebase.firestore.Timestamp.now(),
+    }
+    addBill(order);
+    setBill([])
+    setClient(' ')
+  } else{
+    alert('escribe nombre')
+  } 
+};
+
+const handleCancel = () => {
+    setBill([])
+    setClient(' ')
+};
 
   return (
     <section className="order">
       <div className="bill">
         <div className="bill-info">
           <P>Cliente</P>
-          <input className="bill-info-input" type="text" />
+          <input className="bill-info-input" type="text"  value={client} onChange={handleClient}/>
           <div className="bill-info-number">
             <P className="bill-info-client">#1</P>
           </div>
@@ -56,8 +82,8 @@ export default function Bill() {
         </div>
       </div>
       <div className="bill-botton">
-        <Button cName="btn-cancel abort" text="Cancelar"></Button>
-        <Button cName="btn-send send" text="Enviar"></Button>
+        <Button cName="btn-cancel abort" text="Cancelar" onClick={handleCancel}></Button>
+        <Button cName="btn-send send" text="Enviar" onClick={handleSend}></Button>
       </div>
     </section>
   );

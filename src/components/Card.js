@@ -28,6 +28,7 @@ function Card(props) {
       price: props.price * count,
       id :Math.floor(Math.random() * 100)
     });
+    setCount(1)
   };
   return (
     <>
