@@ -2,13 +2,12 @@ import React, { useState, useEffect } from "react";
 import Tab from "../Tab";
 import { db } from "../../firebaseConfig.js";
 import Modal from "../Modal";
-import Bill from "../Bill"
-import { WeiterProvider} from '../../WeiterContext'
+import Bill from "../Bill";
+import { WeiterProvider } from "../../WeiterContext";
 
-const NuevaOrden = () => {
+const NewOrder = () => {
   const [menu, setMenu] = useState([]);
   const [modal, setModal] = useState([]);
-
 
   useEffect(() => {
     db.collection("Menu")
@@ -37,14 +36,14 @@ const NuevaOrden = () => {
   }, []);
 
   return (
-    <div style={{display: 'flex'}}>
+    <div style={{ display: "flex" }}>
       <WeiterProvider>
         <Tab menu={menu}></Tab>
-      <Modal info={modal}></Modal>
-      <Bill></Bill>
-     </WeiterProvider>
+        <Modal info={modal}></Modal>
+        <Bill></Bill>
+      </WeiterProvider>
     </div>
   );
 };
 
-export default NuevaOrden;
+export default NewOrder;
