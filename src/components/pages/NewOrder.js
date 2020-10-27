@@ -4,6 +4,7 @@ import { db } from "../../firebaseConfig.js";
 import Modal from "../Modal";
 import Bill from "../Bill";
 import { WeiterProvider } from "../../WeiterContext";
+import NavBar from "../Navbar";
 
 const NewOrder = () => {
   const [menu, setMenu] = useState([]);
@@ -27,7 +28,7 @@ const NewOrder = () => {
               menu: Object.values(doc.data()),
               id: doc.id === "Options" ? "Carne" : "Adicionales",
             });
-            localStorage.setItem("info", modalMenu);
+            
           }
         });
         setMenu(tabMenu);
@@ -36,13 +37,16 @@ const NewOrder = () => {
   }, []);
 
   return (
-    <div style={{ display: "flex" }}>
-      <WeiterProvider>
-        <Tab menu={menu}></Tab>
-        <Modal info={modal}></Modal>
-        <Bill></Bill>
-      </WeiterProvider>
-    </div>
+    <>
+      <NavBar />
+      <div style={{ display: "flex" }}>
+        <WeiterProvider>
+          <Tab menu={menu}></Tab>
+          <Modal info={modal}></Modal>
+          <Bill></Bill>
+        </WeiterProvider>
+      </div>
+    </>
   );
 };
 

@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import { H2 } from "./Styling";
-import Button from "./button";
+import Button from "./Button";
 import "./Card.scss";
 import { WeiterContext } from '../WeiterContext'
 

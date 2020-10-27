@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import Item from "./Item";
 import { P, P2, H2 } from "./Styling";
-import Button from "./button";
+import Button from "./Button";
 import { WeiterContext } from "../WeiterContext";
 import { firebase, addBill} from '../firebaseConfig'
 import "./Bill.scss";
@@ -31,7 +31,7 @@ export default function Bill() {
   const totalWithIva = iva + getTotal();
 
   const handleClient = (e)=> setClient(e.currentTarget.value);
-  
+
 
   const handleSend = () => {
   if (client !== ' '){
@@ -48,7 +48,7 @@ export default function Bill() {
     setClient(' ')
   } else{
     alert('escribe nombre')
-  } 
+  }
 };
 
 const handleCancel = () => {
