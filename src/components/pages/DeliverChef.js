@@ -5,9 +5,9 @@ import NavBar from "../Navbar";
 export default function DeliverChef() {
   return (
     <>
-    <NavBar/>
+    <NavBar rol="chef"/>
     <div>
-      <h1>Orders</h1>
+      <h1>Deliver chef</h1>
     </div>
     </>
   )

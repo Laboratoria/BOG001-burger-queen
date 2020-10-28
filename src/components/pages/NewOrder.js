@@ -28,7 +28,7 @@ const NewOrder = () => {
               menu: Object.values(doc.data()),
               id: doc.id === "Options" ? "Carne" : "Adicionales",
             });
-            
+
           }
         });
         setMenu(tabMenu);
@@ -38,7 +38,7 @@ const NewOrder = () => {
 
   return (
     <>
-      <NavBar />
+      <NavBar rol ='mesero' />
       <div style={{ display: "flex" }}>
         <WeiterProvider>
           <Tab menu={menu}></Tab>

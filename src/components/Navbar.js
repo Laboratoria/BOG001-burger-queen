@@ -26,7 +26,7 @@ const menuItems = [
   },
 ];
 
-export default function Navbar() {
+export default function Navbar(props) {
   return (
     <nav className="navbar">
       <div>
@@ -39,7 +39,7 @@ export default function Navbar() {
           </NavLink>
         </li>
         {menuItems
-          .filter((item) => item.user === 'mesero')
+          .filter((item) => item.user === props.rol)
           .map((item, index) => {
             return (
               <li key={index} className="nav-item">
