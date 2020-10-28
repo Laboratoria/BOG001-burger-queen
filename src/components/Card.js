@@ -2,10 +2,10 @@ import React, { useState, useContext } from "react";
 import { H2 } from "./Styling";
 import Button from "./button";
 import "./Card.scss";
-import { WeiterContext } from "../WeiterContext";
+import { AppContext } from "../AppContext";
 
 function Card(props) {
-  let { clickToOpen, addProduct } = useContext(WeiterContext);
+  let { clickToOpen, addProduct } = useContext(AppContext);
 
   const [count, setCount] = useState(1);
 

@@ -3,7 +3,7 @@ import Tab from "../Tab";
 import { db } from "../../firebaseConfig.js";
 import Modal from "../Modal";
 import Bill from "../Bill";
-import { WeiterProvider } from "../../WeiterContext";
+import { WeiterProvider } from "../../AppContext";
 import NavBar from "../Navbar";
 
 const NewOrder = () => {
@@ -28,7 +28,6 @@ const NewOrder = () => {
               menu: Object.values(doc.data()),
               id: doc.id === "Options" ? "Carne" : "Adicionales",
             });
-
           }
         });
         setMenu(tabMenu);
@@ -38,13 +37,11 @@ const NewOrder = () => {
 
   return (
     <>
-      <NavBar rol ='mesero' />
+      <NavBar rol="mesero" />
       <div style={{ display: "flex" }}>
-        <WeiterProvider>
-          <Tab menu={menu}></Tab>
-          <Modal info={modal}></Modal>
-          <Bill></Bill>
-        </WeiterProvider>
+        <Tab menu={menu}></Tab>
+        <Modal info={modal}></Modal>
+        <Bill></Bill>
       </div>
     </>
   );

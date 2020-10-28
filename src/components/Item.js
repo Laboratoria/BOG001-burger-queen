@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
 import { P2 } from "./Styling";
 import "./Item.scss";
-import { WeiterContext } from "../WeiterContext";
+import { AppContext } from "../AppContext";
 
 export default function Item({ name, price, quantity, grid, id, userRol }) {
-  let { deleteProduct } = useContext(WeiterContext);
+  let { deleteProduct } = useContext(AppContext);
 
   const handleDelete = () => {
     deleteProduct(id);

@@ -2,13 +2,13 @@ import React, { useContext, useState } from "react";
 import Item from "./Item";
 import { P, P2, H2 } from "./Styling";
 import Button from "./button";
-import { WeiterContext } from "../WeiterContext";
-import { firebase, addBill} from '../firebaseConfig'
+import { AppContext } from "../AppContext";
+import { firebase, addBill } from "../firebaseConfig";
 import "./Bill.scss";
 
 export default function Bill() {
-  let { bill, setBill } = useContext(WeiterContext);
-  const [client, setClient] = useState(' ');
+  let { bill, setBill } = useContext(AppContext);
+  const [client, setClient] = useState(" ");
 
   let products = bill.map((prod, i) => (
     <Item
@@ -21,51 +21,54 @@ export default function Bill() {
     />
   ));
 
-
   const totalBill = bill.reduce((acc, el) => acc + el.price, 0);
-    
+
   const iva = totalBill * 0.1;
-  const tax = iva.toFixed(2)
+  const tax = iva.toFixed(2);
   const totalWithIva = iva + totalBill;
 
-  const handleClient = (e)=> setClient(e.currentTarget.value);
-
+  const handleClient = (e) => setClient(e.currentTarget.value);
 
   const handleSend = () => {
-  if (client !== ' '){
-    const order = {
-      client: client,
-      products: bill,
-      total: totalWithIva,
-      isDone: false,
-      isDeliver: false,
-      date: firebase.firestore.Timestamp.now(),
+    if (client !== " ") {
+      const order = {
+        client: client,
+        products: bill,
+        total: totalWithIva,
+        isDone: false,
+        isDeliver: false,
+        date: firebase.firestore.Timestamp.now(),
+      };
+      addBill(order);
+      setBill([]);
+      setClient(" ");
+    } else {
+      alert("escribe nombre");
     }
-    addBill(order);
-    setBill([])
-    setClient(' ')
-  } else{
-    alert('escribe nombre')
-  }
-};
+  };
 
-const handleCancel = () => {
-    setBill([])
-    setClient(' ')
-};
+  const handleCancel = () => {
+    setBill([]);
+    setClient(" ");
+  };
 
   return (
     <section className="order">
       <div className="bill">
         <div className="bill-info">
-        <div className="bill-info-number">
+          <div className="bill-info-number">
             <P className="bill-info-client">#1</P>
           </div>
-          <label htmlFor="client" >
-          <P>Cliente</P>
-          <input type="text" id="client" className="bill-info-input" value={client} onChange={handleClient}/>
+          <label htmlFor="client">
+            <P>Cliente</P>
+            <input
+              type="text"
+              id="client"
+              className="bill-info-input"
+              value={client}
+              onChange={handleClient}
+            />
           </label>
-          
         </div>
         <div className="bill-title">
           <P>Cant</P>
@@ -83,8 +86,16 @@ const handleCancel = () => {
         </div>
       </div>
       <div className="bill-botton">
-        <Button cName="btn-cancel abort" text="Cancelar" onClick={handleCancel}></Button>
-        <Button cName="btn-send send" text="Enviar" onClick={handleSend}></Button>
+        <Button
+          cName="btn-cancel abort"
+          text="Cancelar"
+          onClick={handleCancel}
+        ></Button>
+        <Button
+          cName="btn-send send"
+          text="Enviar"
+          onClick={handleSend}
+        ></Button>
       </div>
     </section>
   );

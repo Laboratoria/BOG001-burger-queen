@@ -1,8 +1,11 @@
 import React from "react";
 import { P, H2 } from "./Styling";
 import Button from "./button";
+import Item from "./Item"
 
 export default function Order(props) {
+  let products = props.data
+
   return (
     <div className="order">
       <P>Cliente</P>
