@@ -37,11 +37,13 @@
 }
 
 .bill-info-input{
+    grid-row: 2/2;
+    & > input {
     margin: 15px;
     width: 210px;
     height: 30px;
     border: none;
-    grid-row: 2/2;
+    }
 }
 
 .bill-title{

@@ -1,6 +1,6 @@
 import React, {useContext, useState} from "react";
 import { H1, H2 } from "../components/Styling";
-import Button from "./Button";
+import Button from "./button";
 import "./Modal.scss";
 import ReactDom from "react-dom";
 import { WeiterContext } from '../WeiterContext'

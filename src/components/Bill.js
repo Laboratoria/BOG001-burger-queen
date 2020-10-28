@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import Item from "./Item";
 import { P, P2, H2 } from "./Styling";
-import Button from "./Button";
+import Button from "./button";
 import { WeiterContext } from "../WeiterContext";
 import { firebase, addBill} from '../firebaseConfig'
 import "./Bill.scss";
@@ -21,14 +21,12 @@ export default function Bill() {
     />
   ));
 
-  const getTotal = () => {
-    const totalBill = bill.reduce((acc, el) => acc + el.price, 0);
-    return totalBill;
-  };
 
-  const iva = getTotal() * 0.1;
+  const totalBill = bill.reduce((acc, el) => acc + el.price, 0);
+    
+  const iva = totalBill * 0.1;
   const tax = iva.toFixed(2)
-  const totalWithIva = iva + getTotal();
+  const totalWithIva = iva + totalBill;
 
   const handleClient = (e)=> setClient(e.currentTarget.value);
 
@@ -61,7 +59,9 @@ const handleCancel = () => {
       <div className="bill">
         <div className="bill-info">
           <P>Cliente</P>
-          <input className="bill-info-input" type="text"  value={client} onChange={handleClient}/>
+          <label htmlFor="client" className="bill-info-input">
+          <input type="text" id="client" value={client} onChange={handleClient}/>
+          </label>
           <div className="bill-info-number">
             <P className="bill-info-client">#1</P>
           </div>

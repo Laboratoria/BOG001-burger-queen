@@ -1,16 +1,13 @@
 import React, { useState, useContext } from "react";
 import { H2 } from "./Styling";
-import Button from "./Button";
+import Button from "./button";
 import "./Card.scss";
 import { WeiterContext } from '../WeiterContext'
 
 function Card(props) {
   let {clickToOpen, addProduct} = useContext(WeiterContext);
 
-  // const [isOpen, setIsOpen] = useState(false);
-
   const[count, setCount] = useState(1);
-  const burgerCard = () => (props.name.includes("Hamburguesa") ? true : false);
 
   const handleInputChanges = (e) => {
     setCount(e.currentTarget.value);
@@ -35,9 +32,9 @@ function Card(props) {
       <div className="card">
         <H2 className="card-name">{props.name}</H2>
 
-        <img className="card-info-item" src={props.img} alt="food" />
+        <img className="card-info-item" src={props.img} alt="food"  width='auto' height='100%' />
         <H2 className="card-info-price">{"$ " + props.price}</H2>
-        {burgerCard() ? (
+        {props.name.includes("Hamburguesa") ? (
           <>
             <Button
               id={props.name}
@@ -49,14 +46,15 @@ function Card(props) {
           </>
         ) : (
           <>
+          <label htmlFor={props.name + 'quantity'}  className="card-info-input">
             <input
               value={count}
               name={props.name}
               data-price={props.price}
               type="number"
-              className="card-info-input"
               onChange={(e) => handleInputChanges(e)}
             ></input>
+            </label>
             <Button cName="card-btn confirm" text="Agregar" onClick={handleClick}> </Button>
           </>
         )}

@@ -23,16 +23,20 @@
 }
 .card-info-item {
   grid-area: Imagen;
-  width: 45px;
-  height: 37px;
+  width: auto;
+  height: 100%;
+  margin: auto;
 }
 .card-info-input {
   grid-area: Input;
+  display: flex;
+  & > input {
   width: 74px;
   height: 30px;
   margin: auto;
   border: none;
   text-align: center;
+  }
 }
 .card-btn {
   grid-area: Button;
