@@ -58,13 +58,14 @@ const handleCancel = () => {
     <section className="order">
       <div className="bill">
         <div className="bill-info">
-          <P>Cliente</P>
-          <label htmlFor="client" className="bill-info-input">
-          <input type="text" id="client" value={client} onChange={handleClient}/>
-          </label>
-          <div className="bill-info-number">
+        <div className="bill-info-number">
             <P className="bill-info-client">#1</P>
           </div>
+          <label htmlFor="client" >
+          <P>Cliente</P>
+          <input type="text" id="client" className="bill-info-input" value={client} onChange={handleClient}/>
+          </label>
+          
         </div>
         <div className="bill-title">
           <P>Cant</P>
