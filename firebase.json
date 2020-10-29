@@ -6,11 +6,15 @@
   "functions": {
     "runtime": "nodejs8",
     "predeploy": [
-      "npm --prefix \"$RESOURCE_DIR\" run lint"
-    ]
+      "npm --prefix \"%RESOURCE_DIR%\" run lint"
+    ],
+    "source": "functions"
   },
   "hosting": {
-    "public": "build",
+    "headers": [
+      {"source": "/service-worker.js", "headers": [{"key": "Cache-Control", "value": "no-cache"}]}
+    ],
+    "public": "public",
     "ignore": [
       "firebase.json",
       "**/.*",
@@ -22,5 +26,8 @@
         "destination": "/index.html"
       }
     ]
+  },
+  "database": {
+    "rules": "database.rules.json"
   }
 }
