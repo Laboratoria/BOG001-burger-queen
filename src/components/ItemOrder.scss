@@ -1,0 +1,17 @@
+@import "src/App.scss";
+
+.item-order{
+    display: flex;
+    align-items: center;
+    height: 48px ;
+    border-top: 1px solid $zeta;
+}
+
+.item-order-quantity{
+    width: 53px;
+    padding: 0 15px;
+    text-align: center;
+}
+.item-order-name{
+    width: 200px;
+}

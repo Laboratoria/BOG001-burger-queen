@@ -3,7 +3,6 @@ import Tab from "../Tab";
 import { db } from "../../firebaseConfig.js";
 import Modal from "../Modal";
 import Bill from "../Bill";
-import { WeiterProvider } from "../../AppContext";
 import NavBar from "../Navbar";
 
 const NewOrder = () => {

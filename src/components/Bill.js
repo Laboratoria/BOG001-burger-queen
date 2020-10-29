@@ -7,12 +7,13 @@ import { firebase, addBill } from "../firebaseConfig";
 import "./Bill.scss";
 
 export default function Bill() {
-  let { bill, setBill } = useContext(AppContext);
+  let { bill, setBill, idOrder } = useContext(AppContext);
   const [client, setClient] = useState(" ");
 
   let products = bill.map((prod, i) => (
     <Item
       grid="box-grid"
+      cName='bill-box'
       key={prod.name + i}
       name={prod.name}
       price={prod.price}
@@ -38,6 +39,7 @@ export default function Bill() {
         isDone: false,
         isDeliver: false,
         date: firebase.firestore.Timestamp.now(),
+        idOrder: idOrder,
       };
       addBill(order);
       setBill([]);
@@ -53,11 +55,11 @@ export default function Bill() {
   };
 
   return (
-    <section className="order">
+    <section className="order-bill">
       <div className="bill">
         <div className="bill-info">
           <div className="bill-info-number">
-            <P className="bill-info-client">#1</P>
+            <P className="bill-info-client">{`# ${idOrder}`}</P>
           </div>
           <label htmlFor="client">
             <P>Cliente</P>

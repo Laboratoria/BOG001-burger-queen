@@ -1,23 +1,24 @@
 
-import React, {useState, useEffect, useContext} from 'react'
+import React, { useContext} from 'react'
 import NavBar from "../Navbar";
-import { AppContext } from "../AppContext";
-
+import { AppContext } from "../../AppContext";
 import Order from "../Order"
 
 
 export default function OrderChef() {
 
   let { order } = useContext(AppContext);
- order.map((dataOrder, i
 
- ))
+  let OrderInProcess = order.filter(order => order.isDone === false).map((dataOrder, i) => {
+    return <Order key={'order'+i} data={dataOrder} rol={true}/>
+
+ })
 
   return (
     <>
     <NavBar rol="chef"/>
     <div  style={{ display: "flex" }}>
-    <Order/>
+    {OrderInProcess}
     </div>
     </>
   )

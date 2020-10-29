@@ -1,0 +1,21 @@
+@import "src/App.scss";
+
+.order{
+    width: 270px;
+    min-height: 500px;
+    background-color: $beta;
+    border: 1px solid $zeta;
+    margin: auto;
+}
+
+.order-client{
+    padding: 15px;
+}
+
+.order-title{
+    display: flex;
+    justify-content: space-around;
+    & > p{
+        padding: 10px;
+    }
+}

@@ -23,7 +23,8 @@ export default function WeiterProvider({ children }) {
     setBill(filtered);
   };
 
-  const [order, setOrder] = useState([])
+  const [order, setOrder] = useState([]);
+  const [idOrder, setIdOrder] = useState(1);
 
   useEffect(() => {
     db.collection('orders')
@@ -35,6 +36,7 @@ export default function WeiterProvider({ children }) {
         arrayData.push(data)
     })
     setOrder(arrayData);
+    setIdOrder(arrayData.length)
   })
   },[])
 
@@ -56,6 +58,7 @@ export default function WeiterProvider({ children }) {
         burger,
         stateBurger,
         order,
+        idOrder,
       }}
     >
       {children}
