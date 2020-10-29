@@ -1,0 +1,157 @@
+{
+    "Café Americano": {
+      "id": "cafe_americano",
+      "name": "Café Americano",
+      "price": 5,
+      "img": "",
+      "menu": [
+        "breakfast"
+      ],
+      "type": [
+        "Bebida"
+      ]
+    },
+    "Café con Leche": {
+      "id": "cafe_con_leche",
+      "name": "Café con leche",
+      "price": 5,
+      "img": "",
+      "menu": [
+        "breakfast"
+      ],
+      "type": [
+        "Bebida"
+      ]
+    },
+    "Sandwich de jamón y queso": {
+      "id": "sandwich_de_jamon_y_queso",
+      "name": "Sandwich de jamón y queso",
+      "price": 5,
+      "img": "",
+      "menu": [
+        "breakfast"
+      ],
+      "type": [
+        "Comida"
+      ]
+    },
+    "Jugo de frutas natural": {
+      "id": "jugo_de_frutas_natural",
+      "name": "Jugo de frutas natural",
+      "price": 5,
+      "img": "",
+      "menu": [
+        "breakfast"
+      ],
+      "type": [
+        "Bebida"
+      ]
+    },
+    "Hamburguesa simple": {
+      "id": "hamburguesa_simple",
+      "name": "Hamburguesa simple",
+      "price": 10,
+      "img": "",
+      "menu": [
+        "lunch"
+      ],
+      "type": [
+        "Comida"
+      ],
+      "class": [
+        "res",
+        "pollo",
+        "vegetariana"
+      ]
+    },
+    "Hamburguesa doble": {
+      "id": "hamburguesa_doble",
+      "name": "Hamburguesa doble",
+      "price": 15,
+      "img": "",
+      "menu": [
+        "lunch"
+      ],
+      "type": [
+        "Comida"
+      ],
+      "class": [
+        "res",
+        "pollo",
+        "vegetariana"
+      ]
+    },
+    "Papas fritas": {
+      "id": "papas_fritas",
+      "name": "Papas fritas",
+      "price": 5,
+      "img": "",
+      "menu": [
+        "lunch"
+      ],
+      "type": [
+        "Complemento"
+      ]
+    },
+    "Aros de cebolla": {
+      "id": "aros_de_cebolla",
+      "name": "Aros de Cebolla",
+      "price": 5,
+      "img": "",
+      "menu": [
+        "lunch"
+      ],
+      "type": [
+        "Complemento"
+      ]
+    },
+    "Agua 500 ml": {
+      "id": "agua_500ml",
+      "name": "Agua 500ml",
+      "price": 5,
+      "img": "",
+      "menu": [
+        "lunch"
+      ],
+      "type": [
+        "Bebida"
+      ]
+    },
+    "Agua 750 ml": {
+      "id": "agua_750ml",
+      "name": "Agua 750ml",
+      "price": 7,
+      "img": "",
+      "menu": [
+        "lunch"
+      ],
+      "type": [
+        "Bebida"
+      ]
+    },
+    "Gaseosa 500ml": {
+      "id": "gaseosa_500ml",
+      "name": "Gaseosa 500ml",
+      "price": 7,
+      "img": "",
+      "menu": [
+        "lunch"
+      ],
+      "type": [
+        "Bebida"
+      ]
+    },
+    "Gaseosa 750 ml": {
+      "id": "gaseosa_750ml",
+      "name": "Gaseosa 750ml",
+      "price": 7,
+      "img": "",
+      "menu": [
+        "lunch"
+      ],
+      "type": [
+        "Bebida"
+      ]
+    }
+  }
+  
