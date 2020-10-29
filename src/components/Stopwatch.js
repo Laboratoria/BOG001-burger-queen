@@ -1,29 +1,31 @@
 import React, {useState, useEffect} from 'react'
+import{ P } from './Styling'
 import Button from './button'
 
-export default function Stopwatch() {
-    const [time, setTime] = useState({minute: 0, second: 0});
+export default function Stopwatch({timeStart}) {
+    const [time, setTime] = useState(0);
+    var hours = Math.floor((time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutes = Math.floor((time % (1000 * 60 * 60)) / (1000 * 60));
+    let seconds = Math.floor((time % (1000 * 60)) / 1000);
 
     useEffect(()=>{
-        setInterval(() => {
-            setTime(time => {
-              return {
-                minute: time.second === 59 ? time.minute + 1 : time.minute,
-                second: time.second === 59 ? 0 : time.second + 1
-              };
-            });
+        let x = setInterval(() => {
+            setTime(time =>  Date.now() - timeStart );
           }, 1000);
-    }, []);
+          return () =>  clearInterval(x);
+    }, [timeStart]);
 
-    const handleStop = () =>{
-        clearInterval(time)
-        console.log(time)
+    const handleStop = () => {
+    
+        console.log(hours, minutes, seconds)
+        //console.time(time)
     }
     return (
         <>
         <div className="stopwatch">
-        {time.minute < 10 ? "0" + time.minute : time.minute} :
-        {time.second < 10 ? "0" + time.second : time.second}
+        <P> 
+            {hours} :  {minutes} : {seconds} 
+        </P>
       </div>
       <Button cName="btn-default send" text="Terminar" onClick={handleStop}></Button>
       </>
