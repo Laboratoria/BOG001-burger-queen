@@ -1,6 +1,7 @@
 {
   "projects": {
     "BurgerQueen": "burgerqueen-ln-fa10b",
-    "staging": "burgerqueen-ln-fa10b"
+    "staging": "burgerqueen-ln-fa10b",
+    "default": "burgerqueen-ln-fa10b"
   }
 }
