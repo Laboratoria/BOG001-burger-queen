@@ -25,8 +25,8 @@ export default function Order(props) {
       {products}
       {props.rol ? (
         <>
-   
-        <Stopwatch timeStart={infoOrder.date.toDate().getTime()}/>
+
+        <Stopwatch timeStart={infoOrder.date.toDate().getTime()} idDoc={infoOrder.idDoc}/>
         </>
       ) : (
           <>

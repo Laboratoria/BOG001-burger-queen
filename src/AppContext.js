@@ -33,7 +33,7 @@ export default function WeiterProvider({ children }) {
       const arrayData =[]
       querySnapshot.forEach(doc => {
        const data= doc.data()
-        arrayData.push(data)
+        arrayData.push({...data, idDoc:doc.id})
     })
     setOrder(arrayData);
     setIdOrder(arrayData.length)
