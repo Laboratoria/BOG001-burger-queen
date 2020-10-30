@@ -17,12 +17,20 @@ export default function Order(props) {
         <P className="bill-info-client">{`# ${infoOrder.idOrder}`}</P>
       </div>
       <P className='order-client'>{'Cliente: ' + infoOrder.client}</P>
-      <div className="order-title">
-        <P>Cant</P>
-        <P>Producto</P>
-        {props.rol ? null : <P>Precio</P>}
-      </div>
-      {products}
+
+      <table className='oder-table' >
+        <thead>
+          <tr>
+        <th><P>Cant</P></th>
+        <th><P>Producto</P></th>
+        {props.rol ? null : <th><P>Precio</P></th>}
+        </tr>
+        </thead>
+        <tbody>
+        {products}
+        </tbody>
+        </table>
+
       {props.rol ? (
         <>
 

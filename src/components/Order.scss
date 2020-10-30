@@ -5,17 +5,40 @@
     min-height: 500px;
     background-color: $beta;
     border: 1px solid $zeta;
-    margin: auto;
+    border-radius:5px;
+    margin: 50px;
+    display: flex;
+    flex-direction:column;
 }
 
 .order-client{
     padding: 15px;
 }
 
-.order-title{
-    display: flex;
-    justify-content: space-around;
-    & > p{
-        padding: 10px;
-    }
+
+.oder-table{
+  border-collapse: collapse;
+  border-bottom: 1px solid $zeta;
+}
+
+th {
+  padding: 15px 0px;
+  &:first-child{
+    padding-left:10px;
+  }
+}
+
+th:first-child{
+  padding-left:10px;
+}
+
+th:last-child{
+  padding-right:10px;
+}
+
+.order-total{
+  display: flex;
+  justify-content: space-between;
+  padding:20px;
+  border-top:1px solid $zeta;
 }

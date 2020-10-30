@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import{ P } from './Styling'
 import Button from './button'
 import {updateOrder} from '../firebaseConfig'
+import  './Stopwatch.scss'
 
 
 

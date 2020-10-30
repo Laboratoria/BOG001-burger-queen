@@ -7,12 +7,13 @@ export default function ItemOrder({ name, price, quantity, id, userRol }) {
 
 
   return (
-    <div className='item-order'>
-      <P2 className="item-order-quantity">{quantity}</P2>
-      <P2 className="item-order-name">{name}</P2>
+    <tr className='item-order'>
+
+     <td><P2 >{quantity}</P2></td>
+     <td><P2 >{name}</P2></td>
       {userRol ? null :
-          <P2 className="">{"$" + price} </P2>
+         <td><P2>{"$" + price} </P2></td>
       }
-    </div>
+    </tr>
   );
 }
