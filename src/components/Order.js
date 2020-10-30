@@ -11,6 +11,25 @@ export default function Order(props) {
     return <ItemOrder key={item.name + i} name={item.name} quantity={item.quantity} price={item.price} userRol={props.rol}/>
   })
 
+  let rolBq;
+  if(props.rol){
+    if(infoOrder.isDone === false){
+    rolBq= <Stopwatch timeStart={infoOrder.date.toDate().getTime()} idDoc={infoOrder.idDoc}/>
+    }else{
+      rolBq =  <P>{infoOrder.time}</P>
+    }
+  }else {
+    rolBq = (
+            <>
+            <div className="order-total">
+              <H2>TOTAL</H2>
+              <H2>{`$ ${infoOrder.total}`}</H2>
+            </div>
+            <Button cName="btn-default send" text="Entregar"></Button>
+             </>
+    )
+  }
+
   return (
     <div className="order">
       <div className="bill-info-number">
@@ -30,21 +49,8 @@ export default function Order(props) {
         {products}
         </tbody>
         </table>
-
-      {props.rol ? (
-        <>
-
-        <Stopwatch timeStart={infoOrder.date.toDate().getTime()} idDoc={infoOrder.idDoc}/>
-        </>
-      ) : (
-          <>
-            <div className="order-total">
-              <H2>TOTAL</H2>
-              <H2>{`$ ${infoOrder.total}`}</H2>
-            </div>
-            <Button cName="btn-default send" text="Entregar"></Button>
-          </>
-        )}
+        {rolBq}
+    
     </div>
   );
 }
