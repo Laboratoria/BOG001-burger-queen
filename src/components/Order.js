@@ -4,6 +4,7 @@ import Button from "./button";
 import ItemOrder from "./ItemOrder"
 import Stopwatch from "./Stopwatch"
 import './Order.scss'
+import {updateOrder} from '../firebaseConfig'
 
 export default function Order(props) {
   let infoOrder = props.data;
@@ -11,12 +12,18 @@ export default function Order(props) {
     return <ItemOrder key={item.name + i} name={item.name} quantity={item.quantity} price={item.price} userRol={props.rol}/>
   })
 
+  const handleDeliver = () =>{
+   updateOrder(infoOrder.idDoc,{
+     isDeliver: true,
+   })
+  }
+
   let rolBq;
   if(props.rol){
     if(infoOrder.isDone === false){
     rolBq= <Stopwatch timeStart={infoOrder.date.toDate().getTime()} idDoc={infoOrder.idDoc}/>
     }else{
-      rolBq =  <P>{infoOrder.time}</P>
+      rolBq =  <P className='oder-time'>Tiempo de preparación <br/>  {infoOrder.time }</P>
     }
   }else {
     rolBq = (
@@ -25,7 +32,7 @@ export default function Order(props) {
               <H2>TOTAL</H2>
               <H2>{`$ ${infoOrder.total}`}</H2>
             </div>
-            <Button cName="btn-default send" text="Entregar"></Button>
+            <Button cName="btn-default send" text="Entregar" onClick={handleDeliver}></Button>
              </>
     )
   }
@@ -50,7 +57,7 @@ export default function Order(props) {
         </tbody>
         </table>
         {rolBq}
-    
+
     </div>
   );
 }
