@@ -4,60 +4,62 @@ import Button from "./button";
 import ItemOrder from "./ItemOrder"
 import Stopwatch from "./Stopwatch"
 import './Order.scss'
-import {updateOrder} from '../firebaseConfig'
+import { updateOrder } from '../firebaseConfig'
 
 export default function Order(props) {
   let infoOrder = props.data;
   let products = infoOrder.products.map((item, i) => {
-    return <ItemOrder key={item.name + i} name={item.name} quantity={item.quantity} price={item.price} userRol={props.rol}/>
+    return <ItemOrder key={item.name + i} name={item.name} quantity={item.quantity} price={item.price} userRol={props.rol} />
   })
 
-  const handleDeliver = () =>{
-   updateOrder(infoOrder.idDoc,{
-     isDeliver: true,
-   })
+  const handleDeliver = () => {
+    updateOrder(infoOrder.idDoc, {
+      isDeliver: true,
+    })
   }
 
   let rolBq;
-  if(props.rol){
-    if(infoOrder.isDone === false){
-    rolBq= <Stopwatch timeStart={infoOrder.date.toDate().getTime()} idDoc={infoOrder.idDoc}/>
-    }else{
-      rolBq =  <P className='oder-time'>Tiempo de preparación <br/>  {infoOrder.time }</P>
+  if (props.rol) {
+    if (infoOrder.isDone === false) {
+      rolBq = <Stopwatch timeStart={infoOrder.date.toDate().getTime()} idDoc={infoOrder.idDoc} />
+    } else {
+      rolBq = <P className='oder-time'>Tiempo de preparación <br />  {infoOrder.time}</P>
     }
-  }else {
+  } else {
     rolBq = (
-            <>
-            <div className="order-total">
-              <H2>TOTAL</H2>
-              <H2>{`$ ${infoOrder.total}`}</H2>
-            </div>
-            <Button cName="btn-default send" text="Entregar" onClick={handleDeliver}></Button>
-             </>
+      <>
+      <footer>
+        <div className="order-total">
+          <H2>TOTAL</H2>
+          <H2>{`$ ${infoOrder.total}`}</H2>
+        </div>
+        <Button cName="btn-default send" text="ENTREGAR" onClick={handleDeliver}></Button>
+        </footer>
+      </>
     )
   }
 
   return (
-    <div className="order">
+    <article className="order">
+      <header>
       <div className="bill-info-number">
         <P className="bill-info-client">{`# ${infoOrder.idOrder}`}</P>
       </div>
       <P className='order-client'>{'Cliente: ' + infoOrder.client}</P>
-
+      </header>
       <table className='oder-table' >
         <thead>
           <tr>
-        <th><P>Cant</P></th>
-        <th><P>Producto</P></th>
-        {props.rol ? null : <th><P>Precio</P></th>}
-        </tr>
+            <th><P>Cant</P></th>
+            <th><P>Producto</P></th>
+            {props.rol ? <th/> : <th><P>Precio</P></th>}
+          </tr>
         </thead>
         <tbody>
-        {products}
+          {products}
         </tbody>
-        </table>
-        {rolBq}
-
-    </div>
+      </table>
+      {rolBq}
+    </article>
   );
 }

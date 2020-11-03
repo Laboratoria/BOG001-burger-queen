@@ -37,11 +37,11 @@ const NewOrder = () => {
   return (
     <>
       <NavBar rol="mesero" />
-      <div style={{ display: "flex" }}>
+      <section style={{ display: "flex" }}>
         <Tab menu={menu}></Tab>
         <Modal info={modal}></Modal>
         <Bill></Bill>
-      </div>
+      </section>
     </>
   );
 };
