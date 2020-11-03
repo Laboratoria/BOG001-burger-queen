@@ -1,14 +1,15 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
+import Router from './components/Router';
 
-//import home from '../src/components/home';
 
-function App() {
-  return (
-    <div className="App">
-     <h1>prueba</h1>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <Router />
+    );
+
+  }
 }
 
 export default App;
