@@ -42,7 +42,7 @@ function Card(props) {
           <>
             <Button
               id={props.name}
-              cName="card-btn confirm card-options"
+              cName="card-btn btn-default confirm card-options"
               text="Opciones"
               onClick={handleModal}
             ></Button>
@@ -62,7 +62,7 @@ function Card(props) {
               ></input>
             </label>
             <Button
-              cName="card-btn confirm"
+              cName="card-btn btn-default confirm"
               text="Agregar"
               onClick={handleClick}
             >

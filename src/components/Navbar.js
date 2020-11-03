@@ -1,7 +1,8 @@
-import React from "react";
+import React, {useContext} from "react";
 import { Link, NavLink } from "react-router-dom";
 import { P } from "./Styling";
 import "./Navbar.scss";
+import { AppContext } from "../AppContext";
 
 const menuItems = [
   {
@@ -27,6 +28,9 @@ const menuItems = [
 ];
 
 export default function Navbar(props) {
+
+  let { employee} = useContext(AppContext);
+  console.log(employee);
   return (
     <nav className="navbar">
       <div>
@@ -55,6 +59,7 @@ export default function Navbar(props) {
             );
           })}
       </ul>
+        <P>{employee}</P>
     </nav>
   );
 }

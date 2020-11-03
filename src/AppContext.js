@@ -40,7 +40,7 @@ export default function WeiterProvider({ children }) {
   })
   },[])
 
-
+  const [employee, setEmployee] = useState(' ');
 
 
 
@@ -59,6 +59,8 @@ export default function WeiterProvider({ children }) {
         stateBurger,
         order,
         idOrder,
+        employee,
+        setEmployee
       }}
     >
       {children}

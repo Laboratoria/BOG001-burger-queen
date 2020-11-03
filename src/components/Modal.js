@@ -94,12 +94,12 @@ export default function Modal({ info }) {
         </div>
         <div className="modal-options">
           <Button
-            cName="btn-cancel abort"
+            cName="btn-default abort"
             text="Cancelar"
             onClick={clickToClose}
           ></Button>
           <Button
-            cName="btn-send send"
+            cName="btn-default send"
             onClick={handleClick}
             text="Agregar"
             type="submit"

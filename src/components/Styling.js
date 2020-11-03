@@ -13,6 +13,12 @@ font-size: 18px;
 color: black;
 font-weight: bold;
 `
+const H = styled.h1`
+font-family: 'Roboto' , sans-serif;
+font-size: 20px;
+color: black;
+font-weight: bold;
+`
 
 const H2 = styled.h2`
 font-family: 'Roboto' , sans-serif;
@@ -26,7 +32,7 @@ font-family: 'Roboto' , sans-serif;
 font-size: 16px;
 color: black;
 `
-export { H1,P, H2, P2 }
+export { H1,P, H2, P2, H }
 
 
 

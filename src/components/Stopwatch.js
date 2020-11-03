@@ -40,7 +40,7 @@ export default function Stopwatch({ timeStart, idDoc }) {
           {hours} :  {minutes} : {seconds}
         </P>
       </div>
-      <Button cName="btn-default send" text="Terminar" onClick={handleStop}></Button>
+      <Button cName="btn-default send" text="TERMINAR" onClick={handleStop}></Button>
     </>
   )
 }

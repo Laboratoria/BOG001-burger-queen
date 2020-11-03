@@ -1,23 +1,33 @@
 
-import React from 'react'
+import React, {useContext, useState} from 'react'
 import Button from '../button'
-import { P } from '../Styling'
+import { H } from '../Styling'
 import './Home.scss'
+import logo from "../../assets/Logo.png"
+import { AppContext } from "../../AppContext";
 
 export default function Home() {
+  let { employee, setEmployee} = useContext(AppContext);
+  const [name, setName] = useState(' ');
+
+  const handleEmployee = (e) => {
+    setName(e.currentTarget.value)
+  }
+console.log(name, employee);
   return ( 
     <div id='home'>
       <section className='home-section'>
-      <h1>Burger Queen</h1>
+      <img src={logo} alt="Logo"/>
+      <H>"Fresco y autentico"</H>
       </section>
       <section className='home-section'>
-      <label > <P>Escribe tú nombre</P>   </label>
-      <input type="text" placeholder="Escribe tú nombre"/>
-    
-      <P>Escoge tú rol</P>
-      <div>
-      <Button cName="btn-default" text="Chef" />
-      <Button cName="btn-default" text="Mesero" />
+        <div>
+      <label > <H>Escribe tú nombre</H>   
+      <input type="text"  className='name-employee' onChange={(e) => handleEmployee(e)} placeholder="Escribe tú nombre"/>
+      </label>
+      <H>Escoge tú rol</H>
+      <Button cName="btn-home" text="CHEF" onClick={()=> { window.location = "/pedidos"; setEmployee(name)}}></Button>
+      <Button cName="btn-home" text="MESERO" onClick={()=> window.location = "/nueva-orden"}/>
       </div>
       </section>
     </div>

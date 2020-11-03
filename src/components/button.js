@@ -4,7 +4,7 @@ import "./Button.scss";
 const Button = (props) => {
   return (
     <button
-      className={props.cName + " btn-default"}
+      className={ props.cName }
       type="button"
       onClick={props.onClick}
     >

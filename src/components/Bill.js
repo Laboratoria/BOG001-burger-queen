@@ -89,13 +89,13 @@ export default function Bill() {
       </div>
       <div className="bill-botton">
         <Button
-          cName="btn-cancel abort"
-          text="Cancelar"
+          cName="btn-default abort"
+          text="CANCELAR"
           onClick={handleCancel}
         ></Button>
         <Button
-          cName="btn-send send"
-          text="Enviar"
+          cName="btn-default send"
+          text="ENVIAR"
           onClick={handleSend}
         ></Button>
       </div>
