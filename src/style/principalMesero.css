@@ -1,0 +1,30 @@
+:root {
+  --main-color: rgba(180, 103, 103, 0.226);
+  --secondary-color: rgb(252, 117, 27);
+  --secondary-buttons: rgb(253, 159, 97);
+}
+html{
+    background-color: var(--main-color);
+
+}.form-control{
+    background-color: #b4676770;
+    border-radius: 15px;
+    width: 100%;
+   }
+   #miid::placeholder {
+    padding-left: 700px;
+    padding-top: 50px;
+    color: #741616;
+  }
+  .card-body{
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+@media (min-width: 700px) and (max-width: 1290px){
+  #miid::placeholder {
+    padding-left: 190px;
+    padding-top: 50px;
+    color: #741616;
+  }
+}
