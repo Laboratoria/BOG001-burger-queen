@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import React, { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { P } from "./Styling";
 import "./Navbar.scss";
@@ -28,13 +28,12 @@ const menuItems = [
 ];
 
 export default function Navbar(props) {
-
-  let { employee} = useContext(AppContext);
+  const { employee } = useContext(AppContext);
   console.log(employee);
   return (
     <nav className="navbar">
       <div>
-        <Link className="navbar-logo" to="/"></Link>
+        <Link className="navbar-logo" to="/" />
       </div>
       <ul className="nav-menu">
         <li className="nav-item">
@@ -44,22 +43,20 @@ export default function Navbar(props) {
         </li>
         {menuItems
           .filter((item) => item.user === props.rol)
-          .map((item, index) => {
-            return (
-              <li key={index} className="nav-item">
-                <NavLink
-                  to={item.path}
-                  className="nav-links"
-                  exact
-                  activeClassName="active"
-                >
-                  <P>{item.name}</P>
-                </NavLink>
-              </li>
-            );
-          })}
+          .map((item, index) => (
+            <li key={index} className="nav-item">
+              <NavLink
+                to={item.path}
+                className="nav-links"
+                exact
+                activeClassName="active"
+              >
+                <P>{item.name}</P>
+              </NavLink>
+            </li>
+          ))}
+        <li className="nav-item name"><P>{employee}</P></li>
       </ul>
-        <P>{employee}</P>
     </nav>
   );
 }

@@ -34,18 +34,38 @@
             text-align: center;
             margin: 30px;
         }
-        & > button {
+        & > a {
             margin-bottom: 30px;
         }
     }
-    
+
 }
 
 .name-employee {
     height: 50px;
     width: 300px;
-    border: 1px solid;
+    border: 1px solid gray;
     font-size: 16px;
     text-align: center;
     border-radius: 5px;
+}
+
+.letra
+{
+  font-weight: bolder;
+  font-size:40px;
+  font-size: 45px;
+  text-align: center;
+  color: #7B2F22;
+  font-family: 'Roboto';
+}
+
+.icon-home{
+  position: absolute;
+  left: 40px;
+  bottom: 7px;
+}
+
+.home-error-input{
+  color: $epsylon;
 }

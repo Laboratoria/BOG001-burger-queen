@@ -18,10 +18,22 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "eslint": "eslint src"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": [
+      "react-app",
+      "airbnb",
+      "plugin:jsx-a11y/recommended"
+      ],
+    "plugins": [
+      "jsx-a11y"
+      ],
+    "rules": {
+      "semi": 0,
+      "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+      }
   },
   "browserslist": {
     "production": [
@@ -34,5 +46,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-plugin-jsx-a11y": "^6.4.1"
   }
 }

@@ -1,19 +1,19 @@
-import React, { useContext, useState } from "react";
-import Item from "./Item";
-import { P, P2, H2 } from "./Styling";
-import Button from "./button";
-import { AppContext } from "../AppContext";
-import { firebase, addBill } from "../firebaseConfig";
-import "./Bill.scss";
+import React, { useContext, useState } from 'react';
+import Item from './Item';
+import { P, P2, H2 } from './Styling';
+import Button from './button';
+import { AppContext } from '../AppContext';
+import { firebase, addBill } from '../firebaseConfig';
+import './Bill.scss';
 
 export default function Bill() {
-  let { bill, setBill, idOrder } = useContext(AppContext);
-  const [client, setClient] = useState(" ");
+  const { bill, setBill, idOrder } = useContext(AppContext);
+  const [client, setClient] = useState(' ');
 
-  let products = bill.map((prod, i) => (
+  const products = bill.map((prod, i) => (
     <Item
       grid="box-grid"
-      cName='bill-box'
+      cName="bill-box"
       key={prod.name + i}
       name={prod.name}
       price={prod.price}
@@ -31,27 +31,27 @@ export default function Bill() {
   const handleClient = (e) => setClient(e.currentTarget.value);
 
   const handleSend = () => {
-    if (client !== " ") {
+    if (client !== ' ') {
       const order = {
-        client: client,
+        client,
         products: bill,
         total: totalWithIva,
         isDone: false,
         isDeliver: false,
         date: firebase.firestore.Timestamp.now(),
-        idOrder: idOrder,
+        idOrder,
       };
       addBill(order);
       setBill([]);
-      setClient(" ");
+      setClient(' ');
     } else {
-      alert("escribe nombre");
+      alert('escribe nombre');
     }
   };
 
   const handleCancel = () => {
     setBill([]);
-    setClient(" ");
+    setClient(' ');
   };
 
   return (
@@ -80,11 +80,17 @@ export default function Bill() {
         </div>
         <div className="bill-total">
           <P2>IVA(10%)</P2>
-          <P2>${tax}</P2>
+          <P2>
+            $
+            {tax}
+          </P2>
         </div>
         <div className="bill-total">
           <H2>TOTAL</H2>
-          <H2>${totalWithIva}</H2>
+          <H2>
+            $
+            {totalWithIva}
+          </H2>
         </div>
       </div>
       <div className="bill-botton">
@@ -92,12 +98,12 @@ export default function Bill() {
           cName="btn-default abort"
           text="CANCELAR"
           onClick={handleCancel}
-        ></Button>
+        />
         <Button
           cName="btn-default send"
           text="ENVIAR"
           onClick={handleSend}
-        ></Button>
+        />
       </div>
     </section>
   );

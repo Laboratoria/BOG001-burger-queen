@@ -1,11 +1,11 @@
-import React, { useState, useContext } from "react";
-import { H2 } from "./Styling";
-import Button from "./button";
-import "./Card.scss";
-import { AppContext } from "../AppContext";
+import React, { useState, useContext } from 'react';
+import { H2 } from './Styling';
+import Button from './button';
+import './Card.scss';
+import { AppContext } from '../AppContext';
 
 function Card(props) {
-  let { clickToOpen, addProduct } = useContext(AppContext);
+  const { clickToOpen, addProduct } = useContext(AppContext);
 
   const [count, setCount] = useState(1);
 
@@ -37,20 +37,20 @@ function Card(props) {
           width="auto"
           height="100%"
         />
-        <H2 className="card-info-price">{"$ " + props.price}</H2>
-        {props.name.includes("Hamburguesa") ? (
+        <H2 className="card-info-price">{`$ ${props.price}`}</H2>
+        {props.name.includes('Hamburguesa') ? (
           <>
             <Button
               id={props.name}
               cName="card-btn btn-default confirm card-options"
               text="Opciones"
               onClick={handleModal}
-            ></Button>
+            />
           </>
         ) : (
           <>
             <label
-              htmlFor={props.name + "quantity"}
+              htmlFor={`${props.name}quantity`}
               className="card-info-input"
             >
               <input
@@ -59,14 +59,14 @@ function Card(props) {
                 data-price={props.price}
                 type="number"
                 onChange={(e) => handleInputChanges(e)}
-              ></input>
+              />
             </label>
             <Button
               cName="card-btn btn-default confirm"
               text="Agregar"
               onClick={handleClick}
             >
-              {" "}
+              {' '}
             </Button>
           </>
         )}

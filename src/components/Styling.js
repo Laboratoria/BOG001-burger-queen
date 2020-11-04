@@ -14,10 +14,10 @@ color: black;
 font-weight: bold;
 `
 const H = styled.h1`
-font-family: 'Roboto' , sans-serif;
-font-size: 20px;
-color: black;
-font-weight: bold;
+font-family: 'Open Sans' , sans-serif;
+font-size: 22px;
+color: #544c54;
+font-weight: 600;
 `
 
 const H2 = styled.h2`
@@ -30,9 +30,9 @@ font-weight: bold;
 const P2 = styled.p`
 font-family: 'Roboto' , sans-serif;
 font-size: 16px;
-color: black;
+color:${(props) => (props.error ? "#D83131" : "black") };
 `
-export { H1,P, H2, P2, H }
 
-
-
+export {
+  H1, P, H2, P2, H,
+}

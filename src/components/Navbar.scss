@@ -1,23 +1,29 @@
-@import 'src/App.scss';
+@import "src/App.scss";
 
-
-.nav-menu{
+.nav-menu {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  background-color:$omega;
+  background-color: $omega;
 }
 
-.nav-item{
+.nav-item {
   list-style: none;
-
+  &.name {
+    position: relative;
+    left: 400px;
+    text-transform: uppercase;
+    > p{
+      color:$gamma;
+    }
+  }
   .nav-links {
     display: block;
-    padding:20px;
+    padding: 20px;
     text-decoration: none;
     margin: auto;
-    &.active{
+    &.active {
       border-bottom: 3px solid $gamma;
-  }
+    }
   }
 }

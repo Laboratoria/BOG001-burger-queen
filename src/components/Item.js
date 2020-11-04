@@ -1,26 +1,32 @@
-import React, { useContext } from "react";
-import { P2 } from "./Styling";
-import "./Item.scss";
-import { AppContext } from "../AppContext";
+import React, { useContext } from 'react';
+import { P2 } from './Styling';
+import './Item.scss';
+import { AppContext } from '../AppContext';
+import Delete from '../assets/delete.svg';
 
-export default function Item({ name, price, quantity, grid, id, userRol }) {
-  let { deleteProduct } = useContext(AppContext);
+export default function Item({
+  name, price, quantity, grid, id, userRol,
+}) {
+  const { deleteProduct } = useContext(AppContext);
 
   const handleDelete = () => {
     deleteProduct(id);
   };
 
   return (
-    <div className={"bill-box " + grid}>
+    <div className={`bill-box ${grid}`}>
       <P2 className="bill-box-quantities">{quantity}</P2>
       <P2>{name}</P2>
-          <P2 className="bill-box-price">{"$" + price} </P2>
-          <img
-            src="https://firebasestorage.googleapis.com/v0/b/burger-queen-ad2b2.appspot.com/o/016-delete-min.png?alt=media&token=7783a77e-2f23-4c94-9e1f-bcefbaaf8c04"
-            alt="delete"
-            className="bill-box-delete"
-            onClick={handleDelete}
-          ></img>
+      <P2 className="bill-box-price">
+        {`$${price}`}
+        {' '}
+      </P2>
+      <img
+        src={Delete}
+        alt="delete"
+        className="bill-box-delete"
+        onClick={handleDelete}
+      />
     </div>
   );
 }
