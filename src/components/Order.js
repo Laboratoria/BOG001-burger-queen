@@ -40,13 +40,11 @@ export default function Order({ data, rol }) {
   } else {
     rolBq = (
       <>
-        <footer>
           <div className="order-total">
             <H2>TOTAL</H2>
             <H2>{`$ ${data.total}`}</H2>
           </div>
           <Button cName="btn-default send" text="ENTREGAR" onClick={handleDeliver} />
-        </footer>
       </>
     )
   }
@@ -71,7 +69,9 @@ export default function Order({ data, rol }) {
           {products}
         </tbody>
       </table>
-      {rolBq}
+      <footer>
+        {rolBq}
+      </footer>
     </article>
   );
 }

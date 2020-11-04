@@ -1,14 +1,14 @@
 @import "src/App.scss";
 
 .stopwatch {
-  border: 3px solid $omega;
+  border: 1px solid $omega;
   border-radius: 5px;
   width: 120px;
   justify-content:center;
   height: 35px;
   display: flex;
   align-items: center;
-  margin: auto;
+  margin: 30px auto;
   & > p {
     color: $gamma; 
   }

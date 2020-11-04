@@ -1,10 +1,33 @@
 @import "src/App.scss";
 
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  width: 100vw;
+  height: 100px;
+  background-color: $omega;
+  
+  & > div {
+    display: flex;
+    align-items: center;
+  }
+  & > div > p {
+    text-transform: uppercase;
+  }
+}
+
+.navbar-logo{
+  width: 80px;
+  height: auto;
+  margin-right: 20px;
+}
+
 .nav-menu {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  background-color: $omega;
 }
 
 .nav-item {
@@ -19,11 +42,11 @@
   }
   .nav-links {
     display: block;
-    padding: 20px;
+    padding: 35px  20px;
     text-decoration: none;
     margin: auto;
     &.active {
-      border-bottom: 3px solid $gamma;
+      border-bottom: 4px solid $gamma;
     }
   }
 }

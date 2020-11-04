@@ -21,12 +21,12 @@
   display: flex;
   width: 100%;
   position: absolute;
+  border-top:2px solid $zeta;
   bottom: 20px;
   flex-direction: column;
 }
 .order-client{
-    padding: 15px;
-    font-weight: bold;
+    padding: 0 15px 15px;
     font-size: 20px;
 }
 
@@ -58,7 +58,6 @@ th:last-child{
   justify-content: space-between;
   padding:20px;
   margin-bottom: 20px;
-  border-top:2px solid $zeta;
 }
 .oder-time{
   margin:30px;

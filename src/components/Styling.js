@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const P = styled.p`
 font-family: 'Roboto' , sans-serif;
 font-size: 18px;
-color: black;
+color: ${(props) => (props.employee ? '#4D2B91' : 'black')};
 font-weight: regular;
 `
 const H1 = styled.h1`
@@ -26,7 +26,7 @@ color: black;
 font-weight: bold;
 `
 
-const P2 = styled.p`
+const P2 = styled(P)`
 font-family: 'Roboto' , sans-serif;
 font-size: 16px;
 color:${(props) => (props.error ? '#D83131' : 'black')};
