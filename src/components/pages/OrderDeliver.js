@@ -6,7 +6,7 @@ import Order from '../Order'
 export default function OrderChef() {
   const { order } = useContext(AppContext);
 
-  const OrderToDeliver = order.filter((order) => order.isDone === true && order.isDeliver === false).map((dataOrder, i) => <Order key={`order${i}`} data={dataOrder} rol={false} />)
+  const OrderToDeliver = order.filter((orderClient) => orderClient.isDone === true && orderClient.isDeliver === false).map((dataOrder, i) => <Order key={`order${i}`} data={dataOrder} rol={false} />)
 
   return (
     <>

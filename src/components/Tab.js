@@ -2,15 +2,22 @@ import React, { useState } from 'react';
 import './Tab.scss';
 import Card from './Card'
 
-export default function Tab(props) {
+export default function Tab({ menu }) {
   const [click, setClick] = useState({ active: 'Desayuno' });
   const handleClick = (e) => {
     setClick({ active: e.target.id });
   };
-  let menu;
-  const tabs = props.menu.map((section, index) => {
+  let Allmenu;
+  const tabs = menu.map((section, index) => {
     if (click.active === section.id) {
-      menu = section.menu.map((content, i) => <Card name={content.name} price={content.price} img={content.img} key={content.name + i} />)
+      Allmenu = section.menu.map((content, i) => (
+        <Card
+          name={content.name}
+          price={content.price}
+          img={content.img}
+          key={content.name + i}
+        />
+      ));
     }
     return (
       <li
@@ -27,7 +34,7 @@ export default function Tab(props) {
   return (
     <div className="menu-container">
       <ul className="tab-list">{tabs}</ul>
-      <section className="container-card">{menu}</section>
+      <section className="container-card">{Allmenu}</section>
     </div>
   );
 }

@@ -4,9 +4,7 @@ import './Item.scss';
 import { AppContext } from '../AppContext';
 import Delete from '../assets/delete.svg';
 
-export default function Item({
-  name, price, quantity, grid, id, userRol,
-}) {
+export default function Item({ name, price, quantity, grid, id }) {
   const { deleteProduct } = useContext(AppContext);
 
   const handleDelete = () => {

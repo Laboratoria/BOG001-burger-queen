@@ -11,7 +11,6 @@ function App() {
   return (
     <>
       <Router>
-
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/nueva-orden" exact component={NewOrder} />

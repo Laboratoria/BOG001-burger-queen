@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 
-
 const P = styled.p`
 font-family: 'Roboto' , sans-serif;
 font-size: 18px;
@@ -30,7 +29,7 @@ font-weight: bold;
 const P2 = styled.p`
 font-family: 'Roboto' , sans-serif;
 font-size: 16px;
-color:${(props) => (props.error ? "#D83131" : "black") };
+color:${(props) => (props.error ? '#D83131' : 'black')};
 `
 
 export {

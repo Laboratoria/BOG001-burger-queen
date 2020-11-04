@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Tab from '../Tab';
-import { db } from '../../firebaseConfig.js';
+import { db } from '../../firebaseConfig';
 import Modal from '../Modal';
 import Bill from '../Bill';
 import NavBar from '../Navbar';
@@ -18,15 +18,16 @@ const NewOrder = () => {
 
         querySnapshot.forEach((doc) => {
           if (doc.id === 'Breakfast' || doc.id === 'Lunch') {
-            return tabMenu.push({
+            tabMenu.push({
               menu: Object.values(doc.data()),
               id: doc.id === 'Breakfast' ? 'Desayuno' : 'Fuerte',
             });
+          } else {
+            modalMenu.push({
+              menu: Object.values(doc.data()),
+              id: doc.id === 'Options' ? 'Carne' : 'Adicionales',
+            });
           }
-          modalMenu.push({
-            menu: Object.values(doc.data()),
-            id: doc.id === 'Options' ? 'Carne' : 'Adicionales',
-          });
         });
         setMenu(tabMenu);
         setModal(modalMenu);

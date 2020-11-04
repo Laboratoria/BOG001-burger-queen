@@ -16,9 +16,17 @@
     flex-direction: column;
     & > label{
        display: flex;
-       justify-content: space-around;
+       flex-direction: column;
        line-height: 3; 
        margin: 10px;
+       & > div{
+           display: flex;
+           justify-content: space-around;
+       }
+       > p {
+           line-height: 0;
+           margin: 0 20px 10px auto;
+       }
     }
 }
 

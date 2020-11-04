@@ -13,7 +13,7 @@ export default function Stopwatch({ timeStart, idDoc }) {
 
   useEffect(() => {
     const x = setInterval(() => {
-      setTime((time) => Date.now() - timeStart);
+      setTime(() => Date.now() - timeStart);
     }, 1000);
     return () => clearInterval(x);
   }, [timeStart]);

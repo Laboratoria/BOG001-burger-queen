@@ -1,8 +1,8 @@
 import React, { useContext, useState } from 'react';
+import ReactDom from 'react-dom';
 import { H1, H2 } from './Styling';
 import Button from './button';
 import './Modal.scss';
-import ReactDom from 'react-dom';
 import { AppContext } from '../AppContext';
 
 export default function Modal({ info }) {

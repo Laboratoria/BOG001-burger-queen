@@ -2,9 +2,7 @@ import React from 'react';
 import { P2 } from './Styling';
 import './ItemOrder.scss';
 
-export default function ItemOrder({
-  name, price, quantity, id, userRol,
-}) {
+export default function ItemOrder({ name, price, quantity, userRol }) {
   return (
     <tr className="item-order">
 

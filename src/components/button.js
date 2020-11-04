@@ -1,14 +1,14 @@
 import React from 'react';
 import './Button.scss';
 
-const Button = (props) => (
+const Button = ({ cName, onClick, img, text }) => (
   <button
-    className={props.cName}
+    className={cName}
     type="button"
-    onClick={props.onClick}
+    onClick={onClick}
   >
-    {props.img}
-    {props.text}
+    {img}
+    {text}
   </button>
 );
 

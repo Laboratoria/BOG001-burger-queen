@@ -1,41 +1,40 @@
-import React, { useContext, useState } from "react";
-import { Link } from "react-router-dom";
-import Button from "../button";
-import { H, P } from "../Styling";
-import "./Home.scss";
-import logo from "../../assets/Logo.png";
-import chef from "../../assets/chef.svg";
-import waiter from "../../assets/waiter.svg";
-import { AppContext } from "../../AppContext";
+import React, { useContext, useState } from 'react';
+import { Link } from 'react-router-dom';
+import Button from '../button';
+import { H, P2 } from '../Styling';
+import './Home.scss';
+import logo from '../../assets/Logo.png';
+import chef from '../../assets/chef.svg';
+import waiter from '../../assets/waiter.svg';
+import { AppContext } from '../../AppContext';
 
 export default function Home() {
-  const { employee, setEmployee } = useContext(AppContext);
-  const [name, setName] = useState("");
-  const [error, setError] = useState("");
+  const { setEmployee } = useContext(AppContext);
+  const [name, setName] = useState('');
+  const [error, setError] = useState('');
 
   const handleEmployee = (e) => {
     setName(e.currentTarget.value);
   };
 
   const handleClickHome = () => {
-    if (name !== "") {
+    if (name !== '') {
       setEmployee(name);
     } else {
-      setError(<P error > Escribe tu nombre</P>);
+      setError(<P2 error> Escribe tu nombre</P2>);
     }
   };
 
-  console.log(error);
   return (
     <div id="home">
       <section className="home-section">
-        <img src={logo} alt="Logo" />
-        <H>"Fresco y auténtico"</H>
+        <img src={logo} srcSet={`${logo} 300w`} alt="Logo" />
+        <H>&quot;Fresco y auténtico&quot;</H>
       </section>
       <section className="home-section">
         <div>
-          <h3 className="letra">¡Bienvenido!</h3>
-          <label>
+          <h1 className="letra">¡Bienvenido!</h1>
+          <label htmlFor="name-employee">
             <H>Ingresa tú nombre</H>
             <input
               type="text"
@@ -46,7 +45,7 @@ export default function Home() {
             {error}
           </label>
           <H>Escoge tú rol</H>
-          <Link to={name !== "" ? "/pedidos" : "/"}>
+          <Link to={name !== '' ? '/pedidos' : '/'}>
             <Button
               cName="btn-home"
               img={<img className="icon-home" src={chef} alt="chef" />}
@@ -54,7 +53,7 @@ export default function Home() {
               onClick={handleClickHome}
             />
           </Link>
-          <Link to={name !== "" ? "/nueva-orden" : "/"}>
+          <Link to={name !== '' ? '/nueva-orden' : '/'}>
             <Button
               cName="btn-home"
               img={<img className="icon-home" src={waiter} alt="waiter" />}

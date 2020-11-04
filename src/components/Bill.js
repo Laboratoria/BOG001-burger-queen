@@ -9,6 +9,7 @@ import './Bill.scss';
 export default function Bill() {
   const { bill, setBill, idOrder } = useContext(AppContext);
   const [client, setClient] = useState(' ');
+  const [error, setError] = useState('');
 
   const products = bill.map((prod, i) => (
     <Item
@@ -45,7 +46,7 @@ export default function Bill() {
       setBill([]);
       setClient(' ');
     } else {
-      alert('escribe nombre');
+      setError(<P2 error> Escribe el nombre del cliente</P2>);
     }
   };
 
@@ -62,14 +63,17 @@ export default function Bill() {
             <P className="bill-info-client">{`# ${idOrder}`}</P>
           </div>
           <label htmlFor="client">
-            <P>Cliente</P>
-            <input
-              type="text"
-              id="client"
-              className="bill-info-input"
-              value={client}
-              onChange={handleClient}
-            />
+            <div>
+              <P>Cliente</P>
+              <input
+                type="text"
+                id="client"
+                className="bill-info-input"
+                value={client}
+                onChange={handleClient}
+              />
+            </div>
+            {error}
           </label>
         </div>
         <div className="bill-title">

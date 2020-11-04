@@ -6,7 +6,7 @@ import { AppContext } from '../../AppContext';
 export default function DeliverChef() {
   const { order } = useContext(AppContext);
 
-  const OrderDone = order.filter((order) => order.isDone === true).map((dataOrder, i) => <Order key={`order${i}`} data={dataOrder} rol />)
+  const OrderDone = order.filter((orderClient) => orderClient.isDone === true).map((dataOrder, i) => <Order key={`order${i}`} data={dataOrder} rol />)
 
   return (
     <>

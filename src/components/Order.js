@@ -6,27 +6,34 @@ import Stopwatch from './Stopwatch'
 import './Order.scss'
 import { updateOrder } from '../firebaseConfig'
 
-export default function Order(props) {
-  const infoOrder = props.data;
-  const products = infoOrder.products.map((item, i) => <ItemOrder key={item.name + i} name={item.name} quantity={item.quantity} price={item.price} userRol={props.rol} />)
+export default function Order({ data, rol }) {
+  const products = data.products.map((item, i) => (
+    <ItemOrder
+      key={item.name + i}
+      name={item.name}
+      quantity={item.quantity}
+      price={item.price}
+      userRol={rol}
+    />
+  ));
 
   const handleDeliver = () => {
-    updateOrder(infoOrder.idDoc, {
+    updateOrder(data.idDoc, {
       isDeliver: true,
     })
   }
 
   let rolBq;
-  if (props.rol) {
-    if (infoOrder.isDone === false) {
-      rolBq = <Stopwatch timeStart={infoOrder.date.toDate().getTime()} idDoc={infoOrder.idDoc} />
+  if (rol) {
+    if (data.isDone === false) {
+      rolBq = <Stopwatch timeStart={data.date.toDate().getTime()} idDoc={data.idDoc} />
     } else {
       rolBq = (
         <P className="oder-time">
           Tiempo de preparación
           <br />
           {' '}
-          {infoOrder.time}
+          {data.time}
         </P>
       )
     }
@@ -36,7 +43,7 @@ export default function Order(props) {
         <footer>
           <div className="order-total">
             <H2>TOTAL</H2>
-            <H2>{`$ ${infoOrder.total}`}</H2>
+            <H2>{`$ ${data.total}`}</H2>
           </div>
           <Button cName="btn-default send" text="ENTREGAR" onClick={handleDeliver} />
         </footer>
@@ -48,16 +55,16 @@ export default function Order(props) {
     <article className="order">
       <header>
         <div className="bill-info-number">
-          <P className="bill-info-client">{`# ${infoOrder.idOrder}`}</P>
+          <P className="bill-info-client">{`# ${data.idOrder}`}</P>
         </div>
-        <P className="order-client">{`Cliente: ${infoOrder.client}`}</P>
+        <P className="order-client">{`Cliente: ${data.client}`}</P>
       </header>
       <table className="oder-table">
         <thead>
           <tr>
             <th><P>Cant</P></th>
             <th><P>Producto</P></th>
-            {props.rol ? <th /> : <th><P>Precio</P></th>}
+            {rol ? <th /> : <th><P>Precio</P></th>}
           </tr>
         </thead>
         <tbody>

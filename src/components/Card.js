@@ -4,7 +4,7 @@ import Button from './button';
 import './Card.scss';
 import { AppContext } from '../AppContext';
 
-function Card(props) {
+function Card({ name, price, img }) {
   const { clickToOpen, addProduct } = useContext(AppContext);
 
   const [count, setCount] = useState(1);
@@ -13,14 +13,14 @@ function Card(props) {
     setCount(e.currentTarget.value);
   };
   const handleModal = () => {
-    clickToOpen(props.name, props.price);
+    clickToOpen(name, price);
   };
 
   const handleClick = () => {
     addProduct({
-      name: props.name,
-      quantity: parseInt(count),
-      price: props.price * count,
+      name,
+      quantity: parseInt(count, 10),
+      price: price * count,
       id: Math.floor(Math.random() * 100),
     });
     setCount(1);
@@ -28,20 +28,20 @@ function Card(props) {
   return (
     <>
       <div className="card">
-        <H2 className="card-name">{props.name}</H2>
+        <H2 className="card-name">{name}</H2>
 
         <img
           className="card-info-item"
-          src={props.img}
+          src={img}
           alt="food"
           width="auto"
           height="100%"
         />
-        <H2 className="card-info-price">{`$ ${props.price}`}</H2>
-        {props.name.includes('Hamburguesa') ? (
+        <H2 className="card-info-price">{`$ ${price}`}</H2>
+        {name.includes('Hamburguesa') ? (
           <>
             <Button
-              id={props.name}
+              id={name}
               cName="card-btn btn-default confirm card-options"
               text="Opciones"
               onClick={handleModal}
@@ -50,13 +50,13 @@ function Card(props) {
         ) : (
           <>
             <label
-              htmlFor={`${props.name}quantity`}
+              htmlFor={`${name}quantity`}
               className="card-info-input"
             >
               <input
                 value={count}
-                name={props.name}
-                data-price={props.price}
+                name={name}
+                data-price={price}
                 type="number"
                 onChange={(e) => handleInputChanges(e)}
               />
