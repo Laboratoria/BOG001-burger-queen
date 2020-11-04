@@ -15,6 +15,22 @@ firebase.initializeApp(firebaseConfig);
 
 const db = firebase.firestore();
 
+db.settings({
+  cacheSizeBytes: db.CACHE_SIZE_UNLIMITED,
+});
+
+db.enablePersistence().catch((err) => {
+  if (err.code === 'failed-precondition') {
+    // Multiple tabs open, persistence can only be enabled
+    // in one tab at a a time.
+    // ...
+  } else if (err.code === 'unimplemented') {
+    // The current browser does not support all of the
+    // features required to enable persistence
+    // ...
+  }
+});
+
 function addBill(data) {
   db.collection('orders').add(data);
 }
@@ -26,6 +42,4 @@ const updateOrder = async (id, fields) => {
   }
 };
 
-export {
-  db, addBill, firebase, updateOrder,
-};
+export { db, addBill, firebase, updateOrder };
