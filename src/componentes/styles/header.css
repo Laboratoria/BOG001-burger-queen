@@ -1,0 +1,55 @@
+@font-face{
+    font-family: kind;
+    src: url(../styles/Kind.otf);
+}
+.Navbar {
+    width: 100%;
+    padding: 0.5rem 0;
+    background-color: #581010;
+  }
+.Navbar-c{
+   background-color: #233152;
+}
+  .Navbar__brand {
+    color: #ffffff;
+  
+    display: flex;
+    align-items: center;
+  }
+  
+  .Navbar__brand:hover {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  .Navbar__brand-logo {
+    margin-right: 0.9rem;
+    width: -90%;
+  }
+  .font-weight-light{
+      font-family: kind;
+      font-size: 9vw;
+  }
+  .font-weight-bold{
+    font-family: kind;
+    font-size: 9vw;
+  }
+ .Navbar-p{
+    display:inline;
+    font-size: 3vw;
+    padding: 5rem;
+    float: right;
+    margin-top: -13%;
+    color: #ffffff;
+ }
+ a{
+    text-decoration: none;
+}
+
+@media (min-width: 700px) and (max-width: 1290px){
+    .Navbar-p{ 
+        padding: 3.7rem 2rem;
+        margin-top: -19%;
+}
+
+}
