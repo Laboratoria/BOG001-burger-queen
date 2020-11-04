@@ -4,7 +4,7 @@ import { db } from './firebaseConfig';
 const AppContext = React.createContext();
 const { Provider, Consumer } = AppContext;
 
-export default function WeiterProvider({ children }) {
+export default function AppProvider({ children }) {
   const [isOpen, setIsOpen] = useState(false);
   const [burger, stateBurger] = useState({});
   const clickToOpen = (name, price) => {
@@ -63,4 +63,4 @@ export default function WeiterProvider({ children }) {
   );
 }
 
-export { WeiterProvider, AppContext, Consumer };
+export { AppProvider, AppContext, Consumer };
