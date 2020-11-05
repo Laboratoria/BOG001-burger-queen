@@ -1,6 +1,7 @@
 import React from 'react';
-import '../css/Home.css';
-import background from '../../src/img/background.jpg'
+import '../views/css/Home.css';
+import background from '../img/background.jpg'
+
 
 const Home = () => {
   return (
