@@ -34,8 +34,8 @@ function Card({ name, price, img }) {
           className="card-info-item"
           src={img}
           alt="food"
-          width="auto"
-          height="100%"
+          width="40"
+          height="40"
         />
         <H2 className="card-info-price">{`$ ${price}`}</H2>
         {name.includes('Hamburguesa') ? (

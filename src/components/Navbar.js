@@ -1,8 +1,7 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { P } from './Styling';
 import './Navbar.scss';
-import { AppContext } from '../AppContext';
 import Logo from '../assets/Logo.png';
 
 const menuItems = [
@@ -27,9 +26,8 @@ const menuItems = [
     user: 'chef',
   },
 ];
-
 export default function Navbar(props) {
-  const { employee } = useContext(AppContext);
+  const nameEmployee = localStorage.getItem('employ')
   return (
     <nav className="navbar">
       <div>
@@ -56,7 +54,7 @@ export default function Navbar(props) {
             ))}
         </ul>
       </div>
-      <div><P employee>{employee}</P></div>
+      <div><P employee>{nameEmployee}</P></div>
     </nav>
   );
 }

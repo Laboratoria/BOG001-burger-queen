@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Button from '../button';
 import { H, P2 } from '../Styling';
@@ -6,10 +6,8 @@ import './Home.scss';
 import logo from '../../assets/Logo.png';
 import chef from '../../assets/chef.svg';
 import waiter from '../../assets/waiter.svg';
-import { AppContext } from '../../AppContext';
 
 export default function Home() {
-  const { setEmployee } = useContext(AppContext);
   const [name, setName] = useState('');
   const [error, setError] = useState('');
 
@@ -19,7 +17,7 @@ export default function Home() {
 
   const handleClickHome = () => {
     if (name !== '') {
-      setEmployee(name);
+      localStorage.setItem('employ', name);
     } else {
       setError(<P2 error> Escribe tu nombre</P2>);
     }

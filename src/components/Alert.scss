@@ -1,0 +1,18 @@
+@import "src/App.scss";
+
+.swal-title, .swal-text{
+  font-family: 'Roboto', sans-serif;
+}
+.swal-button--confirm{
+  background-color: $sigma;
+}
+.swal-button--confirm:hover{
+  background-color: $sigma;
+}
+.swal-button{
+  width:100px ;
+  height: 40px;
+}
+.swal-button--danger{
+  background-color: $epsylon;
+}

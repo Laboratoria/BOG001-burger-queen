@@ -9,7 +9,7 @@ import './Bill.scss';
 
 export default function Bill() {
   const { bill, setBill, idOrder } = useContext(AppContext);
-  const [client, setClient] = useState(' ');
+  const [client, setClient] = useState('');
   const [error, setError] = useState('');
 
   const products = bill.map((prod, i) => (
@@ -33,8 +33,8 @@ export default function Bill() {
   const handleClient = (e) => setClient(e.currentTarget.value);
 
   const handleSend = () => {
-    const addOrder = () => {
-      if (client !== ' ') {
+    if (client !== '') {
+      const addOrder = () => {
         const order = {
           client,
           products: bill,
@@ -46,20 +46,21 @@ export default function Bill() {
         };
         addBill(order);
         setBill([]);
-        setClient(' ');
-      } else {
-        setError(<P2 error> Escribe el nombre del cliente</P2>);
+        setClient('');
+        setError('');
       }
+      Alert('Seguro que quieres enviar la orden', 'success', false, 'La orden ha sido enviada', addOrder)
+    } else {
+      setError(<P2 error> Escribe el nombre del cliente</P2>);
     }
-    Alert('Seguro que quieres enviar la orden', 'success', 'la orden ha sido enviada', addOrder)
-  };
+  }
 
   const handleCancel = () => {
     const cleanOrder = () => {
       setBill([]);
-      setClient(' ');
+      setClient('');
     }
-    Alert('Seguro que quieres cancelar la orden', 'error', 'la orden ha sido cancelada', cleanOrder)
+    Alert('Seguro que quieres cancelar la orden', 'error', true, 'La orden ha sido cancelada', cleanOrder)
   };
 
   return (
