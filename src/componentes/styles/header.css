@@ -8,7 +8,9 @@
     background-color: #581010;
   }
 .Navbar-c{
-   background-color: #233152;
+  width: 100%;
+  padding: 0.5rem 0;
+  background-color: #233152;
 }
   .Navbar__brand {
     color: #ffffff;
