@@ -5,14 +5,14 @@ import './index.css';
 //import App from './App';
 //import reportWebVitals from './reportWebVitals';
 //import Header from './componentes/header.js';
-//import PrincipalMesero from './pages/principalMesero';
-import PrincipalCocina from './pages/principalCocina';
+import PrincipalMesero from './pages/principalMesero';
+//import PrincipalCocina from './pages/principalCocina';
 //import HeaderCocina from './componentes/HeaderCocina';
 
 const container = document.getElementById('root');
 
 // ReactDOM.render(__qué__, __dónde__);
-ReactDOM.render(<PrincipalCocina />,container);
+ReactDOM.render(<PrincipalMesero />,container);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
