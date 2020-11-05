@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import Item from './Item';
 import { P, P2, H2 } from './Styling';
 import Button from './button';
+import Alert from './Alert'
 import { AppContext } from '../AppContext';
 import { firebase, addBill } from '../firebaseConfig';
 import './Bill.scss';
@@ -32,27 +33,33 @@ export default function Bill() {
   const handleClient = (e) => setClient(e.currentTarget.value);
 
   const handleSend = () => {
-    if (client !== ' ') {
-      const order = {
-        client,
-        products: bill,
-        total: totalWithIva,
-        isDone: false,
-        isDeliver: false,
-        date: firebase.firestore.Timestamp.now(),
-        idOrder,
-      };
-      addBill(order);
-      setBill([]);
-      setClient(' ');
-    } else {
-      setError(<P2 error> Escribe el nombre del cliente</P2>);
+    const addOrder = () => {
+      if (client !== ' ') {
+        const order = {
+          client,
+          products: bill,
+          total: totalWithIva,
+          isDone: false,
+          isDeliver: false,
+          date: firebase.firestore.Timestamp.now(),
+          idOrder,
+        };
+        addBill(order);
+        setBill([]);
+        setClient(' ');
+      } else {
+        setError(<P2 error> Escribe el nombre del cliente</P2>);
+      }
     }
+    Alert('Seguro que quieres enviar la orden', 'success', 'la orden ha sido enviada', addOrder)
   };
 
   const handleCancel = () => {
-    setBill([]);
-    setClient(' ');
+    const cleanOrder = () => {
+      setBill([]);
+      setClient(' ');
+    }
+    Alert('Seguro que quieres cancelar la orden', 'error', 'la orden ha sido cancelada', cleanOrder)
   };
 
   return (
