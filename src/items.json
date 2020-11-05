@@ -1,0 +1,106 @@
+{
+  "items": [
+    {
+      "Hamburguesa Simple": {
+        "id": "hamburguesa_1",
+        "name": "Hamburguesa Simple",
+        "price": 10,
+        "img": "/images/cafe_americano.jpg",
+        "type": ["Principal"],
+        "class": ["res", "pollo", "vegetariana"]
+      },
+      "Hamburguesa Doble": {
+        "id": "hamburguesa_2",
+        "name": "Hamburguesa Doble",
+        "price": 15,
+        "img": "/images/cafe_americano.jpg",
+        "type": ["Principal"],
+        "class": ["res", "pollo", "vegetariana"]
+      },
+      "Papas Fritas": {
+        "id": "papas-fritas",
+        "name": "Papas Fritas",
+        "price": 5,
+        "img": "/images/cafe_americano.jpg",
+        "type": ["Acompañamientos"]
+      },
+      "Aros de cebolla": {
+        "id": "aros-cebolla",
+        "name": "Aros de cebolla",
+        "price": 5,
+        "img": "/images/cafe_americano.jpg",
+        "type": ["Acompañamientos"]
+      },
+      "Agua 500 ml": {
+        "id": "agua_500ml",
+        "name": "Agua 500ml",
+        "price": 5,
+        "img": "/images/agua_500ml.jpg",
+        "type": ["Principal"]
+      },
+      "Agua 750 ml": {
+        "id": "agua_750ml",
+        "name": "Agua 750ml",
+        "price": 7,
+        "img": "/images/agua_750ml.jpg",
+        "type": ["Principal"]
+      },
+      "Gaseosa 500ml": {
+        "id": "gaseosa_500ml",
+        "name": "Gaseosa 500ml",
+        "price": 7,
+        "img": "/images/gaseosa_500ml.jpg",
+        "type": ["Principal"]
+      },
+      "Gaseosa 750 ml": {
+        "id": "gaseosa_750ml",
+        "name": "Gaseosa 750ml",
+        "price": 7,
+        "img": "/images/gaseosa_750ml.jpg",
+        "type": ["Princiapl"]
+      },
+      "Café Americano": {
+        "id": "cafe_americano",
+        "name": "Café Americano",
+        "price": 5,
+        "img": "/images/cafe_americano.jpg",
+        "type": ["Desayuno"]
+      },
+      "Café con Leche": {
+        "id": "cafe_con_leche",
+        "name": "Café con leche",
+        "price": 5,
+        "img": "/images/cafe_con_leche.jpg",
+        "type": ["Desayuno"]
+      },
+      "Sandwich de jamón y queso": {
+        "id": "sandwich_de_jamon_y_queso",
+        "name": "Sandwich de jamón y queso",
+        "price": 5,
+        "img": "/images/sandwich_de_jamon_y_queso.png",
+        "type": ["Desayuno"]
+      },
+      "Jugo de frutas natural": {
+        "id": "jugo_de_frutas_natural",
+        "name": "Jugo de frutas natural",
+        "price": 5,
+        "img": "/images/jugo_de_frutas_natural.jpg",
+        "type": ["Desayuno"]
+      },
+      "Queso": {
+        "id": "queso",
+        "name": "Queso",
+        "price": 1,
+        "img": "/images/agua_500ml.jpg",
+        "type": ["Adición"]
+      },
+      "Huevo": {
+        "id": "huevo",
+        "name": "Huevo",
+        "price": 1,
+        "img": "/images/agua_500ml.jpg",
+        "type": ["Adicón"]
+      }
+    }
+  ]
+}

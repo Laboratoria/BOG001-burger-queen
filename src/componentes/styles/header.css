@@ -15,16 +15,19 @@
   
     display: flex;
     align-items: center;
+    height: 7em;
   }
   
   .Navbar__brand:hover {
     color: #ffffff;
     text-decoration: none;
+    height: 9em;
   }
   
   .Navbar__brand-logo {
     margin-right: 0.9rem;
-    width: -90%;
+    width: 5em;
+    padding-left: 2em;
   }
   .font-weight-light{
       font-family: kind;

@@ -5,7 +5,7 @@ import "../style/principalMesero.css";
 class PrincipalMesero extends React.Component {
   render() {
     return (
-      <div>
+      <React.Fragment>
         <Header />
         <div className="card-body">
           <div className="form-group">
@@ -14,14 +14,18 @@ class PrincipalMesero extends React.Component {
               rows="8"
               cols="98"
               id="miid"
-              class="form-control"
+              className="form-control"
               placeholder="____________________________________________________________"
             ></textarea>
           </div>
         </div>
-      </div>
+        <div className='container'>
+        </div>
+      </React.Fragment>
     );
   }
 }
 
 export default PrincipalMesero;
+
+

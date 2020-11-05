@@ -1,15 +1,23 @@
 :root {
   --main-color: rgba(180, 103, 103, 0.226);
-  --secondary-color: rgb(252, 117, 27);
-  --secondary-buttons: rgb(253, 159, 97);
+  --headerMesero-color: #581010;
+  --headerCocina-color: #233152;
+  --borderRadius-buttoms: 20px;
+  --borderSecundary-buttoms: 0 20px 20px 0;
+  --borderThird-buttoms:20px 0 0 20px;
+  --buttoms-color: rgba(255, 255, 255, 0.80);
+  --buttomsSecundary-color:#E0BDBD;
+  --buttomSecundary-Over:#D19E9E;
+  --padding-buttoms: 1em;
 }
 html{
     background-color: var(--main-color);
 
 }.form-control{
-    background-color: #b4676770;
-    border-radius: 15px;
+    background-color: rgba(179, 101, 101, 0.23);
+    border-radius: var(--borderRadius-buttoms);
     width: 100%;
+    border: none;
    }
    #miid::placeholder {
     padding-left: 700px;
