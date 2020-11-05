@@ -1,0 +1,46 @@
+:root {
+    --main-color: rgba(180, 103, 103, 0.226);
+    --headerMesero-color: #581010;
+    --headerCocina-color: #233152;
+    --borderRadius-buttoms: 20px;
+    --borderSecundary-buttoms: 0 20px 20px 0;
+    --borderThird-buttoms:20px 0 0 20px;
+    --buttoms-color: rgba(255, 255, 255, 0.80);
+    --buttomsSecundary-color:#E0BDBD;
+    --buttomSecundary-Over:#D19E9E;
+    --padding-buttoms: 1em;
+}
+
+
+.Container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 90vh;
+    background-color:  hsla(220, 2%, 30%, 0.26);
+    padding-top: 10vh;
+}
+.grid {
+    background-color: #581010;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 0px;
+    width: 80%;
+    height: 80%;
+}
+
+.parteUno{
+    grid-area: 1 / 1 / 2 / 2; 
+    background-color: #D19E9E;
+    display: flex;
+    justify-content: center;
+}
+.parteDos{
+    grid-area: 1 / 2 / 2 / 3;; 
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+}

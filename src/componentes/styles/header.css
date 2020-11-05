@@ -8,11 +8,16 @@
     background-color: #581010;
   }
 .Navbar-c{
-   background-color: #233152;
+  width: 100vw;
+  height: 10vh;
+  padding: 0.5rem 0;
+  background-color: #233152;
+  position: fixed;
+  top: 0;
 }
   .Navbar__brand {
     color: #ffffff;
-  
+    height: 7em;
     display: flex;
     align-items: center;
   }
@@ -24,7 +29,9 @@
   
   .Navbar__brand-logo {
     margin-right: 0.9rem;
-    width: -90%;
+    width: 5em;
+    padding-left: 2em;
+  
   }
   .font-weight-light{
       font-family: kind;
@@ -48,7 +55,7 @@
 
 @media (min-width: 700px) and (max-width: 1290px){
     .Navbar-p{ 
-        padding: 3.7rem 2rem;
+        padding: 4.2rem 2rem;
         margin-top: -19%;
 }
 

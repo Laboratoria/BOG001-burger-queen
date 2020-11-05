@@ -6,7 +6,8 @@
 html{
     background-color: var(--main-color);
 
-}.form-control{
+}
+.form-control{
     background-color: #b4676770;
     border-radius: 15px;
     width: 100%;
