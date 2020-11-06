@@ -33,29 +33,29 @@ export default function Home() {
         <div>
           <h1 className="letra">¡Bienvenido!</h1>
           <label htmlFor="name-employee">
-            <H>Ingresa tú nombre</H>
+            <H>Ingresa tu nombre</H>
             <input
               type="text"
               className="name-employee"
               onChange={(e) => handleEmployee(e)}
-              placeholder="Escribe tú nombre"
+              placeholder="Nombre"
             />
             {error}
           </label>
-          <H>Escoge tú rol</H>
-          <Link to={name !== '' ? '/pedidos' : '/'}>
-            <Button
-              cName="btn-home"
-              img={<img className="icon-home" src={chef} alt="chef" />}
-              text="CHEF"
-              onClick={handleClickHome}
-            />
-          </Link>
+          <H>Escoge tu rol</H>
           <Link to={name !== '' ? '/nueva-orden' : '/'}>
             <Button
               cName="btn-home"
               img={<img className="icon-home" src={waiter} alt="waiter" />}
               text="MESERO"
+              onClick={handleClickHome}
+            />
+          </Link>
+          <Link to={name !== '' ? '/pedidos' : '/'}>
+            <Button
+              cName="btn-home"
+              img={<img className="icon-home" src={chef} alt="chef" />}
+              text="CHEF"
               onClick={handleClickHome}
             />
           </Link>

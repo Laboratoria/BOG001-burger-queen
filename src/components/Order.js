@@ -57,18 +57,20 @@ export default function Order({ data, rol }) {
         </div>
         <P className="order-client">{`Cliente: ${data.client}`}</P>
       </header>
+      <div className="oder-table-container">
       <table className="oder-table">
         <thead>
           <tr>
-            <th><P>Cant</P></th>
-            <th><P>Producto</P></th>
-            {rol ? <th /> : <th><P>Precio</P></th>}
+            <th><H2>Cant</H2></th>
+            <th><H2>Producto</H2></th>
+            {rol ? <th /> : <th><H2>Precio</H2></th>}
           </tr>
         </thead>
         <tbody>
           {products}
         </tbody>
       </table>
+      </div>
       <footer>
         {rolBq}
       </footer>

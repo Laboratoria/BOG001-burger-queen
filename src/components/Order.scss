@@ -2,7 +2,7 @@
 
 .order{
     width: 270px;
-    min-height: 550px;
+    height: 550px;
     background-color: $beta;
     border: 1px solid $zeta;
     border-radius:5px;
@@ -14,7 +14,6 @@
 
 .order > header {
   border-bottom: 2px solid $zeta;
-  margin-bottom: 20px;
 }
 
 .order > footer {
@@ -30,6 +29,19 @@
     font-size: 20px;
 }
 
+.oder-table-container {
+  overflow-y: scroll;
+  height: 320px;
+}
+
+.oder-table-container::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.oder-table-container::-webkit-scrollbar-thumb {
+  background-color: #d2cece;
+}
 
 .oder-table{
   border-collapse: collapse;
@@ -45,21 +57,22 @@ th {
   }
 }
 
-th:first-child{
+th:first-child {
   padding-left:10px;
 }
 
-th:last-child{
+th:last-child {
   padding-right:10px;
 }
 
-.order-total{
+.order-total {
   display: flex;
   justify-content: space-between;
   padding:20px;
   margin-bottom: 20px;
 }
-.oder-time{
+
+.oder-time {
   margin:30px;
   text-align: center;
   line-height: 2;

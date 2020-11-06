@@ -33,7 +33,7 @@ export default function Bill() {
   const handleClient = (e) => setClient(e.currentTarget.value);
 
   const handleSend = () => {
-    if (client !== '') {
+    if (client !== '' && bill.length !== 0) {
       const addOrder = () => {
         const order = {
           client,
@@ -49,9 +49,11 @@ export default function Bill() {
         setClient('');
         setError('');
       }
-      Alert('Seguro que quieres enviar la orden', 'success', false, 'La orden ha sido enviada', addOrder)
+      Alert('Seguro que quieres enviar la orden', 'warning', false, 'La orden ha sido enviada', addOrder)
+    } else if (client !== '' && bill.length === 0) {
+      setError(<P2 error>Añade productos</P2>);
     } else {
-      setError(<P2 error> Escribe el nombre del cliente</P2>);
+      setError(<P2 error> Escribe nombre del cliente </P2>);
     }
   }
 
@@ -77,6 +79,7 @@ export default function Bill() {
                 type="text"
                 id="client"
                 className="bill-info-input"
+                placeholder= "Nombre"
                 value={client}
                 onChange={handleClient}
               />
