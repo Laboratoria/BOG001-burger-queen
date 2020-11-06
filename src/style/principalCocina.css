@@ -37,10 +37,12 @@
     background-color: #D19E9E;
     display: flex;
     justify-content: center;
+    overflow: scroll;
 }
 .parteDos{
     grid-area: 1 / 2 / 2 / 3;; 
     background-color: aqua;
     display: flex;
     justify-content: center;
+    overflow: scroll;
 }
