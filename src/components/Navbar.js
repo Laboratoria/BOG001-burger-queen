@@ -11,8 +11,8 @@ const menuItems = [
     user: 'mesero',
   },
   {
-    name: 'Ordenes Enviadas',
-    path: '/ordenes-enviadas',
+    name: 'Ordenes por Entregar',
+    path: '/ordenes-por-entregar',
     user: 'mesero',
   },
   {

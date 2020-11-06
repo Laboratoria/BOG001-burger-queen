@@ -14,7 +14,7 @@ function App() {
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/nueva-orden" exact component={NewOrder} />
-          <Route path="/ordenes-enviadas" exact component={OrderDeliver} />
+          <Route path="/ordenes-por-entregar" exact component={OrderDeliver} />
           <Route path="/pedidos" exact component={OrderChef} />
           <Route path="/pedidos-terminados" exact component={DeliverChef} />
         </Switch>
