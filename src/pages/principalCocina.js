@@ -10,8 +10,8 @@ class PrincipalCocina extends React.Component {
                 <div className= "Container"> 
                 <HeaderCocina/>
                 <div className="grid"> 
-                <div className="parteUno"> <BotonesPedidos/> </div>
-                <div className="parteDos">  </div>
+                <div className="parteUno">  <BotonesPedidos/>  <BotonesPedidos/> <BotonesPedidos/> <BotonesPedidos/> <BotonesPedidos/> <BotonesPedidos/> <BotonesPedidos/> </div>
+                <div className="parteDos"> <div className="factura"> <div className="title">RESUMEN PEDIDO:</div><div className="resumenFactura">  LALALA </div></div> </div>
                 </div>
                 
                 </div>
