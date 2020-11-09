@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+
 body {
   text-align: center;
   background-image: url("../../img/background.jpg");
@@ -47,14 +48,14 @@ img {
   padding-top: 60px;
 }
 
-.NavLink {
+.Button {
   background-color: #ff840b;
   border: none;
   padding: 20px;
   border-radius: 5px;
 }
 
-.NavLink a {
+.Button a {
   text-decoration: none;
 }
 

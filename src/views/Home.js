@@ -1,7 +1,4 @@
 import React from 'react';
-import background from '../img/background.jpg'
-
-
 import { Link } from "react-router-dom";
 import logo from '../img/logo.png';
 
@@ -13,11 +10,11 @@ const Home = () => {
           <div className="Soy"><h1>Soy</h1></div>
 
      <div className='Buttons'>
-            <button className="NavLink">
+            <button className="Button">
               
             <Link to={'/mesero'}><h2>Mesero</h2></Link>
             </button>
-            <button className="NavLink">
+            <button className="Button">
             <Link to={'/cocinero'}><h2>Cocinero</h2></Link>
             </button>
            
