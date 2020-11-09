@@ -3,9 +3,12 @@
     src: url(../styles/Kind.otf);
 }
 .Navbar {
-    width: 100%;
+    width: 100vw;
+    height: 10vh;
     padding: 0.5rem 0;
     background-color: #581010;
+    position: fixed;
+    top: 0;
   }
 .Navbar-c{
   width: 100vw;
