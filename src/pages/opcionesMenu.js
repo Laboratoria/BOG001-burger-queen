@@ -9,7 +9,9 @@ class OpcionesMenu extends React.Component {
                 <div className= "Container"> 
                 <Header/>
                 <div className="grid"> 
-                
+                <div className="zonaImagen"> </div>
+                <div className="zonaClase"> </div>
+                <div className="zonaBotones"> </div>
                 </div>
                 
                 </div>
