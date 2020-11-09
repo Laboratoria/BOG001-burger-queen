@@ -1,0 +1,8 @@
+:root {
+    --main-color: rgba(180, 103, 103, 0.226);
+    --secondary-color: rgb(252, 117, 27);
+    --secondary-buttons: rgb(253, 159, 97);
+  }
+  html{
+      background-color: var(--main-color);
+  }

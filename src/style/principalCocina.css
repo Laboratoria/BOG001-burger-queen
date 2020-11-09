@@ -1,18 +1,12 @@
 :root {
-    --main-color: rgba(180, 103, 103, 0.226);
-    --headerMesero-color: #581010;
+    --main-color: hsla(220, 20%, 59%, 0.26);
     --headerCocina-color: #233152;
-    --borderRadius-buttoms: 20px;
-    --borderSecundary-buttoms: 0 20px 20px 0;
-    --borderThird-buttoms:20px 0 0 20px;
-    --buttoms-color: rgba(255, 255, 255, 0.80);
-    --buttomsSecundary-color:#E0BDBD;
-    --buttomSecundary-Over:#D19E9E;
-    --padding-buttoms: 1em;
+    --border-buttoms: 10px;
+    --division-color: rgb(11, 11, 11, 0.70);
 }
 
 html{
-    background-color: hsla(220, 2%, 30%, 0.26);
+    background-color: var(--main-color);
 }
 
 .Container{
@@ -37,17 +31,39 @@ html{
 
 .parteUno{
     grid-area: 1 / 1 / 2 / 2; 
-    background-color: rgb(11, 11, 11, 0.70);
-    border-radius: 10px;
-    display: flex;
+    background-color: var(--division-color);
+    border-radius: var(--border-buttoms);
+    display: inline-grid;
     justify-content: center;
     overflow: scroll;
 }
 .parteDos{
     grid-area: 1 / 2 / 2 / 3;; 
-    background-color:  rgb(11, 11, 11, 0.70);
-    border-radius: 10px;
+    background-color: var(--division-color);
+    border-radius: var(--border-buttoms);
     display: flex;
     justify-content: center;
     overflow: scroll;
+}
+
+.factura{
+    background-color: rgb(241, 236, 236);
+    color: #233152;
+    padding: 1em;
+    margin: 1em;
+    width: 80%;
+    border-radius: var(--border-buttoms);
+    overflow: scroll;
+}
+
+.title{
+    font-size: 2em;
+    padding: 0.2em;
+    border-bottom: 3px;
+    border-bottom-style: solid;
+    border-color: #233152;
+}
+.resumenFactura{
+    color: #233152;
+    margin: 1em;
 }
