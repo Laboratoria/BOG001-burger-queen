@@ -1,5 +1,4 @@
 import React from "react";
-
 import "./styles/pedidosCocina.css";
 
 class botonesPedidos extends React.Component {

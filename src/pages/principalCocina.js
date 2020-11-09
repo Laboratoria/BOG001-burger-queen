@@ -1,6 +1,7 @@
 import React from "react";
 import HeaderCocina from "../componentes/HeaderCocina";
 import '../style/principalCocina.css';
+import botonesPedidos from "../componentes/pedidosCocina";
 
 class PrincipalCocina extends React.Component {
     render() {
@@ -9,8 +10,8 @@ class PrincipalCocina extends React.Component {
                 <div className= "Container"> 
                 <HeaderCocina/>
                 <div className="grid"> 
-                <div className="parteUno"> 'parte Uno'  <botonesPedidos/> <botonesPedidos/> <botonesPedidos/> <botonesPedidos/></div>
-                <div className="parteDos">'parte dos' </div>
+                <div className="parteUno"> <botonesPedidos/> <botonesPedidos/> <botonesPedidos/> <botonesPedidos/></div>
+                <div className="parteDos">  </div>
                 </div>
                 
                 </div>

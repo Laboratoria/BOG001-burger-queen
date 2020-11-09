@@ -22,7 +22,7 @@
     padding-top: 10vh;
 }
 .grid {
-    background-color: #581010;
+    background-color: none;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
@@ -34,14 +34,16 @@
 
 .parteUno{
     grid-area: 1 / 1 / 2 / 2; 
-    background-color: #D19E9E;
+    background-color: rgb(11, 11, 11, 0.70);
+    border-radius: 10px;
     display: flex;
     justify-content: center;
     overflow: scroll;
 }
 .parteDos{
     grid-area: 1 / 2 / 2 / 3;; 
-    background-color: aqua;
+    background-color:  rgb(11, 11, 11, 0.70);
+    border-radius: 10px;
     display: flex;
     justify-content: center;
     overflow: scroll;
