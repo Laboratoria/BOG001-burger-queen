@@ -47,8 +47,7 @@ export default function Modal({ info }) {
     <section className="overlay">
       <div className="modal">
         <H1 className="modal-title">
-          Escoge la
-          {title[0]}
+          Escoge la {title[0]}
         </H1>
         <div className="modal-options">
           {options.map((item, i) => (
