@@ -1,8 +1,8 @@
 import React from "react";
 //import { Link } from 'react-router-dom';
-
 import logo from "../images/hamburguesa.svg";
 import "./styles/header.css";
+
 class HeaderCocina extends React.Component {
   render() {
     return (

@@ -1,0 +1,22 @@
+:root {
+    --main-color: rgba(180, 103, 103, 0.226);
+    --borderRadius-buttoms: 20px;
+    --borderSecundary-buttoms: 0 20px 20px 0;
+    --borderThird-buttoms:20px 0 0 20px;
+    --buttoms-color: rgba(255, 255, 255, 0.80);
+    --buttomsSecundary-color:#E0BDBD;
+    --buttomSecundary-Over:#D19E9E;
+    --padding-buttoms: 1em;
+}
+
+.botonPedido{
+    background-color: var(--buttoms-color);
+    align-items: center;
+    color : white; 
+    max-width: 200px;
+    height: 400px;
+    justify-content: center;
+    border-radius: 10px;
+    box-sizing: border-box; 
+    margin: 1px;
+}
