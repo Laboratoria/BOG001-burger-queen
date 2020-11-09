@@ -1,7 +1,7 @@
 import React from "react";
 import "./styles/pedidosCocina.css";
 
-class botonesPedidos extends React.Component {
+class BotonesPedidos extends React.Component {
     render() {
         return (
             <div className="botonPedido">
@@ -12,4 +12,4 @@ class botonesPedidos extends React.Component {
         )}
 }
 
-export default botonesPedidos;
+export default BotonesPedidos;
