@@ -11,6 +11,9 @@
     --padding-buttoms: 1em;
 }
 
+html{
+    background-color: hsla(220, 2%, 30%, 0.26);
+}
 
 .Container{
     display: flex;
@@ -18,7 +21,7 @@
     justify-content: center;
     width: 100vw;
     height: 90vh;
-    background-color:  hsla(220, 2%, 30%, 0.26);
+    background-color: none ;
     padding-top: 10vh;
 }
 .grid {
