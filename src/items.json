@@ -5,7 +5,7 @@
           "id": "hamburguesa_1",
           "name": "Hamburguesa Simple",
           "price": 10,
-          "img": "/images/cafe_americano.jpg",
+          "img": "./images/Hamburguesa L.jpg",
           "type": ["Principal"],
           "class": ["res", "pollo", "vegetariana"]
         },
