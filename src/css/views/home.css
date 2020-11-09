@@ -2,8 +2,8 @@
 body {
   text-align: center;
   background-image: url("../../img/background.jpg");
-  background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 
 .Home {
@@ -17,7 +17,7 @@ body {
           flex-direction: column;
   margin: 0px auto;
   margin-top: 80px;
-  width: 50%;
+  width: 80%;
   height: 500px;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -31,7 +31,7 @@ body {
 .Logo,
 img {
   height: 150px;
-  margin-top: -40px;
+  margin-top: -20px;
   -webkit-animation: bounce;
           animation: bounce;
   /* referring directly to the animation's @keyframe declaration */
@@ -84,6 +84,9 @@ h2 {
   img {
     height: 260px;
   }
+  body {
+    background-repeat: no-repeat;
+  }
 }
 
 /* Desktop */
@@ -105,6 +108,9 @@ h2 {
   img {
     height: 150px;
     margin-top: -40px;
+  }
+  body {
+    background-repeat: no-repeat;
   }
 }
 /*# sourceMappingURL=home.css.map */
