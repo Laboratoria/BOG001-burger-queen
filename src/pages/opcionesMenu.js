@@ -12,8 +12,8 @@ class OpcionesMenu extends React.Component {
                     <Header />
                     <div className="grid">
                         <div className="zonaImagen"> <img src={combo} alt='combo' /></div>
-                        <div className="zonaClase"> <div className="bot"> 1 </div> <div className="bot"> 2 </div> <div className="bot"> 3 </div> </div>
-                        <div className="zonaBotones"> <BotonesOpciones/> <BotonesOpciones/>  <BotonesOpciones/> </div>
+                        <div className="zonaClase"> <div className="bot"> Tipo </div> <div className="bot"> Adiciones </div> <div className="bot"> Salsas </div> </div>
+                        <div className="zonaBotones"> <BotonesOpciones/></div>
                     </div>
 
                 </div>
