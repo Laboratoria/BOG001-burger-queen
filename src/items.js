@@ -2,9 +2,10 @@ import hamburguesa from './images/HamburguesaL.jpg'
 import papitas from './images/papitas.jpg';
 import agua from './images/jugo.jpg';
 import gaseosa from './images/Gaseosa.jpg';
+import cafe from './images/CafeTaza.jpg';
 const itemsMenu = {  data: { 
       "Hamburguesa Simple": {
-        "id": "001",
+        "id": 1,
         "name": "Hamburguesa Simple",
         "price": 10,
         "img": hamburguesa,
@@ -12,7 +13,7 @@ const itemsMenu = {  data: {
         "class": ["res", "pollo", "vegetariana"]
       },
       "Hamburguesa Doble": {
-        "id": "002",
+        "id": 2,
         "name": "Hamburguesa Doble",
         "price": 15,
         "img": hamburguesa,
@@ -20,84 +21,84 @@ const itemsMenu = {  data: {
         "class": ["res", "pollo", "vegetariana"]
       },
       "Papas Fritas": {
-        "id": "003",
+        "id": 3,
         "name": "Papas Fritas",
         "price": 5,
         "img": papitas,
         "type": ["Acompañamientos"]
       },
       "Aros de cebolla": {
-        "id": "004",
+        "id": 4,
         "name": 'Aros de cebolla',
         "price": 5,
         "img": papitas,
         "type": ["Acompañamientos"]
       },
       "Agua 500 ml": {
-        "id": "005",
+        "id": 5,
         "name": "Agua 500ml",
         "price": 5,
         "img": agua,
         "type": ["Bebidas"]
       },
       "Agua 750 ml": {
-        "id": "006",
+        "id": 6,
         "name": "Agua 750ml",
         "price": 7,
         "img": agua,
         "type": ["Bebidas"]
       },
       "Gaseosa 500ml": {
-        "id": "007",
+        "id": 7,
         "name": "Gaseosa 500ml",
         "price": 7,
         "img": gaseosa,
         "type": ["Bebidas"]
       },
       "Gaseosa 750 ml": {
-        "id": "008",
+        "id": 8,
         "name": "Gaseosa 750ml",
         "price": 7,
         "img": gaseosa,
         "type": ["Bebidas"]
       },
       "Café Americano": {
-        "id": "009",
+        "id": 9,
         "name": "Café Americano",
         "price": 5,
-        "img": "/images/cafe_americano.jpg",
-        "type": ["Desayuno"]
+        "img": cafe,
+        "type": ["DesayunoBebidas"]
       },
       "Café con Leche": {
-        "id": "010",
+        "id": 10,
         "name": "Café con leche",
         "price": 5,
-        "img": "/images/cafe_con_leche.jpg",
-        "type": ["Desayuno"]
+        "img": cafe,
+        "type": ["DesayunoBebidas"]
       },
       "Sandwich de jamón y queso": {
-        "id": "011",
+        "id": 11,
         "name": "Sandwich de jamón y queso",
         "price": 5,
-        "img": "/images/sandwich_de_jamon_y_queso.png",
+        "img": hamburguesa,
         "type": ["Desayuno"]
       },
       "Jugo de frutas natural": {
-        "id": "012",
+        "id": 12,
         "name": "Jugo de frutas natural",
         "price": 5,
-        "img": "/images/jugo_de_frutas_natural.jpg",
-        "type": ["Desayuno"]
+        "img": agua,
+        "type": ["DesayunoBebidas"]
       },
       "Queso": {
-        "id": "013",
+        "id": 13,
         "name": "Queso",
         "price": 1,
         "img": "/images/agua_500ml.jpg",
         "type": ["Adición"]
       },
       "Huevo": {
-        "id": "014",
+        "id": 14,
         "name": "Huevo",
         "price": 1,
         "img": "/images/agua_500ml.jpg",

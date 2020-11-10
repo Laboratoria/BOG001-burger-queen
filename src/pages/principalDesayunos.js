@@ -1,11 +1,11 @@
 import React from "react";
 import Header from "../componentes/header";
 import "../style/principalMesero.css";
-import BadgesList from "../componentes/botonesItems";
 import Factura from "../componentes/factura";
 import Nombre from "../componentes/nombre";
+import BadgesListDesayuno from "../componentes/botonesDesayuno";
 
-class PrincipalMesero extends React.Component {
+class PrincipalDesayuno extends React.Component {
   render() {
     return (
       <div>
@@ -14,7 +14,7 @@ class PrincipalMesero extends React.Component {
           <div className="card-body">
             <Nombre />
             <div className="grid">
-              <BadgesList />
+                <BadgesListDesayuno />
               <Factura />
             </div>
           </div>
@@ -24,4 +24,4 @@ class PrincipalMesero extends React.Component {
   }
 }
 
-export default PrincipalMesero;
+export default PrincipalDesayuno;

@@ -1,0 +1,35 @@
+.parteDos {
+    grid-area: 1 / 2 / 2 / 3;
+    background-color: #ffffff;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    overflow: scroll;
+    margin-top: 26px;
+  }
+  .factura {
+    background-color: #ffffff;
+    color: #741616;
+    padding: 1em;
+    margin: 1em;
+    width: 80%;
+    border-radius: 10px;
+    overflow: scroll;
+  }
+  .title {
+    font-size: 2em;
+    padding: 0.2em;
+    border-bottom: 3px;
+    border-bottom-style: solid;
+    border-color: #741616;
+    text-emphasis-color: #741616;
+  }
+  
+  .total {
+    font-size: 1.25em;
+    padding: 0.2em;
+    border-bottom: 3px;
+    border-top-style: solid;
+    border-color: #741616;
+    margin-top: 20em;
+  }
