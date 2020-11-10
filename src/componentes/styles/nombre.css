@@ -1,0 +1,22 @@
+.form-control {
+    background-color: #b4676770;
+    border-radius: 15px;
+    width: 90%;
+    height: 150px;
+    border: none;
+    font-size: 2em;
+  }
+  .nombre {
+    padding-left: 54px;
+    padding-top: 50px;
+  }
+  .inputNombre {
+    padding-left: 161px;
+    padding-top: 21px;
+    margin: 7px 22px;
+    border: none;
+    border-bottom-style: solid;
+    border-color: #741616;
+    background-color: #b4676700;
+    outline: none;
+  }
