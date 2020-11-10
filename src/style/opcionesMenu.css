@@ -27,14 +27,35 @@ html{
     height: 80%;
 }
 .zonaImagen{
-    background-color: sienna;
+    background-color: none;
     grid-area: 1 / 1 / 2 / 4; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .zonaClase{
-    background-color: skyblue;
+    border-style: solid;
+    border-color: skyblue;
     grid-area: 2 / 1 / 3 / 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .zonaBotones{
-    background-color: springgreen;
+    border-style: solid;
+    border-color: springgreen;
     grid-area: 3 / 1 / 4 / 4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.bot{
+    background-color: #D19E9E;
+    width: 150px ;
+    height: 60px;
+    margin: 0.5em;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
