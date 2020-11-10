@@ -5,6 +5,7 @@ import {OpcionesMenu} from './pages/opcionesMenu';
 import {PrincipalCocina} from './pages/principalCocina';
 import {PrincipalDesayuno} from './pages/principalDesayunos';
 import {PrincipalMesero} from './pages/principalMesero';
+import NotFound from './pages/notFound'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
      <Router extract path='/opciones' component={OpcionesMenu}/>
      <Router extract path='/desayunos' component={PrincipalDesayuno}/>
      <Router extract path='/cocina' component={PrincipalCocina}/>
+     <Router component= { NotFound }/>
    </Switch>
     </BrowserRouter>
   );
