@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import { AppContext } from '../AppContext';
 import { P } from './Styling';
 import './Navbar.scss';
 import Logo from '../assets/Logo.png';
@@ -27,11 +28,18 @@ const menuItems = [
   },
 ];
 export default function Navbar(props) {
-  const nameEmployee = localStorage.getItem('employ')
+  const { order } = useContext(AppContext);
+  const OrderToDeliver = order.filter(
+    (orderClient) => orderClient.isDone === true && orderClient.isDeliver === false,
+  );
+
+  const nameEmployee = localStorage.getItem('employ');
   return (
     <nav className="navbar">
       <div>
-        <Link to="/"><img src={Logo} alt="" className="navbar-logo" /></Link>
+        <Link to="/">
+          <img src={Logo} alt="" className="navbar-logo" />
+        </Link>
         <ul className="nav-menu">
           <li className="nav-item">
             <NavLink to="/" className="nav-links" exact>
@@ -48,13 +56,25 @@ export default function Navbar(props) {
                   exact
                   activeClassName="active"
                 >
-                  <P>{item.name}</P>
+                  <P>
+                    {item.name}
+                    {' '}
+                    {item.name === 'Ordenes por Entregar'
+                    && OrderToDeliver.length > 0 ? (
+                      <span className="nav-notifications">
+                        {OrderToDeliver.length}
+                        {' '}
+                      </span>
+                      ) : null}
+                  </P>
                 </NavLink>
               </li>
             ))}
         </ul>
       </div>
-      <div><P employee>{nameEmployee}</P></div>
+      <div>
+        <P employee>{nameEmployee}</P>
+      </div>
     </nav>
   );
 }

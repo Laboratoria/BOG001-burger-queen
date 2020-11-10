@@ -8,7 +8,7 @@
   width: 100vw;
   height: 100px;
   background-color: $omega;
-  
+
   & > div {
     display: flex;
     align-items: center;
@@ -49,4 +49,17 @@
       border-bottom: 4px solid $gamma;
     }
   }
+}
+
+.nav-notifications{
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: $gamma;
+  color:white;
+  display: inline-block;
+  line-height: 1.7;
+  text-align: center;
+
+
 }
