@@ -13,7 +13,7 @@ class OpcionesMenu extends React.Component {
                     <div className="grid">
                         <div className="zonaImagen"> <img src={combo} alt='combo' /></div>
                         <div className="zonaClase"> <div className="bot"> 1 </div> <div className="bot"> 2 </div> <div className="bot"> 3 </div> </div>
-                        <div className="zonaBotones"> <BotonesOpciones/> <BotonesOpciones/>  <BotonesOpciones/> </div>
+                        <div className="zonaBotones"> <BotonesOpciones/> </div>
                     </div>
 
                 </div>
@@ -22,4 +22,4 @@ class OpcionesMenu extends React.Component {
     }
 };
 
-export default OpcionesMenu
+export default OpcionesMenu;

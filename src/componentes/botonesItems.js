@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import items from '../items';
 import './styles/botonesItems.css'
 class BadgesList extends React.Component {
@@ -15,7 +16,7 @@ class BadgesList extends React.Component {
               <div className='botonesPrincipal'>
                 <li className='lista'>
                  <img className='imgPrincipal' src={e.img} alt='imagen'/>
-                    <button className='botonesClase'>{e.name}   ${e.price}</button>
+                    <Link className='botonesHamburguesa' to='/opciones'>{e.name}   ${e.price}</Link>
                 </li>
               </div>
             </React.Fragment>)
@@ -37,7 +38,7 @@ class BadgesList extends React.Component {
                   <div className='botonesAcompañamientos'>
                     <li className='lista'>
                      <img className='imgPrincipal' src={e.img} alt='imagen'/>
-                        <button className='botonesClase'>{e.name}   ${e.price}</button>
+                        <button className='botonesClase' >{e.name}   ${e.price}</button>
                     </li>
                   </div>
                   </React.Fragment>)

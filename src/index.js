@@ -1,9 +1,11 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import App from './App';
 import './index.css';
+//import Home from './pages/home';
 //import PrincipalDesayuno from './pages/principalDesayunos';
-import PrincipalCocina from './pages/principalCocina';
+//import PrincipalCocina from './pages/principalCocina';
 //import OpcionesMenu from './pages/opcionesMenu';
 //import App from './App';
 //import reportWebVitals from './reportWebVitals';
@@ -15,7 +17,7 @@ const container = document.getElementById('root');
 
 // ReactDOM.render(__qué__, __dónde__);
 
-ReactDOM.render(<PrincipalCocina />,container);
+ReactDOM.render(<App />,container);
 
 
 // If you want to start measuring performance in your app, pass a function
