@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 //import { Link } from 'react-router-dom';
 import logo from "../images/hamburguesa.svg";
 import "./styles/header.css";
@@ -13,7 +14,7 @@ class HeaderCocina extends React.Component {
             <span className="font-weight-light">Burger</span>
             <span className="font-weight-bold">Queen</span>
           </a>
-          <a className="Navbar-p" href="/">cocina</a>
+          <Link className="Navbar-p" href="/cocina">cocina</Link>
         </div>
       </div>
     );

@@ -8,7 +8,7 @@ import Nombre from "../componentes/nombre";
 class PrincipalMesero extends React.Component {
   render() {
     return (
-      <div>
+      <React.Fragment>
         <div className="Container">
           <Header />
           <div className="card-body">
@@ -19,7 +19,7 @@ class PrincipalMesero extends React.Component {
             </div>
           </div>
         </div>
-      </div>
+      </React.Fragment>
     );
   }
 }
