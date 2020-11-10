@@ -4,36 +4,28 @@
   --headerCocina-color: #233152;
   --borderRadius-buttoms: 20px;
   --borderSecundary-buttoms: 0 20px 20px 0;
-  --borderThird-buttoms:20px 0 0 20px;
-  --buttoms-color: rgba(255, 255, 255, 0.80);
-  --buttomsSecundary-color:#E0BDBD;
-  --buttomSecundary-Over:#D19E9E;
+  --borderThird-buttoms: 20px 0 0 20px;
+  --buttoms-color: rgba(255, 255, 255, 0.8);
+  --buttomsSecundary-color: #e0bdbd;
+  --buttomSecundary-Over: #d19e9e;
   --padding-buttoms: 1em;
 }
-html{
-    background-color: var(--main-color);
-
+html {
+  background-color: var(--main-color);
 }
-.form-control{
-    background-color: #b4676770;
-    border-radius: 15px;
-    width: 90%;
-    height: 150px;
-    border: none;
-   }
-  .card-body{
-    width: 90%;
-    margin-left: 5%;
-    margin-top: 5%;
+.card-body {
+  width: 90%;
+  margin-left: 9%;
+  margin-top: 5%;
 }
 
-.Container{
+.Container {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100vw;
   height: 90vh;
-  background-color: none ;
+  background-color: none;
   padding-top: 29vh;
 }
 .grid {
@@ -47,31 +39,9 @@ html{
   height: 80%;
 }
 
-.parteUno{
-  grid-area: 1 / 1 / 2 / 2; 
-  background-color: rgb(11, 11, 11, 0.70);
-  border-radius: 10px;
-  display: flex;
-  justify-content: initial;
-  overflow: scroll;
-}
-.parteDos{
-  grid-area: 1 / 2 / 2 / 3;; 
-  background-color:  #ffffff;
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  overflow: scroll;
-  margin-top: 26px;
-}
 
-@media (min-width: 700px) and (max-width: 1290px){
-  #miid::placeholder {
-    padding-left: 190px;
-    padding-top: 50px;
-    color: #741616;
-  }
-  .Container{
+@media (min-width: 700px) and (max-width: 1290px) {
+  .Container {
     padding-top: 4vh;
   }
 }
