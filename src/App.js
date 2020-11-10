@@ -1,24 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter, Router, Switch } from 'react-router-dom';
+//import { Component } from 'react';
+import {OpcionesMenu} from './pages/opcionesMenu';
+import {PrincipalCocina} from './pages/principalCocina';
+import {PrincipalDesayuno} from './pages/principalDesayunos';
+import {PrincipalMesero} from './pages/principalMesero';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+   <Switch>
+     <Router extract path='/meseros' component={PrincipalMesero}/>
+     <Router extract path='/opciones' component={OpcionesMenu}/>
+     <Router extract path='/desayunos' component={PrincipalDesayuno}/>
+     <Router extract path='/cocina' component={PrincipalCocina}/>
+   </Switch>
+    </BrowserRouter>
   );
 }
 
