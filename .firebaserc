@@ -1,5 +1,14 @@
 {
   "projects": {
     "bq": "burguerqueen-d4634"
+  },
+  "targets": {
+    "burguerqueen-d4634": {
+      "hosting": {
+        "burger-queen": [
+          "burguerqueen-d4634"
+        ]
+      }
+    }
   }
 }

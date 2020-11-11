@@ -1,5 +1,4 @@
-<app-menu></app-menu>
-hola
-<!-- <div *ngFor="let order of menu">
-
-</div> -->
+<!-- <app-menu></app-menu> -->
+<div *ngFor="let item of menus">
+    <app-menu (itemSelected)="clickItem($event)" [menu]="item"></app-menu>
+</div>

@@ -1,4 +1,8 @@
-<div *ngFor="let item of menu">
-    {{item.item}}
+<!-- <div *ngFor="let item of menu">
     {{item.price}}
-</div>
+    {{item.item}}
+</div> -->
+
+<h3>{{menu.item}}</h3>
+<p>{{menu.price}}</p>
+<button (click)="addOrder()">Agregar al pedido</button>

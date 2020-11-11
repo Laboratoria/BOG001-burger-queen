@@ -121,8 +121,13 @@
               "devServerTarget": "burger-queen:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
-    }},
+    }
+  },
   "defaultProject": "burger-queen"
 }
