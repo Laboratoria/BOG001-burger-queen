@@ -9,7 +9,7 @@ class PrincipalMesero extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <div className="Container">
+        <div className="Container1">
           <Header />
           <div className="card-body">
             <Nombre />
