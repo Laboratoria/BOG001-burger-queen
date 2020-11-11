@@ -5,8 +5,16 @@
     --division-color: rgb(11, 11, 11, 0.70);
 }
 
-html{
+.Container2{
     background-color: var(--main-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 90vh;
+    background-color: none ;
+    padding-top: 10vh;
+
 }
 
 .Container{
@@ -14,8 +22,7 @@ html{
     align-items: center;
     justify-content: center;
     width: 100vw;
-    height: 90vh;
-    background-color: none ;
+    height: 71vh;
     padding-top: 10vh;
 }
 .grid {

@@ -1,5 +1,5 @@
 :root {
-    --main-color: hsla(220, 20%, 59%, 0.26);
+    --main-color: hsla(221, 20%, 59%, 0.185);
     --headerCocina-color: #233152;
     --border-buttoms: 10px;
     --division-color: rgb(11, 11, 11, 0.70);
@@ -8,25 +8,36 @@
     font-family: kind;
     src: url(/src/componentes/styles/Kind.otf);
   }
-html{
+
+.Container0{
     background-color: var(--main-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    padding-top: 29vh;
 }
 .logo {
-    width: 12em;
+    width: 9em;
     padding-left: 14em;
+  }
+  .card-body1{
+    margin-top: -35%;
+    margin-left: 284px;
   }
 
   .font {
     font-family: kind;
-    font-size: 11vw;
+    font-size: 9vw;
     padding-top: 1rem;
-    margin-left: 200px;
+    margin-left: 120px;
   }
   .nombre {
     padding-left: 88px;
-    padding-top: 48px;
+    padding-top: 5px;
     color:  #233152;
-    font-size: 4vw;
+    font-size: 2vw;
   }
   .input {
     padding-left: 161px;
@@ -39,8 +50,31 @@ html{
     outline: none;
   }
   .botonEntrar{
-    margin: 56px 491px;
-    font-size: 4vw;
-    border-bottom: solid;
-    color: #233152;
+    border-radius:20px 20px 20px 20px;
+    background-color: #233152;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
+    margin:0px 349px;
+    padding: 12px 79px;
+    font-size: 1vw;
+    
+  }
+
+  @media (min-width: 700px) and (max-width: 1290px) {
+    .card-body1{
+      margin-top: -74%;
+      margin-left: 284px;
+    }
+    .nombre {
+      font-size: 2.5vw;
+    }
+    .font {
+      padding-top: 1rem;
+      margin-left: 195px;
+    }
+    .botonEntrar{
+      margin:0px 330px;
+      font-size: 2vw;
+      
+    }
   }

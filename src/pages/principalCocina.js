@@ -7,7 +7,7 @@ class PrincipalCocina extends React.Component {
     render() {
         return (
             <div>
-                <div className= "Container"> 
+                <div className= "Container2"> 
                 <HeaderCocina/>
                 <div className="grid"> 
                 <div className="parteUno">  <BotonesPedidos/>  <BotonesPedidos/> <BotonesPedidos/> <BotonesPedidos/> <BotonesPedidos/> <BotonesPedidos/> <BotonesPedidos/> </div>
