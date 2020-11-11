@@ -1,5 +1,5 @@
 import React from "react";
-//import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import logo from "../images/hamburguesa.svg";
 import "./styles/header.css";
@@ -13,8 +13,8 @@ class Header extends React.Component {
             <span className="font-weight-light">Burger</span>
             <span className="font-weight-bold">Queen</span>
           </a>
-          <a className="Navbar-p" href="/">Desayunos</a>
-          <a className="Navbar-p" href="/">Principal</a>
+          <Link className="Navbar-p" to="/desayunos">Desayunos</Link>
+          <Link className="Navbar-p" to="/meseros">Principal</Link>
         </div>
       </div>
     );

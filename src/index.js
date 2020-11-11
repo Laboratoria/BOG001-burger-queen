@@ -1,10 +1,16 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import App from './App';
 import './index.css';
+//import Home from './pages/home';
 //import PrincipalDesayuno from './pages/principalDesayunos';
 //import PrincipalCocina from './pages/principalCocina';
+<<<<<<< HEAD
 import OpcionesMenu from './pages/opcionesMenu';
+=======
+//import OpcionesMenu from './pages/opcionesMenu';
+>>>>>>> 759d8a69d0ed9f094baf44d4548492fb22f32666
 //import App from './App';
 //import reportWebVitals from './reportWebVitals';
 //import Header from './componentes/header.js';

@@ -22,4 +22,4 @@ class OpcionesMenu extends React.Component {
     }
 };
 
-export default OpcionesMenu
+export default OpcionesMenu;

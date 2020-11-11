@@ -9,14 +9,20 @@
   .nombre {
     padding-left: 54px;
     padding-top: 50px;
+    color: #741616;
   }
   .inputNombre {
     padding-left: 161px;
     padding-top: 21px;
-    margin: 7px 22px;
+    margin: 7px 7px;
     border: none;
     border-bottom-style: solid;
     border-color: #741616;
     background-color: #b4676700;
     outline: none;
+  }
+
+
+  .inputNombre::placeholder{
+    font-size: 3vw;
   }
