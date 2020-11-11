@@ -2,7 +2,6 @@
 
 *{
   margin:0px;
- 
   
 }
 
@@ -16,5 +15,4 @@ body {
 
 
 @import 'views/home.scss';
-
 @import 'components/notFound.scss';

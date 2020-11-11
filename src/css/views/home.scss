@@ -1,12 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
 
 
-.body-background {
-  background-image: url("../../img/background.jpg");
-  background-size: cover;      
-  background-position: center; 
-  height: 100vh;
+.body-background.full-screen {
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.466),
+      rgba(0, 0, 0, 0.466)
+    ),
+  url("../../img/background.jpg");  
 }
+
+.body-background {
+  min-height: 100vh;
+  display: flex;
+}
+
 
 .Home {
   background-color: rgba(255, 255, 255, 0.8);
@@ -18,16 +28,17 @@
   align-items: center;
   justify-content: center;
   border-radius: 10px;
-   
+  margin-top: 80px;  
 }
 
-.Logo,
-img {
+.Logo img {
   height: 150px;
   margin-top: -20px;
   animation: bounce; /* referring directly to the animation's @keyframe declaration */
   animation-duration: 2s; /* don't forget to set a duration! */
   }
+
+
 
 .Buttons {
   display: grid;
@@ -72,9 +83,10 @@ h2 {
   img {
     height: 260px;
   }
-  body {
-    background-repeat: no-repeat; 
-   }
+  
+  .Home {
+    margin-top: 150px;
+  }
 }
 
 /* Desktop */
@@ -96,9 +108,5 @@ h2 {
   img {
     height: 150px;
     margin-top: -40px;
-  }
-
-  body {
-   background-repeat: no-repeat;  
   }
 }

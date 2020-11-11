@@ -6,7 +6,7 @@ import logo from '../img/logo.png';
 const Home = () => {
   return (
 
-    <section className="body-background">
+    <section className="body-background full-screen">
 
     <div className="Home">   
       <div className="Logo">
@@ -23,12 +23,8 @@ const Home = () => {
             </button>
            
             </div>
-
-
       </div>  
       </section>
- 
-     
 
 
   );
