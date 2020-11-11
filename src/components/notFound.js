@@ -10,7 +10,8 @@ function notFound() {
             <div className="body-notfound">
                 <div className="icon">
                 <img src={icon} alt="icon" />
-                <p>404 - Not Found</p>
+                <h1>404</h1>
+                <h2>Page not found</h2>
         </div>
         </div>
        
