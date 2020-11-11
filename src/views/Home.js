@@ -1,10 +1,14 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import logo from '../img/logo.png';
+//import background from '../img/background.jpg'
 
 const Home = () => {
   return (
-    <div className="Home">
+
+    <section className="body-background">
+
+    <div className="Home">   
       <div className="Logo">
           <img src={logo} alt="logo"/></div>
           <div className="Soy"><h1>Soy</h1></div>
@@ -22,7 +26,9 @@ const Home = () => {
 
 
       </div>  
-
+      </section>
+ 
+     
 
 
   );
