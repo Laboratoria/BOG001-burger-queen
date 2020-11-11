@@ -1,0 +1,17 @@
+import firebase from 'firebase';
+
+//Here is the configuration of firebase and initit app
+const firebaseConfig = {
+  apiKey: "AIzaSyBqkuHhOw-AjiuntRSU2Zs9FW86Osdismk",
+  authDomain: "burguer-queen-88.firebaseapp.com",
+  databaseURL: "https://burguer-queen-88.firebaseio.com",
+  projectId: "burguer-queen-88",
+  storageBucket: "burguer-queen-88.appspot.com",
+  messagingSenderId: "848608553853",
+  appId: "1:848608553853:web:6a877a489d6699f57cba14"
+  };
+
+// Initialize Firebase
+export default () => {
+  firebase.initializeApp(firebaseConfig);
+}
