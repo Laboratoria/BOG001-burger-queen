@@ -45,6 +45,7 @@ html{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    overflow: scroll;
 }
 .bot{
     background-color: #D19E9E;

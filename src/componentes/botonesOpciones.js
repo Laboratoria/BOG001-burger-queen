@@ -5,14 +5,9 @@ import items from '../items';
 class BotonesOpciones extends React.Component {
     render() {
         const list = [];
-        const listType = [];
-        const listAdditions = [];
-        const listSauces = []
         const data = items
-
         Object.values(data.data).forEach((e) => {
-
-            if (e.type.includes('Tipo')) {
+            if (e.additions.includes('yes')) {
                 list.push(
                     <React.Fragment key={e.id} >
                         <div className='botones' type="button">
@@ -22,12 +17,11 @@ class BotonesOpciones extends React.Component {
                     </React.Fragment>)
             }
         })
+        console.log(list)
             return (
                 <div>{list}</div>
-                    
             )
         
     }
 }
-
     export default BotonesOpciones;
