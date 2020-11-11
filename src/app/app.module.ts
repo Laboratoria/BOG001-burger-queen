@@ -7,14 +7,12 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
-import { HolaComponent } from './hola/hola.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
-    HolaComponent
   ],
   imports: [
     BrowserModule,
