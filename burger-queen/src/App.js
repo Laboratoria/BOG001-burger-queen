@@ -5,7 +5,8 @@ import {
   Route,
   Link
 } from "react-router-dom";
-
+import Ingreso from './components/ingresar';
+import './Styles/ingresa.scss';
 
 function App() {
   return (
@@ -15,8 +16,10 @@ function App() {
       </div>
       <hr />
       <Switch>{/* Se carga el contenido dinamico */}
-        <Route path="/contacto">
-          Esta es la pagina de contacto
+        <Route path="/ingresar">
+          <div className="App">
+            <Ingreso />
+          </div>
         </Route>
         <Route path="/contacto">
           Esta es la pagina de contacto
