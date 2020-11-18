@@ -6,8 +6,8 @@ import logo from "../images/hamburguesa.svg";
 function Home() {
     return (
       <div>
-        <div className="Container">
-          <div className="card-body">
+        <div className="Container0">
+          <div className="card-body1">
           <img className="logo" src={logo} alt="Logo" />
             <div className="grid1">
             <span className="font">BurgerQueen</span>

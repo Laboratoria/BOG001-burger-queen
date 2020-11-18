@@ -8,7 +8,7 @@ class OpcionesMenu extends React.Component {
     render() {
         return (
             <div>
-                <div className="Container">
+                <div className="Container3">
                     <Header />
                     <div className="grid">
                         <div className="zonaImagen"> <img src={combo} alt='combo' /></div>

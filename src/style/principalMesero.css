@@ -10,24 +10,30 @@
   --buttomSecundary-Over: #d19e9e;
   --padding-buttoms: 1em;
 }
-html {
-  background-color: var(--main-color);
-}
-.card-body {
-  width: 90%;
-  margin-left: 9%;
-  margin-top: 5%;
-}
-
-.Container {
+.Container4{
+  background-color:  rgba(180, 103, 103, 0.109);
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100vw;
   height: 90vh;
-  background-color: none;
   padding-top: 29vh;
 }
+.Container1{
+  background-color:  rgba(180, 103, 103, 0.109);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 90vh;
+  padding-top: 29vh;
+}
+.card-body {
+  width: 90%;
+  margin-left: 9%;
+  margin-top: 10%;
+}
+
 .grid {
   background-color: none;
   display: grid;
@@ -44,4 +50,9 @@ html {
   .Container {
     padding-top: 4vh;
   }
+  .card-body {
+    margin-left: 9%;
+    margin-top: -55%;
+  }
+
 }
