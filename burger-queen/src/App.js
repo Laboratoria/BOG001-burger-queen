@@ -5,21 +5,15 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import Ingreso from './components/ingresar';
-import './Styles/ingresa.scss';
+import LoginView from './Vistas/Login.jsx';
+import './Styles/sass/login.scss';
 
 function App() {
   return (
     <Router>
-      <div>
-        <h1>Hola mundo React</h1>
-      </div>
-      <hr />
       <Switch>{/* Se carga el contenido dinamico */}
-        <Route path="/ingresar">
-          <div className="App">
-            <Ingreso />
-          </div>
+        <Route path="">
+        <LoginView/>
         </Route>
         <Route path="/contacto">
           Esta es la pagina de contacto

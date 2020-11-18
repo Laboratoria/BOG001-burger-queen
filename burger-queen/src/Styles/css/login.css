@@ -1,0 +1,42 @@
+@font-face {
+  font-family: Cookie-Regular;
+  src: url(../Letras/Cookie-Regular.ttf); }
+@font-face {
+  font-family: OPTIChampionBold;
+  src: url(../Letras/OPTIChampionBold.otf); }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+.backgraund {
+  background: url(../Imagenes/fondo_inicio.jpg);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center center; }
+  .backgraund .welcome {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 35%;
+    margin-top: 15%; }
+    .backgraund .welcome h2 {
+      font-family: Cookie-Regular;
+      font-size: 7vw; }
+    .backgraund .welcome h1 {
+      margin-top: -12%;
+      font-family: OPTIChampionBold;
+      font-size: 6.5vw; }
+    .backgraund .welcome .startOrder {
+      background-color: #F1B007;
+      width: 40%;
+      height: 45px;
+      border-radius: 10px;
+      font-family: OPTIChampionBold;
+      font-size: 1.2vw; }
+
+/*# sourceMappingURL=login.css.map */
