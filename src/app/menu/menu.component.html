@@ -3,6 +3,32 @@
     {{item.item}}
 </div> -->
 
-<h3>{{menu.item}}</h3>
+<!-- <h3>{{menu.item}}</h3>
 <p>{{menu.price}}</p>
-<button (click)="addOrder()">Agregar al pedido</button>
+<button (click)="addOrder()">Agregar al pedido</button> -->
+
+
+<div class="list row">
+    <div class="col-md-6">
+        <h4>Menu List</h4>
+        <ul class="list-group">
+            <li class="list-group-item" *ngFor="let menu of menus; let i = index" [class.active]="i == currentIndex"
+                (click)="setActiveMenu(menu, i)">
+                {{ menu.item }}
+            </li>
+        </ul>
+    </div>
+    <div class="col-md-6">
+        <!-- <div *ngIf="currentTutorial"> -->
+        <!-- <app-tutorial-details
+          (refreshList)="refreshList()"
+          [menu]="currentMenu"
+        ></app-tutorial-details> -->
+        <!-- </div> -->
+
+        <div *ngIf="!currentMenu">
+            <br />
+            <p>Please click on a Menu...</p>
+        </div>
+    </div>
+</div>
