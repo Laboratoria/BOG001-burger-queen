@@ -17,6 +17,13 @@ export class MenuService {
     // this.menuDb = this.db.list('/menu', ref => ref.orderByChild('time'));
   }
 
+  addItem(id: number, item: string, price: number, category: string, time: Array<string>): Promise<void> {
+    const ref = this.firestore.createId();
+    return this.firestore.doc(`menu/${ref}`).set({
+      id, item, price, category, time
+    });
+  }
+
   // getMenu(): Observable<Menu[]> {
   //   return this.menuDb.snapshotChanges().pipe(
   //     map(changes => {

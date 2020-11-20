@@ -1,0 +1,8 @@
+<form [formGroup]="addItemForm" (submit)="addItem()">
+    <label for="">Id: <input type="number" formControlName="id"></label>
+    <label for="">Item: <input type="text" formControlName="item"></label>
+    <label for="">Price: <input type="number" formControlName="price"></label>
+    <label for="">Category: <input type="text" formControlName="category"></label>
+    <label for="">Time: <input type="text" formControlName="time"></label>
+    <button type="submit" [disabled]="!addItemForm.valid">Add Item</button>
+</form>

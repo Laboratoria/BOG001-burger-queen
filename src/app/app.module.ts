@@ -6,16 +6,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { environment } from '../environments/environment';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 import { AppComponent } from './app.component';
 import { MenuComponent } from './Components/menu/menu.component';
 import { MenuService } from './Services/menu.service';
+import { AddItemMenuComponent } from './Components/add-item-menu/add-item-menu.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
+    AddItemMenuComponent,
   ],
   imports: [
     BrowserModule,
@@ -25,6 +29,8 @@ import { MenuService } from './Services/menu.service';
     AngularFirestoreModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [MenuService],
   bootstrap: [AppComponent]
