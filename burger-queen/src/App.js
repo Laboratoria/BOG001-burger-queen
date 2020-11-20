@@ -12,11 +12,10 @@ function App() {
   return (
     <Router>
       <Switch>{/* Se carga el contenido dinamico */}
-        <Route path="">
-        <LoginView/>
+        <Route  path=""  component={LoginView}>
         </Route>
-        <Route path="/contacto">
-          Esta es la pagina de contacto
+        <Route exact path="/contacto"  component={}>
+          
         </Route>
       </Switch>
     </Router>

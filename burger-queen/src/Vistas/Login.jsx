@@ -1,13 +1,17 @@
-import React from 'react'
-const { Fragment } = require("react")
+import React from 'react';
+import { useHistory } from "react-router-dom";
+const { Fragment } = require("react");
+
+
 
 const Ingreso = () => {
+  const history = useHistory();
   return (
     <Fragment>
       <div className="welcome">
         <h2>BURGER</h2>
         <h1>QUEEN</h1>
-        <button className="startOrder">Iniciar Pedido</button>
+        <button className="startOrder" onClick={() => history.push("/contacto")}>Iniciar Pedido</button>
       </div>
     </Fragment>
   );
@@ -15,9 +19,9 @@ const Ingreso = () => {
 
 function LoginView() {
   return (
-    <div className="backgraund">
+    < Fragment className="backgraund">
     <Ingreso/>
-    </div>
+    </Fragment>
   )
 }
 
