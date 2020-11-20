@@ -11,7 +11,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 // import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
-import {MenuService} from './menu.service';
+import { MenuService } from './menu.service';
 
 @NgModule({
   declarations: [
@@ -25,7 +25,7 @@ import {MenuService} from './menu.service';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [MenuService],
   bootstrap: [AppComponent]

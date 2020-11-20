@@ -1,8 +1,11 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+// import { HttpClient } from '@angular/common/http';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
 import { Menu } from './Interfaces/menu.model';
-// import { AngularFireList } from 'angularfire2/database'
+// import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
+import { Observable } from 'rxjs';
+// import { map } from 'rxjs/operators';
+
 
 
 @Injectable({
@@ -12,23 +15,40 @@ export class MenuService {
 
   // private menuDb: AngularFireList<Menu>;
 
-  private dbPath = '/menu';
-  tutorialsRef: AngularFirestoreCollection<Menu> = null;
 
-  constructor(
-    private http: HttpClient,
-    private db: AngularFirestore
-  ) {
-    this.tutorialsRef = db.collection(this.dbPath);
+  constructor(public firestore: AngularFirestore) {
+    // this.menuDb = this.db.list('/menu', ref => ref.orderByChild('time'));
   }
 
-  getAll(): AngularFirestoreCollection<Menu> {
-    // console.log(this.tutorialsRef.get().then((querySnapshot) => {
-    //       querySnapshot.forEach((doc) => {
-    //         console.log(`${doc.id} => ${doc.data()}`);
-    //       });)
-    return this.tutorialsRef;
+  // getMenu(): Observable<Menu[]> {
+  //   return this.menuDb.snapshotChanges().pipe(
+  //     map(changes => {
+  //       return changes.map(c => ({ id: c.payload.val().id, ...c.payload.val() }));
+  //     })
+  //   );
+  // }
+
+
+  getMenu(): Observable<Menu[]> {
+    return this.firestore.collection<Menu>('menu').valueChanges();
   }
+
+  // addItemMenu(menu: Menu) {
+  //   return this.menuDb.push(menu);
+  // }
+
+  // deleteItemMenu(id) {
+  //   this.db.list('/menu').remove(id);
+  // }
+
+
+  // getAll(): AngularFirestoreCollection<Menu> {
+  // console.log(this.tutorialsRef.get().then((querySnapshot) => {
+  //       querySnapshot.forEach((doc) => {
+  //         console.log(`${doc.id} => ${doc.data()}`);
+  //       });)
+  // return this.tutorialsRef;
+}
 
 
 
@@ -44,4 +64,4 @@ export class MenuService {
   //     });
   //   });
   // }
-}
+// }
