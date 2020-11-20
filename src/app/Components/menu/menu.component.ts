@@ -1,8 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { MenuService } from '../menu.service';
-// import { map } from 'rxjs/operators';
+import { MenuService } from '../../Services/menu.service';
 import { Observable } from 'rxjs';
-import { Menu } from '../Interfaces/menu.model';
+import { Menu } from '../../Interfaces/menu.model';
 
 @Component({
   selector: 'app-menu',

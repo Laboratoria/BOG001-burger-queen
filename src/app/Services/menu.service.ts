@@ -1,10 +1,7 @@
 import { Injectable } from '@angular/core';
-// import { HttpClient } from '@angular/common/http';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
-import { Menu } from './Interfaces/menu.model';
-// import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
+import { Menu } from '../Interfaces/menu.model';
 import { Observable } from 'rxjs';
-// import { map } from 'rxjs/operators';
 
 
 
