@@ -16,7 +16,6 @@ export class AddItemMenuComponent implements OnInit {
 
   constructor(private menuService: MenuService, formBuilder: FormBuilder) {
     this.addItemForm = formBuilder.group({
-      id: ['', Validators.required],
       item: ['', Validators.required],
       price: ['', Validators.required],
       category: ['', Validators.required],
@@ -25,13 +24,12 @@ export class AddItemMenuComponent implements OnInit {
   }
 
   addItem(): any {
-    const id = this.addItemForm.value.id;
     const item = this.addItemForm.value.item;
     const price = this.addItemForm.value.price;
     const category = this.addItemForm.value.category;
     const time = this.addItemForm.value.time;
 
-    this.menuService.addItem(id, item, price, category, time);
+    this.menuService.addItem(item, price, category, time);
     // .then(
     //   () => {
     //     loading.dismiss().then(() => {

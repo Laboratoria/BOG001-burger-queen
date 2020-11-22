@@ -1,6 +1,7 @@
 <div *ngFor="let item of menu$">
     <h3>{{item.item}}</h3>
     <h4>{{item.price}}</h4>
+    <button type="button" (click)="deleteItem(item.id)">Delete item</button>
 </div>
 
 <!-- <h3>{{menu.item}}</h3> -->

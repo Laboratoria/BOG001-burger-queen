@@ -17,41 +17,22 @@ export class MenuService {
     // this.menuDb = this.db.list('/menu', ref => ref.orderByChild('time'));
   }
 
-  addItem(id: number, item: string, price: number, category: string, time: Array<string>): Promise<void> {
-    const ref = this.firestore.createId();
-    return this.firestore.doc(`menu/${ref}`).set({
-      id, item, price, category, time
+  addItem(item: string, price: number, category: string, time: Array<string>): Promise<void> {
+    const id = this.firestore.createId();
+    return this.firestore.doc(`menu/${id}`).set({
+      item, price, category, time
     });
   }
 
-  // getMenu(): Observable<Menu[]> {
-  //   return this.menuDb.snapshotChanges().pipe(
-  //     map(changes => {
-  //       return changes.map(c => ({ id: c.payload.val().id, ...c.payload.val() }));
-  //     })
-  //   );
-  // }
-
-
-  getMenu(): Observable<Menu[]> {
-    return this.firestore.collection<Menu>('menu').valueChanges();
+  deleteItem(itemId: string): Promise<void> {
+    return this.firestore.doc(`menu/${itemId}`).delete();
   }
 
-  // addItemMenu(menu: Menu) {
-  //   return this.menuDb.push(menu);
-  // }
+  getMenu(): Observable<Menu[]> {
+    console.log(this.firestore.collection<Menu>('menu').valueChanges());
+    return this.firestore.collection<Menu>('menu').valueChanges({ idField: 'id' });
+  }
 
-  // deleteItemMenu(id) {
-  //   this.db.list('/menu').remove(id);
-  // }
-
-
-  // getAll(): AngularFirestoreCollection<Menu> {
-  // console.log(this.tutorialsRef.get().then((querySnapshot) => {
-  //       querySnapshot.forEach((doc) => {
-  //         console.log(`${doc.id} => ${doc.data()}`);
-  //       });)
-  // return this.tutorialsRef;
 }
 
 
@@ -61,11 +42,3 @@ export class MenuService {
   //   ref.set({ title: 'zkoder cafe' });
   // }
 
-  // getAllMenu(): void {
-  //   this.db.collection('menu').get().then((querySnapshot) => {
-  //     querySnapshot.forEach((doc) => {
-  //       console.log(`${doc.id} => ${doc.data()}`);
-  //     });
-  //   });
-  // }
-// }

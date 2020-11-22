@@ -2,6 +2,8 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { MenuService } from '../../Services/menu.service';
 import { Observable } from 'rxjs';
 import { Menu } from '../../Interfaces/menu.model';
+import { ActivatedRoute, Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-menu',
@@ -12,18 +14,26 @@ export class MenuComponent implements OnInit {
   // public menuList: Observable<Menu[]>;
   // public menu$: Observable<Menu[]>;
   public menu$;
+  public itemId: string;
 
-  constructor(private menuService: MenuService) {
+  constructor(private menuService: MenuService, private route: ActivatedRoute) {
 
   }
 
   ngOnInit(): void {
-    // this.menuList = this.menuService.getMenu();
-    // this.menu$ = this.menuService.getMenu();
+    this.itemId = this.route.snapshot.paramMap.get('id');
     this.menuService.getMenu().pipe().subscribe(menu => {
       this.menu$ = menu;
-      console.log(menu);
+      console.log(this.menu$);
     });
+  }
+
+  deleteItem(itemId: string): void {
+    console.log(itemId);
+    const confirmation = confirm('Estas seguro de que deseas eliminar este item?');
+    if (confirmation) {
+      this.menuService.deleteItem(itemId);
+    }
   }
 
   // @Input() menu;
@@ -32,40 +42,6 @@ export class MenuComponent implements OnInit {
   // addOrder(): void {
   //   console.log('añadido a la orden');
   //   this.itemSelected.emit(this.menu.id);
-  // }
-
-  // menus: any;
-  // currentMenu = null;
-  // currentIndex = -1;
-  // title = '';
-
-  // constructor(private menuService: MenuService) { }
-
-  // ngOnInit(): void {
-  //   this.retrieveMenu();
-  // }
-
-  // refreshList(): void {
-  //   this.currentMenu = null;
-  //   this.currentIndex = -1;
-  //   this.retrieveMenu();
-  // }
-
-  // retrieveMenu(): void {
-  //   this.menuService.getAll().snapshotChanges().pipe(
-  //     map(changes =>
-  //       changes.map(c =>
-  //         ({ id: c.payload.doc.id, ...c.payload.doc.data() })
-  //       )
-  //     )
-  //   ).subscribe(data => {
-  //     this.menus = data;
-  //   });
-  // }
-
-  // setActiveMenu(menu, index): void {
-  //   this.currentMenu = menu;
-  //   this.currentIndex = index;
   // }
 
 }
