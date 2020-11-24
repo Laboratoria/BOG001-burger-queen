@@ -9,27 +9,30 @@ $mostaza:#F1B007;
 }
 
 *{
-  margin: 0;
-  padding: 0;
+  margin:0px;
+  padding: 0%;
+  height:100%;
   box-sizing: border-box;
 }
 
-.backgraund{
-    background: url(../Imagenes/fondo_inicio.jpg);
+.background{
+    background: url(../../Fondos/fondo_inicio.jpg);
     width: 100%;
     height: 100%;
     position: fixed;
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     .welcome{
       width:30%;
+      height: 30%;
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin-left: 35%;
-      margin-top: 15%;
 
       h2{
         font-family: Cookie-Regular;

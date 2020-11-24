@@ -1,0 +1,67 @@
+@import 'login';
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+
+.backgroundRoles{
+    background: url(../../Fondos/fondoBurger.jpg);
+    width: 100%;
+    background-size: cover;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    flex-flow: column;
+
+    .navigation{
+        background-color: $mostaza;
+        width: 80%;
+        height: 35%;
+        margin-top: 6%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: row;
+
+        h3{
+            font-family: OPTIChampionBold;
+            font-size: 3.5vw;
+            }
+    
+        h2{
+            font-family: Cookie-Regular;
+            font-size: 3.5vw;
+            margin-top: 10px;
+        }   
+    }
+    
+    h1{
+        font-family: OPTIChampionBold;
+        font-size: 3vw;
+        color: antiquewhite;
+        margin: 3% ;
+    }
+.roles {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: row wrap;
+   
+.cocinera{
+    width: 26%;
+    height: 310px;
+    font-family: 'OPTIChampionBold';
+    color:$mostaza;
+}
+.mesera {
+    width: 35%;
+    height: 310px;
+    font-family: 'OPTIChampionBold';
+    color:$mostaza;
+}
+}
+}

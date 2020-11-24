@@ -11,7 +11,7 @@ const Ingreso = () => {
       <div className="welcome">
         <h2>BURGER</h2>
         <h1>QUEEN</h1>
-        <button className="startOrder" onClick={() => history.push("/contacto")}>Iniciar Pedido</button>
+        <button className="startOrder" onClick={() => history.push("/roles", { from: "/" })}>Iniciar Pedido</button>
       </div>
     </Fragment>
   );
@@ -19,8 +19,10 @@ const Ingreso = () => {
 
 function LoginView() {
   return (
-    < Fragment className="backgraund">
+    <Fragment>
+    <div className="background">
     <Ingreso/>
+    </div>
     </Fragment>
   )
 }
