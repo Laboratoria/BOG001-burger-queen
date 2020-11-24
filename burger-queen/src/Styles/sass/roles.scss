@@ -11,7 +11,7 @@
 .backgroundRoles{
     background: url(../../Fondos/fondoBurger.jpg);
     width: 100%;
-    background-size: cover;
+    background-attachment: fixed;
     display: flex;
     justify-content:space-around;
     align-items: center;
@@ -46,6 +46,7 @@
         margin: 3% ;
     }
 .roles {
+    width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -53,15 +54,24 @@
    
 .cocinera{
     width: 26%;
-    height: 310px;
-    font-family: 'OPTIChampionBold';
-    color:$mostaza;
+    height: 310px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .mesera {
     width: 35%;
     height: 310px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+a{
     font-family: 'OPTIChampionBold';
-    color:$mostaza;
+    color:#f0f0f3;
+    font-size: 2.5vw;
 }
 }
 }

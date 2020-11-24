@@ -17,12 +17,12 @@ $mostaza:#F1B007;
 .backgraundFooter{
   background-color: $mostaza;
   display: flex;
-  position: relative;
   width: 100%;
   flex-direction: row;
   justify-content: space-around;
   font-family: Cookie-Regular;
   font-size: 3vw;
+  margin-top: 4%;
 
   .nameGroup{
       display: flex;
@@ -30,6 +30,6 @@ $mostaza:#F1B007;
   }
 
   .copyright{
-      margin-top: 2%;
+      padding-top: 2%;
   }
 }
