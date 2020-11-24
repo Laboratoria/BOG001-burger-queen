@@ -1,0 +1,35 @@
+$mostaza:#F1B007;
+@font-face {
+  font-family:Cookie-Regular;
+  src: url(../Letras/Cookie-Regular.ttf);
+}
+@font-face{
+  font-family: OPTIChampionBold;
+  src: url(../Letras/OPTIChampionBold.otf);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.backgraundFooter{
+  background-color: $mostaza;
+  display: flex;
+  position: relative;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-around;
+  font-family: Cookie-Regular;
+  font-size: 3vw;
+
+  .nameGroup{
+      display: flex;
+      flex-direction: column;
+  }
+
+  .copyright{
+      margin-top: 2%;
+  }
+}
