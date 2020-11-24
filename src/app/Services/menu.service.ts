@@ -33,12 +33,38 @@ export class MenuService {
     return this.firestore.collection<Menu>('menu').valueChanges({ idField: 'id' });
   }
 
+  getBreakfasts(): Observable<Menu[]> {
+    console.log(this.firestore.collection<Menu>('menu', ref => ref.where('time', '==', 'breakfast')).valueChanges({ idField: 'id' }));
+    return this.firestore.collection<Menu>('menu', ref => ref.where('time', '==', 'breakfast')).valueChanges({ idField: 'id' });
+  }
+
+
+  //---- PRUEBAS NO FUNCIONA:
+  // setItem(): void {
+  //   this.firestore.doc(`menu/${itemId}`).update()
+  //   const ref = this.db.doc('menu');
+  //   ref.set({ title: 'zkoder cafe' });
+  // }
+
+  // currentValues(item, price, category, time): any {
+  //   return ({ item, price, category, time });
+  // }
+
+  // FieldsForm(itemField, priceField, categoryField, timeField): any {
+  //   return ({ itemField, priceField, categoryField, timeField });
+  // }
+
+  // updateItem(currentValues, FieldsForm): void {
+  //   const values = currentValues();
+  //   const fields = FieldsForm();
+  //   fields.itemField.setValue(values.item);
+  //   fields.priceField.setValue(values.price);
+  //   fields.categoryField.setValue(values.category);
+  //   fields.timeField.setValue(values.time);
+  // }
+
 }
 
 
 
-  // setItem(): void {
-  //   const ref = this.db.doc('menu');
-  //   ref.set({ title: 'zkoder cafe' });
-  // }
 

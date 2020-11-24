@@ -9,8 +9,6 @@ import { MenuService } from '../../Services/menu.service';
   styleUrls: ['./add-item-menu.component.sass']
 })
 export class AddItemMenuComponent implements OnInit {
-  // addItemForm = createSongForm
-  // addItem() = createSong();
 
   public addItemForm: FormGroup;
 
@@ -23,25 +21,32 @@ export class AddItemMenuComponent implements OnInit {
     });
   }
 
+  clearForm(): void {
+    this.addItemForm.reset({
+      item: '',
+      price: '',
+      category: '',
+      time: '',
+    });
+  }
+
   addItem(): any {
     const item = this.addItemForm.value.item;
     const price = this.addItemForm.value.price;
     const category = this.addItemForm.value.category;
     const time = this.addItemForm.value.time;
 
-    this.menuService.addItem(item, price, category, time);
-    // .then(
-    //   () => {
-    //     loading.dismiss().then(() => {
-    //       this.router.navigateByUrl('');
-    //     });
-    //   },
-    //   error => {
-    //     loading.dismiss().then(() => {
-    //       console.error(error);
-    //     });
-    //   }
-    // );
+    this.menuService.addItem(item, price, category, time)
+      .then(
+        () => {
+          alert('Item added successfully');
+        }
+      )
+      .catch((err) => {
+        alert('Error adding item: ' + err);
+      });
+
+    this.clearForm();
 
   }
 

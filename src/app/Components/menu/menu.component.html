@@ -1,9 +1,18 @@
+<app-add-item-form></app-add-item-form>
+
 <div *ngFor="let item of menu$">
     <h3>{{item.item}}</h3>
     <h4>{{item.price}}</h4>
-    <button type="button" (click)="deleteItem(item.id)">Delete item</button>
+    <button type="button" (click)="deleteItem(item.id)">Delete</button>
+    <button type="button" (click)="updateItem(item.id)">Update</button>
+
 </div>
 
+<!-- prueba de filtradooo -->
+<!-- <div *ngFor="let item of breakfasts$">
+    <h3>{{item.item}}</h3>
+    <h4>{{item.price}}</h4>
+</div> -->
 <!-- <h3>{{menu.item}}</h3> -->
 <!-- <p>{{menu.price}}</p> -->
 <!-- <button (click)="addOrder()">Agregar al pedido</button> -->

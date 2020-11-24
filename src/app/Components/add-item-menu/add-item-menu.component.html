@@ -1,5 +1,8 @@
 <form [formGroup]="addItemForm" (submit)="addItem()">
-    <label for="">Item: <input type="text" formControlName="item"></label>
+    <mat-form-field appearance="fill">
+        <mat-label for="">Item: <input matInput type="text" formControlName="item"></mat-label>
+    </mat-form-field>
+
     <label for="">Price: <input type="number" formControlName="price"></label>
     <label for="">Category: <input type="text" formControlName="category"></label>
     <label for="">Time: <input type="text" formControlName="time"></label>
