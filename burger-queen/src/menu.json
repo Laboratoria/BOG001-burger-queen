@@ -1,4 +1,4 @@
-{"menu_breakfast":[
+{"breakfast":[
     {
       "id": 1 ,
       "type": "bebida",
@@ -24,7 +24,7 @@
         "price": 10 
     }
 ],
-"menu_lunch": [
+"lunch": [
     {
         "id": 5 ,
         "type": "hamburguesa",
@@ -38,43 +38,43 @@
         "price": 15 
     },
     {
-        "id": 6 ,
+        "id": 7 ,
         "type": "acompañamiento",
         "item": "Papas fritas",
         "price": 5 
     },
     {
-        "id": 6 ,
+        "id": 8 ,
         "type": "acompañamiento",
         "item": "Aros de cebolla",
         "price": 5 
     },
     {
-        "id": 6 ,
+        "id": 9,
         "type": "bebida",
         "item": "Agua 500ml",
         "price": 5 
     },
     {
-        "id": 6 ,
+        "id": 10 ,
         "type": "bebida",
         "item": "Agua 750ml",
         "price": 7
     },
     {
-        "id": 6 ,
+        "id": 11,
         "type": "bebida",
         "item": "Agua 750ml",
         "price": 7
     },
     {
-        "id": 6 ,
+        "id": 12,
         "type": "bebida",
         "item": "Gaseosa 500ml",
         "price": 7
     },
     {
-        "id": 6 ,
+        "id": 13,
         "type": "bebida",
         "item": "Gaseosa 750ml",
         "price": 10

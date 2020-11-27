@@ -5,10 +5,10 @@ const Footer = () => {
   return (
     <Fragment>
       <div className="backgraundFooter">
-          <spam className="copyright">Copyright © 2020</spam>
+          <span className="copyright">Copyright © 2020</span>
           <div className="nameGroup">
-          <spam className="design">Diseñado por</spam>
-          <spam className="name">Angelica U. Y Mayely B.</spam>
+          <span className="design">Diseñado por</span>
+          <span className="name">Angelica U. Y Mayely B.</span>
           </div>
       </div>
     </Fragment>

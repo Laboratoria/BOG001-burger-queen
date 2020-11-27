@@ -1,0 +1,6 @@
+@import "roles";
+
+
+.backgroundKitchen{
+    @extend .backgroundRoles;
+}
