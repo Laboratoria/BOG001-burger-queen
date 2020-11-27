@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from "react-router-dom";
+import Navigation from './Navigation'
 import Footer from './Footer';
 const { Fragment } = require("react");
 
@@ -19,15 +20,6 @@ const Roles = () => {
         </Fragment>
             
     )
-}
-
-const  Navigation = () => {
-    return ( 
-        <div className="navigation">
-        <h2>BURGER</h2>
-        <h3>QUEEN</h3>
-        </div>
-    );
 }
 
 
