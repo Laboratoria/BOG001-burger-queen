@@ -19,17 +19,19 @@ const Navigation =() => {
             <h3>QUEEN</h3>
             </div>
         </div>
-        <nav className={sidebar ? 'nav-menu-active' : 'nav-menu'}>
-            <ul onClick={showSidebar} className='nav-menu-items'>
-                <li className='navbar-toggle'>
-                <Link to='#' className='menu-bars'>
-                    <FontAwesomeIcon icon={faTimes}/>
+        <div className={sidebar ? 'nav-menu-active' : 'nav-menu'}>
+            <div  className='nav-menu-items'>
+            <ul>
+                <li className='menu-bars'>
+                <Link to='#' >
+                    <FontAwesomeIcon onClick={showSidebar} icon={faTimes}/>
                 </Link>    
                 </li>
-                <li className='nav-text'>holisss</li>
-                <li>porque no sirve</li>
+                <li className='nav-text'>Desayuno</li>
+                <li className='nav-text'>Almuerzo y Cena</li>
             </ul>
-        </nav>
+            </div>
+        </div>
         </Fragment>
        
     )
