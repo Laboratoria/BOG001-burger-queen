@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+  BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import LoginView from './Vistas/Login.jsx';
 import BackgroundRoles from './Vistas/Roles.jsx';
 import BackgroundKitchen from './Vistas/Kitchen'
