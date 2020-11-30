@@ -2,13 +2,23 @@
 .navigation{
     background-color: $mostaza;
     width: 80%;
-    height: 35%;
+    height: 70px;
     margin-top: 6%;
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-flow: row;
-
+    .menu-bars {
+        margin-left: 2rem;
+        font-size: 3rem;
+        color: black;
+        background: none;
+    }
+    .title{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+    }
     h3{
         font-family: OPTIChampionBold;
         font-size: 3.5vw;
@@ -19,4 +29,52 @@
         font-size: 3.5vw;
         margin-top: 10px;
     }   
+}
+.nav-menu{
+    background-color: grey;
+    width: 250px;
+    height: 50vh;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    transition: 860ms;
+    .nav-menu-items{
+        width: 100%;
+        .nav-text{
+            display: flex;
+            justify-content:start;
+            align-items: center;
+            padding: 6px 0px 6px 20px;
+            list-style: none;
+            color: white;
+            font-size: 18px;
+            width: 95%;
+            li:hover{
+                background-color: #1b1f55;
+                border-radius: 4px;
+                padding: 0px 12px;
+                width: 95%;
+                height: 100%;
+            }
+    }
+
+    .navbar-toggle{
+        width: 100%;
+        height: 10px;
+    }
+    
+    }
+    
+    .menu-bars{
+        margin-left: 2rem;
+        font-size: 3rem;
+        color: black;
+        background: none;
+    }
+}
+.nav-menu-active {
+    left: 0;
+    transition: 350ms;
+    border: 5px solid red;
 }
