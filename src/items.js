@@ -10,7 +10,6 @@ const itemsMenu = {  data: {
         "price": 10,
         "img": hamburguesa,
         "type": ["Principal"],
-        "class": ["res", "pollo", "vegetariana"]
       },
       "Hamburguesa Doble": {
         "id": 2,
@@ -18,7 +17,6 @@ const itemsMenu = {  data: {
         "price": 15,
         "img": hamburguesa,
         "type": ["Principal"],
-        "class": ["res", "pollo", "vegetariana"]
       },
       "Papas Fritas": {
         "id": 3,
@@ -103,6 +101,55 @@ const itemsMenu = {  data: {
         "price": 1,
         "img": "/images/agua_500ml.jpg",
         "type": ["Adición"]
+      },
+      "Tocino": {
+        "id": 21,
+        "name": "Tocino",
+        "price": 3,
+        "img": "/images/agua_500ml.jpg",
+        "type": ["Adición"]
+      },
+      "Tomate": {
+        "id": 15,
+        "name": "Tomate",
+        "price": 0,
+        "img": "/images/agua_500ml.jpg",
+        "type": ["Salsas"]
+      },
+      "Mayonesa": {
+        "id": 16,
+        "name": "Mayonesa",
+        "price": 0,
+        "img": "/images/agua_500ml.jpg",
+        "type": ["Salsas"]
+      },
+      "Mostaza": {
+        "id": 17,
+        "name": "Mostaza",
+        "price": 0,
+        "img": "/images/agua_500ml.jpg",
+        "type": ["Salsas"]
+      },
+      "Res": {
+        "id": 18,
+        "name": "Res",
+        "price": 0,
+        "img": "/images/agua_500ml.jpg",
+        "type": ["Tipo"]
+      },
+      "Pollo": {
+        "id": 19,
+        "name": "Pollo",
+        "price": 0,
+        "img": "/images/agua_500ml.jpg",
+        "type": ["Tipo"]
+      },
+      "Vegetariana": {
+        "id": 20,
+        "name": "Vegetariana",
+        "price": 0,
+        "img": "/images/agua_500ml.jpg",
+        "type": ["Tipo"]
       }
     }
 } 
