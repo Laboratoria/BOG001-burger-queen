@@ -9,7 +9,8 @@ import BotonesGaseosa from "../componentes/practicaGaseosa.js";
 //class PrincipalMesero extends React.Component {
   //render() {
 function PrincipalMesero (props) {
-    const [count, setCount] = useState([]);
+    
+  const [count, setCount] = useState([]);
 
     return (
       <React.Fragment>
@@ -18,8 +19,10 @@ function PrincipalMesero (props) {
           <div className="card-body">
             <Nombre />
             <div className="grid">
-              <BadgesList />
+              <BadgesList contador={count} setContedor={setCount} />
+
               <Factura acaVacontador={count}/>
+
               <BotonesGaseosa contador={count} setContedor={setCount}/>
             </div>
           </div>

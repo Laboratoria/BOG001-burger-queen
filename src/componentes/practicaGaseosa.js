@@ -1,26 +1,32 @@
 import React from "react";
 import "./styles/botonesItems.css";
+import items from '../items';
 
 function BotonesGaseosa(props) {
-    let newElement = "Item ";
-    // aca es prueba 
-    //const [count, setCount] = useState([]);
-    //class BotonesGaseosa extends React.Component {
-    const agregarFactura = (e) => {
-        console.log("Estoy haciendo click")
-        props.setContedor(oldArray => [...oldArray, newElement]);
-    }
+    const data = items
 
-    //   render() {
+    //let newElement = nombre;
+    //const [count, setCount] = useState([]);
+    const agregarFactura = (e) => {
+        console.log(nombre)
+        props.setContedor(oldArray => [...oldArray, nombre]);
+    }
+    
+    let nombre="";
+    Object.values(data.data).forEach((e) => {
+        nombre = e.name})
+
+    
+    //    items.map( (cu) => console.log(cu.name ) )
 
     return (
-        //<div className="botonesClase" >
-            <button onClick={agregarFactura} className="botonesClase" >
-                <p> Coca Cola </p>
+        
+            <button onClick={agregarFactura} className="botonesClase">
+                <p> {nombre} </p>
             </button>
-        //</div>
+        
     )
-    //}
+
 }
 
 export default BotonesGaseosa;
