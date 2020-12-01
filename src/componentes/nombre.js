@@ -8,6 +8,7 @@ class Nombre extends React.Component {
       event.preventDefault();
       console.log(this.newName.current.value);
     }
+    
   
     newName = React.createRef(); 
   render() {
@@ -15,7 +16,7 @@ class Nombre extends React.Component {
       <form className="form-control" onSubmit={this.addDish}>
         <p className="nombre">
           Nombre:<input className="inputNombre" ref={this.newName}></input>
-          <button type="submit" onClick={this.addDish}>enviar</button>        
+          <button type="submit" className='botonNombre' onClick={this.addDish}>Enviar</button>        
         </p>
       </form>
     );

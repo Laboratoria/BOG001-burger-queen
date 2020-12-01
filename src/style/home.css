@@ -24,7 +24,7 @@
   }
   .card-body1{
     margin-top: -35%;
-    margin-left: 284px;
+    margin-left: -4%;
   }
 
   .font {
@@ -49,21 +49,31 @@
     background-color: #b4676700;
     outline: none;
   }
+  .botonEntrar1{
+    border-radius:20px 20px 20px 20px;
+    background-color: #741616b0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
+    position: absolute;
+    left: 34%;
+    padding: 12px 79px;
+    
+  }
   .botonEntrar{
     border-radius:20px 20px 20px 20px;
     background-color: #233152;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #ffffff;
-    margin:0px 349px;
+   position: absolute;
+   left: 54%;
     padding: 12px 79px;
     font-size: 1vw;
     
   }
-
   @media (min-width: 700px) and (max-width: 1290px) {
     .card-body1{
       margin-top: -74%;
-      margin-left: 284px;
+      margin-left: -4%;
     }
     .nombre {
       font-size: 2.5vw;
@@ -72,9 +82,17 @@
       padding-top: 1rem;
       margin-left: 195px;
     }
-    .botonEntrar{
-      margin:0px 330px;
-      font-size: 2vw;
-      
-    }
+    .botonEntrar1 {
+      position: absolute;
+      left: 15%;
+
+  }
+
+  .botonEntrar {
+    padding: 14px 98px;
+    position: absolute;
+    left: 55%;
+    font-size: 2vw;
+
+}
   }
