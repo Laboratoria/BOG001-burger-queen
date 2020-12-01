@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom'
 import '../style/home.css'
 import logo from "../images/hamburguesa.svg";
 
-function Home() {
+export default function Home() {
+ 
     return (
       <div>
         <div className="Container0">
@@ -12,9 +13,10 @@ function Home() {
             <div className="grid1">
             <span className="font">BurgerQueen</span>
             <p className="nombre">
-          Ingresar:<input className="input" type="text"></input>
+          Nombre:<input className="input" type="text"></input>
            </p>
-           <Link className='botonEntrar' to='/meseros'>Entrar</Link>
+           <Link className='botonEntrar1' to='/meseros'>Meseros</Link>
+           <Link className='botonEntrar' to='/cocina'>Cocina</Link>
             </div>
           </div>
         </div>
@@ -22,5 +24,3 @@ function Home() {
     );
   }
 
-
-export default Home;

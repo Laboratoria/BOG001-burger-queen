@@ -21,4 +21,19 @@
     background-color: #b4676700;
     outline: none;
   }
- 
+ .botonNombre{
+  border-radius: 5px;
+  background-color: #741616b0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: black;
+  width: 12%;
+  height: 2.5em;
+  border: none;
+  margin-left: 10px;
+  vertical-align: top;
+  margin: 1px 10px;
+  position: absolute;
+  left: 73%;
+  top: 28%;
+  font-size: 2vw;
+ }
