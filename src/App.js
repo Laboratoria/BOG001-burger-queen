@@ -10,6 +10,7 @@ import PrincipalMesero from "./pages/principalMesero";
 import Home from "./pages/home";
 
 function App() {
+  
   return (
     <BrowserRouter>
       <Switch>
