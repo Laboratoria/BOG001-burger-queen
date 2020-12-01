@@ -3,25 +3,29 @@
       "id": 1 ,
       "type": "bebida",
       "item": "Café Americano",
-      "price": 5 
+      "price": 5,
+      "us":"$"
     },
     {
         "id": 2 ,
         "type": "bebida",
         "item": "Café con leche",
-        "price": 7  
+        "price": 7,
+        "us":"$"
     },
     {
         "id": 3 ,
         "type": "bebida",
         "item": "Jugo de frutas natural",
-        "price": 7  
+        "price": 7,
+        "us":"$"  
     },
     {
         "id": 4 ,
         "type": "snack",
         "item": "Sandwich de jamón y queso",
-        "price": 10 
+        "price": 10,
+        "us":"$"
     }
 ],
 "lunch": [

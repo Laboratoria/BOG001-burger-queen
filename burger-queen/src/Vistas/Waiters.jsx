@@ -3,19 +3,32 @@ import Navigation from './Navigation';
 import Footer from './Footer';
 import menus from '../menu.json'
 
+const Clients = () => {
+    return ( 
+        <div>
+            <label>Cliente: <input type="text"></input></label> 
+        </div>
+     );
+}
+ 
+
+
 const Menu = () => {
     const [menu, setMenu] = useState(menus)
 
     return ( 
         <Fragment>
+            <div className= 'menuBreak'>
+            <Clients/>    
             {
             menu.breakfast.map(element => 
-            <tr key={ element.id}>
-             <td>{element.item}</td>
-            <td>{element.price}</td>
-            </tr>
-           )
+            <li  key={ element.id}>
+            <li className= 'itemsBreak'>{element.item} {element.us} {element.price}</li>
+            </li>
+            )
             }
+            </div>
+            
         </Fragment>
 
     );
@@ -26,10 +39,7 @@ const BackgroundWaiters = () => {
     <Fragment>
 <div className="backgroundKitchen">
         <Navigation/>
-        <div>
-            <Menu/>
-        </div>
-        
+        <Menu/>
         <Footer/>
     </div>
     </Fragment>

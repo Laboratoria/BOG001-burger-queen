@@ -12,7 +12,7 @@ const Navigation =() => {
         <Fragment>
         <div  className="navigation">
             <Link to='#' className='menu-bars'>
-            <FontAwesomeIcon onClick={showSidebar} icon ={faHamburger}/>
+            <FontAwesomeIcon onClick={showSidebar }  icon ={sidebar ? faTimes : faHamburger }/>
             </Link>
             <div className ='title'>
             <h2>BURGER</h2>
@@ -22,10 +22,7 @@ const Navigation =() => {
         <div className={sidebar ? 'nav-menu-active' : 'nav-menu'}>
             <div  className='nav-menu-items'>
             <ul>
-                <li className='menu-bars'>
-                <Link to='#' >
-                    <FontAwesomeIcon onClick={showSidebar} icon={faTimes}/>
-                </Link>    
+                <li className='menu-bars'> 
                 </li>
                 <li className='nav-text'>Desayuno</li>
                 <li className='nav-text'>Almuerzo y Cena</li>
@@ -33,7 +30,6 @@ const Navigation =() => {
             </div>
         </div>
         </Fragment>
-       
     )
 }
 
