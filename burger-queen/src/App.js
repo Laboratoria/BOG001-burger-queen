@@ -7,8 +7,9 @@ import BackgroundKitchen from './Vistas/Kitchen'
 import './Styles/sass/login.scss';
 import './Styles/sass/roles.scss';
 import './Styles/sass/footer.scss';
-import './Styles/sass/navigation.scss'
-import './Styles/sass/kitchen.scss'
+import './Styles/sass/navigation.scss';
+import './Styles/sass/kitchen.scss';
+import './Styles/sass/waiters.scss'
 import BackgroundWaiters from './Vistas/Waiters.jsx';
 
 function App() {

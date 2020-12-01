@@ -25,8 +25,7 @@ const Roles = () => {
 
 function BackgroundRoles () {
     return (
-        <div className="backgroundRoles">
-        <Navigation/>    
+        <div className="backgroundRoles">   
         <h1>ESCOGE TU ROL</h1>
         <Roles />
         <Footer/>
