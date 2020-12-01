@@ -3,13 +3,21 @@ import React from "react";
 import "./styles/nombre.css";
 
 class Nombre extends React.Component {
+ 
+    addDish = event => {
+      event.preventDefault();
+      console.log(this.newName.current.value);
+    }
+  
+    newName = React.createRef(); 
   render() {
     return (
-      <div className="form-control">
+      <form className="form-control" onSubmit={this.addDish}>
         <p className="nombre">
-          Nombre:<input className="inputNombre" type="text"></input>
+          Nombre:<input className="inputNombre" ref={this.newName}></input>
+          <button type="submit" onClick={this.addDish}>enviar</button>        
         </p>
-      </div>
+      </form>
     );
   }
 }
