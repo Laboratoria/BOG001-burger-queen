@@ -3,6 +3,7 @@ import "./styles/botonesItems.css";
 
 function BotonesGaseosa(props) {
     let newElement = "Item ";
+    // aca es prueba 
     //const [count, setCount] = useState([]);
     //class BotonesGaseosa extends React.Component {
     const agregarFactura = (e) => {
