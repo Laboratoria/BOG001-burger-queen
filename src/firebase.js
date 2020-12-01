@@ -1,15 +1,20 @@
-import firebase from 'firebase';
+import firebase from "firebase/app";
+import "firebase/auth";
+import "firebase/firestore";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyB6Y16dDHyR09mup0YjjlkxIsIOhQTZLvk",
-    authDomain: "burgerqueen-ln-fa10b.firebaseapp.com",
-    databaseURL: "https://burgerqueen-ln-fa10b.firebaseio.com",
-    projectId: "burgerqueen-ln-fa10b",
-    storageBucket: "burgerqueen-ln-fa10b.appspot.com",
-    messagingSenderId: "44932893073",
-    appId: "1:44932893073:web:3be76f069def522b227230"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
 
-  export default firebase;
+    apiKey: "AIzaSyAQbohs-qbcHf1sypMXyQS5INFKO7ooKQI",
+    authDomain: "burgerqueen-d2b77.firebaseapp.com",
+    databaseURL: "https://burgerqueen-d2b77.firebaseio.com",
+    projectId: "burgerqueen-d2b77",
+    storageBucket: "burgerqueen-d2b77.appspot.com",
+    messagingSenderId: "672034291491",
+    appId: "1:672034291491:web:0ee49b57aa163342039696"
+  };
+ 
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+export const auth = firebase.auth();
+// export const storage = firebase.storage();
+export default firebase;
