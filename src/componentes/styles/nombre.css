@@ -1,0 +1,39 @@
+.form-control {
+    background-color: #b4676770;
+    border-radius: 15px;
+    width: 90%;
+    height: 150px;
+    border: none;
+    font-size: 3em;
+  }
+  .nombre {
+    padding-left: 54px;
+    padding-top: 100px;
+    color: #741616;
+  }
+  .inputNombre {
+    padding-left: 250px;
+    padding-top: 21px;
+    margin: 47px 7px;
+    border: none;
+    border-bottom-style: solid;
+    border-color: #741616;
+    background-color: #b4676700;
+    outline: none;
+  }
+ .botonNombre{
+  border-radius: 5px;
+  background-color: #741616b0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: black;
+  width: 12%;
+  height: 2.5em;
+  border: none;
+  margin-left: 10px;
+  vertical-align: top;
+  margin: 1px 10px;
+  position: absolute;
+  left: 73%;
+  top: 28%;
+  font-size: 2vw;
+ }

@@ -5,7 +5,8 @@ const admin = require('firebase-admin');
 admin.initializeApp();
 admin.firestore().settings({ timestampsInSnapshots: true });
 
-
+//no se usan
+//autentificación
 exports.createProfile = functions.auth.user().onCreate(
   user => admin.firestore().doc(`users/${user.uid}`).set({
     email: user.email,

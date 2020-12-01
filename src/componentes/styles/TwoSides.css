@@ -1,0 +1,16 @@
+.parteUno{
+    grid-area: 1 / 1 / 2 / 2; 
+    background-color: rgb(11, 11, 11, 0.70);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    overflow: scroll;
+}
+.parteDos{
+    grid-area: 1 / 2 / 2 / 3;; 
+    background-color:  rgb(11, 11, 11, 0.70);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    overflow: scroll;
+}
