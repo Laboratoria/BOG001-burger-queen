@@ -1,0 +1,164 @@
+{
+    "Café Americano": {
+      "id": "americano",
+      "name": "Café Americano",
+      "price": 5,
+      "img": "./img/americano.jpg",
+      "menu": [
+        "Desayuno"
+      ],
+      "type": [
+        "Bebida"
+      ]
+    },
+    "Café con Leche": {
+      "id": "cafe_con_leche",
+      "name": "Café con leche",
+      "price": 7,
+      "img": "./img/.jpg",
+      "menu": [
+        "Desayuno"
+      ],
+      "type": [
+        "Bebida"
+      ]
+    },
+    "Sandwich de jamón y queso": {
+      "id": "sandwich_de_jamon_y_queso",
+      "name": "Sandwich de jamón y queso",
+      "price": 10,
+      "img": "/img/.png",
+      "menu": [
+        "Desayuno"
+      ],
+      "type": [
+        "Comida"
+      ]
+    },
+    "Jugo de frutas natural": {
+      "id": "jugo_de_frutas_natural",
+      "name": "Jugo de frutas natural",
+      "price": 7,
+      "img": "/img/.jpg",
+      "menu": [
+        "Desayuno"
+      ],
+      "type": [
+        "Bebida"
+      ]
+    },
+    "Hamburguesa simple": {
+      "id": "hamburguesa_simple",
+      "name": "Hamburguesa simple",
+      "price": 10,
+      "img": "/img/.jpg",
+      "menu": [
+        "Almuerzo y cena"
+      ],
+      "type": [
+        "Comida"
+      ],
+      "class": [
+        "res",
+        "pollo",
+        "vegetariana"
+      ],
+      "Addition":[
+        "huevo",
+        "queso"
+      ]
+    },
+    "Hamburguesa doble": {
+      "id": "hamburguesa_doble",
+      "name": "Hamburguesa doble",
+      "price": 15,
+      "img": "/img/.jpg",
+      "menu": [
+        "Almuerzo y cena"
+      ],
+      "type": [
+        "Comida"
+      ],
+      "class": [
+        "res",
+        "pollo",
+        "vegetariana"
+      ],
+      "Addition":[
+        "huevo",
+        "queso"
+      ]
+    },
+    "Papas fritas": {
+      "id": "papas_fritas",
+      "name": "Papas fritas",
+      "price": 5,
+      "img": "/img/.jpg",
+      "menu": [
+        "Almuerzo y cena"
+      ],
+      "type": [
+        "Acompañamiento"
+      ]
+    },
+    "Aros de cebolla": {
+      "id": "aros_de_cebolla",
+      "name": "Aros de Cebolla",
+      "price": 5,
+      "img": "/img/.jpg",
+      "menu": [
+        "Almuerzo y cena"
+      ],
+      "type": [
+        "Acompañamiento"
+      ]
+    },
+    "Agua 500 ml": {
+      "id": "agua_500ml",
+      "name": "Agua 500ml",
+      "price": 5,
+      "img": "/img/.jpg",
+      "menu": [
+        "Almuerzo y cena"
+      ],
+      "type": [
+        "Bebida"
+      ]
+    },
+    "Agua 750 ml": {
+      "id": "agua_750ml",
+      "name": "Agua 750ml",
+      "price": 7,
+      "img": "/img/.jpg",
+      "menu": [
+        "Almuerzo y cena"
+      ],
+      "type": [
+        "Bebida"
+      ]
+    },
+    "Gaseosa 500ml": {
+      "id": "gaseosa_500ml",
+      "name": "Gaseosa 500ml",
+      "price": 7,
+      "img": "/img/.jpg",
+      "menu": [
+        "Almuerzo y cena"
+      ],
+      "type": [
+        "Bebida"
+      ]
+    },
+    "Gaseosa 750 ml": {
+      "id": "gaseosa_750ml",
+      "name": "Gaseosa 750ml",
+      "price": 10,
+      "img": "/img/.jpg",
+      "menu": [
+        "Almuerzo y cena"
+      ],
+      "type": [
+        "Bebida"
+      ]
+    }
+  }
