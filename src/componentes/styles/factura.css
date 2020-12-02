@@ -4,7 +4,7 @@
     color: #741616;
     padding: 1em;
     margin: 1em;
-    width: 80%;
+    max-width: 80%;
     border-radius: 10px;
     overflow: scroll;
   }
