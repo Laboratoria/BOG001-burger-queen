@@ -7,9 +7,9 @@ function BadgesList(props) {
   
 
   const agregarFactura = (e) => {
-  //  let newElement = e.name;
-    console.log( 'click')
-    //props.setContedor(oldArray => [...oldArray, newElement]);
+    let newElement = e.name;
+    console.log( newElement)
+    props.setContedor(oldArray => [...oldArray, newElement]);
 }
 
         const list = [];
@@ -24,7 +24,7 @@ function BadgesList(props) {
               <div className='botonesPrincipal'>
                 <li className='lista'>
                  <img className='imgPrincipal' src={e.img} alt='imagen'/>
-                    <Link  to='/opciones'><button className="botonesClase" onClick={agregarFactura} > {e.name}   ${e.price} </button> </Link>
+                    <Link  to='/opciones'><button className="botonesClase" onClick={()=>{agregarFactura (e) } } > {e.name}   ${e.price} </button> </Link>
                 </li>
               </div>
             </React.Fragment>)
@@ -35,7 +35,7 @@ function BadgesList(props) {
                 <div className='botonesBebidas'>
                   <li className='lista'>
                   <img className='imgPrincipal' src={e.img} alt='imagen'/>
-                      <button onClick={agregarFactura } className="botonesClase" id ={e.name}> {e.name}   ${e.price}</button>
+                      <button onClick={()=>{agregarFactura (e) }} className="botonesClase" id ={e.name}> {e.name}   ${e.price}</button>
                   </li>
                 </div>
                 </React.Fragment>)
@@ -46,7 +46,7 @@ function BadgesList(props) {
                   <div className='botonesAcompañamientos'>
                     <li className='lista'>
                      <img className='imgPrincipal' src={e.img} alt='imagen'/>
-                        <button onClick={agregarFactura} className="botonesClase" id ={e.name}>{e.name}   ${e.price}</button>
+                        <button onClick={()=>{agregarFactura (e) }} className="botonesClase" id ={e.name}>{e.name}   ${e.price}</button>
                     </li>
                   </div>
                   </React.Fragment>)

@@ -20,10 +20,7 @@ function PrincipalMesero (props) {
             <Nombre />
             <div className="grid">
               <BadgesList contador={count} setContedor={setCount} />
-
               <Factura acaVacontador={count}/>
-
-              <BotonesGaseosa contador={count} setContedor={setCount}/>
             </div>
           </div>
         </div>
