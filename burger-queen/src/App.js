@@ -4,7 +4,7 @@ import {
 import LoginView from './Vistas/Login.jsx';
 import BackgroundRoles from './Vistas/Roles.jsx';
 import BackgroundKitchen from './Vistas/Kitchen'
-import BackgroundWaiters from './Vistas/Waiters.jsx';
+import Menu from './Vistas/Waiters.jsx';
 import './Styles/sass/login.scss';
 import './Styles/sass/roles.scss';
 import './Styles/sass/footer.scss';
@@ -24,7 +24,7 @@ function App() {
           <BackgroundRoles />
         </Route>
         <Route path="/mesa" exact>
-        <BackgroundWaiters/>
+        <Menu/>
         </Route>
         <Route path="/cocina" exact>
         <BackgroundKitchen/>

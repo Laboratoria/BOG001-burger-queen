@@ -21,6 +21,7 @@ const Request = () => {
 
 
 export const Menu = () => {
+
     const [menu, setMenu] = useState(menus)
 
     const [cena, setCena] = useState(false);
@@ -28,32 +29,21 @@ export const Menu = () => {
 
     return (
         <Fragment>
-            <div className={cena ? 'menuBreak-active' : 'menuBreak'}>
-                <Clients />
-                {
-                    menu.breakfast.map(element =>
-                        <div key={element.id} className="itemsBreak" >{element.item}
-                            <div className="itemsPrice">
-                                {element.us} {element.price}
-                            </div>
-                        </div>
-                    )  
-                }
-                <Navigation showMenuCena = {showCena}/>
-            </div>
-        </Fragment>
-
-    );   
-}
-
-
-const BackgroundWaiters = () => {
-    return (
-        <Fragment>
             <div className="backgroundKitchen">
-                <Navigation />
+                <Navigation showMenuCena={showCena} />
                 <div className="containerGlobal">
-                    <Menu />
+                <div className={cena ? 'menuBreak-active' : 'menuBreak'}>
+                    <Clients />
+                    {
+                        menu.breakfast.map(element =>
+                            <div key={element.id} className="itemsBreak" >{element.item}
+                                <div className="itemsPrice">
+                                    {element.us} {element.price}
+                                </div>
+                            </div>
+                        )
+                    }
+                </div>
                     <Request />
                 </div>
                 <Footer />
@@ -61,5 +51,6 @@ const BackgroundWaiters = () => {
         </Fragment>
     );
 }
+export default Menu;
 
-export default BackgroundWaiters;
+
