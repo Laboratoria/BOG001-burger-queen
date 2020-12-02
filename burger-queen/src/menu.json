@@ -1,0 +1,102 @@
+{
+    "breakfast": [
+        {
+            "id": 1,
+            "type": "bebida",
+            "item": "Café Americano",
+            "price": 5,
+            "us": "$"
+        },
+        {
+            "id": 2,
+            "type": "bebida",
+            "item": "Café con leche",
+            "price": 7,
+            "us": "$"
+        },
+        {
+            "id": 3,
+            "type": "bebida",
+            "item": "Jugo de frutas natural",
+            "price": 7,
+            "us": "$"
+        },
+        {
+            "id": 4,
+            "type": "snack",
+            "item": "Sandwich de jamón y queso",
+            "price": 10,
+            "us": "$"
+        },
+        {
+            "id": 5,
+            "type": "snack",
+            "item": "Sandwich de Pollo",
+            "price": 13,
+            "us": "$"
+        },
+        {
+            "id": 6,
+            "type": "snack",
+            "item": "Huevos batidos",
+            "price": 5,
+            "us": "$"
+        }
+    ],
+    "lunch": [
+        {
+            "id": 7,
+            "type": "hamburguesa",
+            "item": "Hamburguesa simple",
+            "price": 10
+        },
+        {
+            "id": 8,
+            "type": "hamburguesa",
+            "item": "Hamburguesa doble",
+            "price": 15
+        },
+        {
+            "id": 9,
+            "type": "acompañamiento",
+            "item": "Papas fritas",
+            "price": 5
+        },
+        {
+            "id": 10,
+            "type": "acompañamiento",
+            "item": "Aros de cebolla",
+            "price": 5
+        },
+        {
+            "id": 11,
+            "type": "bebida",
+            "item": "Agua 500ml",
+            "price": 5
+        },
+        {
+            "id": 12,
+            "type": "bebida",
+            "item": "Agua 750ml",
+            "price": 7
+        },
+        {
+            "id": 13,
+            "type": "bebida",
+            "item": "Agua 750ml",
+            "price": 7
+        },
+        {
+            "id": 14,
+            "type": "bebida",
+            "item": "Gaseosa 500ml",
+            "price": 7
+        },
+        {
+            "id": 15,
+            "type": "bebida",
+            "item": "Gaseosa 750ml",
+            "price": 10
+        }
+    ]
+}

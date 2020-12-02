@@ -1,0 +1,107 @@
+@font-face {
+    font-family: Rancho-Regular;
+    src: url(../Letras/Rancho-Regular.ttf);
+}
+
+
+.containerGlobal {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    .containerCliente {
+        width: 90%;
+        height: 43px;
+        margin-top: 5%;
+        margin-left: 5%;
+
+        label {
+            font-family: Rancho-Regular;
+            font-size: 5vh;
+
+            input {
+                width: 70%;
+                height: 30px;
+                border-radius: 5px;
+            }
+        }
+    }
+
+    .menuBreak {
+        background-color: rgb(184, 181, 181);
+        border-radius: 4%;
+        height: 400px;
+        width: 30%;
+        height: 400px;
+        margin-left: -80%;
+        transition: 850ms;
+
+        .itemsBreak {
+            font-family: Rancho-Regular;
+            background-color: rgb(13, 13, 14);
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: blanchedalmond;
+            float: left;
+            width: 35%;
+            height: 20%;
+            margin-top: 3%;
+            margin-left: 10%;
+            margin-right: 2%;
+            margin-bottom: 2%;
+            padding: 2%;
+
+            &:nth-child(2n) {
+                margin-right: 0;
+            }
+
+        }
+    }
+
+    .menuBreak-active {
+        background-color: rgb(184, 181, 181);
+        border-radius: 4%;
+        height: 400px;
+        width: 30%;
+        height: 400px;
+        margin-top: 2%;
+        transition: 350ms;
+
+        .itemsBreak {
+            font-family: Rancho-Regular;
+            background-color: rgb(13, 13, 14);
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: blanchedalmond;
+            float: left;
+            width: 35%;
+            height: 20%;
+            margin-top: 3%;
+            margin-left: 10%;
+            margin-right: 2%;
+            margin-bottom: 2%;
+            padding: 2%;
+
+            &:nth-child(2n) {
+                margin-right: 0;
+            }
+        }
+    }
+
+
+    .containerRequest {
+        background-color: rgb(184, 181, 181);
+        border-radius: 4%;
+        height: 400px;
+        width: 30%;
+        height: 300px;
+        margin-top: 2%;
+
+    }
+}
