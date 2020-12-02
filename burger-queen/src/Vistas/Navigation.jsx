@@ -2,11 +2,12 @@ import React, { Fragment, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHamburger, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { Link } from "react-router-dom";
-import Menu from "./Waiters.jsx";
 
-const Navigation = () => {
+
+const Navigation = (props) => {
     const [sidebar, setSidebar] = useState(false);
     const showSidebar = () => setSidebar(!sidebar);
+
 
     return (
         <Fragment>
@@ -23,8 +24,8 @@ const Navigation = () => {
                 <div className='nav-menu-items'>
                     <ul>
                         <Link to='#' >
-                            <li className='nav-text' onClick={<Menu showCena />} >Desayuno</li>
-                            <li className='nav-text' onClick={<Menu showCena/>} >Almuerzo y Cena</li>
+                            <li className='nav-text'>Desayuno</li>
+                            <li className='nav-text' onClick= {props.showMenuCena} >Almuerzo y Cena</li>
                         </Link>
                     </ul>
                 </div>
@@ -32,6 +33,4 @@ const Navigation = () => {
         </Fragment>
     )
 }
-
-
 export default Navigation;

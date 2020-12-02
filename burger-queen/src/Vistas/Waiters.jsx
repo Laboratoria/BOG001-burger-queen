@@ -37,11 +37,13 @@ export const Menu = () => {
                                 {element.us} {element.price}
                             </div>
                         </div>
-                    )
+                    )  
                 }
+                <Navigation showMenuCena = {showCena}/>
             </div>
         </Fragment>
-    );
+
+    );   
 }
 
 
