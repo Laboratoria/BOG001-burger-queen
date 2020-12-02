@@ -1,0 +1,27 @@
+
+  .factura {
+    background-color: #ffffff;
+    color: #741616;
+    padding: 1em;
+    margin: 1em;
+    max-width: 80%;
+    border-radius: 10px;
+    overflow: scroll;
+  }
+  .title {
+    font-size: 2em;
+    padding: 0.2em;
+    border-bottom: 3px;
+    border-bottom-style: solid;
+    border-color: #741616;
+    text-emphasis-color: #741616;
+  }
+  
+  .total {
+    font-size: 1.25em;
+    padding: 0.2em;
+    border-bottom: 3px;
+    border-top-style: solid;
+    border-color: #741616;
+    margin-top: 20em;
+  }
