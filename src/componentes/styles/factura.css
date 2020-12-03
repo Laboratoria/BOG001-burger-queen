@@ -1,12 +1,13 @@
 
-  .factura {
+  .factura1 {
     background-color: #ffffff;
     color: #741616;
     padding: 1em;
     margin: 1em;
-    max-width: 80%;
+    width: 80%;
+    height: 531px;
     border-radius: 10px;
-    overflow: scroll;
+    overflow: auto;
   }
   .title {
     font-size: 2em;
@@ -23,5 +24,17 @@
     border-bottom: 3px;
     border-top-style: solid;
     border-color: #741616;
-    margin-top: 20em;
   }
+ .imgMenos{
+  width: 13.5%;
+  margin: -3.5% 14%;
+ }
+ .listFactr{
+  width: 117%;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 13% -33%;
+  padding: 3% 10%;
+ }
+ 

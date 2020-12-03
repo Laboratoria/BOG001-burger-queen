@@ -13,6 +13,9 @@
 .lista{
     list-style: none;
 }
+.list-unstyled{
+    list-style: none;
+}
 
 .botonesClase{
     border-radius: var(--borderSecundary-buttoms);

@@ -14,7 +14,8 @@ function BotonesGaseosa(props) {
     
     let nombre="";
     Object.values(data.data).forEach((e) => {
-        nombre = e.name})
+        nombre = e.name}
+        )
 
     
     //    items.map( (cu) => console.log(cu.name ) )

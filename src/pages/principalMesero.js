@@ -4,7 +4,7 @@ import "../style/principalMesero.css";
 import BadgesList from "../componentes/botonesItems";
 import Factura from "../componentes/factura";
 import Nombre from "../componentes/nombre";
-import BotonesGaseosa from "../componentes/practicaGaseosa.js";
+//import BotonesGaseosa from "../componentes/practicaGaseosa.js";
 
 //class PrincipalMesero extends React.Component {
   //render() {
