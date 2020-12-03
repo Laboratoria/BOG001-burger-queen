@@ -8,17 +8,22 @@ function Factura ( props) {
         const eliminarFactura = (e) => {
             console.log('dando click')
         }
+
+        let total = 0;
+        props.acaVacontador.forEach(element => {
+            total += element.price
+        });
     return(
         <div className="factura1">
           <div className="title">Factura:</div>
           <div className="resumenFactura" id= "rFactura">
           <ul>
                 {props.acaVacontador.map((item , index )=> (
-                    <li className='listFactr' key = {index}>{item}  <img className='imgMenos' src={menos} alt='imagen' onClick={()=>{eliminarFactura () }}/></li>
+                    <li className='listFactr' key = {index}>{item.name} <img className='imgMenos' src={menos} alt='imagen' onClick={()=>{eliminarFactura () }}/></li>
                 ))}
             </ul>
           </div>
-          <div className="total">Total:</div>
+                <div className="total">Total:  $ {total}</div>
         </div>
     )
     //}
