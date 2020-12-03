@@ -14,13 +14,33 @@ const Clients = () => {
 const Request = () => {
     return (
         <div className="containerRequest">
-
+        
         </div>
+    );
+}
+const MenuLunch = () => {
+    const [menuLunch, setMenuLunch] = useState(menus)
+    return ( 
+        <Fragment>
+            <div className="containerLunch">
+            {
+            menuLunch.lunch.map(e => 
+                <div key={e.id} className="itemsLunch">
+                    <h3>{e.type}</h3>
+                    {e.item}
+                    <div className="priceLunch">
+                        {e.us}{e.price}
+                    </div>
+                </div>)
+        }
+            </div>
+        </Fragment>
     );
 }
 
 
-export const Menu = () => {
+
+const MenuBreakfast = () => {
 
     const [menu, setMenu] = useState(menus)
 
@@ -44,13 +64,17 @@ export const Menu = () => {
                         )
                     }
                 </div>
+                <MenuLunch/>
                     <Request />
                 </div>
+                
                 <Footer />
             </div>
         </Fragment>
     );
 }
-export default Menu;
+
+
+export default MenuBreakfast;
 
 
