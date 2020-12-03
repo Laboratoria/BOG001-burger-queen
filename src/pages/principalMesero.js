@@ -4,28 +4,20 @@ import "../style/principalMesero.css";
 import BadgesList from "../componentes/botonesItems";
 import Factura from "../componentes/factura";
 import Nombre from "../componentes/nombre";
-import db from "../firebaseguardarpedido";
+//import guardarPedidosfs from "../firebaseguardarpedido";
 //import BotonesGaseosa from "../componentes/practicaGaseosa.js";
 
-//class PrincipalMesero extends React.Component {
-  //render() {
 
- /*   export const nuevoItem = async () => {
 
-      const subirNuevoItem = document.getElementById('subirNuevoItem');
-      subirNuevoItem.addEventListener('submit', (e) => {
+ /*   const nuevoPedido = async () => {
+      const subirNuevoPedido = document.getElementById('subirPedido');
+      subirPedido.addEventListener('submit', (e) => {
           e.preventDefault();
-          const nombreNuevoItem = document.getElementById('nombreNuevoItem').value;
-          const descripcionNuevoItem = document.getElementById('descripcionNuevoItem').value;
-          //sacar funcion aparte main.js guardar obj 
-          db.collection('objetos').doc().set(
-              {   
-                  nombreNuevoItem,
-                  descripcionNuevoItem
-              }
-          )
-          console.log( nombreNuevoItem, descripcionNuevoItem )
-          window.location.hash = "#/item"
+          const nombreCliente = document.getElementById('nombreCliente').value;
+          const pedido = count
+          //como tomar todo del mismo lugar ? id nombre 
+          guardarPedidosfs(nombreCliente , pedido )
+          console.log( nombre, Pedido )
       })
   }
 */
@@ -48,7 +40,7 @@ function PrincipalMesero (props) {
         </div>
       </React.Fragment>
     );
-  //}
+
 }
 
 export default PrincipalMesero;
