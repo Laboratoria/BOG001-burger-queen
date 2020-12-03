@@ -2,7 +2,7 @@
 //auth.onAuthStateChanged((user) => {
 //if (user) { window.location.hash = '#/home'; }
 //})
-
+import firebase from "./firebase";
 const db = firebase.firestore();
 
 //export const obtenerObjetos = id => db.collection('objetos').doc(id).get().then (snapshot);
