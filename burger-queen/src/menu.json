@@ -46,57 +46,67 @@
     "lunch": [
         {
             "id": 7,
-            "type": "hamburguesa",
             "item": "Hamburguesa simple",
-            "price": 10
+            "price": 10,
+            "us": "$"
         },
         {
             "id": 8,
-            "type": "hamburguesa",
             "item": "Hamburguesa doble",
-            "price": 15
+            "price": 15,
+            "us": "$"
         },
         {
             "id": 9,
-            "type": "acompañamiento",
-            "item": "Papas fritas",
-            "price": 5
+            "item": "Hamburguesa de Pollo",
+            "price": 13,
+            "us": "$"
         },
         {
             "id": 10,
-            "type": "acompañamiento",
-            "item": "Aros de cebolla",
-            "price": 5
+            "type": "Acompañamiento",
+            "item": "Papas fritas",
+            "price": 5,
+            "us": "$"
         },
         {
             "id": 11,
-            "type": "bebida",
-            "item": "Agua 500ml",
-            "price": 5
-        },
+            "type": "Acompañamiento",
+            "item": "Aros de cebolla",
+            "price": 5,
+            "us": "$"
+        }
+    ],
+    "bebidas":[
         {
             "id": 12,
-            "type": "bebida",
-            "item": "Agua 750ml",
-            "price": 7
+            "item": "Agua 500ml",
+            "price": 5,
+            "us": "$"
         },
         {
             "id": 13,
-            "type": "bebida",
             "item": "Agua 750ml",
-            "price": 7
+            "price": 7,
+            "us": "$"
         },
         {
             "id": 14,
-            "type": "bebida",
-            "item": "Gaseosa 500ml",
-            "price": 7
+            "item": "Agua 750ml",
+            "price": 7,
+            "us": "$"
         },
         {
             "id": 15,
-            "type": "bebida",
+            "item": "Gaseosa 500ml",
+            "price": 7,
+            "us": "$"
+        },
+        {
+            "id": 16,
             "item": "Gaseosa 750ml",
-            "price": 10
+            "price": 10,
+            "us": "$"
         }
     ]
 }
