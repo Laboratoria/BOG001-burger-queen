@@ -14,27 +14,24 @@ const Clients = () => {
 const Request = () => {
     return (
         <div className="containerRequest">
-        
+
         </div>
     );
 }
 const MenuLunch = () => {
     const [menuLunch, setMenuLunch] = useState(menus)
-    return ( 
+    return (
         <Fragment>
-            <div className="containerLunch">
-            <Clients />
             {
-            menuLunch.lunch.map(e => 
-                <div key={e.id} className="itemsLunch">
-                    <h3>{e.type}</h3>
-                    {e.item}
-                    <div className="priceLunch">
-                        {e.us}{e.price}
-                    </div>
-                </div>)
-        }
-            </div>
+                menuLunch.lunch.map(e =>
+                    <div key={e.id} className="itemsLunch">
+                        <h3>{e.type}</h3>
+                        {e.item}
+                        <div className="priceLunch">
+                            {e.us}{e.price}
+                        </div>
+                    </div>)
+            }
         </Fragment>
     );
 }
@@ -53,29 +50,31 @@ const MenuBreakfast = () => {
             <div className="backgroundKitchen">
                 <Navigation showMenuCena={showCena} />
                 <div className="containerGlobal">
-                <div className={cena ? 'menuBreak-active' : 'menuBreak'}>
-                    <Clients />
-                    {
-                        menu.breakfast.map(element =>
-                            <div key={element.id} className="itemsBreak" >{element.item}
-                                <div className="itemsPrice">
-                                    {element.us} {element.price}
-                                </div>
-                            </div>
-                        )
-                    }
-                </div>
-                <MenuLunch/>
+                    <div className="menuBreak">
+                        <Clients />
+                        <div className="containerLunch">
+                            <MenuLunch />
+                        </div>
+                        <div className={cena ? 'containerBreakfast-active' : 'containerBreakfast'} >
+                            {
+                                menu.breakfast.map(element =>
+                                    <div key={element.id} className="itemsBreak" >{element.item}
+                                        <div className="itemsPrice">
+                                            {element.us} {element.price}
+                                        </div>
+                                    </div>
+                                )
+                            }
+                        </div>
+                    </div>
                     <Request />
                 </div>
-                
+
                 <Footer />
             </div>
         </Fragment>
     );
 }
-
-
 export default MenuBreakfast;
 
 
