@@ -23,6 +23,7 @@ const MenuLunch = () => {
     return ( 
         <Fragment>
             <div className="containerLunch">
+            <Clients />
             {
             menuLunch.lunch.map(e => 
                 <div key={e.id} className="itemsLunch">
