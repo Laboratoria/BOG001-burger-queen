@@ -1,4 +1,4 @@
-import burger from './burgerlab.svg';
+import burger from './img/Logo Burger lab.png';
 import './App.scss';
 
 function App() {
