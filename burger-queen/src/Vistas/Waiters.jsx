@@ -52,10 +52,11 @@ const MenuBreakfast = () => {
                 <div className="containerGlobal">
                     <div className="menuBreak">
                         <Clients />
+                        {cena ?
                         <div className="containerLunch">
                             <MenuLunch />
-                        </div>
-                        <div className={cena ? 'containerBreakfast-active' : 'containerBreakfast'} >
+                        </div> :
+                        <div className='containerBreakfast'>
                             {
                                 menu.breakfast.map(element =>
                                     <div key={element.id} className="itemsBreak" >{element.item}
@@ -65,7 +66,7 @@ const MenuBreakfast = () => {
                                     </div>
                                 )
                             }
-                        </div>
+                        </div>}
                     </div>
                     <Request />
                 </div>
