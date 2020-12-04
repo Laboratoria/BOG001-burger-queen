@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import logo from './logo.svg';
-=======
 import burger from './burgerlab.svg';
->>>>>>> 037cafcaba2bc956bd73fa561db8144a66e7b16e
 import './App.scss';
 
 function App() {
