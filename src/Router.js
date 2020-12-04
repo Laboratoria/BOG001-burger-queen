@@ -4,13 +4,13 @@ import { Switch } from 'react-router-dom';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 const Router = () => {
-    render(){
+    
         return(
             <BrowserRouter>
                 <Switch>
-                    <Route exact path="/" component{} />
+                    <Route exact path="/" />
                 </Switch>
             </BrowserRouter>
         )
-    }
+    
 }
