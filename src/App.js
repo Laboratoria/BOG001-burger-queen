@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-import burger from './img/Logo Burger lab.png';
-=======
 import React from 'react';
 import logo from './logo.svg';
->>>>>>> 291533eeedad6244bdc09a332a708b2dfab11cf5
 import './App.scss';
 
 function App() {
