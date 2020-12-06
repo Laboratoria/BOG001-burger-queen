@@ -1,0 +1,30 @@
+[
+  {
+    "id": "100",
+    "code": "CAME",
+    "menu": "Desayuno",
+    "item": "Café americano",
+    "price": "5"
+  },
+  {
+    "id": "200",
+    "code": "CALE",
+    "menu": "Desayuno",
+    "item": "Café con leche",
+    "price": "7"
+  },
+  {
+    "id": "300",
+    "code": "SNJQ",
+    "menu": "Desayuno",
+    "item": "Sandwich de jamón y queso",
+    "price": "10"
+  },
+  {
+    "id": "400",
+    "code": "JUFN",
+    "menu": "Desayuno",
+    "item": "Jugo de frutas natural",
+    "price": "7"
+  }
+]

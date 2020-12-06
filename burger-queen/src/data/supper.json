@@ -1,0 +1,242 @@
+[
+  {
+    "id": 500,
+    "code": "HSR",
+    "menu": "Almuerzo y Cena",
+    "submenu": "Hamburguesas",
+    "recipe": "res",
+    "options": "sin extras",
+    "item": "Hamburguesa simple res",
+    "price": 10
+  },
+  {
+    "id": 510,
+    "code": "HSR EH",
+    "menu": "Almuerzo y Cena",
+    "submenu": "Hamburguesas",
+    "recipe": "res",
+    "options": "extra huevo",
+    "item": "Hamburguesa simple res extra huevo",
+    "price": 11
+  },
+  {
+    "id": 520,
+    "code": "HSR EQ",
+    "menu": "Almuerzo y Cena",
+    "submenu": "Hamburguesas",
+    "recipe": "res",
+    "options": "extra queso",
+    "item": "Hamburguesa simple res extra queso",
+    "price": 11
+  },
+  {
+    "id": 530,
+    "code": "HSPOL",
+    "menu": "Almuerzo y Cena",
+    "submenu": "Hamburguesas",
+    "recipe": "pollo",
+    "options": "sin extras",
+    "item": "Hamburguesa simple pollo",
+    "price": 10
+  },
+  {
+    "id": 540,
+    "code": "HSPOL EH",
+    "menu": "Almuerzo y Cena",
+    "submenu": "Hamburguesas",
+    "recipe": "pollo",
+    "options": "extra huevo",
+    "item": "Hamburguesa simple pollo extra huevo",
+    "price": 11
+  },
+  {
+    "id": 550,
+    "code": "HSPOL EQ",
+    "menu": "Almuerzo y Cena",
+    "submenu": "Hamburguesas",
+    "recipe": "pollo",
+    "options": "extra queso",
+    "item": "Hamburguesa simple pollo extra queso",
+    "price": 11
+  },
+  {
+    "id": 560,
+    "code": "HSV",
+    "menu": "Almuerzo y Cena",
+    "submenu": "Hamburguesas",
+    "recipe": "vegetariana",
+    "options": "sin extras",
+    "item": "Hamburguesa simple vegetariana",
+    "price": 10
+  },
+  {
+    "id": 570,
+    "code": "HSV EH",
+    "menu": "Almuerzo y Cena",
+    "submenu": "Hamburguesas",
+    "recipe": "vegetariana",
+    "options": "extra huevo",
+    "item": "Hamburguesa simple vegetariana extra huevo",
+    "price": 11
+  },
+  {
+    "id": 580,
+    "code": "HSV EQ",
+    "menu": "Almuerzo y Cena",
+    "submenu": "Hamburguesas",
+    "recipe": "vegetariana",
+    "options": "extra queso",
+    "item": "Hamburguesa simple vegetariana extra queso",
+    "price": 11
+  },
+  {
+    "id": 600,
+    "code": "HDR",
+    "menu": "Almuerzo y Cena",
+    "submenu": "Hamburguesas",
+    "recipe": "res",
+    "options": "sin extras",
+    "item": "Hamburguesa doble res",
+    "price": 15
+  },
+  {
+    "id": 610,
+    "code": "HDR EH",
+    "menu": "Almuerzo y Cena",
+    "submenu": "Hamburguesas",
+    "recipe": "res",
+    "options": "extra huevo",
+    "item": "Hamburguesa doble res extra huevo",
+    "price": 16
+  },
+  {
+    "id": 620,
+    "code": "HDR EQ",
+    "menu": "Almuerzo y Cena",
+    "submenu": "Hamburguesas",
+    "recipe": "res",
+    "options": "extra queso",
+    "item": "Hamburguesa doble res extra queso",
+    "price": 16
+  },
+  {
+    "id": 630,
+    "code": "HDPOL",
+    "menu": "Almuerzo y Cena",
+    "submenu": "Hamburguesas",
+    "recipe": "pollo",
+    "options": "sin extras",
+    "item": "Hamburguesa doble pollo",
+    "price": 15
+  },
+  {
+    "id": 640,
+    "code": "HDPOL EH",
+    "menu": "Almuerzo y Cena",
+    "submenu": "Hamburguesas",
+    "recipe": "pollo",
+    "options": "extra huevo",
+    "item": "Hamburguesa doble pollo extra huevo",
+    "price": 16
+  },
+  {
+    "id": 650,
+    "code": "HDPOL EQ",
+    "menu": "Almuerzo y Cena",
+    "submenu": "Hamburguesas",
+    "recipe": "pollo",
+    "options": "extra queso",
+    "item": "Hamburguesa doble pollo extra queso",
+    "price": 16
+  },
+  {
+    "id": 660,
+    "code": "HDV",
+    "menu": "Almuerzo y Cena",
+    "submenu": "Hamburguesas",
+    "recipe": "vegetariana",
+    "options": "sin extras",
+    "item": "Hamburguesa doble vegetariana",
+    "price": 15
+  },
+  {
+    "id": 670,
+    "code": "HDV EH",
+    "menu": "Almuerzo y Cena",
+    "submenu": "Hamburguesas",
+    "recipe": "vegetariana",
+    "options": "extra huevo",
+    "item": "Hamburguesa doble vegetariana extra huevo",
+    "price": 16
+  },
+  {
+    "id": 680,
+    "code": "HDV EQ",
+    "menu": "Almuerzo y Cena",
+    "submenu": "Hamburguesas",
+    "recipe": "vegetariana",
+    "options": "extra queso",
+    "item": "Hamburguesa doble vegetariana extra queso",
+    "price": 16
+  },
+  {
+    "id": 700,
+    "code": "ACO PFR",
+    "menu": "Almuerzo y Cena",
+    "submenu": "Acompañamientos",
+    "recipe": "sin extras",
+    "options": "sin extras",
+    "item": "Papas fritas",
+    "price": 5
+  },
+  {
+    "id": 800,
+    "code": "ACO ACB",
+    "menu": "Almuerzo y Cena",
+    "submenu": "Acompañamientos",
+    "recipe": "sin extras",
+    "options": "sin extras",
+    "item": "Aros de cebolla",
+    "price": 5
+  },
+  {
+    "id": 900,
+    "code": "TAG 500",
+    "menu": "Almuerzo y Cena",
+    "submenu": "Para tomar",
+    "recipe": "sin extras",
+    "options": "sin extras",
+    "item": "Agua 500 mL",
+    "price": 5
+  },
+  {
+    "id": 1000,
+    "code": "TAG 750",
+    "menu": "Almuerzo y Cena",
+    "submenu": "Para tomar",
+    "recipe": "sin extras",
+    "options": "sin extras",
+    "item": "Agua 750 mL",
+    "price": 7
+  },
+  {
+    "id": 1100,
+    "code": "TGS 500",
+    "menu": "Almuerzo y Cena",
+    "submenu": "Para tomar",
+    "recipe": "sin extras",
+    "options": "sin extras",
+    "item": "Gaseosa 500 mL",
+    "price": 7
+  },
+  {
+    "id": 1200,
+    "code": "TGS 750",
+    "menu": "Almuerzo y Cena",
+    "submenu": "Para tomar",
+    "recipe": "sin extras",
+    "options": "sin extras",
+    "item": "Gaseosa 750 mL",
+    "price": 10
+  }
+]

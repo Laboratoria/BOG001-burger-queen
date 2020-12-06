@@ -36,3 +36,50 @@
     transform: rotate(360deg);
   }
 }
+
+.Bar {
+  display: grid;
+  grid-template-rows: 1;
+  grid-template-columns: 12;
+  vertical-align: middle;
+  text-align: center;
+  align-items: center;
+  align-content: space-around;
+  height: 150px;
+  color:#FFFFFF;
+  background-color:#FF6D00;
+}
+
+.barIcon{
+  display: grid;
+  grid-column: 1/2;
+}
+
+.barTitle{
+  display: grid;
+  grid-column: 3/10;
+}
+
+.barMenu{
+  display: grid;
+  grid-column: 11/12
+}
+
+.menuBreakfast-container {
+  display: grid;
+  align-self: start;
+  padding-left: 4em;
+  padding-right: 4em;
+  margin-top: 4em;
+  color:#F3B69A;
+  background-color:#B71C1C;
+}
+
+.menuSupper-container {
+  display: grid;
+  padding-left: 4em;
+  padding-right: 4em;
+  margin-top: 4em;
+  color: #FFE548;
+  background-color: #3E2723;
+}

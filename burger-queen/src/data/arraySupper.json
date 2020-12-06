@@ -1,0 +1,74 @@
+[
+  {
+    "id": 500,
+    "code": "HSR",
+    "menu": "Almuerzo y Cena",
+    "submenu": "Hamburguesas",
+    "size": ["simple", "doble"],
+    "recipe": ["res", "pollo", "vegetariana"],
+    "options": ["sin extras", "extra huevo", "extra queso"],
+    "item": "Hamburguesa",
+    "price": 10
+  },
+  
+  {
+    "id": 700,
+    "code": "ACO PFR",
+    "menu": "Almuerzo y Cena",
+    "submenu": "Acompañamientos",
+    "recipe": "sin extras",
+    "options": "sin extras",
+    "item": "Papas fritas",
+    "price": 5
+  },
+  {
+    "id": 800,
+    "code": "ACO ACB",
+    "menu": "Almuerzo y Cena",
+    "submenu": "Acompañamientos",
+    "recipe": "sin extras",
+    "options": "sin extras",
+    "item": "Aros de cebolla",
+    "price": 5
+  },
+  {
+    "id": 900,
+    "code": "TAG 500",
+    "menu": "Almuerzo y Cena",
+    "submenu": "Para tomar",
+    "recipe": "sin extras",
+    "options": "sin extras",
+    "item": "Agua 500 mL",
+    "price": 5
+  },
+  {
+    "id": 1000,
+    "code": "TAG 750",
+    "menu": "Almuerzo y Cena",
+    "submenu": "Para tomar",
+    "recipe": "sin extras",
+    "options": "sin extras",
+    "item": "Agua 750 mL",
+    "price": 7
+  },
+  {
+    "id": 1100,
+    "code": "TGS 500",
+    "menu": "Almuerzo y Cena",
+    "submenu": "Para tomar",
+    "recipe": "sin extras",
+    "options": "sin extras",
+    "item": "Gaseosa 500 mL",
+    "price": 7
+  },
+  {
+    "id": 1200,
+    "code": "TGS 750",
+    "menu": "Almuerzo y Cena",
+    "submenu": "Para tomar",
+    "recipe": "sin extras",
+    "options": "sin extras",
+    "item": "Gaseosa 750 mL",
+    "price": 10
+  }
+]
