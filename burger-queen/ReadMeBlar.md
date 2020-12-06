@@ -8,15 +8,28 @@
 ***
 
 ## 1. Dailys
-01/12/2020 Lectura del README de Burger Queen. Checklist del arranque del proyecto. Checklist de los objetivos de aprendizaje. Dibujar en papel los bocetos (de baja fidelidad) de las historias de usuario. Esquema del JSON del menú.
-02/12/2020 Q&A Burger Queen con Mayra: Chequeo del JSON. Recomendó estudiar el flujo de los datos y hacer diagramas de estados. Tomar en cuenta los roles desde el principio (bluuweb)
-03/12/2020 Mejoramiento del JSON. Fork del repositorio y configuración del remoto en GitHub. Mirar Tutoriales de React+Firebase CRUD (Fazt, bluuweb, codigofacilito). Inicio prototipo de alta. Planning de los componentes.
-04/12/2020 Configurar el proyecto en Firebase, según instrucciones del README. Chequear el arranque de la app: Listo, todo bello. Crear mis primeros componentes. Crear carpetas assets, components y data para organizar un poco la estructura de carpetas del proyecto. Subir cambios a mi rama "bqblar". Planning en GitHub. https://github.com/blarteagar/BOG001-burger-queen/projects/1.
+01/12/2020 Lectura del README de Burger Queen. Checklist del arranque del proyecto. Checklist de los 
+objetivos de aprendizaje. Dibujar en papel los bocetos (de baja fidelidad) de las historias de usuario.
+Esquema del JSON del menú.
+02/12/2020 Q&A Burger Queen con Mayra: Chequeo del JSON. Recomendó estudiar el flujo de los datos y 
+hacer diagramas de estados. Tomar en cuenta los roles desde el principio (bluuweb)
+03/12/2020 Mejoramiento del JSON. Fork del repositorio y configuración del remoto en GitHub. Mirar 
+Tutoriales de React+Firebase CRUD (Fazt, bluuweb, codigofacilito). Inicio prototipo de alta. Planning de 
+los componentes.
+04/12/2020 Configurar el proyecto en Firebase, según instrucciones del README. Chequear el arranque de 
+la app: Listo, todo bello. Crear mis primeros componentes. Crear carpetas assets, components y data 
+para organizar un poco la estructura de carpetas del proyecto. Subir cambios a mi rama "bqblar". 
+Planning en GitHub. https://github.com/blarteagar/BOG001-burger-queen/projects/1.
 Seguir mirando el video de Fazt.
-05/12/2020 Según prototipo en Figma, debería tener una página de bienvenida donde mediante botones pueda elegir los tres roles de usuario: 1. mesero tomando orden 2. cocinero viendo pedidos pendientes por preparar 3. mesero viendo pedidos pendientes por entregar.
-He logrado prototipar en alta fidelidad el flujo de la historia 1, pidiendo desayunos y agregando sandwich, cafe con leche, luego quitando el cafe con leche del pedido... Y ya. No prototipo más por hoy.
+05/12/2020 Según prototipo en Figma, debería tener una página de bienvenida donde mediante botones 
+pueda elegir los tres roles de usuario: 1. mesero tomando orden 2. cocinero viendo pedidos pendientes 
+por preparar 3. mesero viendo pedidos pendientes por entregar.
+He logrado prototipar en alta fidelidad el flujo de la historia 1, pidiendo desayunos y agregando 
+sandwich, cafe con leche, luego quitando el cafe con leche del pedido... 
+Y ya. No prototiparé más por el día de hoy.
 Hice spike de la renderización de componentes a partir de los JSONs.
 Terminaré de ver el video de Fazt, revisaré uno por uno los recursos de React del README.md
+06/12/2020 Cumpleaños Carmelita. Trabajaré en el pulimento de MD-Links.
 
 
 
