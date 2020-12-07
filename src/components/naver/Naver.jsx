@@ -3,23 +3,14 @@ import pedido from '../../assets/img/pedido.png';
 import ordenLista from '../../assets/img/orden lista.png';
 import logout from '../../assets/img/pedido.png';
 import './Naver.scss';
+import Imagenesnav from '../shared/Imagenesnav';
 
 const naver = () => {
     return (
         <div className="naver">
-            <div className="pedidos">
-                <img src={pedido} className="pedido" alt="pedido" />
-                <p>PEDIDOS</p>
-            </div>
-            <div className="ordenLista">
-                <img src={ordenLista} className="ordenLista" alt="Orden Lista" />
-                <p>ORDEN LISTA</p>
-            </div>
-            <div className="cerrar">
-                <img src={logout} className="logOut" alt="Cerrar sesión" />
-                <p>CERRAR SESIÓN</p>
-            </div>
-            
+           <Imagenesnav srcImg={pedido} txtLabel="PEDIDOS" altImg="pedido" />
+           <Imagenesnav srcImg={ordenLista} txtLabel="ORDEN LISTA" altImg="orden lista" /> 
+           <Imagenesnav srcImg={logout} txtLabel="SALIDA" altImg="salida" />           
         </div>
     )
 }
