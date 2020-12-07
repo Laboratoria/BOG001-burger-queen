@@ -25,7 +25,6 @@ import Nombre from "../componentes/nombre";
 function PrincipalMesero (props) {
     
   const [itemsMenu, setItemsMenu] = useState([]);
- console.log(itemsMenu)
     return (
       <React.Fragment>
         <div className="Container1">
@@ -34,7 +33,7 @@ function PrincipalMesero (props) {
             <Nombre />
             <div className="grid">
               <BadgesList contador={itemsMenu} setContador={setItemsMenu} />
-              <Factura acaVacontador={itemsMenu}/>
+              <Factura acaVacontador={itemsMenu} setItemsMenu={setItemsMenu}/>
             </div>
           </div>
         </div>
