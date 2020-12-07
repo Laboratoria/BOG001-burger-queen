@@ -1,10 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import items from '../items';
 import './styles/botonesItems.css'
+import OpcionesMenu from './botonesOpciones';
 function BadgesList(props) {
   
-  
+const click = (e) => {
+  console.log('hago función')
+  let mostrar = e
+  if (mostrar ) {
+    return  <OpcionesMenu /> , console.log(':)'); 
+  } }
 
   const agregarFactura = (e) => {
    //let newElement = e.name;
@@ -24,7 +29,7 @@ function BadgesList(props) {
               <div className='botonesPrincipal'>
                 <li className='lista'>
                  <img className='imgPrincipal' src={e.img} alt='imagen'/>
-                    <Link  to='/opciones'><button className="botonesClase" onClick={()=>{agregarFactura (e) } } > {e.name}   ${e.price} </button> </Link>
+                    <button className="botonesClase" onClick={()=>{agregarFactura (e);  click(e) } } > {e.name}   ${e.price} </button>
                 </li>
               </div>
             </React.Fragment>)
