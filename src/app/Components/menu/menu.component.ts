@@ -28,9 +28,9 @@ export class MenuComponent implements OnInit {
       console.log(this.menu$);
     });
     //Prueba de filtrado --esto no va aqui--
-    this.menuService.getBreakfasts().pipe().subscribe(menu => {
-      this.breakfasts$ = menu;
-    });
+    // this.menuService.getBreakfasts().pipe().subscribe(menu => {
+    //   this.breakfasts$ = menu;
+    // });
 
   }
 
