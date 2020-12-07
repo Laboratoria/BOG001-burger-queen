@@ -14,7 +14,7 @@ import Nombre from "../componentes/nombre";
       subirPedido.addEventListener('submit', (e) => {
           e.preventDefault();
           const nombreCliente = document.getElementById('nombreCliente').value;
-          const pedido = count
+          const pedido = itemsMenu
           //como tomar todo del mismo lugar ? id nombre 
           guardarPedidosfs(nombreCliente , pedido )
           console.log( nombre, Pedido )

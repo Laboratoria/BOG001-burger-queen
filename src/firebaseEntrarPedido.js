@@ -1,7 +1,11 @@
-export const entrarItem = async () => {
-    let id = localStorage.getItem('itemId')
+import firebase from "./firebase";
+const db = firebase.firestore();
+
+ export const entrarItem = async () => {
+
+  let id = localStorage.getItem('itemId')
     
-      const docRef = db.collection("objetos").doc(id);
+      const docRef = db.collection("Pedidos").doc(id);
     
       return docRef.get().then(function(doc) {
     
@@ -29,3 +33,4 @@ export const entrarItem = async () => {
     return viewItem
     });
     }
+  
