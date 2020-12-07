@@ -3,10 +3,25 @@ import Navigation from './Navigation';
 import Footer from './Footer';
 import menus from '../menu.json'
 
-const Clients = () => {
+const Clients = ({infoInput, getInput}) => {
+
+    const updateNewTaskValue = e => getInput(e.target.value);
+
+    const createNewTask = () => {
+        console.log(infoInput)
+        getInput('')
+    }
+
+    /* console.log(createNewTask) */
+
     return (
-        <div className="containerCliente">
-            <label>Cliente: <input type="text"></input></label>
+        <div className="containerCliente" >
+            <MenuBreakfast showNameCliente={createNewTask} />
+            <label>Cliente: <input type="text"
+                value={infoInput}
+                onChange={updateNewTaskValue}
+            />
+            </label>
         </div>
     );
 }
@@ -18,24 +33,27 @@ const Request = () => {
         </div>
     );
 }
+
+
 const MenuLunch = () => {
     const [menuLunch, setMenuLunch] = useState(menus)
     return (
         <Fragment>
-            {
-                menuLunch.lunch.map(e =>
-                    <div key={e.id} className="itemsLunch">
-                        <h3>{e.type}</h3>
-                        {e.item}
-                        <div className="priceLunch">
-                            {e.us}{e.price}
-                        </div>
-                    </div>)
-            }
+            <div className="containerLunch">
+                {
+                    menuLunch.lunch.map(e =>
+                        <div key={e.id} className="itemsLunch">
+                            <h3>{e.type}</h3>
+                            {e.item}
+                            <div className="priceLunch">
+                                {e.us}{e.price}
+                            </div>
+                        </div>)
+                }
+            </div>
         </Fragment>
     );
 }
-
 
 
 const MenuBreakfast = () => {
@@ -45,32 +63,32 @@ const MenuBreakfast = () => {
     const [cena, setCena] = useState(false);
     const showCena = () => setCena(!cena)
 
+    const [newTaskName, setNewTaskName] = useState("")
+
     return (
         <Fragment>
             <div className="backgroundKitchen">
                 <Navigation showMenuCena={showCena} />
                 <div className="containerGlobal">
                     <div className="menuBreak">
-                        <Clients />
+                        <Clients infoInput = {newTaskName} getInput={setNewTaskName} />
                         {cena ?
-                        <div className="containerLunch">
-                            <MenuLunch />
-                        </div> :
-                        <div className='containerBreakfast'>
-                            {
-                                menu.breakfast.map(element =>
-                                    <div key={element.id} className="itemsBreak" >{element.item}
-                                        <div className="itemsPrice">
-                                            {element.us} {element.price}
+                            <MenuLunch /> :
+                            <div className='containerBreakfast'>
+                                {
+                                    menu.breakfast.map(element =>
+                                        <div key={element.id} className="itemsBreak" >{element.item}
+                                            <div className="itemsPrice">
+                                                {element.us} {element.price}
+                                            </div>
                                         </div>
-                                    </div>
-                                )
-                            }
-                        </div>}
+                                    )
+                                }
+                            </div>
+                        }
                     </div>
                     <Request />
                 </div>
-
                 <Footer />
             </div>
         </Fragment>
