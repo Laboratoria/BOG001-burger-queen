@@ -1,8 +1,14 @@
-import React from 'react';
+import React  from 'react';
 import items from '../items';
 import './styles/botonesItems.css'
-class BadgesListDesayuno extends React.Component {
-  render() {
+function BadgesListDesayuno (props) {
+
+
+  const agregarFactura = (e) => {
+    //let newElement = e.name;
+     let newObjeto = {name: e.name, price: e.price};
+     props.setContador(oldArray => [...oldArray, newObjeto]);
+ }
         const list = [];
         const listBebidas = [];
         const data = items
@@ -14,7 +20,7 @@ class BadgesListDesayuno extends React.Component {
               <div className='botonesPrincipal'>
                 <li className='lista'>
                  <img className='imgPrincipal' src={e.img} alt='imagen'/>
-                    <button className='botonesClase'>{e.name}   ${e.price}</button>
+                    <button className='botonesClase' onClick={()=>{agregarFactura (e) } }>{e.name}   ${e.price}</button>
                 </li>
               </div>
               </React.Fragment>)
@@ -25,7 +31,7 @@ class BadgesListDesayuno extends React.Component {
                 <div className='botonesBebidas'>
                   <li className='lista' key={e.id}>
                    <img className='imgPrincipal' src={e.img} alt='imagen'/>
-                      <button className='botonesClase'>{e.name}   ${e.price}</button>
+                      <button className='botonesClase' onClick={()=>{agregarFactura (e) } }>{e.name}   ${e.price}</button>
                   </li>
                 </div>
                 </React.Fragment>)
@@ -45,7 +51,6 @@ class BadgesListDesayuno extends React.Component {
           </div>
       );
     }
-  }
   
   export default BadgesListDesayuno;
   

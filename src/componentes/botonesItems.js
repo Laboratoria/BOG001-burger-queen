@@ -9,7 +9,6 @@ function BadgesList(props) {
   const agregarFactura = (e) => {
    //let newElement = e.name;
     let newObjeto = {name: e.name, price: e.price};
-    console.log(newObjeto)
     props.setContador(oldArray => [...oldArray, newObjeto]);
 }
 
