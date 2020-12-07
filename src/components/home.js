@@ -1,16 +1,15 @@
+import React from "react";
 import burger from '../img/LogoBurgerlab.png';
+import portada from '../img/Fondo.png';
 import '../components/Home.scss';
 
-function Home(){
+const Home = () => {
   return (
-    /*<head>
-        <title>Helivisuel</title>
-        <link rel="shortcut icon" href="img/icon.png"/>
-    </head>*/
-    <section className="Home">
-        <img src={burger} className="App-logo" alt="logo" />
-    </section>
+    <div className="Home">
+        <img src={burger} className="Burger-logo" alt="logo" />
+        <img src={portada} className="Portada" alt="portada" /> 
+    </div>
   );
-}
+};
 
 export default Home;

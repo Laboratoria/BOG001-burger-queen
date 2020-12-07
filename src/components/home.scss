@@ -1,9 +1,24 @@
-/*.Home {
+body {
+    margin: 0px;
+}
+.Home {
+  display:flex;
+  align-items: center;
+}
+.Portada{
+width: 700px;
+height: 700px;
+/*background-size: 50vw 50vh;
+background-image: url("../src/img/Fondo.png");
+background-size: cover;
+background-repeat: no-repeat;
+background-attachment: fixed;
+text-align: center;*/
+}
 
-  }*/
-  
-.App-logo {
-    height: 40vmin;
+.Burger-logo {
+    width: 300px;
+    height: 117px;
     /*pointer-events: none;*/
     text-align: center;
   }

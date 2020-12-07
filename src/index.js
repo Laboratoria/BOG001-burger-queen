@@ -3,14 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.scss';
 import Home from './components/Home';
 import reportWebVitals from './reportWebVitals';
-import Client from './components/Client';
-import Header from './components/Header';
+//import Client from './components/Client';
+//import Header from './components/Header';
 
 ReactDOM.render(
   <React.StrictMode>
     <Home/>
-    <Header />
-    <Client />
+    {/*<Header />
+    <Client />*/}
   </React.StrictMode>,
   document.getElementById('root')
 );
