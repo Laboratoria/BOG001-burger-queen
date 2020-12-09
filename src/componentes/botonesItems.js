@@ -1,13 +1,14 @@
-import React from 'react';
+import React, {useState} from 'react';
 //import { Link } from 'react-router-dom';
 import items from '../items';
 import './styles/botonesItems.css'
+import OpcionesMenu from './botonesOpciones';
 function BadgesList(props) {
   
-  
+const click = (e) => {
+  setMostrar(true) }
 
   const agregarFactura = (e) => {
-   //let newElement = e.name;
     let newObjeto = {name: e.name, price: e.price};
     props.setContador(oldArray => [...oldArray, newObjeto]);
 }
@@ -24,7 +25,7 @@ function BadgesList(props) {
               <div className='botonesPrincipal'>
                 <li className='lista'>
                  <img className='imgPrincipal' src={e.img} alt='imagen'/>
-                    <button className="botonesClase" onClick={()=>{agregarFactura (e) } } > {e.name}   ${e.price} </button> 
+                    <button className="botonesClase" onClick={()=>{agregarFactura (e);  click(e) } } > {e.name}   ${e.price} </button>
                 </li>
               </div>
             </React.Fragment>)
@@ -53,7 +54,11 @@ function BadgesList(props) {
                 }
                     })
                     
-     return (
+    const [mostrar, setMostrar] = useState(false)              
+     if (mostrar) {
+    return  <OpcionesMenu /> 
+     }else
+       return(
         <div>
           <p>Nuestras Hamburguesas</p>
           <ul className="list-unstyled">

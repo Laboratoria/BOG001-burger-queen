@@ -4,9 +4,16 @@ import '../style/opcionesMenu.css';
 import combo from "../images/combo.png";
 import BotonesOpciones from "../componentes/botonesOpciones"
 
-function OpcionesMenu(props){
+/*
+Hacer un condicional que muestre al ser verdadero los botones de opciones. (renderizado condicional del componente opciones menu) 
+exportar componente opciones menu 
+llamar dinamicamente /// como hacer un renderizado dinamico 
+
+
+*/
+function OpcionesMenu (props){
     
-   return (
+        return (
             <div>
                 <div className="Container3">
                     <Header />
@@ -19,6 +26,7 @@ function OpcionesMenu(props){
                 </div>
             </div>
         )
-};
+    
+}
 
 export default OpcionesMenu;
