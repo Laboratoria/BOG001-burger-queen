@@ -1,25 +1,51 @@
-body {
-    margin: 0px;
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
 }
 .Home {
   display:flex;
   align-items: center;
+  flex-direction: column;
+  text-align: center;
 }
 .Portada{
-width: 700px;
-height: 700px;
-/*background-size: 50vw 50vh;
-background-image: url("../src/img/Fondo.png");
+height: 100vh;
+width: 100vw;
+display:flex;
 background-size: cover;
 background-repeat: no-repeat;
 background-attachment: fixed;
-text-align: center;*/
+text-align: center;
 }
 
 .Burger-logo {
-    width: 300px;
-    height: 117px;
-    /*pointer-events: none;*/
+    position:absolute;
+    top: 55px;
+    left: 40%;
+    width: 400px;
+    height: 380px;
     text-align: center;
-  }
+    align-items: center;
+}
+
+.Slogan{
+  position:absolute;
+  font-family: 'Short Stack', cursive;
+  font-size: 18px;
+  top:65%;
+  left:45%;  
+}
+.Rol{
+  font-family: 'Ranchers', cursive;
+  font-weight: bold;
+  position:absolute;
+  font-size: 18px;
+  top:72%;
+  left:48%;  
+}
+.Button-rol{
+  position:absolute;
+
+}
 
