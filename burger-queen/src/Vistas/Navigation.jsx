@@ -25,7 +25,7 @@ const Navigation = (props) => {
                     <ul>
                         <Link to='#' >
                             <li className='nav-text' onClick= {props.showMenuCena}>Desayuno</li>
-                            <li className='nav-text'>Almuerzo y Cena</li>
+                            <li className='nav-text' onClick= {props.showMenuCena}>Almuerzo y Cena</li>
                         </Link>
                     </ul>
                 </div>

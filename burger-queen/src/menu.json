@@ -75,35 +75,38 @@
             "item": "Aros de cebolla",
             "price": 5,
             "us": "$"
-        }
-    ],
-    "bebidas":[
+        },
         {
             "id": 12,
+            "type": "Bebidas",
             "item": "Agua 500ml",
             "price": 5,
             "us": "$"
         },
         {
             "id": 13,
+            "type": "Bebidas",
             "item": "Agua 750ml",
             "price": 7,
             "us": "$"
         },
         {
             "id": 14,
+            "type": "Bebidas",
             "item": "Agua 750ml",
             "price": 7,
             "us": "$"
         },
         {
             "id": 15,
+            "type": "Bebidas",
             "item": "Gaseosa 500ml",
             "price": 7,
             "us": "$"
         },
         {
             "id": 16,
+            "type": "Bebidas",
             "item": "Gaseosa 750ml",
             "price": 10,
             "us": "$"
