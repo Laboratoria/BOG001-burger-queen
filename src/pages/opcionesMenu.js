@@ -4,9 +4,9 @@ import '../style/opcionesMenu.css';
 import combo from "../images/combo.png";
 import BotonesOpciones from "../componentes/botonesOpciones"
 
-class OpcionesMenu extends React.Component {
-    render() {
-        return (
+function OpcionesMenu(props){
+    
+   return (
             <div>
                 <div className="Container3">
                     <Header />
@@ -19,7 +19,6 @@ class OpcionesMenu extends React.Component {
                 </div>
             </div>
         )
-    }
 };
 
 export default OpcionesMenu;

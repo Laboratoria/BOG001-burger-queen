@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 import items from '../items';
 import './styles/botonesItems.css'
 function BadgesList(props) {
@@ -24,7 +24,7 @@ function BadgesList(props) {
               <div className='botonesPrincipal'>
                 <li className='lista'>
                  <img className='imgPrincipal' src={e.img} alt='imagen'/>
-                    <Link  to='/opciones'><button className="botonesClase" onClick={()=>{agregarFactura (e) } } > {e.name}   ${e.price} </button> </Link>
+                    <button className="botonesClase" onClick={()=>{agregarFactura (e) } } > {e.name}   ${e.price} </button> 
                 </li>
               </div>
             </React.Fragment>)
