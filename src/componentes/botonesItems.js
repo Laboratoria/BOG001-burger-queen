@@ -1,31 +1,14 @@
-import React from 'react';
+import React, {useState} from 'react';
+//import { Link } from 'react-router-dom';
 import items from '../items';
 import './styles/botonesItems.css'
 import OpcionesMenu from './botonesOpciones';
 function BadgesList(props) {
   
 const click = (e) => {
-  console.log('hago función')
-  let mostrar = e
-  if (mostrar ) {
-    return  <OpcionesMenu /> , console.log(':)'); 
-  } else { <div>
-    <p>Nuestras Hamburguesas</p>
-    <ul className="list-unstyled">
-        {list}
-    </ul>
-      <p>Acompañamientos</p>
-      <ul className="list-unstyled">
-          {listAcompañamientos}
-      </ul>
-      <p>Bebidas</p>
-      <ul className="list-unstyled">
-          {listBebidas}
-      </ul>
-    </div>}}
+  setMostrar(true) }
 
   const agregarFactura = (e) => {
-   //let newElement = e.name;
     let newObjeto = {name: e.name, price: e.price};
     props.setContador(oldArray => [...oldArray, newObjeto]);
 }
@@ -71,7 +54,11 @@ const click = (e) => {
                 }
                     })
                     
-     return (
+    const [mostrar, setMostrar] = useState(false)              
+     if (mostrar) {
+    return  <OpcionesMenu /> 
+     }else
+       return(
         <div>
           <p>Nuestras Hamburguesas</p>
           <ul className="list-unstyled">
