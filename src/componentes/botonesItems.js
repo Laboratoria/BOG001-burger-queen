@@ -9,7 +9,20 @@ const click = (e) => {
   let mostrar = e
   if (mostrar ) {
     return  <OpcionesMenu /> , console.log(':)'); 
-  } }
+  } else { <div>
+    <p>Nuestras Hamburguesas</p>
+    <ul className="list-unstyled">
+        {list}
+    </ul>
+      <p>Acompañamientos</p>
+      <ul className="list-unstyled">
+          {listAcompañamientos}
+      </ul>
+      <p>Bebidas</p>
+      <ul className="list-unstyled">
+          {listBebidas}
+      </ul>
+    </div>}}
 
   const agregarFactura = (e) => {
    //let newElement = e.name;
