@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+
 const Contador = () => {
     // Declara una nueva variable de estado, que llamaremos "count".
     const [count, setCount] = useState(0);

@@ -65,8 +65,28 @@
   grid-column: 11/12
 }
 
+.takeOrder-container {
+  display: grid;
+  grid-template-columns: 12;
+  align-self: start;
+}
+
 .menuBreakfast-container {
   display: grid;
+  grid-template-columns: 12;
+  grid-column: 1/6;
+  align-self: start;
+  padding-left: 4em;
+  padding-right: 4em;
+  margin-top: 4em;
+  color:#F3B69A;
+  background-color:#B71C1C;
+}
+
+.order-container {
+  display: grid;
+  grid-template-columns: 12;
+  grid-column: 7/12;
   align-self: start;
   padding-left: 4em;
   padding-right: 4em;

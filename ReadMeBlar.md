@@ -3,22 +3,50 @@
 * [1. Dailys](#1-dailys)
 * [2. Objetivos de aprendizaje](#2-objetivos-de-aprendizaje)
 * [3. Consideraciones generales](#3-consideraciones-generales)
-* [4. Criterios de aceptación mínimos del proyecto](#4-criterios-de-aceptación-mínimos-del-proyecto)
-* [5. Pistas, tips y lecturas complementarias](#5-pistas-tips-y-lecturas-complementarias)
-* [6. Recursos BLAR](#6-recursos-BLAR)
+* [4. Recursos](#4-recursos)
 
 ***
 
 ## 1. Dailys
-01/12/2020 Inicio del proyecto Burger Queen. Lectura del README. Bocetos de las historias de usuario. Esquema del JSON.
-02/12/2020 Q&A Burger Queen con Mayra. Observaciones sobre el JSON. Flujo de los datos. Estados.
-03/12/2020 Mejoramiento del JSON. Fork del repositorio. Tutoriales de React.
-Pendiente: Configurar con Firebase
+01/12/2020 Lectura del README de Burger Queen. Checklist del arranque del proyecto. Checklist de los 
+objetivos de aprendizaje. Dibujar en papel los bocetos (de baja fidelidad) de las historias de usuario.
+Esquema del JSON del menú.
+02/12/2020 Q&A Burger Queen con Mayra: Chequeo del JSON. Recomendó estudiar el flujo de los datos y 
+hacer diagramas de estados. Tomar en cuenta los roles desde el principio (bluuweb)
+03/12/2020 Mejoramiento del JSON. Fork del repositorio y configuración del remoto en GitHub. Mirar 
+Tutoriales de React+Firebase CRUD (Fazt, bluuweb, codigofacilito). Inicio prototipo de alta. Planning de 
+los componentes.
+04/12/2020 Configurar el proyecto en Firebase, según instrucciones del README. Chequear el arranque de 
+la app: Listo, todo bello. Crear mis primeros componentes. Crear carpetas assets, components y data 
+para organizar un poco la estructura de carpetas del proyecto. Subir cambios a mi rama "bqblar". 
+Planning en GitHub. https://github.com/blarteagar/BOG001-burger-queen/projects/1.
+Seguir mirando el video de Fazt.
+05/12/2020 Según prototipo en Figma, debería tener una página de bienvenida donde mediante botones 
+pueda elegir los tres roles de usuario: 1. mesero tomando orden 2. cocinero viendo pedidos pendientes 
+por preparar 3. mesero viendo pedidos pendientes por entregar.
+He logrado prototipar en alta fidelidad el flujo de la historia 1, pidiendo desayunos y agregando 
+sandwich, cafe con leche, luego quitando el cafe con leche del pedido... 
+Y ya. No prototiparé más por el día de hoy.
+Hice spike de la renderización de componentes a partir de los JSONs.
+Terminaré de ver el video de Fazt, revisaré uno por uno los recursos de React del README.md
+06/12/2020 Cumpleaños Carmelita. Trabajaré en el pulimento de MD-Links. No pude hacerlo.
+07/12/2020 Daily. Project Feedback MD-Links. Mejorar los commits: usar más verbos descriptivos, subir cualquier funcionalidad por pequeña que sea. Repasar promesas. Usar promise all. Testear MD-Links.  Que este ejercicio permita llevar un mejor tracking de lo que he hecho. OH Maia (Burger Queen): Arreglar fusión de carpetas. Plan general del proyecto. Revisión del JSON de los menú. Roles pueden estar asociados al login. Sigo con el spike sobre roles, React, Firebase, Hooks, CRUD, shopping carts. Planning Sprint 2.
+
+
+
+
+VA QUEDANDO PENDIENTE
+Investigar cómo hacer el CRUD con React + Firebase.
+Spike sobre roles de usuario.
+Spike sobre carritos de mercado. https://github.com/arnab-datta/counter-app.
+Investigar qué son diagramas de estados (en REACT-JS).
+
+Comparar las carpetas burgerqueen y burger-queen, con ayuda de algún coach. Listo!
+Investigar cómo pintar los JSONs (en REACT-JS). Listo!
 
 ## 2. Objetivos de aprendizaje
-
 El objetivo principal de este proyecto es aprender a construir una _interfaz web_
-usando el _framework_ elegido (React, Vue o Angular). Todos estos frameworks de
+usando el _framework_ elegido (React). Todos estos frameworks de
 Front-end atacan el mismo problema: **cómo mantener la interfaz y el estado sincronizados**.
 Así que esta experiencia espera familiarizarte con el concepto de _estado de pantalla_,
 y cómo cada cambio sobre el estado se va a ir reflejando en la interfaz (por ejemplo,
@@ -70,19 +98,7 @@ A continuación puedes ver los objetivos de aprendizaje de este proyecto:
 * [ ] [Firestore.](https://firebase.google.com/docs/firestore)
 * [ ] [Firebase Auth.](https://firebase.google.com/docs/auth/web/start)
 * [ ] [Firebase security rules.](https://firebase.google.com/docs/rules)
-* [ ] Observadores. ([onAuthStateChanged](https://firebase.google.com/docs/auth/web/manage-users?hl=es#get_the_currently_signed-in_user)
- | [onSnapshot](https://firebase.google.com/docs/firestore/query-data/listen#listen_to_multiple_documents_in_a_collection))
-
-### Angular
-
-* [ ] [Components & templates.](https://angular.io/guide/architecture-components#introduction-to-components)
-* [ ] [Directivas estructurales (ngIf / ngFor)](https://angular.io/guide/template-syntax#built-in-structural-directives)
-* [ ] [@Input | @Ouput](https://angular.io/guide/component-interaction#component-interaction)
-* [ ] [Creación y uso de servicios.](https://angular.io/guide/architecture-services#providing-services)
-* [ ] [Manejos de rutas.](https://angular.io/guide/router)
-* [ ] [Creación y uso Observables.](https://angular.io/guide/observables-in-angular)
-* [ ] [Uso de HttpClient.](https://angular.io/guide/http)
-* [ ] [Estilos de componentes (ngStyle / ngClass)](https://angular.io/guide/template-syntax#built-in-directives)
+* [ ] Observadores. ([onAuthStateChanged](https://firebase.google.com/docs/auth/web/manage-users?hl=es#get_the_currently_signed-in_user) | [onSnapshot](https://firebase.google.com/docs/firestore/query-data/listen#listen_to_multiple_documents_in_a_collection))
 
 ### React
 
@@ -104,28 +120,23 @@ A continuación puedes ver los objetivos de aprendizaje de este proyecto:
 * [ ] Aplicar los principios de diseño visual (contraste, alineación, jerarquía)
 * [ ] Planear y ejecutar tests de usabilidad.
 
-## 4. Consideraciones generales
-
-Este proyecto se debe "resolver" de forma individual.
-
-Trabaja en una historia hasta terminarla antes de pasar a la siguiente. Trabaja
-hasta la historia que puedas en el tiempo especificado.
+### 3. Consideraciones generales
+Este proyecto se debe "resolver" de forma individual. Trabaja en una historia hasta terminarla
+antes de pasar a la siguiente. Trabaja hasta la historia que puedas en el tiempo especificado.
 
 La lógica del proyecto debe estar implementada completamente en JavaScript
 (ES6+), HTML y CSS y empaquetada de manera automatizada.
 En este proyecto Sí está permitido usar librerías o frameworks
-(debes elegir entre [React](https://es.reactjs.org/), [Vue](https://vuejs.org/) o
-[Angular](https://angular.io/)).
+(elegí [React](https://es.reactjs.org/)).
 
 La aplicación debe ser un _Single Page App_. Los pedidos los tomaremos desde una
 _tablet_, pero **no queremos una app nativa**, sino una web app que sea
 **responsive** y pueda funcionar **offline**.
 
 Necesitamos pensar bien en el aspecto UX de de quienes van a tomar los pedidos,
- el tamaño y aspecto de los botones, la visibilidad del estado actual del
- pedido, etc.
+el tamaño y aspecto de los botones, la visibilidad del estado actual del pedido, etc.
 
-La aplicación desplegada debe tener 80% o más el las puntuaciones de
+La aplicación desplegada debe tener 80% o más en las puntuaciones de
 Performance, Progressive Web App, Accessibility y Best Practices de Lighthouse.
 
 La aplicación debe hacer uso de `npm-scripts` y contar con scripts `start`,
@@ -156,145 +167,6 @@ _setup_ necesario para ejecutarlos, serán hechos por ti.
 
 Para comenzar este proyecto tendrás que hacer un _fork_ y _clonar_ este
 repositorio.
-
-## 5. Criterios de aceptación mínimos del proyecto
-
-### Definición del producto
-
-El [_Product Owner_](https://youtu.be/r2hU7MVIzxs) nos
-presenta este _backlog_ que es el resultado de su trabajo con el cliente hasta
-hoy.
-
-***
-
-#### [Historia de usuario 1] Mesero/a debe poder tomar pedido de cliente
-
-Yo como meserx quiero tomar el pedido de un cliente para no depender de mi mala
-memoria, para saber cuánto cobrar, y enviarlo a la cocina para evitar errores y
-que se puedan ir preparando en orden.
-
-##### Criterios de aceptación
-
-Lo que debe ocurrir para que se satisfagan las necesidades del usuario)
-
-* Anotar nombre de cliente.
-* Agregar productos al pedido.
-* Eliminar productos.
-* Ver resumen y el total de la compra.
-* Enviar pedido a cocina (guardar en alguna base de datos).
-* Se ve y funciona bien en una _tablet_
-
-##### Definición de terminado
-
-Lo acordado que debe ocurrir para decir que la historia está terminada.
-
-* Debes haber recibido _code review_ de al menos una compañera.
-* Haces _test_ unitarios y, además, has testeado tu producto manualmente.
-* Hiciste _tests_ de usabilidad e incorporaste el _feedback_ del usuario.
-* Desplegaste tu aplicación y has etiquetado tu versión (git tag).
-
-***
-
-#### [Historia de usuario 2] Jefe de cocina debe ver los pedidos
-
-Yo como jefx de cocina quiero ver los pedidos de los clientes en orden y
-marcar cuáles están listos para saber qué se debe cocinar y avisar a lxs meserxs
-que un pedido está listo para servirlo a un cliente.
-
-##### Criterios de aceptación
-
-* Ver los pedidos ordenados según se van haciendo.
-* Marcar los pedidos que se han preparado y están listos para servirse.
-* Ver el tiempo que tomó prepara el pedido desde que llegó hasta que se
-  marcó como completado.
-
-##### Definición de terminado
-
-* Debes haber recibido _code review_ de al menos una compañera.
-* Haces _test_ unitarios y, además, has testeado tu producto manualmente.
-* Hiciste _tests_ de usabilidad e incorporaste el _feedback_ del usuario.
-* Desplegaste tu aplicación y has etiquetado tu versión (git tag).
-
-***
-
-#### [Historia de usuario 3] Meserx debe ver pedidos listos para servir
-
-Yo como meserx quiero ver los pedidos que están preparados para entregarlos
-rápidamente a los clientes que las hicieron.
-
-##### Criterios de aceptación
-
-* Ver listado de pedido listos para servir.
-* Marcar pedidos que han sido entregados.
-
-##### Definición de terminado
-
-* Debes haber recibido _code review_ de al menos una compañera.
-* Haces _test_ unitarios y, además, has testeado tu producto manualmente.
-* Hiciste _tests_ de usabilidad e incorporaste el _feedback_ del usuario.
-* Desplegaste tu aplicación y has etiquetado tu versión (git tag).
-* Los datos se deben mantener íntegros, incluso después de que un pedido ha
-  terminado. Todo esto para poder tener estadísticas en el futuro.
-
-***
-
-## 6. Pistas, tips y lecturas complementarias
-
-### Primeros pasos
-
-NOTA: Si estás haciendo el proyecto en equipo, estos pasos solo los necesita
-hacer una persona por equipo. El resto de las integrantes del equipo después
-podrán hacer sus propios _forks_ a partir del _fork_ principal de su equipo.
-
-1. Haz un _fork_ de este repo (en GitHub).
-
-2. Clona tu _fork_ en tu computadora:
-
-   ```sh
-   git clone git@github.com:<tu-usuario-de-github>/<cohortid>-burger-queen.git
-   cd <cohortid>-burger-queen
-   ```
-
-3. Crea una rama a partir de `master` para empezar a trabajar. Por ejemplo:
-
-   ```sh
-   git checkout -b develop
-   ```
-
-4. Crea un proyecto en [Firebase](https://firebase.google.com/)
-
-5. Habilita Firestore (_comenzar en modo bloqueado_) en sección de "Bases de
-   Datos" de [Firebase console](https://console.firebase.google.com/).
-
-6. Instala la [utilidad de línea de comando de Firebase](https://firebase.google.com/docs/cli?hl=es).
-   Esta utilidad nos permitirá usar el comando `firebase` desde nuestra
-   terminal. Ten en cuenta que el comando de instalación incluye la opción `-g`,
-   lo cual significa que estamos instalando `firebase-tools` de forma _global_,
-   con lo cual quedará disponible desde cualquier _lugar_ (es independiente de
-   un proyecto en particular, no queda instalado en la carpeta `node_modules` de
-   tu proyecto, si no globalmente, por lo tanto no importa desde qué carpeta
-   ejecutes el siguiente comando de instalación).
-
-   ```sh
-   npm i -g firebase-tools
-   ```
-
-7. Iniciamos sesión con Firebase y agregamos entorno que usaremos para
-   desplegar:
-
-   ```sh
-   firebase login
-   firebase use --add
-
-   # Una vez agregado el entorno (proyecto de firebase) puedes agregar otros y
-   # listar los entornos configurados para esta carpeta con este comando
-   firebase use
-   ```
-
-8. Llegado a este punto, ya puedes comenzar con la problemática del proyecto en
-   sí. Te recomendamos como siguiente paso convertir el menú descrito por el
-   cliente en una estructura que podamos poner en un archivo JSON para después
-   _pintar_ en la pantalla.
 
 ### Despliegue
 
@@ -339,49 +211,11 @@ firebase deploy
 
 ***
 
-### :information_source: Nota para estudiantes que elijan React y `create-react-app`
-
-Si tratas de usar [`create-react-app`](https://reactjs.org/docs/create-a-new-react-app.html)
-en el directorio del proyecto recibirás un error diciendo que hay archivos que
-podrían presentar un conflicto. Para evitar este problema puedes crear una nueva
-app usando `create-react-app` y de ahí _mezclarla_ con la carpeta del proyecto:
-
-```sh
-# Si estabas en la carpeta del proyecto, salimos a la carpeta de más arriba
-cd ..
-
-# Creamos una nueva aplicación con `create-react-app` en la carpeta
-# `burger-queen-tmp`
-npx create-react-app burger-queen-tmp
-
-# Copiamos el _boilerplate_ del proyecto _encima_ de la aplicación creada con
-# `create-react-app`
-cp -r <cohort-id>-burger-queen/* burger-queen-tmp/
-
-# Copiamos el contenido de la aplicación creada con `create-react-app` de vuelta
-# al repo del proyecto (teniendo en cuenta el archivo _oculto_ `.gitignore`).
-cp -r burger-queen-tmp/.gitignore burger-queen-tmp/* <cohort-id>-burger-queen/
-
-# Ya podemos borrar la instalación _temporal_ y quedarnos solo con el repo del
-# proyecto, con el que partimos.
-rm -rf burger-queen-tmp
-
-# Volvemos a entrar en el directorio del proyecto y ya deberíamos estar listas
-# para comenzar.
-cd <cohort-id>-burger-queen
-
-# Para confirmar que todo fue bien arranca la aplicación con el siguinte comando
-# y verifica que la interfaz se abre en el navegador.
-yarn start
-```
-
-### Otros recursos
+### 4. Recursos
 
 #### Frameworks / libraries
 
 * [React](https://es.reactjs.org/)
-* [Vue](https://vuejs.org/)
-* [Angular](https://angular.io/)
 
 #### Herramientas
 
@@ -403,3 +237,12 @@ yarn start
 * [Qué es Serverless? | FooBar - YouTube](https://www.youtube.com/watch?v=_SYHUpLi-2U)
 * [Firebase](https://firebase.google.com/)
 * [Serverless Architectures - Martin Fowler](https://www.martinfowler.com/articles/serverless.html)
+
+#### Recursos que me han servido
+
+* [Curso React Udemy por Bluuweb](https://bluuweb.github.io/react-udemy/)
+* [Aplicación CRUD React+Firestore+Hooks por Bluuweb](https://www.youtube.com/watch?v=8rLs-AGn4go)
+* [Curso React and Hooks por Bluuweb Youtube playlist](https://www.youtube.com/watch?v=Di4eAxkPNp0&list=PLPl81lqbj-4KswGEN6o4lF0cscQalpycD)
+* [React+Firebase CRUD por Fazt Youtube](https://www.youtube.com/watch?v=Y9-UkL6ent4&t=768s)
+* [Load and Render JSON Data into React Components](https://www.pluralsight.com/guides/load-and-render-json-data-into-react-components)
+

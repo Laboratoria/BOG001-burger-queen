@@ -1,17 +1,17 @@
-import breakfast from "../data/breakfast.json";
+import supper from "../data/supper.json";
 import React from "react";
 import "../App.css";
 
-export const MenuBreakfast = () => {
+export const MenuSupper = () => {
   return (
     <>
-      <div className="menuBreakfast-container">
-        <h1>Menu Desayunos</h1>
-        {breakfast.map((data, key) => {
+      <div className="menuSupper-container">
+        <h1>Almuerzos y Cenas</h1>
+        {supper.map((data, key) => {
           return (
             <div key={key}>
-              {data.item +
-                "  " +
+                {data.item +
+                " " +
                 " $" +
                 data.price}
             </div>
