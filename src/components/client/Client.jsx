@@ -5,11 +5,11 @@ import './Client.scss';
 const Client = () => {
     render() 
         return(
-            <div className="formNombre">
-                <form>
+            <div className="containerNameClient">
+                <form className="nameClient">
                     <label className="texto"> 
                         Nombre del cliente :
-                        <input type="text" size="40" className="nombreC" name="name" required />
+                        <input type="text" size="50" className="txtClient" name="name" required />
                     </label>
                 </form>
             </div>
