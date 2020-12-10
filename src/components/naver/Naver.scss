@@ -1,5 +1,55 @@
-$bg_sidebar: #E5C065;
+$bg_sidebar: #e5c065;
+$color_font: #8a5e3b;
 
-.naver{
-    background: $bg_sidebar ;
+.slidebar {
+  background: $bg_sidebar;
+  width: 4vw;
+  height: 94vh;
+  position: absolute;
+  top: 6%;
+  left: 0;
+  border-radius: 0 20px 20px 0;
+
+  ul {
+    height: 87vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    list-style: none;
+    padding-left: 10%;
+
+    li {
+      display: flex;
+      align-items: center;
+      color: $color_font;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 20px;
+      line-height: 24px;
+      font-weight: bold;
+      img {
+        width: 3vw;
+      }
+
+      p {
+        display: none;
+        margin-left: 5%;
+      }
+
+    }  
+    
+  }
+  &:hover{
+    width: 15vw;
+    z-index: 1;
+    ul{
+      padding-left: 3%;
+      li{
+        p{
+          display:block;
+        }
+      }
+    }
+
+    
+  }
 }

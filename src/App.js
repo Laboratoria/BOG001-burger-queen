@@ -1,11 +1,9 @@
 import './App.scss';
-import Naver from './components/naver/Naver.jsx'
-import Header from './components/header/Header.jsx'
+import Waiter from './views/Waiter.jsx';
 
 function App() {
   return (
-    <Header />,
-    <Naver />
+    <Waiter />
   );
 }
 

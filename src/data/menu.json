@@ -3,7 +3,7 @@
       "id": "americano",
       "name": "Café Americano",
       "price": 5,
-      "img": "./img/americano.jpg",
+      "img": "../assets/img/cafe americado.png",
       "menu": [
         "Desayuno"
       ],

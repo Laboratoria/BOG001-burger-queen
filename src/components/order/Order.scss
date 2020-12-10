@@ -1,0 +1,32 @@
+.containerResumeOrder {
+  background-color: #dbbc6ec9;
+  position: absolute;
+  top: 20%;
+  left: 55%;
+  width: 40vw;
+  height: 75vh;
+  border-radius: 30px;
+  hr {
+    margin-top: 5%;
+    width: 65vh;
+    height: 1vh;
+    background-color: #f48205;
+  }
+  .labelOrder {
+    color: #f48205;
+    ul {
+        width: 95%;
+        list-style: none;
+        display: flex;
+        margin-top: 0;
+        justify-content: space-around;
+        padding: 0;
+        
+        li{
+        font-size: 20px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: bold;
+        }
+    }
+  }
+}
