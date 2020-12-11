@@ -19,6 +19,14 @@ const Request = ({ showName, getOrder, setNewOrder, newBreakItem }) => {
     return (
         <div className="containerRequest">
             <h3>{showName}</h3>
+            {
+            getOrder.map(element =>
+            <div  key={element.id}>
+                {element.Item} {element.Us} {element.Price}
+            </div>
+        )
+            }
+      
         </div>
     );
 }
@@ -28,6 +36,7 @@ const ItemsBreakfast = ({ showItemBreak, showItemPrice, showItemUs, updateOrder 
             {
                 < div onClick={() => updateOrder({
                     Item: showItemBreak,
+                    Us:showItemUs,
                     Price: showItemPrice
                 })}
                     key={showItemBreak.id} className="itemsBreak"> {showItemBreak}
@@ -84,7 +93,8 @@ const MenuBreakfast = () => {
                             )
                         }
                     </div>
-                    <Request showName={newTaskName} getOrder={order} setNewOrder={setOrder} newBreakItem={itemBreak} />
+                    <Request showName={newTaskName} getOrder={order} setNewOrder={setOrder} newBreakItem={itemBreak} 
+                    />
                 </div>
                 <Footer />
             </div>
