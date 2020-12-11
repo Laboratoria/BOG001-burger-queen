@@ -24,15 +24,19 @@ import Check from "../componentes/check";
 */
 
 function PrincipalMesero (props) {
+
+  const [mostrar, setMostrar] = useState(false);
+
   const [itemsMenu, setItemsMenu] = useState([]);
+  
     return (
       <React.Fragment>
         <div className="Container1">
           <Header />
           <div className="card-body">
             <Nombre />
-            <div className="grid">
-              <BadgesList contador={itemsMenu} setContador={setItemsMenu} />
+            <div className="grid" setMostrar = {setMostrar} >
+              <BadgesList contador={itemsMenu} setContador={setItemsMenu} mostrar = {mostrar}/>
               <Factura acaVacontador={itemsMenu} setItemsMenu={setItemsMenu}/>
             </div>
             <Check/>
