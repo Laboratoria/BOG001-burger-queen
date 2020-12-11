@@ -1,22 +1,11 @@
-import React, { Fragment, useEffect, useState } from 'react';
+import React, { Fragment, useState } from 'react';
 import Navigation from './Navigation';
 import Footer from './Footer';
 import menus from '../menu.json'
-
-const Clients = ({infoInput, getInput}) => {
-
+const Clients = ({ infoInput, getInput }) => {
     const updateNewTaskValue = e => getInput(e.target.value);
-
-    const createNewTask = () => {
-        console.log(infoInput)
-        getInput('')
-    }
-
-    /* console.log(createNewTask) */
-
     return (
         <div className="containerCliente" >
-            <MenuBreakfast showNameCliente={createNewTask} />
             <label>Cliente: <input type="text"
                 value={infoInput}
                 onChange={updateNewTaskValue}
@@ -25,18 +14,33 @@ const Clients = ({infoInput, getInput}) => {
         </div>
     );
 }
-
-const Request = () => {
+const Request = ({ showName, getOrder, setNewOrder, newBreakItem }) => {
+    console.log(getOrder)
     return (
         <div className="containerRequest">
-
+            <h3>{showName}</h3>
         </div>
     );
 }
-
-
+const ItemsBreakfast = ({ showItemBreak, showItemPrice, showItemUs, updateOrder }) => {
+    return (
+        <Fragment>
+            {
+                < div onClick={() => updateOrder({
+                    Item: showItemBreak,
+                    Price: showItemPrice
+                })}
+                    key={showItemBreak.id} className="itemsBreak"> {showItemBreak}
+                    < div className="itemsPrice" >
+                        {showItemUs} {showItemPrice}
+                    </div >
+                </div >
+            }
+        </Fragment>
+    );
+}
 const MenuLunch = () => {
-    const [menuLunch, setMenuLunch] = useState(menus)
+    const [menuLunch] = useState(menus)
     return (
         <Fragment>
             <div className="containerLunch">
@@ -54,40 +58,33 @@ const MenuLunch = () => {
         </Fragment>
     );
 }
-
-
 const MenuBreakfast = () => {
-
-    const [menu, setMenu] = useState(menus)
-
     const [cena, setCena] = useState(false);
     const showCena = () => setCena(!cena)
-
     const [newTaskName, setNewTaskName] = useState("")
-
+    const [itemBreak, setItemBreak] = useState(menus)
+    const [itemPrice, setItemPrice] = useState(menus)
+    const [order, setOrder] = useState([])
+    const updateOrder = (newItemBreak) => {
+        setOrder(prevState => {
+            return [...prevState, newItemBreak]
+        })
+    }
     return (
         <Fragment>
             <div className="backgroundKitchen">
                 <Navigation showMenuCena={showCena} />
                 <div className="containerGlobal">
                     <div className="menuBreak">
-                        <Clients infoInput = {newTaskName} getInput={setNewTaskName} />
+                        <Clients infoInput={newTaskName} getInput={setNewTaskName} />
                         {cena ?
                             <MenuLunch /> :
-                            <div className='containerBreakfast'>
-                                {
-                                    menu.breakfast.map(element =>
-                                        <div key={element.id} className="itemsBreak" >{element.item}
-                                            <div className="itemsPrice">
-                                                {element.us} {element.price}
-                                            </div>
-                                        </div>
-                                    )
-                                }
-                            </div>
+                            itemBreak.breakfast.map(element =>
+                                <ItemsBreakfast updateOrder={updateOrder} key={element.id} showItemBreak={element.item} showItemPrice={element.price} showItemUs={element.us} />
+                            )
                         }
                     </div>
-                    <Request />
+                    <Request showName={newTaskName} getOrder={order} setNewOrder={setOrder} newBreakItem={itemBreak} />
                 </div>
                 <Footer />
             </div>
