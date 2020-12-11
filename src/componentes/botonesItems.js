@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 //import { Link } from 'react-router-dom';
 import items from '../items';
 import './styles/botonesItems.css'
-import OpcionesMenu from './botonesOpciones';
+import OpcionesMenu from '../pages/opcionesMenu';
 function BadgesList(props) {
   
 const click = (e) => {
@@ -54,9 +54,11 @@ const click = (e) => {
                 }
                     })
                     
-    const [mostrar, setMostrar] = useState(false)              
+    const [mostrar, setMostrar] = useState(false)           
      if (mostrar) {
-    return  <OpcionesMenu /> 
+    return  (
+    <OpcionesMenu /> )
+    
      }else
        return(
         <div>

@@ -7,7 +7,6 @@ import './index.css';
 //import PrincipalDesayuno from './pages/principalDesayunos';
 //import PrincipalCocina from './pages/principalCocina';
 //import OpcionesMenu from './pages/opcionesMenu';
-//import App from './App';
 //import reportWebVitals from './reportWebVitals';
 //import Header from './componentes/header.js';
 //import PrincipalMesero from './pages/principalMesero';

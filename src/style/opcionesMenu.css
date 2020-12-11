@@ -17,7 +17,6 @@
 .grid {
     background-color: none;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 2fr 1fr 2fr;
     grid-column-gap: 20px;
     grid-row-gap: 0px;

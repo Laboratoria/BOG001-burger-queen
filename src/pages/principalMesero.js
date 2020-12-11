@@ -4,6 +4,7 @@ import "../style/principalMesero.css";
 import BadgesList from "../componentes/botonesItems";
 import Factura from "../componentes/factura";
 import Nombre from "../componentes/nombre";
+import Check from "../componentes/check";
 //import guardarPedidosfs from "../firebaseguardarpedido";
 //import BotonesGaseosa from "../componentes/practicaGaseosa.js";
 
@@ -23,7 +24,6 @@ import Nombre from "../componentes/nombre";
 */
 
 function PrincipalMesero (props) {
-    
   const [itemsMenu, setItemsMenu] = useState([]);
     return (
       <React.Fragment>
@@ -35,6 +35,7 @@ function PrincipalMesero (props) {
               <BadgesList contador={itemsMenu} setContador={setItemsMenu} />
               <Factura acaVacontador={itemsMenu} setItemsMenu={setItemsMenu}/>
             </div>
+            <Check/>
           </div>
         </div>
       </React.Fragment>
