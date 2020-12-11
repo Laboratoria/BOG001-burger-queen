@@ -54,9 +54,11 @@ const click = (e) => {
                 }
                     })
                     
-    const [mostrar, setMostrar] = useState(false)              
+    const [mostrar, setMostrar] = useState(false)           
      if (mostrar) {
-    return  <OpcionesMenu /> 
+    return  (
+    <OpcionesMenu /> )
+    
      }else
        return(
         <div>

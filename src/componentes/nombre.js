@@ -1,7 +1,7 @@
 import React from "react";
 
 import "./styles/nombre.css";
-
+/*const objeto = {nombreCliente: "Lore", pedido:[{nombreItem:"papas", precio:5},{nombre: "Agua", precio: 5 }] }*/
 class Nombre extends React.Component {
  
     addDish = event => {
