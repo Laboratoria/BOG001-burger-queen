@@ -4,6 +4,7 @@ import "../style/principalMesero.css";
 import BadgesList from "../componentes/botonesItems";
 import Factura from "../componentes/factura";
 import Nombre from "../componentes/nombre";
+
 //import guardarPedidosfs from "../firebaseguardarpedido";
 //import BotonesGaseosa from "../componentes/practicaGaseosa.js";
 
@@ -23,16 +24,19 @@ import Nombre from "../componentes/nombre";
 */
 
 function PrincipalMesero (props) {
-    
+
+  const [mostrar, setMostrar] = useState(false);
+
   const [itemsMenu, setItemsMenu] = useState([]);
+  
     return (
       <React.Fragment>
         <div className="Container1">
           <Header />
           <div className="card-body">
             <Nombre />
-            <div className="grid">
-              <BadgesList contador={itemsMenu} setContador={setItemsMenu} />
+            <div className="grid" setMostrar = {setMostrar} >
+              <BadgesList contador={itemsMenu} setContador={setItemsMenu} mostrar = {mostrar}/>
               <Factura acaVacontador={itemsMenu} setItemsMenu={setItemsMenu}/>
             </div>
           </div>
