@@ -16,18 +16,28 @@ const Clients = ({ infoInput, getInput }) => {
 }
 const Request = ({ showName, getOrder, setNewOrder, newBreakItem }) => {
     console.log(getOrder)
+
     return (
         <div className="containerRequest">
-            <h3>{showName}</h3>
-            {
-            getOrder.map(element =>
-            <div  key={element.id}>
-                {element.Item} {element.Us} {element.Price}
+            <div className="nameClients">
+            <h3>Cliente: {showName}</h3> 
             </div>
-        )
+           
+            {
+                getOrder.map(element =>
+                    <h4 key={element.id}>
+                        <div className="containerOrder">
+                        {element.Item}  
+                        <div className="containerPrice">
+                        {element.Us} {element.Price}
+                        </div>
+                        </div>
+                    </h4>
+                )
             }
-      
-        </div>
+            </div>
+            
+        
     );
 }
 const ItemsBreakfast = ({ showItemBreak, showItemPrice, showItemUs, updateOrder }) => {
@@ -36,10 +46,10 @@ const ItemsBreakfast = ({ showItemBreak, showItemPrice, showItemUs, updateOrder 
             {
                 < div onClick={() => updateOrder({
                     Item: showItemBreak,
-                    Us:showItemUs,
+                    Us: showItemUs,
                     Price: showItemPrice
                 })}
-                    key={showItemBreak.id} className="itemsBreak"> {showItemBreak}
+                    className="itemsBreak"> {showItemBreak}
                     < div className="itemsPrice" >
                         {showItemUs} {showItemPrice}
                     </div >
@@ -48,22 +58,25 @@ const ItemsBreakfast = ({ showItemBreak, showItemPrice, showItemUs, updateOrder 
         </Fragment>
     );
 }
-const MenuLunch = () => {
-    const [menuLunch] = useState(menus)
+const MenuLunch = ({ updateOrder, showItemLunch, showLunchPrice, showLunchUs }) => {
+
     return (
         <Fragment>
-            <div className="containerLunch">
-                {
-                    menuLunch.lunch.map(e =>
-                        <div key={e.id} className="itemsLunch">
-                            <h3>{e.type}</h3>
-                            {e.item}
-                            <div className="priceLunch">
-                                {e.us}{e.price}
-                            </div>
-                        </div>)
-                }
-            </div>
+            {
+                < div onClick={() => updateOrder({
+                    Item: showItemLunch,
+                    Us: showLunchUs,
+                    Price: showLunchPrice
+                })}
+
+                    className="itemsLunch"> {showItemLunch}
+                    < div className="itemsPrice" >
+                        {showLunchUs} {showLunchPrice}
+                    </div >
+                </div >
+
+            }
+
         </Fragment>
     );
 }
@@ -71,7 +84,7 @@ const MenuBreakfast = () => {
     const [cena, setCena] = useState(false);
     const showCena = () => setCena(!cena)
     const [newTaskName, setNewTaskName] = useState("")
-    const [itemBreak, setItemBreak] = useState(menus)
+    const [itemMenu, setItemMenu] = useState(menus)
     const [itemPrice, setItemPrice] = useState(menus)
     const [order, setOrder] = useState([])
     const updateOrder = (newItemBreak) => {
@@ -87,13 +100,19 @@ const MenuBreakfast = () => {
                     <div className="menuBreak">
                         <Clients infoInput={newTaskName} getInput={setNewTaskName} />
                         {cena ?
-                            <MenuLunch /> :
-                            itemBreak.breakfast.map(element =>
+                            <div className="containerLunch">
+                                {
+                                    itemMenu.lunch.map(e =>
+                                        <MenuLunch updateOrder={updateOrder} key={e.id} showItemLunch={e.item} showLunchPrice={e.price} showLunchUs={e.us} />)
+                                }
+                            </div>
+                            :
+                            itemMenu.breakfast.map(element =>
                                 <ItemsBreakfast updateOrder={updateOrder} key={element.id} showItemBreak={element.item} showItemPrice={element.price} showItemUs={element.us} />
                             )
                         }
                     </div>
-                    <Request showName={newTaskName} getOrder={order} setNewOrder={setOrder} newBreakItem={itemBreak} 
+                    <Request showName={newTaskName} getOrder={order} setNewOrder={setOrder} newBreakItem={itemMenu}
                     />
                 </div>
                 <Footer />
