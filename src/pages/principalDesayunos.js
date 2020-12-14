@@ -7,7 +7,6 @@ import BadgesListDesayuno from "../componentes/botonesDesayuno";
 import Check from '../componentes/check'
 function PrincipalDesayuno(props){
   const [itemsMenu, setItemsMenu] = useState([]);
-
    return (
       <div>
         <div className="Container4">

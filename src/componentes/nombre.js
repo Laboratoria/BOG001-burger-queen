@@ -2,25 +2,14 @@ import React from "react";
 
 import "./styles/nombre.css";
 /*const objeto = {nombreCliente: "Lore", pedido:[{nombreItem:"papas", precio:5},{nombre: "Agua", precio: 5 }] }*/
-class Nombre extends React.Component {
- 
-    addDish = event => {
-      event.preventDefault();
-      console.log(this.newName.current.value);
-    }
-    
-  
-    newName = React.createRef(); 
-  render() {
-    return (
-      <form className="form-control" onSubmit={this.addDish}>
+function Nombre (props) {
+      return (
+      <form className="form-control">
         <p className="nombre">
-          Nombre:<input className="inputNombre" ref={this.newName}></input>
-          <button type="submit" className='botonNombre' onClick={this.addDish}>Enviar</button>        
+          Nombre:<input className="inputNombre"></input>
         </p>
       </form>
     );
-  }
 }
 
 export default Nombre;

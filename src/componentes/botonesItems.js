@@ -1,12 +1,14 @@
-import React, {useState} from 'react';
+import React from 'react';
 //import { Link } from 'react-router-dom';
 import items from '../items';
 import './styles/botonesItems.css'
-import OpcionesMenu from '../pages/opcionesMenu';
+
 function BadgesList(props) {
   
 const click = (e) => {
-  setMostrar(true) }
+  props.setMostrar(true)
+
+  }
 
   const agregarFactura = (e) => {
     let newObjeto = {name: e.name, price: e.price};
@@ -25,7 +27,7 @@ const click = (e) => {
               <div className='botonesPrincipal'>
                 <li className='lista'>
                  <img className='imgPrincipal' src={e.img} alt='imagen'/>
-                    <button className="botonesClase" onClick={()=>{agregarFactura (e);  click(e) } } > {e.name}   ${e.price} </button>
+                    <button className='botonesClase' onClick={()=>{agregarFactura (e);  click(e)} } > {e.name}   ${e.price} </button>
                 </li>
               </div>
             </React.Fragment>)
@@ -53,15 +55,9 @@ const click = (e) => {
                   </React.Fragment>)
                 }
                     })
-                    
-    const [mostrar, setMostrar] = useState(false)           
-     if (mostrar) {
-    return  (
-    <OpcionesMenu /> )
-    
-     }else
+                            
        return(
-        <div>
+        <div className='prueba'>
           <p>Nuestras Hamburguesas</p>
           <ul className="list-unstyled">
               {list}

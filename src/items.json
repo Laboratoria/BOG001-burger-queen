@@ -131,7 +131,7 @@
     "id": 16,
     "name": "Mayonesa",
     "price": 0,
-    "img": "/images/agua_500ml.jpg",
+    "img": "./images/salse.jpg",
     "type": "Salsas",
     "additions": ["yes"]
   },
@@ -139,7 +139,7 @@
     "id": 17,
     "name": "Mostaza",
     "price": 0,
-    "img": "/images/agua_500ml.jpg",
+    "img": "./images/salse.jpg",
     "type": "Salsas",
     "additions": ["yes"]
   },

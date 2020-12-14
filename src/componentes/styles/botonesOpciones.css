@@ -9,3 +9,17 @@
     justify-content: center;
     align-items: center;
 }
+
+.intentoList {
+    list-style: none;
+    display: -webkit-inline-box;
+}
+.botonesOpciones{
+    display: flex;
+    margin: 26% -53%;
+}
+.imgAdicion{
+    width: 51%;
+    margin: 8% 28%;
+    border-radius: 14px;
+}
