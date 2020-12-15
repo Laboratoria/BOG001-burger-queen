@@ -3,35 +3,61 @@
   <mat-tab label="Pedidos Listos">Pedidos Listos</mat-tab>
 </mat-tab-group>
 
-<form [formGroup]="orderForm">
-  <div>
-    <mat-form-field class="full-width">
-      <input
-        matInput
-        ngModel
-        id="name"
-        placeholder="Name"
-        formControlName="name"
-      />
-    </mat-form-field>
-    <mat-form-field class="full-width">
-      <input matInput placeholder="table" formControlName="table" />
-    </mat-form-field>
-    <button mat-button type="button" (click)="showMenus()">
-      Comenzar pedido
-    </button>
-  </div>
+<div class="row">
+  <div class="col-sm-8">
+    <form [formGroup]="orderForm">
+      <div>
+        <mat-form-field class="full-width">
+          <input
+            matInput
+            [(ngModel)]="customerName"
+            id="name"
+            placeholder="Nombre"
+            formControlName="name"
+          />
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <input
+            matInput
+            placeholder="N° de mesa"
+            formControlName="table"
+            [(ngModel)]="tableNumber"
+          />
+        </mat-form-field>
+        <button mat-button type="button" (click)="showMenus()">
+          Comenzar pedido
+        </button>
+      </div>
 
-  <div *ngIf="showingMenus">
-    1. Seleccionar el menú
-    <button (click)="breakfast()">Desayunos</button>
-    <button>Almuerzos y cenas</button>
-  </div>
+      <div *ngIf="showingMenus">
+        1. Seleccionar el menú
+        <button (click)="breakfast()">Desayunos</button>
+        <button (click)="lunches()">Almuerzos y cenas</button>
+      </div>
 
-  <div *ngIf="showingBreakfasts">
-    <div *ngFor="let item of breakfasts$">
-      <h3>{{ item.item }}</h3>
-      <h4>{{ item.price }}</h4>
-    </div>
+      <div *ngIf="showingBreakfasts">
+        <div *ngFor="let item of breakfasts$" name="break">
+          <h3>{{ item.item }}</h3>
+          <h4>{{ item.price }}</h4>
+          <button (click)="summary(item.id)">Agregar</button>
+        </div>
+      </div>
+
+      <div *ngIf="showingLunches">
+        <div *ngFor="let item of lunchesAndDinners$">
+          <h3>{{ item.item }}</h3>
+          <h4>{{ item.price }}</h4>
+        </div>
+      </div>
+    </form>
   </div>
-</form>
+  <div class="col-sm-4">
+    <h1>Resumen del pedido</h1>
+    <p><strong>Nombre del cliente: </strong>{{ customerName }}</p>
+    <p><strong>N° de mesa: </strong> {{ tableNumber }}</p>
+
+    <!-- <div *ngIf="showingSummary">
+      {{ item[id] }}
+    </div> -->
+  </div>
+</div>

@@ -45,11 +45,22 @@ export class MenuService {
   getBreakfasts(): Observable<Menu[]> {
     console.log(
       this.firestore
-        .collection<Menu>('menu', (ref) => ref.where('time', '==', '0'))
+        .collection<Menu>('menu', (ref) => ref.where('time', '==', 0))
         .valueChanges({ idField: 'id' })
     );
     return this.firestore
       .collection<Menu>('menu', (ref) => ref.where('time', '==', 0))
+      .valueChanges({ idField: 'id' });
+  }
+
+  getLunchesAndDinners(): Observable<Menu[]> {
+    console.log(
+      this.firestore
+        .collection<Menu>('menu', (ref) => ref.where('time', '==', 1))
+        .valueChanges({ idField: 'id' })
+    );
+    return this.firestore
+      .collection<Menu>('menu', (ref) => ref.where('time', '==', 1))
       .valueChanges({ idField: 'id' });
   }
 

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import {
   FormBuilder,
   Validators,
@@ -15,9 +16,14 @@ import { MenuService } from '../../Services/menu.service';
 export class WaiterComponent implements OnInit {
   public breakfasts$;
   public menu$;
+  public lunchesAndDinners$;
+
+  customerName: string;
+  tableNumber: Number;
 
   showingMenus: boolean = false;
   showingBreakfasts: boolean = false;
+  showingLunches: boolean = false;
 
   orderForm = this.fb.group({
     name: ['', Validators.required],
@@ -26,6 +32,8 @@ export class WaiterComponent implements OnInit {
   // public orderForm: FormGroup;
   // name: string;
   // name = new FormControl('', Validators.required);
+
+  // @Input() item;
 
   constructor(private fb: FormBuilder, private menuService: MenuService) {}
 
@@ -40,6 +48,13 @@ export class WaiterComponent implements OnInit {
       .subscribe((menu) => {
         this.breakfasts$ = menu;
       });
+
+    this.menuService
+      .getLunchesAndDinners()
+      .pipe()
+      .subscribe((menu) => {
+        this.lunchesAndDinners$ = menu;
+      });
   }
 
   showMenus() {
@@ -53,10 +68,24 @@ export class WaiterComponent implements OnInit {
   breakfast() {
     if (this.showingBreakfasts) {
       this.showingBreakfasts = false;
+      this.showingLunches = true;
     } else {
       this.showingBreakfasts = true;
+      this.showingLunches = false;
     }
   }
+
+  lunches() {
+    if (this.showingLunches) {
+      this.showingLunches = false;
+      this.showingBreakfasts = true;
+    } else {
+      this.showingLunches = true;
+      this.showingBreakfasts = false;
+    }
+  }
+
+  // summary(item, price) {}
 
   // console.log(name.errors); // {required: true}
 }
