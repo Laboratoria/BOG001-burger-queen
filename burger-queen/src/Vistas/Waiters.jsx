@@ -15,14 +15,19 @@ const Clients = ({ infoInput, getInput }) => {
     );
 }
 const Request = ({ showName, getOrder, setNewOrder, newBreakItem }) => {
-    console.log(getOrder)
+    
+const totalOrder = getOrder.reduce((sum, value) => (typeof value.Price == "number" ? sum + value.Price : sum), 0);
+
+const sendOrder = (e) =>{
+    e.preventDefault();
+    console.log(showName, getOrder, totalOrder,)
+}
 
     return (
         <div className="containerRequest">
             <div className="nameClients">
             <h3>Cliente: {showName}</h3> 
             </div>
-           
             {
                 getOrder.map(element =>
                     <h4 key={element.id}>
@@ -35,6 +40,8 @@ const Request = ({ showName, getOrder, setNewOrder, newBreakItem }) => {
                     </h4>
                 )
             }
+            <div className="totalPrice">Total = $ {totalOrder}</div>
+            <div className="divEnviar"><button className="enviar" onClick={sendOrder}>Enviar</button></div>
             </div>
             
         
@@ -92,6 +99,11 @@ const MenuBreakfast = () => {
             return [...prevState, newItemBreak]
         })
     }
+
+    const sendKitchen = () =>{
+        console.log("holaa")
+    }
+
     return (
         <Fragment>
             <div className="backgroundKitchen">
@@ -112,7 +124,7 @@ const MenuBreakfast = () => {
                             )
                         }
                     </div>
-                    <Request showName={newTaskName} getOrder={order} setNewOrder={setOrder} newBreakItem={itemMenu}
+                    <Request addRequest={sendKitchen} showName={newTaskName} getOrder={order} setNewOrder={setOrder} newBreakItem={itemMenu}
                     />
                 </div>
                 <Footer />
