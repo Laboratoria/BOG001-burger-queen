@@ -36,6 +36,21 @@ function Factura(props) {
             </li>
           ))}
         </ul>
+        <ul>
+          {props.adiciones.map((item, index) => (
+            <li className="listFactr" key={index}>
+              {item.name}{" "}
+              <img
+                className="imgMenos"
+                src={menos}
+                alt="imagen"
+                onClick={() => {
+                  eliminarFactura(index);
+                }}
+              />
+            </li>
+          ))}
+              </ul>
       </div>
       <div className="total">Total: $ {total}</div>
     </div>

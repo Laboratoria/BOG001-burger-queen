@@ -14,12 +14,14 @@ function OpcionesMenu( props ) {
 
 const [inicio, setInicio] = useState(["Tipo" , "Adición" , "Salsas"]);
 
+
 let mostrarOpciones;
 
-//function filtrar(string, array) { return array.filter( item => item.type === string ) }
+  
+const click = (e) => {
+  props.setMostrar(false)
 
-//const arrayOpciones= ["salsas" , "adiciones" , "tipo"];
-
+  }
 
 
 return (
@@ -70,9 +72,10 @@ return (
           </div>
           <div className="zonaBotones">
             {" "}
-            <BotonesOpciones tipoFiltro ={inicio} />
+            <BotonesOpciones tipoFiltro ={inicio} envio={props.setContadorAdiciones} intento={props.adiciones}/>
           </div>
         </div>
+        <button className='botonVolver' onClick={()=>{click()} }>Regresar</button>
       </div>
     </div>
   );

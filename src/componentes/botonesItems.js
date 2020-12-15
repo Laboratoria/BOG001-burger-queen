@@ -13,6 +13,7 @@ const click = (e) => {
   const agregarFactura = (e) => {
     let newObjeto = {name: e.name, price: e.price};
     props.setContador(oldArray => [...oldArray, newObjeto]);
+    console.log(newObjeto);
 }
 
         const list = [];

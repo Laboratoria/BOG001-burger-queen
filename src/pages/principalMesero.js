@@ -27,10 +27,15 @@ import OpcionesMenu from "./opcionesMenu";
 function PrincipalMesero (props) {
 
   const [itemsMenu, setItemsMenu] = useState([])
+  
+  const [itemsAdiciones, setItemsAdiciones] = useState([])
+ console.log(itemsAdiciones);
   const [mostrar, setMostrar] = useState(false)   
+  
   if (mostrar) {
     return  (
-        <OpcionesMenu /> 
+        <OpcionesMenu adiciones={itemsAdiciones} setContadorAdiciones={setItemsAdiciones} setMostrar={setMostrar}/> 
+        
      )
     
      }else
@@ -42,7 +47,7 @@ function PrincipalMesero (props) {
             <Nombre/>
             <div className= 'grid'>
               <BadgesList contador={itemsMenu} setContador={setItemsMenu} setMostrar={setMostrar} />
-              <Factura acaVacontador={itemsMenu} setItemsMenu={setItemsMenu} />
+              <Factura acaVacontador={itemsMenu} setItemsMenu={setItemsMenu} adiciones={itemsAdiciones} setContadorAdiciones={setItemsAdiciones} />
             </div>
             <Check/>
           </div>
