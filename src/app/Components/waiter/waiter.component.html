@@ -2,3 +2,36 @@
   <mat-tab label="Crear Orden">Crear Orden</mat-tab>
   <mat-tab label="Pedidos Listos">Pedidos Listos</mat-tab>
 </mat-tab-group>
+
+<form [formGroup]="orderForm">
+  <div>
+    <mat-form-field class="full-width">
+      <input
+        matInput
+        ngModel
+        id="name"
+        placeholder="Name"
+        formControlName="name"
+      />
+    </mat-form-field>
+    <mat-form-field class="full-width">
+      <input matInput placeholder="table" formControlName="table" />
+    </mat-form-field>
+    <button mat-button type="button" (click)="showMenus()">
+      Comenzar pedido
+    </button>
+  </div>
+
+  <div *ngIf="showingMenus">
+    1. Seleccionar el menú
+    <button (click)="breakfast()">Desayunos</button>
+    <button>Almuerzos y cenas</button>
+  </div>
+
+  <div *ngIf="showingBreakfasts">
+    <div *ngFor="let item of breakfasts$">
+      <h3>{{ item.item }}</h3>
+      <h4>{{ item.price }}</h4>
+    </div>
+  </div>
+</form>

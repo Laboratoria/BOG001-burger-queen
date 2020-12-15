@@ -1,26 +1,33 @@
 import { Injectable } from '@angular/core';
-import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
+import {
+  AngularFirestore,
+  AngularFirestoreCollection,
+} from '@angular/fire/firestore';
 import { Menu } from '../Interfaces/menu.model';
 import { Observable } from 'rxjs';
 
-
-
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class MenuService {
-
   // private menuDb: AngularFireList<Menu>;
-
 
   constructor(public firestore: AngularFirestore) {
     // this.menuDb = this.db.list('/menu', ref => ref.orderByChild('time'));
   }
 
-  addItem(item: string, price: number, category: string, time: Array<string>): Promise<void> {
+  addItem(
+    item: string,
+    price: number,
+    category: string,
+    time: Array<string>
+  ): Promise<void> {
     const id = this.firestore.createId();
     return this.firestore.doc(`menu/${id}`).set({
-      item, price, category, time
+      item,
+      price,
+      category,
+      time,
     });
   }
 
@@ -30,14 +37,21 @@ export class MenuService {
 
   getMenu(): Observable<Menu[]> {
     console.log(this.firestore.collection<Menu>('menu').valueChanges());
-    return this.firestore.collection<Menu>('menu').valueChanges({ idField: 'id' });
+    return this.firestore
+      .collection<Menu>('menu')
+      .valueChanges({ idField: 'id' });
   }
 
   getBreakfasts(): Observable<Menu[]> {
-    console.log(this.firestore.collection<Menu>('menu', ref => ref.where('time', '==', 'breakfast')).valueChanges({ idField: 'id' }));
-    return this.firestore.collection<Menu>('menu', ref => ref.where('time', '==', 'breakfast')).valueChanges({ idField: 'id' });
+    console.log(
+      this.firestore
+        .collection<Menu>('menu', (ref) => ref.where('time', '==', '0'))
+        .valueChanges({ idField: 'id' })
+    );
+    return this.firestore
+      .collection<Menu>('menu', (ref) => ref.where('time', '==', 0))
+      .valueChanges({ idField: 'id' });
   }
-
 
   //---- PRUEBAS NO FUNCIONA:
   // setItem(): void {
@@ -62,9 +76,4 @@ export class MenuService {
   //   fields.categoryField.setValue(values.category);
   //   fields.timeField.setValue(values.time);
   // }
-
 }
-
-
-
-
