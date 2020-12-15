@@ -40,3 +40,5 @@ export const MenuBreakfast = () => {
     </div>
   );
 };
+
+export default MenuBreakfast;

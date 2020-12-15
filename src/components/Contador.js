@@ -15,4 +15,11 @@ const Contador = () => {
     );
 }
 
+const arrayUno = ['Chile', 'Argentina']
+const arrayDos = ['Perú', 'Mexico']
+
+const Unidos = [...arrayUno, ...arrayDos]
+console.log(Unidos)
+
+
 export default Contador;
