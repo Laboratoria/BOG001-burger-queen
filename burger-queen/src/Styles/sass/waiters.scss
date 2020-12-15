@@ -2,7 +2,15 @@
     font-family: Rancho-Regular;
     src: url(../Letras/Rancho-Regular.ttf);
 }
-
+@font-face{
+    font-family: OPTIChampionBold;
+    src: url(../Letras/OPTIChampionBold.otf);
+  }
+  @font-face {
+    font-family:Cookie-Regular;
+    src: url(../Letras/Cookie-Regular.ttf);
+  }
+  $mostaza:#F1B007;
 
 .containerGlobal {
     width: 100%;
@@ -160,12 +168,10 @@
         width: 90%;
         height: 30px;
         margin: 5%;
-        border: 1px solid red;
         text-align: center;
     }
     
         .containerOrder {
-            border: 1px solid rgb(43, 255, 0);
             display: flex;
             flex-flow: row;
             justify-content: space-between;
@@ -175,11 +181,33 @@
             margin-left: 12%;
         }
         .containerPrice {
-            border: 1px solid orange;
             width: 30%;
             height: 30px;
         }
-    
+        
+        .totalPrice {
+            font-family: OPTIChampionBold;
+            font-size: 3.5 vh;
+            text-align: right;
+            margin-right: 33%;
+        }
+
+        .divEnviar {
+            display: flex;
+            justify-content: center;
+
+            .enviar {
+                font-family:Rancho-Regular;
+                background-color: $mostaza;
+                width: 35%;
+                height: 25px;
+                border-radius: 5px;
+                color: black;
+                font-size: 3.2vh;
+                font-weight: bold;
+            }
+        }
+      
 
    
 }
