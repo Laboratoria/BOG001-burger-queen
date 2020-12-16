@@ -15,6 +15,13 @@ function BotonesOpciones (props){
 
         console.log(arrayEnviar)
 
+
+          
+            const agregarFactura = (e) => {
+              let newObjeto = {name: e.name, price: e.price};
+              props.setContador(oldArray => [...oldArray, newObjeto]);
+          }
+
             return (
 //                <div>{list}</div>
                  // hacer el html
@@ -23,10 +30,10 @@ function BotonesOpciones (props){
                 { arrayEnviar.map((item, index) => (
                     
                 <li className="listFactr" key={index}>
-                    <div className='botones' type="button" value= {item.type}>
+                    <button className='botones' type="button" value= {item.type} onClick={()=>{agregarFactura (item) }}>
                             <img className='imgPrincipal' src={item.img} alt='imagen' />
                             <div><center>{item.name}</center></div>
-                    </div>  
+                    </button>  
                 </li>))} </ul>
             )
         

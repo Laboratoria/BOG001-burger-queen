@@ -13,13 +13,11 @@ llamar dinamicamente /// como hacer un renderizado dinamico
 */
 function OpcionesMenu( props ) {
 
-const [inicio, setInicio] = useState(["Tipo" , "Adición" , "Salsas"]);
+const [inicio, setInicio] = useState(["Tipo" ]);
 
 let mostrarOpciones;
 
-//function filtrar(string, array) { return array.filter( item => item.type === string ) }
-
-//const arrayOpciones= ["salsas" , "adiciones" , "tipo"];
+//contador={itemsMenu} setContador={setItemsMenu}
 
 
 
@@ -72,6 +70,7 @@ return (
           <div className="zonaBotones">
             {" "}
             <BotonesOpciones tipoFiltro ={inicio} />
+            
           </div>
         </div>
       </div>
