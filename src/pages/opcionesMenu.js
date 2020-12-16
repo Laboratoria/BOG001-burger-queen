@@ -18,7 +18,10 @@ const [inicio, setInicio] = useState(["Tipo" ]);
 let mostrarOpciones;
 
 //contador={itemsMenu} setContador={setItemsMenu}
+const click = (e) => {
+  props.setMostrar(false)
 
+  }
 
 
 return (
@@ -69,10 +72,10 @@ return (
           </div>
           <div className="zonaBotones">
             {" "}
-            <BotonesOpciones tipoFiltro ={inicio} />
-            
+            <BotonesOpciones tipoFiltro ={inicio} envio={props.setContadorAdiciones} intento={props.adiciones}/>
           </div>
         </div>
+        <button className='botonVolver' onClick={()=>{click()} }>Regresar</button>
       </div>
     </div>
   );

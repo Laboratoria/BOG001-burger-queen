@@ -15,8 +15,7 @@ class Nombre extends React.Component {
     return (
       <form className="form-control" onSubmit={this.addDish}>
         <p className="nombre">
-          Nombre:<input className="inputNombre" ref={this.newName}></input>
-          <button type="submit" className='botonNombre' onClick={this.addDish}>Enviar</button>        
+          Nombre:<input className="inputNombre" ref={this.newName}></input>       
         </p>
       </form>
     );

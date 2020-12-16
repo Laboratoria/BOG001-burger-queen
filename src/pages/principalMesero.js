@@ -5,6 +5,7 @@ import BadgesList from "../componentes/botonesItems";
 import Factura from "../componentes/factura";
 import Nombre from "../componentes/nombre";
 import Check from "../componentes/check";
+import OpcionesMenu from "./opcionesMenu";
 //import guardarPedidosfs from "../firebaseguardarpedido";
 //import BotonesGaseosa from "../componentes/practicaGaseosa.js";
 
@@ -26,8 +27,17 @@ import Check from "../componentes/check";
 function PrincipalMesero (props) {
   const [itemsMenu, setItemsMenu] = useState([]);
 
+  const [itemsAdiciones, setItemsAdiciones] = useState([])
+ console.log(itemsAdiciones);
+  const [mostrar, setMostrar] = useState(false)   
   
-  
+  if (mostrar) {
+    return  (
+        <OpcionesMenu adiciones={itemsAdiciones} setContadorAdiciones={setItemsAdiciones} setMostrar={setMostrar}/> 
+        
+    )
+    
+    }else
     return (
       <React.Fragment>
         <div className="Container1">
@@ -35,8 +45,8 @@ function PrincipalMesero (props) {
           <div className="card-body">
             <Nombre />
             <div className="grid" >
-              <BadgesList contador={itemsMenu} setContador={setItemsMenu} />
-              <Factura acaVacontador={itemsMenu} setItemsMenu={setItemsMenu}/>
+            <BadgesList contador={itemsMenu} setContador={setItemsMenu} setMostrar={setMostrar} />
+              <Factura acaVacontador={itemsMenu} setItemsMenu={setItemsMenu} adiciones={itemsAdiciones} setContadorAdiciones={setItemsAdiciones} />
             </div>
             <Check/>
           </div>

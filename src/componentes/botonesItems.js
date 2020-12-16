@@ -1,12 +1,12 @@
-import React, {useState} from 'react';
+import React from 'react';
 //import { Link } from 'react-router-dom';
 import items from '../items';
 import './styles/botonesItems.css'
-import OpcionesMenu from '../pages/opcionesMenu';
+
 function BadgesList(props) {
   
 const click = (e) => {
-  setMostrar(true) }
+  props.setMostrar(true) }
 
   const agregarFactura = (e) => {
     let newObjeto = {name: e.name, price: e.price};
@@ -21,10 +21,10 @@ const click = (e) => {
         Object.values(data.data).forEach((e) => {
             if(e.type.includes('Principal')){
             list.push(
-             <React.Fragment key={e.id}>
+            <React.Fragment key={e.id}>
               <div className='botonesPrincipal'>
                 <li className='lista'>
-                 <img className='imgPrincipal' src={e.img} alt='imagen'/>
+                <img className='imgPrincipal' src={e.img} alt='imagen'/>
                     <button className="botonesClase" onClick={()=>{agregarFactura (e);  click(e) } } > {e.name}   ${e.price} </button>
                 </li>
               </div>
@@ -46,21 +46,14 @@ const click = (e) => {
                   <React.Fragment key={e.id}>
                   <div className='botonesAcompañamientos'>
                     <li className='lista'>
-                     <img className='imgPrincipal' src={e.img} alt='imagen'/>
+                    <img className='imgPrincipal' src={e.img} alt='imagen'/>
                         <button onClick={()=>{agregarFactura (e) }} className="botonesClase" id ={e.name}>{e.name}   ${e.price}</button>
                     </li>
                   </div>
                   </React.Fragment>)
                 }
                     })
-                    
-    const [mostrar, setMostrar] = useState(false)           
-     if (mostrar) {
-    return  (
-    <OpcionesMenu /> )
-    
-     }else
-       return(
+      return(
         <div>
           <p>Nuestras Hamburguesas</p>
           <ul className="list-unstyled">

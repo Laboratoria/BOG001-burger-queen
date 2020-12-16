@@ -16,7 +16,7 @@ function PrincipalDesayuno(props){
             <Nombre />
             <div className="grid" >
                 <BadgesListDesayuno  contador={itemsMenu} setContador={setItemsMenu}/>
-              <Factura  acaVacontador={itemsMenu} setItemsMenu={setItemsMenu}/>
+              <Factura  acaVacontador={itemsMenu} setItemsMenu={s}etItemsMenu/>
             </div>
             <Check />
           </div>
