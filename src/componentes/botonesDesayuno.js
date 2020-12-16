@@ -7,6 +7,8 @@ function BadgesListDesayuno (props) {
   const agregarFactura = (e) => {
      let newObjeto = {name: e.name, price: e.price};
      props.setContador(oldArray => [...oldArray, newObjeto]);
+     console.log(newObjeto);
+
  }
         const list = [];
         const listBebidas = [];
@@ -19,7 +21,7 @@ function BadgesListDesayuno (props) {
               <div className='botonesPrincipal'>
                 <li className='lista'>
                  <img className='imgPrincipal' src={e.img} alt='imagen'/>
-                    <button className='botonesClase' onClick={()=>{agregarFactura (e) } }>{e.name}   ${e.price}</button>
+                    <button className='botonesClase' onClick={()=>{agregarFactura (e) } }  id ={e.name}>{e.name}   ${e.price}</button>
                 </li>
               </div>
               </React.Fragment>)
@@ -30,7 +32,7 @@ function BadgesListDesayuno (props) {
                 <div className='botonesBebidas'>
                   <li className='lista' key={e.id}>
                    <img className='imgPrincipal' src={e.img} alt='imagen'/>
-                      <button className='botonesClase' onClick={()=>{agregarFactura (e) } }>{e.name}   ${e.price}</button>
+                      <button className='botonesClase' onClick={()=>{agregarFactura (e) } }  id ={e.name}>{e.name}   ${e.price}</button>
                   </li>
                 </div>
                 </React.Fragment>)
@@ -40,11 +42,11 @@ function BadgesListDesayuno (props) {
      return (
         <div>
           <p>Menú</p>
-          <ul className="list-unstyled" key={data.key}>
+          <ul className="list-unstyled">
               {list}
           </ul>
             <p>Bebidas</p>
-            <ul className="list-unstyled" key={data.key}>
+            <ul className="list-unstyled">
                 {listBebidas}
             </ul>
           </div>

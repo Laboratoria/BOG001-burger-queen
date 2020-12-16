@@ -4,31 +4,41 @@ import items from '../items';
 import './styles/botonesItems.css'
 
 function BadgesList(props) {
-  
-const click = (e) => {
-  props.setMostrar(true) }
+  const list = [];
+  const listBebidas = [];
+  const listAcompañamientos = [];
+  const data = items;
+ 
+  const click = (e) => {
+  props.setMostrar(true)
+  }
 
   const agregarFactura = (e) => {
+    if(e.type.includes('Principal')){
+    const adicionesMenu = props.adiciones
+    console.log(adicionesMenu);
+    let newObjetoHamburgue = {name: e.name, price: e.price, };
+    props.setContador(oldArray => [...oldArray, newObjetoHamburgue]);
+    }
+    else{
     let newObjeto = {name: e.name, price: e.price};
     props.setContador(oldArray => [...oldArray, newObjeto]);
+    }
 }
 
-        const list = [];
-        const listBebidas = [];
-        const listAcompañamientos = [];
-        const data = items
 
         Object.values(data.data).forEach((e) => {
             if(e.type.includes('Principal')){
             list.push(
-            <React.Fragment key={e.id}>
+             <React.Fragment key={e.id} >
               <div className='botonesPrincipal'>
                 <li className='lista'>
-                <img className='imgPrincipal' src={e.img} alt='imagen'/>
-                    <button className="botonesClase" onClick={()=>{agregarFactura (e);  click(e) } } > {e.name}   ${e.price} </button>
+                 <img className='imgPrincipal' src={e.img} alt='imagen'/>
+                    <button className='botonesClase' onClick={()=>{agregarFactura (e);  click(e) }} > {e.name}   ${e.price} </button>
                 </li>
               </div>
-            </React.Fragment>)
+            </React.Fragment>
+            )
             }
             if(e.type.includes('Bebidas')){
               listBebidas.push( 
@@ -53,8 +63,9 @@ const click = (e) => {
                   </React.Fragment>)
                 }
                     })
-      return(
-        <div>
+                            
+       return(
+        <div className='prueba'>
           <p>Nuestras Hamburguesas</p>
           <ul className="list-unstyled">
               {list}

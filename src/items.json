@@ -99,7 +99,6 @@
     "id": 13,
     "name": "Queso",
     "price": 1,
-    "img": "/images/agua_500ml.jpg",
     "type": "Adición",
     "additions": ["yes"]
   },
@@ -107,7 +106,6 @@
     "id": 14,
     "name": "Huevo",
     "price": 1,
-    "img": "/images/agua_500ml.jpg",
     "type": "Adición",
     "additions": ["yes"]
   },
@@ -115,7 +113,6 @@
     "id": 21,
     "name": "Tocino",
     "price": 3,
-    "img": "/images/agua_500ml.jpg",
     "type": "Adición",
     "additions": ["yes"]
   },
@@ -123,7 +120,6 @@
     "id": 15,
     "name": "Tomate",
     "price": 0,
-    "img": "/images/agua_500ml.jpg",
     "type": "Salsas",
     "additions": ["yes"]
   },
@@ -131,7 +127,6 @@
     "id": 16,
     "name": "Mayonesa",
     "price": 0,
-    "img": "/images/agua_500ml.jpg",
     "type": "Salsas",
     "additions": ["yes"]
   },
@@ -139,7 +134,6 @@
     "id": 17,
     "name": "Mostaza",
     "price": 0,
-    "img": "/images/agua_500ml.jpg",
     "type": "Salsas",
     "additions": ["yes"]
   },
@@ -147,7 +141,6 @@
     "id": 18,
     "name": "Res",
     "price": 0,
-    "img": "/images/agua_500ml.jpg",
     "type": "Tipo",
     "additions": ["yes"]
   },
@@ -155,7 +148,6 @@
     "id": 19,
     "name": "Pollo",
     "price": 0,
-    "img": "/images/agua_500ml.jpg",
     "type": "Tipo",
     "additions": ["yes"]
   },

@@ -1,4 +1,4 @@
-import React , { useState }from "react";
+import React , { useState}from "react";
 import Header from "../componentes/header";
 import "../style/principalMesero.css";
 import BadgesList from "../componentes/botonesItems";
@@ -25,30 +25,32 @@ import OpcionesMenu from "./opcionesMenu";
 */
 
 function PrincipalMesero (props) {
-  const [itemsMenu, setItemsMenu] = useState([]);
 
-  const [itemsAdiciones, setItemsAdiciones] = useState([])
- console.log(itemsAdiciones);
-  const [mostrar, setMostrar] = useState(false)   
+  const [itemsMenu, setItemsMenu] = useState([])
+  const [itemsAdiciones, setItemsAdiciones] = useState([]);
+  const [mostrar, setMostrar] = useState(false)  
+  const [nombre, setNombre] = useState({ nombre: "" }); 
+
+ 
   
   if (mostrar) {
     return  (
         <OpcionesMenu adiciones={itemsAdiciones} setContadorAdiciones={setItemsAdiciones} setMostrar={setMostrar}/> 
         
-    )
+     )
     
-    }else
+     }else
     return (
       <React.Fragment>
-        <div className="Container1">
-          <Header />
-          <div className="card-body">
-            <Nombre />
-            <div className="grid" >
-            <BadgesList contador={itemsMenu} setContador={setItemsMenu} setMostrar={setMostrar} />
+        <div className= 'Container1'>
+          <Header/>
+          <div className='card-body'>
+            <Nombre name={nombre} setName={setNombre}/>
+            <div className= 'grid'>
+              <BadgesList contador={itemsMenu} setContador={setItemsMenu} setMostrar={setMostrar} setItemsMenu={setItemsMenu} adiciones={itemsAdiciones} setContadorAdiciones={setItemsAdiciones} />
               <Factura acaVacontador={itemsMenu} setItemsMenu={setItemsMenu} adiciones={itemsAdiciones} setContadorAdiciones={setItemsAdiciones} />
             </div>
-            <Check/>
+            <Check name={nombre} setName={setNombre} pedidoF={itemsMenu} setItemsMenu={setItemsMenu} adiciones={itemsAdiciones} setContadorAdiciones={setItemsAdiciones} />
           </div>
         </div>
       </React.Fragment>
