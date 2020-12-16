@@ -7,6 +7,9 @@ import {
   FormGroup,
 } from '@angular/forms';
 import { MenuService } from '../../Services/menu.service';
+import { Menu } from '../../Interfaces/menu.model';
+import { bindCallback, Observable } from 'rxjs';
+import { OrdersService } from '../../Services/orders.service';
 
 @Component({
   selector: 'app-waiter',
@@ -20,10 +23,15 @@ export class WaiterComponent implements OnInit {
 
   customerName: string;
   tableNumber: Number;
+  // bill: Array<Number> = [];
+  bill: Number;
 
   showingMenus: boolean = false;
   showingBreakfasts: boolean = false;
   showingLunches: boolean = false;
+
+  items$: Observable<Menu[]>;
+  // wishes: Menu[] =[];
 
   orderForm = this.fb.group({
     name: ['', Validators.required],
@@ -33,11 +41,23 @@ export class WaiterComponent implements OnInit {
   // name: string;
   // name = new FormControl('', Validators.required);
 
-  // @Input() item;
+  // @Input() item: Menu;
 
-  constructor(private fb: FormBuilder, private menuService: MenuService) {}
+  constructor(
+    private fb: FormBuilder,
+    private menuService: MenuService,
+    private ordersService: OrdersService
+  ) {
+    this.items$ = this.ordersService.order$;
+    // console.log(this.items$);
+  }
 
   ngOnInit(): void {
+    this.items$.forEach((arr) => {
+      this.bill = arr.reduce((acc, obj) => acc + obj.price, 0);
+      console.log(this.bill);
+    });
+
     // console.log(this.name.errors);
     // this.initForm();
     // console.log(this.name.errors);
@@ -83,6 +103,18 @@ export class WaiterComponent implements OnInit {
       this.showingLunches = true;
       this.showingBreakfasts = false;
     }
+  }
+
+  addWishes(item) {
+    // console.log(item);
+    this.ordersService.addWishes(item);
+  }
+
+  sumPrices() {
+    this.items$.forEach((arr) => {
+      this.bill = arr.reduce((acc, obj) => acc + obj.price, 0);
+      console.log(this.bill);
+    });
   }
 
   // summary(item, price) {}

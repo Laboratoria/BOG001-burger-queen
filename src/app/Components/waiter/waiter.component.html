@@ -39,7 +39,7 @@
         <div *ngFor="let item of breakfasts$" name="break">
           <h3>{{ item.item }}</h3>
           <h4>{{ item.price }}</h4>
-          <button (click)="summary(item.id)">Agregar</button>
+          <button (click)="addWishes(item)">Agregar</button>
         </div>
       </div>
 
@@ -56,8 +56,17 @@
     <p><strong>Nombre del cliente: </strong>{{ customerName }}</p>
     <p><strong>N° de mesa: </strong> {{ tableNumber }}</p>
 
-    <!-- <div *ngIf="showingSummary">
-      {{ item[id] }}
-    </div> -->
+    <!-- <div *ngIf="showingSummary"> -->
+    <div *ngFor="let item of items$ | async">
+      <div class="row">
+        <div class="col-sm-6">{{ item.item }}</div>
+        <div class="col-sm-6">{{ item.price | currency }}</div>
+      </div>
+    </div>
+    <h2>Subtotal: {{ bill | currency }}</h2>
+
+    <!-- <button type="button" (click)="sumPrices()"></button> -->
+
+    <!-- </div> -->
   </div>
 </div>
