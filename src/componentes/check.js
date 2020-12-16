@@ -10,7 +10,7 @@ function Check (props){
 
     const guardoName = props.name;
   
-    const dataFirebase = {nombre:guardoName, pedido:props.pedidoF }
+    const dataFirebase = {nombre:guardoName, pedido:props.pedidoF, adicion:props.adiciones }
     console.log(dataFirebase);
   }
 

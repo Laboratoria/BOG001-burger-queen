@@ -27,8 +27,7 @@ import OpcionesMenu from "./opcionesMenu";
 function PrincipalMesero (props) {
 
   const [itemsMenu, setItemsMenu] = useState([])
-  const [itemsAdiciones, setItemsAdiciones] = useState([])
-  console.log(itemsAdiciones);
+  const [itemsAdiciones, setItemsAdiciones] = useState([]);
   const [mostrar, setMostrar] = useState(false)  
   const [nombre, setNombre] = useState({ nombre: "" }); 
 
@@ -51,7 +50,7 @@ function PrincipalMesero (props) {
               <BadgesList contador={itemsMenu} setContador={setItemsMenu} setMostrar={setMostrar} setItemsMenu={setItemsMenu} adiciones={itemsAdiciones} setContadorAdiciones={setItemsAdiciones} />
               <Factura acaVacontador={itemsMenu} setItemsMenu={setItemsMenu} adiciones={itemsAdiciones} setContadorAdiciones={setItemsAdiciones} />
             </div>
-            <Check name={nombre} setName={setNombre} pedidoF={itemsMenu} />
+            <Check name={nombre} setName={setNombre} pedidoF={itemsMenu} setItemsMenu={setItemsMenu} adiciones={itemsAdiciones} setContadorAdiciones={setItemsAdiciones} />
           </div>
         </div>
       </React.Fragment>

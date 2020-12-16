@@ -15,7 +15,9 @@ function BadgesList(props) {
 
   const agregarFactura = (e) => {
     if(e.type.includes('Principal')){
-    let newObjetoHamburgue = {name: e.name, price: e.price, adicion:props.adiciones };
+    const adicionesMenu = props.adiciones
+    console.log(adicionesMenu);
+    let newObjetoHamburgue = {name: e.name, price: e.price, };
     props.setContador(oldArray => [...oldArray, newObjetoHamburgue]);
     }
     else{
