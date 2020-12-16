@@ -58,6 +58,7 @@
 
 .botonVolver{
     width: 21%;
-    height: 6%
-
+    height: 6%;
+    position: absolute;
+    top: 94%;
 }

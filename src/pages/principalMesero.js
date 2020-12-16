@@ -27,10 +27,12 @@ import OpcionesMenu from "./opcionesMenu";
 function PrincipalMesero (props) {
 
   const [itemsMenu, setItemsMenu] = useState([])
-  
   const [itemsAdiciones, setItemsAdiciones] = useState([])
- console.log(itemsAdiciones);
-  const [mostrar, setMostrar] = useState(false)   
+  console.log(itemsAdiciones);
+  const [mostrar, setMostrar] = useState(false)  
+  const [nombre, setNombre] = useState({ nombre: "" }); 
+
+ 
   
   if (mostrar) {
     return  (
@@ -44,12 +46,12 @@ function PrincipalMesero (props) {
         <div className= 'Container1'>
           <Header/>
           <div className='card-body'>
-            <Nombre/>
+            <Nombre name={nombre} setName={setNombre}/>
             <div className= 'grid'>
-              <BadgesList contador={itemsMenu} setContador={setItemsMenu} setMostrar={setMostrar} />
+              <BadgesList contador={itemsMenu} setContador={setItemsMenu} setMostrar={setMostrar} setItemsMenu={setItemsMenu} adiciones={itemsAdiciones} setContadorAdiciones={setItemsAdiciones} />
               <Factura acaVacontador={itemsMenu} setItemsMenu={setItemsMenu} adiciones={itemsAdiciones} setContadorAdiciones={setItemsAdiciones} />
             </div>
-            <Check/>
+            <Check name={nombre} setName={setNombre} pedidoF={itemsMenu} />
           </div>
         </div>
       </React.Fragment>
