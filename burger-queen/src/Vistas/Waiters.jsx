@@ -17,8 +17,10 @@ const Clients = ({ infoInput, getInput }) => {
         </div>
     );
 }
-const Request = ({ showName, getOrder, setNewOrder, newBreakItem, addRequest }) => {
-    const totalOrder = getOrder.reduce((sum, value) => (typeof value.Price == "number" ? sum + value.Price : sum), 0);
+const Request = ({ showName, getOrder, setNewOrder, newBreakItem, addRequest, setName }) => {
+
+    let totalOrder = getOrder.reduce((sum, value) => (typeof value.Price == "number" ? sum + value.Price : sum), 0);
+    
 
     const initialStateValues = {
         name: showName,
@@ -40,7 +42,11 @@ const Request = ({ showName, getOrder, setNewOrder, newBreakItem, addRequest }) 
             order: getOrder,
             total: totalOrder
         })
-        setValues({...values })
+        totalOrder = 0;
+        setNewOrder([]);
+        setName("");
+
+        
     }
 
     return (
@@ -160,7 +166,7 @@ const MenuBreakfast = () => {
                             )
                         }
                     </div>
-                    <Request addRequest={sendKitchen} showName={newTaskName} getOrder={order} setNewOrder={setOrder} newBreakItem={itemMenu}
+                    <Request addRequest={sendKitchen} showName={newTaskName} setName={setNewTaskName} getOrder={order} setNewOrder={setOrder} newBreakItem={itemMenu}
                     />
                 </div>
                 <Footer />
