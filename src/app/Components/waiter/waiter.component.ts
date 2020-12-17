@@ -37,9 +37,6 @@ export class WaiterComponent implements OnInit {
     name: ['', Validators.required],
     table: ['', Validators.required],
   });
-  // public orderForm: FormGroup;
-  // name: string;
-  // name = new FormControl('', Validators.required);
 
   // @Input() item: Menu;
 
@@ -110,11 +107,16 @@ export class WaiterComponent implements OnInit {
     this.ordersService.addWishes(item);
   }
 
-  sumPrices() {
-    this.items$.forEach((arr) => {
-      this.bill = arr.reduce((acc, obj) => acc + obj.price, 0);
-      console.log(this.bill);
-    });
+  // removeItem(index) {
+  //   console.log(index);
+  //   this.items$.forEach((arr) => {
+  //     arr = arr.filter((item, i) => i !== index);
+  //     console.log(arr);
+  //   });
+  // }
+
+  removeWish(index) {
+    this.ordersService.removeWish(index);
   }
 
   // summary(item, price) {}

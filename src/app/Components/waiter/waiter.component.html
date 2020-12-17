@@ -57,10 +57,13 @@
     <p><strong>N° de mesa: </strong> {{ tableNumber }}</p>
 
     <!-- <div *ngIf="showingSummary"> -->
-    <div *ngFor="let item of items$ | async">
+    <div *ngFor="let item of items$ | async; let i = index">
       <div class="row">
         <div class="col-sm-6">{{ item.item }}</div>
-        <div class="col-sm-6">{{ item.price | currency }}</div>
+        <div class="col-sm-6">
+          {{ item.price | currency }}
+          <button (click)="removeWish(i)">ELiminar</button>
+        </div>
       </div>
     </div>
     <h2>Subtotal: {{ bill | currency }}</h2>
