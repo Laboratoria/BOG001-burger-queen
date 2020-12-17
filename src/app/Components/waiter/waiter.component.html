@@ -14,6 +14,7 @@
             id="name"
             placeholder="Nombre"
             formControlName="name"
+            required
           />
         </mat-form-field>
         <mat-form-field class="full-width">
@@ -22,6 +23,7 @@
             placeholder="N° de mesa"
             formControlName="table"
             [(ngModel)]="tableNumber"
+            required
           />
         </mat-form-field>
         <button mat-button type="button" (click)="showMenus()">
@@ -58,15 +60,20 @@
 
     <!-- <div *ngIf="showingSummary"> -->
     <div *ngFor="let item of items$ | async; let i = index">
-      <div class="row">
-        <div class="col-sm-6">{{ item.item }}</div>
-        <div class="col-sm-6">
+      <div class="row items-order">
+        <div class="col-6">{{ item.item }}</div>
+        <div class="col-4">
           {{ item.price | currency }}
-          <button (click)="removeWish(i)">ELiminar</button>
+        </div>
+        <div class="col-1">
+          <button mat-icon-button (click)="removeWish(i)">
+            <i class="far fa-trash-alt"></i>
+          </button>
         </div>
       </div>
     </div>
     <h2>Subtotal: {{ bill | currency }}</h2>
+    <button (click)="generateOrder()">Enviar pedido a cocina</button>
 
     <!-- <button type="button" (click)="sumPrices()"></button> -->
 

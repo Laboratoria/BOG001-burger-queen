@@ -1,14 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import {
-  FormBuilder,
-  Validators,
-  FormControl,
-  FormGroup,
-} from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 import { MenuService } from '../../Services/menu.service';
 import { Menu } from '../../Interfaces/menu.model';
-import { bindCallback, Observable } from 'rxjs';
+import { Observable } from 'rxjs';
 import { OrdersService } from '../../Services/orders.service';
 
 @Component({
@@ -23,7 +17,6 @@ export class WaiterComponent implements OnInit {
 
   customerName: string;
   tableNumber: Number;
-  // bill: Array<Number> = [];
   bill: Number;
 
   showingMenus: boolean = false;
@@ -31,7 +24,6 @@ export class WaiterComponent implements OnInit {
   showingLunches: boolean = false;
 
   items$: Observable<Menu[]>;
-  // wishes: Menu[] =[];
 
   orderForm = this.fb.group({
     name: ['', Validators.required],
@@ -46,18 +38,12 @@ export class WaiterComponent implements OnInit {
     private ordersService: OrdersService
   ) {
     this.items$ = this.ordersService.order$;
-    // console.log(this.items$);
   }
 
   ngOnInit(): void {
     this.items$.forEach((arr) => {
       this.bill = arr.reduce((acc, obj) => acc + obj.price, 0);
-      console.log(this.bill);
     });
-
-    // console.log(this.name.errors);
-    // this.initForm();
-    // console.log(this.name.errors);
 
     this.menuService
       .getBreakfasts()
@@ -75,10 +61,18 @@ export class WaiterComponent implements OnInit {
   }
 
   showMenus() {
-    if (this.showingMenus) {
-      this.showingMenus = false;
+    const client = this.orderForm.value.name;
+    const table = this.orderForm.value.table;
+    if (client == undefined || table == undefined) {
+      alert(
+        'Por favor llena los campos de cliente y mesa para comenzar el pedido'
+      );
     } else {
-      this.showingMenus = true;
+      if (this.showingMenus) {
+        this.showingMenus = false;
+      } else {
+        this.showingMenus = true;
+      }
     }
   }
 
@@ -103,23 +97,26 @@ export class WaiterComponent implements OnInit {
   }
 
   addWishes(item) {
-    // console.log(item);
     this.ordersService.addWishes(item);
   }
-
-  // removeItem(index) {
-  //   console.log(index);
-  //   this.items$.forEach((arr) => {
-  //     arr = arr.filter((item, i) => i !== index);
-  //     console.log(arr);
-  //   });
-  // }
 
   removeWish(index) {
     this.ordersService.removeWish(index);
   }
 
-  // summary(item, price) {}
+  generateOrder() {
+    const client = this.orderForm.value.name;
+    const table = this.orderForm.value.table;
 
-  // console.log(name.errors); // {required: true}
+    console.log(client, table, this.bill);
+
+    this.ordersService
+      .generateOrder(client, table, this.bill)
+      .then(() => {
+        alert('Orden enviada a cocina');
+      })
+      .catch((err) => {
+        alert('Error: ' + err);
+      });
+  }
 }
