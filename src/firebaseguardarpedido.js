@@ -1,10 +1,7 @@
 import firebase from "./firebase";
 const db = firebase.firestore();
 
-export const guardarPedidosfs = ( nombreCliente , orden ) => 
+export const guardarPedidosfs = ( pedidoObj ) => 
 db.collection('Pedidos').doc().set(
-    {
-        nombreCliente ,
-        orden
-    }
+        pedidoObj
 );
