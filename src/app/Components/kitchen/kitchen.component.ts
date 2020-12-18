@@ -1,6 +1,4 @@
-import { getLocaleExtraDayPeriods } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { getCiphers } from 'crypto';
 import { OrdersService } from '../../Services/orders.service';
 @Component({
   selector: 'app-kitchen',

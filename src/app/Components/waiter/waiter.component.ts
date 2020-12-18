@@ -16,6 +16,7 @@ export class WaiterComponent implements OnInit {
   public menu$;
   public lunchesAndDinners$;
 
+  duration$: Number;
   customerName: string;
   tableNumber: Number;
   bill: Number;
@@ -49,6 +50,7 @@ export class WaiterComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.getDuration();
     this.items$.forEach((arr) => {
       this.bill = arr.reduce((acc, obj) => acc + obj.price, 0);
     });
@@ -132,5 +134,15 @@ export class WaiterComponent implements OnInit {
       .catch((err) => {
         alert('Error: ' + err);
       });
+  }
+
+  getDuration() {
+    this.ordersReady$.forEach((element) => {
+      element.forEach((order) => {
+        const start = order.createdAt;
+        const end = Date.now();
+        this.duration$ = end - start;
+      });
+    });
   }
 }

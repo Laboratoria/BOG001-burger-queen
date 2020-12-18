@@ -83,9 +83,12 @@
       >
     </ng-template>
     <div *ngFor="let order of ordersReady$ | async; let i = index">
-      {{ order.table }}
-      {{ order.name }}
-      {{ order.bill | currency }}
+      Mesa: {{ order.table }} Cliente: {{ order.name }} Cuenta:
+      {{ order.bill | currency }} Tiempo en completarse: {{ duration$ }}
+      <h4>Orden:</h4>
+      <div *ngFor="let item of order.items">
+        {{ item.item }}
+      </div>
     </div>
   </mat-tab>
 </mat-tab-group>
