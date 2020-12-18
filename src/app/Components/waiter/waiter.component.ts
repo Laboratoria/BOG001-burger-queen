@@ -19,6 +19,7 @@ export class WaiterComponent implements OnInit {
   customerName: string;
   tableNumber: Number;
   bill: Number;
+  completeCounter: Number = 0;
 
   showingMenus: boolean = false;
   showingBreakfasts: boolean = false;
@@ -41,6 +42,10 @@ export class WaiterComponent implements OnInit {
   ) {
     this.items$ = this.ordersService.order$;
     this.ordersReady$ = this.ordersService.ready$;
+
+    this.ordersService.ready$.subscribe((orders) => {
+      this.completeCounter = orders.length;
+    });
   }
 
   ngOnInit(): void {

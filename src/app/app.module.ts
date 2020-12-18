@@ -29,6 +29,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatBadgeModule } from '@angular/material/badge';
 
 @NgModule({
   declarations: [
@@ -59,6 +60,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
     MatFormFieldModule,
     MatTabsModule,
     MatGridListModule,
+    MatBadgeModule,
   ],
   providers: [MenuService],
   bootstrap: [AppComponent],

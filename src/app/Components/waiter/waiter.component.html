@@ -77,6 +77,11 @@
   </mat-tab>
 
   <mat-tab label="Pedidos Listos">
+    <ng-template mat-tab-label>
+      <span [matBadge]="completeCounter" matBadgeOverlap="false"
+        >Pedidos Listos</span
+      >
+    </ng-template>
     <div *ngFor="let order of ordersReady$ | async; let i = index">
       {{ order.name }}
       {{ order.bill | currency }}
