@@ -14,7 +14,7 @@ db.collection('Pedidos').doc().set(
         console.error("Error writing document: ", error);
 });
 
-
+/*
 const getAllDocuments = async () => {
         const order = [];
         await db
@@ -27,7 +27,7 @@ const getAllDocuments = async () => {
           });
           return console.log(order)
       };
-
+*/
 
       export default guardarPedidosfs
 

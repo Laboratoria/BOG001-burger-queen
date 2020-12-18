@@ -1,76 +1,50 @@
 import React, {useState , useEffect} from "react";
 import "./styles/pedidosCocina.css";
-//import getAllDocuments from"../firebaseguardarpedido"
 import firebase from "../firebase";
 
 const db = firebase.firestore();
 
-const getAllDocuments = async () => {
-    let view
-    await db
+const getAllDocuments = (callback) => {
+   // let view
+  //  await 
+    db
       .collection("pedidos")
       .get()
       .then((querySnapshot) => {
-        querySnapshot.forEach((doc) => { 
-            const infoPedido = doc.data()
-            infoPedido.id = doc.id; 
-            view += <div className="botonPedido" type="button" id ={infoPedido.id}>
-            <div className="numero pedido">
-                <p>{infoPedido.nombreCliente}</p>
-                <p>{infoPedido.orden} </p>
-            </div>
-        </div>
-        }); // doc.data() is never undefined for query doc snapshots);
-      });
-      return view
-  };
+       // .onSnapshot((doc) => {
+          const dataArr = querySnapshot.docs.map((order) => ({
+            id: order.id,
+            ...order.data(),
+          }));
+          callback(dataArr)
+        });
+      };
+      
+
   
-  const BotonesPedidos = () => {
-    const [loading, setLoading] = useState(false);
-    const [postsList, setPostsList] = useState([]);
+ function    BotonesPedidos (props)  {
+
+    const [data, setData] = useState([]);
     
-    
-  
     useEffect(() => {
-      setLoading(true);
-      getAllDocuments().then(
-        console.log)
-        
-    /*    (view) => setPostsList(view));
-      setLoading(false);
-    }, [loading]);
-    return <div>{[ postsList, setPostsList, loading, setLoading ] }</div>;*/
-  });
-  }
-
-  /* 
-function BotonesPedidos  (props) {
-
-   
-
+      getAllDocuments(setData)
+    }, []);
+     // .then(()=>{
   
-getAllDocuments()
-const querySnapshot = async() => obtenerPedidos();
-
-  let view = '';
-  querySnapshot.forEach ( doc => { 
-        const infoPedido = doc.data()
-        infoPedido.id = doc.id; 
-        view += <div className="botonPedido" type="button" id ={infoPedido.id}>
+      return (  <div> {data.map((infoPedido) => (
+        <div key={infoPedido.id} className="content-pedido">
+        <div className="botonPedido" type="button" id ={infoPedido.id}>
         <div className="numero pedido">
-            <p>{infoPedido.nombreCliente}</p>
-            <p>{infoPedido.orden} </p>
-        </div>
-    </div>
-    
-    })
+          <p>{infoPedido.nombreCliente}</p>
+          <p>{infoPedido.orden} </p>
+      </div>
+  </div>
+  </div>))}
+  </div> 
+            
+            )}
 
-        return ( 
-            view  
-        )
-        
+     //)})}
 
-}
-*/
 
 export default BotonesPedidos;
