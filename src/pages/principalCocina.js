@@ -5,7 +5,7 @@ import '../style/principalCocina.css';
 import Check from '../componentes/check'
 
 function  PrincipalCocina (props)  {
-    const { postsList, setLoading, loading } = BotonesPedidos();
+    const { postsList, setLoading} = useState();
     //const [loading, setLoading] = useState(false);
     //const [postsList, setPostsList] = useState([]);
 

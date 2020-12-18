@@ -2,7 +2,7 @@ import firebase from "./firebase";
 
 const db = firebase.firestore();
 
-export const guardarPedidosfs = async ( pedidoObj ) => 
+const guardarPedidosfs = async ( pedidoObj ) => 
 await 
 db.collection('Pedidos').doc().set(
         pedidoObj
@@ -15,7 +15,7 @@ db.collection('Pedidos').doc().set(
 });
 
 
-export const getAllDocuments = async () => {
+const getAllDocuments = async () => {
         const order = [];
         await db
           .collection("pedidos")
@@ -28,5 +28,6 @@ export const getAllDocuments = async () => {
           return console.log(order)
       };
 
-      export default {getAllDocuments , guardarPedidosfs}
+
+      export default guardarPedidosfs
 

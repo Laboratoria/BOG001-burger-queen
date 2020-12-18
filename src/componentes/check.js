@@ -19,12 +19,12 @@ function Check (props){
     const guardoName = props.name;
     let dataFirebase 
     if (props.adiciones === true ){ 
-      dataFirebase = {nombre:guardoName, pedido:props.pedidoF, adicion:props.adiciones } 
-      guardarPedidosfs(dataFirebase) 
+      dataFirebase = {nombre:guardoName, pedido:props.pedidoF, adicion:props.adiciones }; 
+      guardarPedidosfs(dataFirebase) ;
       console.log("Listo! en FireStore") 
   }
-    else { dataFirebase = {nombre:guardoName, pedido:props.pedidoF}
-    guardarPedidosfs(dataFirebase) 
+    else { dataFirebase = {nombre:guardoName, pedido:props.pedidoF};
+    guardarPedidosfs(dataFirebase) ;
     console.log("Listo! en FireStore") 
     }
 
