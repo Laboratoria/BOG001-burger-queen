@@ -1,4 +1,6 @@
+import { getLocaleExtraDayPeriods } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { getCiphers } from 'crypto';
 import { OrdersService } from '../../Services/orders.service';
 @Component({
   selector: 'app-kitchen',
@@ -11,6 +13,11 @@ export class KitchenComponent implements OnInit {
   constructor(private ordersService: OrdersService) {}
 
   ngOnInit(): void {
+    this.getOrders();
+  }
+
+  //Obtine las ordenes que se han añadido a la BD
+  getOrders() {
     this.ordersService
       .getOrder()
       .pipe()
@@ -20,7 +27,14 @@ export class KitchenComponent implements OnInit {
       });
   }
 
+  //Agrega orden a pedidos listos del mesero
   addCompleteOrder(order) {
     this.ordersService.addCompleteOrder(order);
+  }
+
+  //Elimina la orden completada de la lista de la cocina
+  removeOrderCollection(id) {
+    this.ordersService.removeOrderCollection(id);
+    this.getOrders();
   }
 }

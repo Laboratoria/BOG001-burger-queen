@@ -64,4 +64,8 @@ export class OrdersService {
     this.ordersCompleted = [...this.ordersCompleted, order];
     this.ready.next(this.ordersCompleted);
   }
+
+  removeOrderCollection(itemId: string) {
+    return this.firestore.doc(`orders/${itemId}`).delete();
+  }
 }

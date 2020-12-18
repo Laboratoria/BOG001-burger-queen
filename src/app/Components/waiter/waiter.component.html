@@ -83,6 +83,7 @@
       >
     </ng-template>
     <div *ngFor="let order of ordersReady$ | async; let i = index">
+      {{ order.table }}
       {{ order.name }}
       {{ order.bill | currency }}
     </div>
