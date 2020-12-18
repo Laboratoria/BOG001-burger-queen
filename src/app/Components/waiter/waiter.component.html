@@ -82,14 +82,15 @@
         >Pedidos Listos</span
       >
     </ng-template>
-    <div *ngFor="let order of ordersReady$ | async; let i = index">
-      Mesa: {{ order.table }} Cliente: {{ order.name }} Cuenta:
-      {{ order.bill | currency }} Tiempo en completarse: {{ duration$ }} minutos
-      <h4>Orden:</h4>
+    <div *ngFor="let order of ordersCompleted$; let i = index">
+      {{ order.table }}
+      {{ order.name }}
+      {{ order.bill | currency }}
+      El pedido tomo: {{ duration$ }} milisegundos en completarse.
+      <h4>Entregar:</h4>
       <div *ngFor="let item of order.items">
         {{ item.item }}
       </div>
-      <button (click)="removeOrderDelivered(i)">Orden entregada</button>
     </div>
   </mat-tab>
 </mat-tab-group>

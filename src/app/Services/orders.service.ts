@@ -61,8 +61,6 @@ export class OrdersService {
   }
 
   addCompleteOrder(order: Order) {
-    console.log(order);
-
     this.ordersCompleted = [...this.ordersCompleted, order];
     this.ready.next(this.ordersCompleted);
   }
@@ -82,5 +80,13 @@ export class OrdersService {
     this.firestore.doc(`orders/${id}`).update({
       state: 'completed',
     });
+  }
+
+  getOrdersCompleted(): Observable<Order[]> {
+    return this.firestore
+      .collection<Order>('orders', (order) =>
+        order.where('state', '==', 'completed').orderBy('createdAt', 'asc')
+      )
+      .valueChanges({ idField: 'id' });
   }
 }
