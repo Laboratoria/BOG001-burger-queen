@@ -147,4 +147,8 @@ export class WaiterComponent implements OnInit {
       });
     });
   }
+
+  removeOrderDelivered(index) {
+    this.ordersService.removeOrderDelivered(index);
+  }
 }

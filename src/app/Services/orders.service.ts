@@ -65,6 +65,13 @@ export class OrdersService {
     this.ready.next(this.ordersCompleted);
   }
 
+  removeOrderDelivered(index) {
+    this.ordersCompleted = this.ordersCompleted.filter(
+      (item, i) => i !== index
+    );
+    this.ready.next(this.ordersCompleted);
+  }
+
   removeOrderCollection(itemId: string) {
     return this.firestore.doc(`orders/${itemId}`).delete();
   }
