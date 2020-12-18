@@ -75,5 +75,11 @@
       </div>
     </div>
   </mat-tab>
-  <mat-tab label="Pedidos Listos">Pedidos Listos</mat-tab>
+
+  <mat-tab label="Pedidos Listos">
+    <div *ngFor="let order of ordersReady$ | async; let i = index">
+      {{ order.name }}
+      {{ order.bill | currency }}
+    </div>
+  </mat-tab>
 </mat-tab-group>

@@ -1,5 +1,5 @@
 export interface Order {
-  client: string;
+  name: string;
   table: number;
   bill: Number;
   items: Array<string>;

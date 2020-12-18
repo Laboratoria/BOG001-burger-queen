@@ -5,7 +5,7 @@ import { Menu } from '../../Interfaces/menu.model';
 import { Observable } from 'rxjs';
 import { OrdersService } from '../../Services/orders.service';
 import { DateTime } from 'luxon';
-
+import { Order } from '../../Interfaces/order.model';
 @Component({
   selector: 'app-waiter',
   templateUrl: './waiter.component.html',
@@ -25,6 +25,7 @@ export class WaiterComponent implements OnInit {
   showingLunches: boolean = false;
 
   items$: Observable<Menu[]>;
+  ordersReady$: Observable<Order[]>;
 
   orderForm = this.fb.group({
     name: ['', Validators.required],
@@ -39,6 +40,7 @@ export class WaiterComponent implements OnInit {
     private ordersService: OrdersService
   ) {
     this.items$ = this.ordersService.order$;
+    this.ordersReady$ = this.ordersService.ready$;
   }
 
   ngOnInit(): void {

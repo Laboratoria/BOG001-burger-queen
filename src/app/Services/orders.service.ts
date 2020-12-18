@@ -3,15 +3,21 @@ import { BehaviorSubject } from 'rxjs';
 import { Menu } from '../Interfaces/menu.model';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Order } from '../Interfaces/order.model';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class OrdersService {
+  //waiter
   private wishes: Menu[] = [];
   private order = new BehaviorSubject<Menu[]>([]);
-
   order$ = this.order.asObservable();
+
+  //kitchen
+  private ordersCompleted: Order[] = [];
+  private ready = new BehaviorSubject<Order[]>([]);
+  ready$ = this.ready.asObservable();
 
   constructor(private firestore: AngularFirestore) {}
 
@@ -39,9 +45,23 @@ export class OrdersService {
   }
 
   clearWishes() {
-    for (let i = 0; i <= this.wishes.length; i++) {
-      this.wishes.pop();
-      this.order.next(this.wishes);
-    }
+    this.wishes = [];
+    this.order.next(this.wishes);
+  }
+
+  getOrder(): Observable<Order[]> {
+    console.log(this.firestore.collection<Order>('orders').valueChanges());
+    return this.firestore
+      .collection<Order>('orders', (order) =>
+        order.orderBy('createdAt', 'desc')
+      )
+      .valueChanges({ idField: 'id' });
+  }
+
+  addCompleteOrder(order: Order) {
+    console.log(order);
+
+    this.ordersCompleted = [...this.ordersCompleted, order];
+    this.ready.next(this.ordersCompleted);
   }
 }
