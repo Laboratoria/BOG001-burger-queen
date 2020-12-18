@@ -89,4 +89,10 @@ export class OrdersService {
       )
       .valueChanges({ idField: 'id' });
   }
+
+  updateStateDelivered(id) {
+    this.firestore.doc(`orders/${id}`).update({
+      state: 'delivered',
+    });
+  }
 }

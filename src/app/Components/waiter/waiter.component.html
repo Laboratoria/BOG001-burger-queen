@@ -91,6 +91,7 @@
       <div *ngFor="let item of order.items">
         {{ item.item }}
       </div>
+      <button (click)="updateStateDelivered(order.id)">Orden entregada</button>
     </div>
   </mat-tab>
 </mat-tab-group>

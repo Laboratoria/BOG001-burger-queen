@@ -150,11 +150,16 @@ export class WaiterComponent implements OnInit {
     }
   }
 
-  removeOrderDelivered(index) {
-    this.ordersService.removeOrderDelivered(index);
+  // //ESTO YA NO VA
+  // removeOrderDelivered(index) {
+  //   this.ordersService.removeOrderDelivered(index);
+  // }
+
+  updateStateDelivered(id) {
+    this.ordersService.updateStateDelivered(id);
   }
 
-  //Obtine las ordenes completadas
+  //Obtine las ordenes completadas de firestore segun el estado
   getOrdersCompleted() {
     this.ordersService
       .getOrdersCompleted()
