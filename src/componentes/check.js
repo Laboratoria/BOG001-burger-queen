@@ -17,10 +17,17 @@ function Check (props){
     e.target.setAttribute('alt', 'check');
 
     const guardoName = props.name;
-  
-    const dataFirebase = {nombre:guardoName, pedido:props.pedidoF, adicion:props.adiciones }
-    console.log(dataFirebase);
-    guardarPedidosfs(dataFirebase)
+    let dataFirebase 
+    if (props.adiciones === true ){ 
+      dataFirebase = {nombre:guardoName, pedido:props.pedidoF, adicion:props.adiciones } 
+      guardarPedidosfs(dataFirebase) 
+      console.log("Listo! en FireStore") 
+  }
+    else { dataFirebase = {nombre:guardoName, pedido:props.pedidoF}
+    guardarPedidosfs(dataFirebase) 
+    console.log("Listo! en FireStore") 
+    }
+
   }
 
  
