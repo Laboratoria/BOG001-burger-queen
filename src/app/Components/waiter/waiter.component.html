@@ -46,6 +46,7 @@
             <div *ngFor="let item of lunchesAndDinners$">
               <h3>{{ item.item }}</h3>
               <h4>{{ item.price }}</h4>
+              <button (click)="addWishes(item)">Agregar</button>
             </div>
           </div>
         </form>
