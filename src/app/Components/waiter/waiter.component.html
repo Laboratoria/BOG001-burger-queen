@@ -84,7 +84,7 @@
     </ng-template>
     <div *ngFor="let order of ordersReady$ | async; let i = index">
       Mesa: {{ order.table }} Cliente: {{ order.name }} Cuenta:
-      {{ order.bill | currency }} Tiempo en completarse: {{ duration$ }}
+      {{ order.bill | currency }} Tiempo en completarse: {{ duration$ }} minutos
       <h4>Orden:</h4>
       <div *ngFor="let item of order.items">
         {{ item.item }}

@@ -141,7 +141,9 @@ export class WaiterComponent implements OnInit {
       element.forEach((order) => {
         const start = order.createdAt;
         const end = Date.now();
-        this.duration$ = end - start;
+        const totalms = end - start;
+        const totalmin = totalms / 60000;
+        this.duration$ = totalmin;
       });
     });
   }
