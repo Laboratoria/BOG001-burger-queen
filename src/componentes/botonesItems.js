@@ -56,7 +56,7 @@ function BadgesList(props) {
                   <React.Fragment key={e.id}>
                   <div className='botonesAcompañamientos'>
                     <li className='lista'>
-                     <img className='imgPrincipal' src={e.img} alt='imagen'/>
+                    <img className='imgPrincipal' src={e.img} alt='imagen'/>
                         <button onClick={()=>{agregarFactura (e) }} className="botonesClase" id ={e.name}>{e.name}   ${e.price}</button>
                     </li>
                   </div>

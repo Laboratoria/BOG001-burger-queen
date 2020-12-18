@@ -5,6 +5,7 @@ import salsa from '../images/salse.jpg';
 import adiciones from '../images/adicion.jpg';
 import hamburguesa from '../images/hamburguesa.jpg'
 
+
 function BotonesOpciones (props){
 
 

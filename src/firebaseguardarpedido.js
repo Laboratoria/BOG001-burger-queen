@@ -1,10 +1,17 @@
 import firebase from "./firebase";
+
 const db = firebase.firestore();
 
-export const guardarPedidosfs = ( nombreCliente , orden ) => 
+const guardarPedidosfs = async ( pedidoObj ) => 
+await 
 db.collection('Pedidos').doc().set(
-    {
-        nombreCliente ,
-        orden
-    }
-);
+        pedidoObj
+)
+.then((response) => {
+        return response;
+})
+.catch((error) => {
+        console.error("Error writing document: ", error);
+});
+
+export default guardarPedidosfs; 

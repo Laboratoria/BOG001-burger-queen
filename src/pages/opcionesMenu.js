@@ -6,7 +6,7 @@ import Header from "../componentes/header"
 
 function OpcionesMenu( props ) {
 
-const [inicio, setInicio] = useState(["Tipo" , "Adición" , "Salsas"]);
+const [inicio, setInicio] = useState(["Tipo" ]);
 
 
 let mostrarOpciones;

@@ -1,13 +1,27 @@
-import React from "react";
+import React, {useState , useEffect} from "react";
 import "./styles/pedidosCocina.css";
 import firebase from "../firebase";
+import { listenAllDocs } from "../firebaseCrud"; 
+/*
 
+function TableReclamo() {
+    const [rowData, setRowData] = useState([]);
+  
+    useEffect(() => {
+      listenAllDocs(setRowData);
+    }, []);
+  
+    const headerColumn = [
+      {
+        id: "01",
+        label: "pedido",
+      }]
+    }
 const db = firebase.firestore();
 const obtenerPedidos = async () => {
     return db.collection('Pedidos')
     .get()
 }
-
 
 function BotonesPedidos  (props) {
 
@@ -32,3 +46,5 @@ function BotonesPedidos  (props) {
 }
 
 export default BotonesPedidos;
+
+*/
