@@ -9,12 +9,12 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class OrdersService {
-  //waiter
+  //waiter resumen de pedido
   private wishes: Menu[] = [];
   private order = new BehaviorSubject<Menu[]>([]);
   order$ = this.order.asObservable();
 
-  //kitchen
+  //kitchen pedidos marcados como listos
   private ordersCompleted: Order[] = [];
   private ready = new BehaviorSubject<Order[]>([]);
   ready$ = this.ready.asObservable();
@@ -35,12 +35,14 @@ export class OrdersService {
     const items = this.wishes;
     const createdAt = Date.now();
     const id = this.firestore.createId();
+    const state = 'pending';
     return this.firestore.doc(`orders/${id}`).set({
       name,
       table,
       bill,
       items,
       createdAt,
+      state,
     });
   }
 
@@ -49,11 +51,11 @@ export class OrdersService {
     this.order.next(this.wishes);
   }
 
-  getOrder(): Observable<Order[]> {
+  getOrdersPending(): Observable<Order[]> {
     console.log(this.firestore.collection<Order>('orders').valueChanges());
     return this.firestore
       .collection<Order>('orders', (order) =>
-        order.orderBy('createdAt', 'desc')
+        order.where('state', '==', 'pending').orderBy('createdAt', 'asc')
       )
       .valueChanges({ idField: 'id' });
   }
@@ -74,5 +76,11 @@ export class OrdersService {
 
   removeOrderCollection(itemId: string) {
     return this.firestore.doc(`orders/${itemId}`).delete();
+  }
+
+  updateStateOrder(id) {
+    this.firestore.doc(`orders/${id}`).update({
+      state: 'completed',
+    });
   }
 }

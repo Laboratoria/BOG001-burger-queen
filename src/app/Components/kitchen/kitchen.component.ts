@@ -17,7 +17,7 @@ export class KitchenComponent implements OnInit {
   //Obtine las ordenes que se han añadido a la BD
   getOrders() {
     this.ordersService
-      .getOrder()
+      .getOrdersPending()
       .pipe()
       .subscribe((order) => {
         this.orders$ = order;
@@ -26,13 +26,14 @@ export class KitchenComponent implements OnInit {
   }
 
   //Agrega orden a pedidos listos del mesero
-  addCompleteOrder(order) {
+  addCompleteOrder(order, id) {
     this.ordersService.addCompleteOrder(order);
+    this.ordersService.updateStateOrder(id);
   }
 
   //Elimina la orden completada de la lista de la cocina
-  removeOrderCollection(id) {
-    this.ordersService.removeOrderCollection(id);
-    this.getOrders();
-  }
+  // removeOrderCollection(id) {
+  //   this.ordersService.removeOrderCollection(id);
+  //   this.getOrders();
+  // }
 }

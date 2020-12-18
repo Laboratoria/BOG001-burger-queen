@@ -3,10 +3,5 @@
   <div *ngFor="let item of order.items">
     <h4>{{ item.item }}</h4>
   </div>
-  <button
-    (click)="addCompleteOrder(order)"
-    (click)="removeOrderCollection(order.id)"
-  >
-    Marcar como listo
-  </button>
+  <button (click)="addCompleteOrder(order, order.id)">Marcar como listo</button>
 </div>

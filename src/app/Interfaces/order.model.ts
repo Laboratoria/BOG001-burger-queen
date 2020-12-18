@@ -4,4 +4,5 @@ export interface Order {
   bill: Number;
   items: Array<string>;
   createdAt: Date;
+  state: string;
 }
