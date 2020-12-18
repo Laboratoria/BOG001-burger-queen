@@ -4,6 +4,7 @@ import { MenuService } from '../../Services/menu.service';
 import { Menu } from '../../Interfaces/menu.model';
 import { Observable } from 'rxjs';
 import { OrdersService } from '../../Services/orders.service';
+import { DateTime } from 'luxon';
 
 @Component({
   selector: 'app-waiter',
@@ -107,6 +108,7 @@ export class WaiterComponent implements OnInit {
   generateOrder() {
     const client = this.orderForm.value.name;
     const table = this.orderForm.value.table;
+    const createdAt = DateTime.local();
 
     console.log(client, table, this.bill);
 
@@ -114,6 +116,11 @@ export class WaiterComponent implements OnInit {
       .generateOrder(client, table, this.bill)
       .then(() => {
         alert('Orden enviada a cocina');
+        this.ordersService.clearWishes();
+        this.showingMenus = false;
+        this.showingBreakfasts = false;
+        this.showingLunches = false;
+        this.orderForm.reset();
       })
       .catch((err) => {
         alert('Error: ' + err);

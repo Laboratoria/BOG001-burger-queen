@@ -27,12 +27,21 @@ export class OrdersService {
 
   generateOrder(name: string, table: number, bill: Number): Promise<void> {
     const items = this.wishes;
+    const createdAt = Date.now();
     const id = this.firestore.createId();
     return this.firestore.doc(`orders/${id}`).set({
       name,
       table,
       bill,
       items,
+      createdAt,
     });
+  }
+
+  clearWishes() {
+    for (let i = 0; i <= this.wishes.length; i++) {
+      this.wishes.pop();
+      this.order.next(this.wishes);
+    }
   }
 }

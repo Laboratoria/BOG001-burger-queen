@@ -1,82 +1,78 @@
 <mat-tab-group animationDuration="0ms">
-  <mat-tab label="Crear Orden">Crear Orden</mat-tab>
-  <mat-tab label="Pedidos Listos">Pedidos Listos</mat-tab>
-</mat-tab-group>
+  <mat-tab label="Crear Orden">
+    <div class="row m-0">
+      <div class="col-sm-8">
+        <form [formGroup]="orderForm">
+          <div>
+            <mat-form-field class="full-width">
+              <input
+                matInput
+                [(ngModel)]="customerName"
+                id="name"
+                placeholder="Nombre"
+                formControlName="name"
+                required
+              />
+            </mat-form-field>
+            <mat-form-field class="full-width">
+              <input
+                matInput
+                placeholder="N° de mesa"
+                formControlName="table"
+                [(ngModel)]="tableNumber"
+                required
+              />
+            </mat-form-field>
+            <button mat-button type="button" (click)="showMenus()">
+              Comenzar pedido
+            </button>
+          </div>
 
-<div class="row">
-  <div class="col-sm-8">
-    <form [formGroup]="orderForm">
-      <div>
-        <mat-form-field class="full-width">
-          <input
-            matInput
-            [(ngModel)]="customerName"
-            id="name"
-            placeholder="Nombre"
-            formControlName="name"
-            required
-          />
-        </mat-form-field>
-        <mat-form-field class="full-width">
-          <input
-            matInput
-            placeholder="N° de mesa"
-            formControlName="table"
-            [(ngModel)]="tableNumber"
-            required
-          />
-        </mat-form-field>
-        <button mat-button type="button" (click)="showMenus()">
-          Comenzar pedido
-        </button>
+          <div *ngIf="showingMenus">
+            1. Seleccionar el menú
+            <button (click)="breakfast()">Desayunos</button>
+            <button (click)="lunches()">Almuerzos y cenas</button>
+          </div>
+
+          <div *ngIf="showingBreakfasts">
+            <div *ngFor="let item of breakfasts$" name="break">
+              <h3>{{ item.item }}</h3>
+              <h4>{{ item.price }}</h4>
+              <button (click)="addWishes(item)">Agregar</button>
+            </div>
+          </div>
+
+          <div *ngIf="showingLunches">
+            <div *ngFor="let item of lunchesAndDinners$">
+              <h3>{{ item.item }}</h3>
+              <h4>{{ item.price }}</h4>
+            </div>
+          </div>
+        </form>
       </div>
+      <div class="col-sm-4">
+        <h1>Resumen del pedido</h1>
+        <p><strong>Nombre del cliente: </strong>{{ customerName }}</p>
+        <p><strong>N° de mesa: </strong> {{ tableNumber }}</p>
 
-      <div *ngIf="showingMenus">
-        1. Seleccionar el menú
-        <button (click)="breakfast()">Desayunos</button>
-        <button (click)="lunches()">Almuerzos y cenas</button>
-      </div>
-
-      <div *ngIf="showingBreakfasts">
-        <div *ngFor="let item of breakfasts$" name="break">
-          <h3>{{ item.item }}</h3>
-          <h4>{{ item.price }}</h4>
-          <button (click)="addWishes(item)">Agregar</button>
+        <!-- <div *ngIf="showingSummary"> -->
+        <div *ngFor="let item of items$ | async; let i = index">
+          <div class="row items-order">
+            <div class="col-6">{{ item.item }}</div>
+            <div class="col-4">
+              {{ item.price | currency }}
+            </div>
+            <div class="col-1">
+              <button mat-icon-button (click)="removeWish(i)">
+                <i class="far fa-trash-alt"></i>
+              </button>
+            </div>
+          </div>
         </div>
-      </div>
-
-      <div *ngIf="showingLunches">
-        <div *ngFor="let item of lunchesAndDinners$">
-          <h3>{{ item.item }}</h3>
-          <h4>{{ item.price }}</h4>
-        </div>
-      </div>
-    </form>
-  </div>
-  <div class="col-sm-4">
-    <h1>Resumen del pedido</h1>
-    <p><strong>Nombre del cliente: </strong>{{ customerName }}</p>
-    <p><strong>N° de mesa: </strong> {{ tableNumber }}</p>
-
-    <!-- <div *ngIf="showingSummary"> -->
-    <div *ngFor="let item of items$ | async; let i = index">
-      <div class="row items-order">
-        <div class="col-6">{{ item.item }}</div>
-        <div class="col-4">
-          {{ item.price | currency }}
-        </div>
-        <div class="col-1">
-          <button mat-icon-button (click)="removeWish(i)">
-            <i class="far fa-trash-alt"></i>
-          </button>
-        </div>
+        <h2>Subtotal: {{ bill | currency }}</h2>
+        <button (click)="generateOrder()">Enviar pedido a cocina</button>
       </div>
     </div>
-    <h2>Subtotal: {{ bill | currency }}</h2>
-    <button (click)="generateOrder()">Enviar pedido a cocina</button>
-
-    <!-- <button type="button" (click)="sumPrices()"></button> -->
-
-    <!-- </div> -->
-  </div>
-</div>
+  </mat-tab>
+  <mat-tab label="Pedidos Listos">Pedidos Listos</mat-tab>
+</mat-tab-group>
