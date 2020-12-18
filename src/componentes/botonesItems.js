@@ -1,33 +1,52 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 import items from '../items';
 import './styles/botonesItems.css'
-class BadgesList extends React.Component {
-    render() {
-        const list = [];
-        const listBebidas = [];
-        const listAcompañamientos = [];
-        const data = items
+
+function BadgesList(props) {
+  const list = [];
+  const listBebidas = [];
+  const listAcompañamientos = [];
+  const data = items;
+ 
+  const click = (e) => {
+  props.setMostrar(true)
+  }
+
+  const agregarFactura = (e) => {
+    if(e.type.includes('Principal')){
+    const adicionesMenu = props.adiciones
+    console.log(adicionesMenu);
+    let newObjetoHamburgue = {name: e.name, price: e.price, };
+    props.setContador(oldArray => [...oldArray, newObjetoHamburgue]);
+    }
+    else{
+    let newObjeto = {name: e.name, price: e.price};
+    props.setContador(oldArray => [...oldArray, newObjeto]);
+    }
+}
+
 
         Object.values(data.data).forEach((e) => {
             if(e.type.includes('Principal')){
             list.push(
-             <React.Fragment key={e.id}>
+             <React.Fragment key={e.id} >
               <div className='botonesPrincipal'>
                 <li className='lista'>
                  <img className='imgPrincipal' src={e.img} alt='imagen'/>
-                    <Link className='botonesHamburguesa' to='/opciones'>{e.name}   ${e.price}</Link>
+                    <button className='botonesClase' onClick={()=>{agregarFactura (e);  click(e) }} > {e.name}   ${e.price} </button>
                 </li>
               </div>
-            </React.Fragment>)
+            </React.Fragment>
+            )
             }
             if(e.type.includes('Bebidas')){
-              listBebidas.push(
+              listBebidas.push( 
                 <React.Fragment key={e.id}>
                 <div className='botonesBebidas'>
                   <li className='lista'>
-                   <img className='imgPrincipal' src={e.img} alt='imagen'/>
-                      <button className='botonesClase'>{e.name}   ${e.price}</button>
+                  <img className='imgPrincipal' src={e.img} alt='imagen'/>
+                      <button onClick={()=>{agregarFactura (e) }} className="botonesClase" id ={e.name}> {e.name}   ${e.price}</button>
                   </li>
                 </div>
                 </React.Fragment>)
@@ -37,16 +56,16 @@ class BadgesList extends React.Component {
                   <React.Fragment key={e.id}>
                   <div className='botonesAcompañamientos'>
                     <li className='lista'>
-                     <img className='imgPrincipal' src={e.img} alt='imagen'/>
-                        <button className='botonesClase' >{e.name}   ${e.price}</button>
+                    <img className='imgPrincipal' src={e.img} alt='imagen'/>
+                        <button onClick={()=>{agregarFactura (e) }} className="botonesClase" id ={e.name}>{e.name}   ${e.price}</button>
                     </li>
                   </div>
                   </React.Fragment>)
                 }
                     })
-                    
-     return (
-        <div>
+                            
+       return(
+        <div className='prueba'>
           <p>Nuestras Hamburguesas</p>
           <ul className="list-unstyled">
               {list}
@@ -61,7 +80,7 @@ class BadgesList extends React.Component {
             </ul>
           </div>
       );
-    }
+    
   }
   
   export default BadgesList;

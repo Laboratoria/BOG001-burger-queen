@@ -1,25 +1,78 @@
-import React from "react";
-import Header from "../componentes/header";
-import '../style/opcionesMenu.css';
+import React, { useState } from "react";
+import "../style/opcionesMenu.css";
 import combo from "../images/combo.png";
-import BotonesOpciones from "../componentes/botonesOpciones"
+import BotonesOpciones from "../componentes/botonesOpciones";
+import Header from "../componentes/header"
 
-class OpcionesMenu extends React.Component {
-    render() {
-        return (
-            <div>
-                <div className="Container3">
-                    <Header />
-                    <div className="grid">
-                        <div className="zonaImagen"> <img src={combo} alt='combo' /></div>
-                        <div className="zonaClase"> <div className="bot"> 1 </div> <div className="bot"> 2 </div> <div className="bot"> 3 </div> </div>
-                        <div className="zonaBotones"> <BotonesOpciones/> </div>
-                    </div>
+function OpcionesMenu( props ) {
 
-                </div>
+const [inicio, setInicio] = useState(["Tipo" ]);
+
+
+let mostrarOpciones;
+
+  
+const click = (e) => {
+  props.setMostrar(false)
+
+  }
+
+
+return (
+    <div>
+      <Header />
+    <div className="Container3">
+        <div className="grid">
+        <div className="zonaImagen">
+            {" "}
+            <img src={combo} alt="combo" />
+        </div>
+          <div className="zonaClase">
+            {" "}
+            <div
+              className="bot"
+              type="button"
+              onClick={() => {  mostrarOpciones = 
+               "Tipo";
+                setInicio(mostrarOpciones)
+              }}
+            >
+              {" "}
+              Tipo{" "}
             </div>
-        )
-    }
-};
+            <div
+              className="bot"
+              type="button"
+              onClick={() => { mostrarOpciones = 
+                "Adición";
+                setInicio(mostrarOpciones)
+              }}
+            >
+              {" "}
+              Adiciones{" "}
+            </div>
+            <div
+              className="bot"
+              type="button"
+              onClick={() => {  mostrarOpciones = 
+                "Salsas";
+                setInicio(mostrarOpciones)
+              }}
+            
+            >
+              {" "}
+              Salsas{" "}
+            </div>{" "}
+          </div>
+          <div className="zonaBotones">
+            {" "}
+            <BotonesOpciones tipoFiltro ={inicio} envio={props.setContadorAdiciones} intento={props.adiciones}/>
+          </div>
+        </div>
+        <button className='botonVolver' onClick={()=>{click()} }>Regresar</button>
+      </div>
+    </div>
+  );
+}
 
 export default OpcionesMenu;

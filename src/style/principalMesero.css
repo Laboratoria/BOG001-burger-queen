@@ -32,6 +32,7 @@
   width: 90%;
   margin-left: 9%;
   margin-top: 10%;
+
 }
 
 .grid {
@@ -44,7 +45,11 @@
   width: 91%;
   height: 80%;
 }
-
+.red{
+  background: none;
+  display: none;
+  visibility: hidden;
+}
 
 @media (min-width: 700px) and (max-width: 1290px) {
   .Container {

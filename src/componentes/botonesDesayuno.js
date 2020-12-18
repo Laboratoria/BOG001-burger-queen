@@ -1,8 +1,15 @@
-import React from 'react';
+import React  from 'react';
 import items from '../items';
 import './styles/botonesItems.css'
-class BadgesListDesayuno extends React.Component {
-  render() {
+function BadgesListDesayuno (props) {
+
+
+  const agregarFactura = (e) => {
+     let newObjeto = {name: e.name, price: e.price};
+     props.setContador(oldArray => [...oldArray, newObjeto]);
+     console.log(newObjeto);
+
+ }
         const list = [];
         const listBebidas = [];
         const data = items
@@ -14,7 +21,7 @@ class BadgesListDesayuno extends React.Component {
               <div className='botonesPrincipal'>
                 <li className='lista'>
                  <img className='imgPrincipal' src={e.img} alt='imagen'/>
-                    <button className='botonesClase'>{e.name}   ${e.price}</button>
+                    <button className='botonesClase' onClick={()=>{agregarFactura (e) } }  id ={e.name}>{e.name}   ${e.price}</button>
                 </li>
               </div>
               </React.Fragment>)
@@ -25,7 +32,7 @@ class BadgesListDesayuno extends React.Component {
                 <div className='botonesBebidas'>
                   <li className='lista' key={e.id}>
                    <img className='imgPrincipal' src={e.img} alt='imagen'/>
-                      <button className='botonesClase'>{e.name}   ${e.price}</button>
+                      <button className='botonesClase' onClick={()=>{agregarFactura (e) } }  id ={e.name}>{e.name}   ${e.price}</button>
                   </li>
                 </div>
                 </React.Fragment>)
@@ -35,17 +42,16 @@ class BadgesListDesayuno extends React.Component {
      return (
         <div>
           <p>Menú</p>
-          <ul className="list-unstyled" key={data.key}>
+          <ul className="list-unstyled">
               {list}
           </ul>
             <p>Bebidas</p>
-            <ul className="list-unstyled" key={data.key}>
+            <ul className="list-unstyled">
                 {listBebidas}
             </ul>
           </div>
       );
     }
-  }
   
   export default BadgesListDesayuno;
   
