@@ -83,13 +83,19 @@
       >
     </ng-template>
     <div *ngFor="let order of ordersCompleted$; let i = index">
-      {{ order.table }}
-      {{ order.name }}
-      {{ order.bill | currency }}
-      El pedido tomo: {{ duration$ }} milisegundos en completarse.
+      <p>Mesa: {{ order.table }}</p>
+      <p>Cliente: {{ order.name }}</p>
+      <p>Cuenta: {{ order.bill | currency }}</p>
+      <p>
+        <span>El pedido fue completado en </span
+        >{{ getDuration(order) | durationToFormat: "mm" }}
+        <span>minutos y </span
+        >{{ getDuration(order) | durationToFormat: "mm:ss" | slice: 3:5
+        }}<span> segundos</span>
+      </p>
       <h4>Entregar:</h4>
       <div *ngFor="let item of order.items">
-        {{ item.item }}
+        <p>{{ item.item }}</p>
       </div>
       <button (click)="updateStateDelivered(order.id, i)">
         Orden entregada

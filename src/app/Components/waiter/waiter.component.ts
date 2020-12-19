@@ -1,11 +1,12 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { MenuService } from '../../Services/menu.service';
 import { Menu } from '../../Interfaces/menu.model';
 import { Observable } from 'rxjs';
 import { OrdersService } from '../../Services/orders.service';
-import { DateTime } from 'luxon';
 import { Order } from '../../Interfaces/order.model';
+import Duration from 'luxon/src/duration.js';
+
 @Component({
   selector: 'app-waiter',
   templateUrl: './waiter.component.html',
@@ -16,8 +17,12 @@ export class WaiterComponent implements OnInit {
   public menu$;
   public lunchesAndDinners$;
   public ordersCompleted$;
+  prueba;
   duration$: Number;
+  duration: Number;
   bill: Number;
+  tableNumber: Number;
+  customerName: string;
   completeCounter: Number = 0;
   showingMenus: boolean = false;
   showingBreakfasts: boolean = false;
@@ -131,17 +136,9 @@ export class WaiterComponent implements OnInit {
       });
   }
 
-  getDuration() {
-    if (this.ordersCompleted$ !== []) {
-      this.ordersCompleted$.forEach((order) => {
-        const start = order.createdAt;
-        const end = Date.now();
-        const totalms = end - start;
-        const totalmin = totalms / 60000;
-        this.duration$ = totalmin;
-        console.log(this.duration$);
-      });
-    }
+  getDuration(order) {
+    this.prueba = Duration.fromMillis(order.duration);
+    return this.prueba;
   }
 
   updateStateDelivered(id, index) {
@@ -156,7 +153,6 @@ export class WaiterComponent implements OnInit {
       .pipe()
       .subscribe((order) => {
         this.ordersCompleted$ = order;
-        this.getDuration();
       });
   }
 }

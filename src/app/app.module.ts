@@ -9,6 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { LuxonModule } from 'luxon-angular';
 
 // import { MaterialModule } from './material';
 
@@ -61,6 +62,7 @@ import { MatBadgeModule } from '@angular/material/badge';
     MatTabsModule,
     MatGridListModule,
     MatBadgeModule,
+    LuxonModule,
   ],
   providers: [MenuService],
   bootstrap: [AppComponent],

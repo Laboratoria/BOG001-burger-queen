@@ -96,4 +96,10 @@ export class OrdersService {
       state: 'delivered',
     });
   }
+
+  updateEndTime(id, duration) {
+    this.firestore.doc(`orders/${id}`).update({
+      duration: duration,
+    });
+  }
 }

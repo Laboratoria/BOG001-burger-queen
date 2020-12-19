@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { OrdersService } from '../../Services/orders.service';
+import Duration from 'luxon/src/duration.js';
+
 @Component({
   selector: 'app-kitchen',
   templateUrl: './kitchen.component.html',
@@ -27,8 +29,11 @@ export class KitchenComponent implements OnInit {
 
   //Agrega orden a pedidos listos del mesero
   addCompleteOrder(order, id) {
+    const end = Date.now();
+    const duration = end - order.createdAt;
     this.ordersService.addCompleteOrder(order);
     this.ordersService.updateStateOrder(id);
+    this.ordersService.updateEndTime(id, duration);
   }
 
   //Elimina la orden completada de la lista de la cocina
