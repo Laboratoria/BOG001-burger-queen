@@ -63,9 +63,10 @@ export class OrdersService {
   addCompleteOrder(order: Order) {
     this.ordersCompleted = [...this.ordersCompleted, order];
     this.ready.next(this.ordersCompleted);
+    console.log(this.ready$);
   }
 
-  removeOrderDelivered(index) {
+  removeNotificationCounter(index) {
     this.ordersCompleted = this.ordersCompleted.filter(
       (item, i) => i !== index
     );

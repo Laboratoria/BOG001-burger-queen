@@ -17,24 +17,21 @@ export class WaiterComponent implements OnInit {
   public lunchesAndDinners$;
   public ordersCompleted$;
   duration$: Number;
-  customerName: string;
-  tableNumber: Number;
   bill: Number;
   completeCounter: Number = 0;
-
   showingMenus: boolean = false;
   showingBreakfasts: boolean = false;
   showingLunches: boolean = false;
-
   items$: Observable<Menu[]>;
-  ordersReady$: Observable<Order[]>;
+  // customerName: string;
+  // tableNumber: Number;
+  // ordersReady$: Observable<Order[]>;
+  // @Input() item: Menu;
 
   orderForm = this.fb.group({
     name: ['', Validators.required],
     table: ['', Validators.required],
   });
-
-  // @Input() item: Menu;
 
   constructor(
     private fb: FormBuilder,
@@ -42,7 +39,7 @@ export class WaiterComponent implements OnInit {
     private ordersService: OrdersService
   ) {
     this.items$ = this.ordersService.order$;
-    this.ordersReady$ = this.ordersService.ready$;
+    // this.ordersReady$ = this.ordersService.ready$;
 
     this.ordersService.ready$.subscribe((orders) => {
       this.completeCounter = orders.length;
@@ -107,6 +104,7 @@ export class WaiterComponent implements OnInit {
     }
   }
 
+  //Funciones sección resumen de pedidos
   addWishes(item) {
     this.ordersService.addWishes(item);
   }
@@ -118,10 +116,6 @@ export class WaiterComponent implements OnInit {
   generateOrder() {
     const client = this.orderForm.value.name;
     const table = this.orderForm.value.table;
-    const createdAt = DateTime.local();
-
-    console.log(client, table, this.bill);
-
     this.ordersService
       .generateOrder(client, table, this.bill)
       .then(() => {
@@ -150,13 +144,9 @@ export class WaiterComponent implements OnInit {
     }
   }
 
-  // //ESTO YA NO VA
-  // removeOrderDelivered(index) {
-  //   this.ordersService.removeOrderDelivered(index);
-  // }
-
-  updateStateDelivered(id) {
+  updateStateDelivered(id, index) {
     this.ordersService.updateStateDelivered(id);
+    this.ordersService.removeNotificationCounter(index);
   }
 
   //Obtine las ordenes completadas de firestore segun el estado
