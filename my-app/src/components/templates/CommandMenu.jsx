@@ -1,5 +1,6 @@
 import React from 'react';
-import 'firebase/firestore'
+import 'firebase/firestore';
+import Counter from '../molecules/Counter';
 
 const CommandMenu = (props) => {
 
@@ -23,7 +24,7 @@ const CommandMenu = (props) => {
           props.menuItems.map(menuItem => (
             <tr key={menuItem.id}>
               <td>{menuItem.item}</td>
-              <td>1</td>
+              <td><Counter /></td>
               <td>$ {menuItem.price} USD</td>
               <td>
                 <button>Edit</button>
