@@ -1,0 +1,7 @@
+.navBox{
+  width: 4vw;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: auto;
+}
