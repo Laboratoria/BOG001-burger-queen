@@ -1,0 +1,12 @@
+.quantityBox{
+    display: flex;
+    margin: 0 1rem;
+}
+
+.quantityBtn{
+    width: 24px;
+}
+
+.quantity{
+    margin: 0 1rem;
+}
