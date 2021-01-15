@@ -1,0 +1,94 @@
+{
+   "menu":[
+      {
+         "breakfast":[
+            {  "option":"opt-br-1",
+               "item":"American Coffee",
+               "price":5
+            },
+            {  "option":"opt-br-2",
+               "item":"White Coffee",
+               "price":7
+            },
+            {  "option":"opt-br-3",
+               "item":"Ham & cheese sandwich",
+               "price":10
+            },
+            {  "option":"opt-br-4",
+               "item":"Natural fruit juice",
+               "price":7
+            }
+         ]
+      },
+      {
+         "lunch":[
+            {
+               "burger":[
+                  {
+                     "item":"Simple Burger",
+                     "price":10,
+                     "type":[
+                        "Meat",
+                        "Chicken",
+                        "Veggie"
+                     ]
+                  },
+                  {
+                     "item":"Double Burger",
+                     "price":15,
+                     "type":[
+                        "Meat",
+                        "Chicken",
+                        "Veggie"
+                     ]
+                  }
+               ]
+            },
+            {
+               "foodsides":[
+                  {
+                     "item":"French fries",
+                     "price":5
+                  },
+                  {
+                     "item":"Onion rings",
+                     "price":5
+                  }
+               ]
+            },
+            {
+               "drinks":[
+                  {
+                     "item":"Water 500ml",
+                     "price":5
+                  },
+                  {
+                     "item":"Water 750ml",
+                     "price":7
+                  },
+                  {
+                     "item":"Soda 500ml",
+                     "price":7
+                  },
+                  {
+                     "item":"Soda 750ml",
+                     "price":10
+                  }
+               ]
+            },
+            {
+               "adition":[
+                  {
+                     "item":"Cheese",
+                     "price":1
+                  },
+                  {
+                     "item":"Egg",
+                     "price":1
+                  }
+               ]
+            }
+         ]
+      }
+   ]
+}

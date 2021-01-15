@@ -18,17 +18,12 @@
   width: 10vw;
 }
 
-.navBox{
-  width: 4vw;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-}
-
 .menu{
   height: 100vh;
   width: 90vw;
   background: #FFFFFF;
   border-radius: 55px 0px 0px 55px;
   --smooth-corners: 10;
+  padding: 2.5vw;
+  display: flex;
 }

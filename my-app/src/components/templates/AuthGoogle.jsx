@@ -2,29 +2,29 @@ import React from 'react';
 import {useHistory} from 'react-router-dom';
 import firebase from 'firebase/app';
 import 'firebase/auth';
-import Style from './LogInForm';
-import googleIcon from '../atoms/google.svg';
+import Style from './LogInForm.module.css';
+import googleIcon from '../atoms/assets/google-w.svg';
 
 function authSocialMedia (){
-    const googleProvider =new firebase.auth.GoogleAuthProvider();
-    return firebase.auth().signInWithPopup(googleProvider)
+  const googleProvider =new firebase.auth.GoogleAuthProvider();
+  return firebase.auth().signInWithPopup(googleProvider)
 }
+
 const Auth = () =>{
   let history= useHistory();
-    function google (e) {
-        e.preventDefault();
-        authSocialMedia().then( () =>{
-            history.push('/Menu')
-            }
-            )
-    }
-//This is the template html
-    return(
-        <div className={`row justify-content-center`}>
-   <p className={`${Style.o}`}>-O-</p>
-    <img src={googleIcon} className={`${Style.google}`} alt="googleLogIn" onClick={google}/>
-        </div>
-    )
+  function google (e) {
+    e.preventDefault();
+    authSocialMedia().then( () =>{
+      history.push('/UserProfile')
+    })
+  }
 
+  return(
+    <div className={`${Style.googleContainer}`}>
+      <p className={`${Style.o}`}>Or</p>
+      <button onClick={google}>Login with<img src={googleIcon} className={`${Style.google}`} alt="googleLogIn"/></button>
+    </div>
+  )
 }
+
 export default Auth

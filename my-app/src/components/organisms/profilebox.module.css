@@ -1,0 +1,18 @@
+.profileBox{
+  width: 6.8vw;
+  display: flex;
+  margin: auto;
+  text-decoration: none;
+  margin-bottom: 96px;
+}
+
+.profilePhoto{
+  border-radius: 96px;
+  margin-bottom: 15px;
+}
+
+.nameUser{
+  color: aliceblue;
+  text-align: center;
+  font-family: 'Montserrat';
+}
