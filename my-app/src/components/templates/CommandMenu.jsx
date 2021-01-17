@@ -1,10 +1,34 @@
 import React from 'react';
+import firebase from 'firebase/app';
 import 'firebase/firestore';
 import Counter from '../molecules/Counter';
 
 const CommandMenu = (props) => {
 
   console.log(props.menuItems)
+  const db = firebase.firestore();
+
+  const leerDatos = () => {
+      db.collection("orders").get().then((querySnapshot) => {
+      querySnapshot.forEach((doc) => {
+          console.log(`${doc.id}`);
+      });
+    });
+    console.log('Funciona');
+  }
+
+  function sendOrder() {
+    db.collection("orders").add({
+      item: "arroz",
+      price: 5
+    })
+    .then(function(docRef) {
+      console.log("Document written with ID: ", docRef.id);
+    })
+    .catch(function(error) {
+      console.log("Error adding document: ", error);
+    });
+  }
 
   return (
     <div>
@@ -27,8 +51,7 @@ const CommandMenu = (props) => {
               <td><Counter /></td>
               <td>$ {menuItem.price} USD</td>
               <td>
-                <button>Edit</button>
-                <button>Delete</button>
+                <button onClick={leerDatos}> ✖ </button>
               </td>
             </tr>
           )) : (
@@ -39,7 +62,7 @@ const CommandMenu = (props) => {
         }
       </tbody>
     </table>
-    <button>Send to kitchen</button>
+    <button onClick={sendOrder}>Send to kitchen</button>
     </div>
 
   )
