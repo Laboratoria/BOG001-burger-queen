@@ -1,7 +1,7 @@
 import React from 'react';
 import firebase from 'firebase/app';
 import 'firebase/auth';
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
 import Style from './profilebox.module.css';
 
 const ProfileBox = ()=>{
@@ -16,7 +16,7 @@ const ProfileBox = ()=>{
   return(
     <div className={`${Style.profileBox}`}>
       <Link to='/UserProfile'>
-        <img className={`${Style.profilePhoto}`}src={photoUrl} alt="User Pic"/>
+        <img className={`${Style.profilePhoto}`} src={photoUrl} alt="User Pic"/>
         <p className={`${Style.nameUser}`}>{name}</p>
       </Link>
     </div>

@@ -4,7 +4,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import BreakfastOptions from '../organisms/BreakfastOptions'
 import LunchMealOptions from '../organisms/LunchMealOptions'
-import MenuTabs from '../organisms/MenuTabs'
+import MenuTabs from '../organisms/MenuTabs';
 
 
 // Buscar elevación del estado

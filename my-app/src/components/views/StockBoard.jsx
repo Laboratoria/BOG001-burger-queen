@@ -6,24 +6,25 @@ import Clock from '../organisms/Clock';
 import ProfileBox from '../organisms/ProfileBox';
 import FormFoodStock from '../templates/FormFoodStock';
 import StockReport from '../templates/StockReport';
-import { v4 as uuidv4 } from 'uuid';
+import firebase from 'firebase/app';
+import 'firebase/firestore';
 
 const StockBoard = ()=>{
 
-  const menuData = [
-    { id: uuidv4(), name: 'Hamburguesa', quantity: 8, price: '$10 USD'},
-    { id: uuidv4(), name: 'Jugo', quantity: 3, price: '$7 USD'},
-    { id: uuidv4(), name: 'Cafe', quantity: 5, price: '$10 USD'},
+  const menuStock = [
+    { name: 'Hamburguesa', quantity: 8, price: '$10 USD'},
+    { name: 'Jugo', quantity: 3, price: '$7 USD'},
+    { name: 'Cafe', quantity: 5, price: '$10 USD'},
   ]
 
-  const [menuItems, setMenuItems] = useState(menuData);
+  const [stockItems, setStockItems] = useState(menuStock);
 
   //Add Items selected
-  const addItem = (menuItem) => {
-    menuItem.id = uuidv4()
-    setMenuItems([
-      ...menuItems,
-      menuItem
+
+  const addStock = (stockData) => {
+    setStockItems([
+      ...stockItems,
+      stockData
     ])
   }
 
@@ -36,8 +37,8 @@ const StockBoard = ()=>{
         <Clock />
       </div>
       <div className={`${Style.menu}`}>
-        <FormFoodStock addItem={addItem}/>
-        <StockReport menuItems={menuItems} />
+        <FormFoodStock addStock={addStock}/>
+        <StockReport stockItems={stockItems} />
       </div>
     </div>
   )

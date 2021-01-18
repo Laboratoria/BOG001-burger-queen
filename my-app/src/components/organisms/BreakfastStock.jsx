@@ -30,10 +30,13 @@ const BreakfastStock = (props) => {
     // .add assign an unique id from doc, so... uuidv4 isn't necesary
 
     db.collection("br-stock").add({
-      AmericanCoffee:         stockbr1,
-      WhiteCoffee:            stockbr2,
-      HamAndCheeseSandwich:   stockbr3,
-      Juice:                  stockbr4
+      "stock":
+        {
+          AmericanCoffee:         stockbr1,
+          WhiteCoffee:            stockbr2,
+          HamAndCheeseSandwich:   stockbr3,
+          Juice:                  stockbr4
+        }
     })
 
     // Shows ID of document created in firestore, then refresh input values

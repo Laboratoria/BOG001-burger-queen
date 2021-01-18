@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Style from '../templates/choosefood.module.css';
 
 class MenuTabs extends Component {
   state = { tabs: null, activeTab: null }
@@ -21,10 +22,10 @@ class MenuTabs extends Component {
   renderTabs() {
     const { tabs } = this.state;
     return (
-      <ul>
+      <ul className={`${Style.tabs}`}>
         {tabs.map((tab, index) => {
           return(
-            <li key={index}>
+            <li key={index} className={`${Style.liTabs}`}>
               <a href="/" className={`${tab.state}`}
               onClick={event => this.handleClick(event, tab)}>{tab.name}</a>
             </li>

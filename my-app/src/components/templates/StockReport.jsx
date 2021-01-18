@@ -1,40 +1,43 @@
 import React from 'react';
+import firebase from 'firebase/app';
+import 'firebase/firestore';
 
-const StockReport = (props) => {
+const StockReport = () => {
 
-  console.log(props.menuItems)
+  // Initialize Cloud Firestore
+
+  const db = firebase.firestore();
+
+  const stock =
+    db.collection("br-stock").onSnapshot((querySnapshot) => {
+      querySnapshot.forEach((doc) => {
+        console.log(`${doc.id} => ${doc.data().stock}`);
+      });
+    });
+    console.log(stock)
+
   return (
-    <table>
+    <div>
+      <button>📦</button>
+      <table>
       <thead>
         <tr>
           <th>Item</th>
           <th>Qty.</th>
-          <th>Price</th>
           <th>Opt.</th>
         </tr>
       </thead>
       <tbody>
-        {
-          //Message to indicate empty command
-          props.menuItems.length > 0 ?
-          props.menuItems.map(menuItem => (
-            <tr key={menuItem.id}>
-              <td>{menuItem.name}</td>
-              <td>{menuItem.quantity}</td>
-              <td>{menuItem.price}</td>
+            <tr>
+              <td>j</td>
+              <td>quantity</td>
               <td>
                 <button>Edit</button>
-                <button>Delete</button>
               </td>
             </tr>
-          )) : (
-            <tr>
-              <td colSpan={4}>Select items to send to kitchen</td>
-            </tr>
-          )
-        }
       </tbody>
     </table>
+    </div>
   )
 }
 
