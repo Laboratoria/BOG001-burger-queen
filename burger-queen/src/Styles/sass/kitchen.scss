@@ -1,6 +1,41 @@
 @import "roles";
-
+@font-face{
+    font-family: OPTIChampionBold;
+    src: url(../Letras/OPTIChampionBold.otf);
+  }
 
 .backgroundKitchen{
     @extend .backgroundRoles;
+}
+
+.containerOrder {
+    display: flex;
+    width: 70%;
+    justify-content: center;
+    
+    .containerName {
+        text-align: center;
+        font-family:OPTIChampionBold;
+        width: 100%;
+        height: 40px;
+
+    }
+    
+    .backgroundOrder {
+        background-color: rgb(184, 181, 181);
+        border-radius: 4%;
+        width: 30%;
+        height: 200px;
+        overflow-y: scroll;
+        margin: 2%;
+        padding-left: 3%;
+        flex-direction: column;
+        
+
+        .orderKitchen {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        width: 100%;
+        height: 40px;
+        }
+    }
 }
