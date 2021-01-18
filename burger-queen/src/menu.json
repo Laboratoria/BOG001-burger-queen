@@ -5,7 +5,8 @@
             "type": "bebida",
             "item": "Café Americano",
             "price": 5,
-            "us": "$"
+            "us": "$",
+            "img": "/Imagenes/Burger-doble.png"
         },
         {
             "id": 2,
