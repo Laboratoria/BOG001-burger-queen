@@ -6,16 +6,17 @@ import Counter from '../molecules/Counter';
 const CommandMenu = (props) => {
 
   console.log(props.menuItems)
+
+  // Initialize Cloud Firestore
+
   const db = firebase.firestore();
 
-  const leerDatos = () => {
-      db.collection("orders").get().then((querySnapshot) => {
-      querySnapshot.forEach((doc) => {
-          console.log(`${doc.id}`);
-      });
+  db.collection("br-order").onSnapshot((querySnapshot) => {
+    querySnapshot.forEach((doc) => {
+      console.log(`${doc.id} => ${doc.data().order.item}`);
     });
-    console.log('Funciona');
-  }
+  });
+
 
   function sendOrder() {
     db.collection("orders").add({
@@ -42,24 +43,14 @@ const CommandMenu = (props) => {
         </tr>
       </thead>
       <tbody>
-        {
-          //Message to indicate empty command
-          props.menuItems.length > 0 ?
-          props.menuItems.map(menuItem => (
-            <tr key={menuItem.id}>
-              <td>{menuItem.item}</td>
+            <tr>
+              <td>item</td>
               <td><Counter /></td>
-              <td>$ {menuItem.price} USD</td>
+              <td>$ 10 USD</td>
               <td>
-                <button onClick={leerDatos}> ✖ </button>
+                <button> ✖ </button>
               </td>
             </tr>
-          )) : (
-            <tr>
-              <td colSpan={3}>Select items to send to kitchen</td>
-            </tr>
-          )
-        }
       </tbody>
     </table>
     <button onClick={sendOrder}>Send to kitchen</button>

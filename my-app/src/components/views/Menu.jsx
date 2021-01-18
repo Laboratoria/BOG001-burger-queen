@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import Style from './menu.module.css';
-import {Link} from 'react-router-dom';
 import NavWaiter from '../organisms/NavWaiter';
 import Clock from '../organisms/Clock';
 import ProfileBox from '../organisms/ProfileBox';
 import ChooseFood from '../templates/ChooseFood';
 import CommandMenu from '../templates/CommandMenu';
 import { v4 as uuidv4 } from 'uuid';
+import LogoBox from '../molecules/Logo';
 
 const Menu = (props)=>{
   // Check it to debbug checkbox form https://ibaslogic.com/react-form-handling/
@@ -27,10 +27,11 @@ const Menu = (props)=>{
       menuItem
     ])
   }
+
   return(
     <div className={`${Style.container}`}>
       <div className={`${Style.nav}`}>
-      <Link to='/'><img src='' alt=''/></Link>
+        <LogoBox />
         <ProfileBox />
         <NavWaiter />
         <Clock />

@@ -10,7 +10,7 @@ import ExitIcon from '../atoms/assets/exit.png';
 const NavWaiter = ()=>{
   return(
     <nav className={`${Style.navBox}`}>
-      <ul>
+      <ul className={`${Style.navUlWaiter}`}>
         <Link to='/Menu'><img src={MenuIcon} alt="Menu view"/></Link>
         <Link to='/ReportOfOrderStatus'><img src={KitchenIcon} alt="Kitchen icon, state of order"/></Link>
         <Link to='/'><img src={StockIcon} alt="Stock view"/></Link>

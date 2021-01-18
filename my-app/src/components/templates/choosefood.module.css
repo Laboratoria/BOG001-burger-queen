@@ -1,0 +1,24 @@
+
+.tabs{
+  display: flex;
+  flex-direction: row;
+}
+
+.liTabs{
+  list-style: none;
+  width: 50%;
+  height: 50px;
+  text-align: center;
+  background-color: #383838;
+  border-radius: 8px 8px 0px 0px;
+
+}
+
+.liTabs a{
+  height: 100%;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #EFEFEF;
+  font-size: 24px;
+  font-weight: 700;
+}
