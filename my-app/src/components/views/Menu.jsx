@@ -37,8 +37,8 @@ const Menu = (props)=>{
         <Clock />
       </div>
       <div className={`${Style.menu}`}>
-        <ChooseFood addItem={addItem}/>
-        <CommandMenu  menuItems={menuItems}/>
+        <ChooseFood addItem={addItem} />
+        <CommandMenu  menuItems={menuItems} className={`${Style.commandMenu}`}/>
       </div>
     </div>
   )

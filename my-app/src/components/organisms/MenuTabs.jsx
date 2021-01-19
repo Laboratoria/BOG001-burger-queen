@@ -36,6 +36,7 @@ class MenuTabs extends Component {
   }
   render() {
     const { tabs, activeTab } = this.state;
+    console.log (tabs);
     const tabToshow = activeTab -1;
     return (
       <div>

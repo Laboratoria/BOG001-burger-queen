@@ -2,6 +2,7 @@
 
 import React from 'react';
 import {Link} from 'react-router-dom';
+import Style from '../views/menu.module.css';
 import BreakfastOptions from '../organisms/BreakfastOptions'
 import LunchMealOptions from '../organisms/LunchMealOptions'
 import MenuTabs from '../organisms/MenuTabs';
@@ -26,7 +27,7 @@ const dataMenu = [
 
 const ChooseFood = (props)=>{
   return(
-    <div>
+    <div className={`${Style.chooseFood}`}>
       <MenuTabs data= {dataMenu}/>
       <Link to='/'><img src='' alt=''/></Link>
     </div>
