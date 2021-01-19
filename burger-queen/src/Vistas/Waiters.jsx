@@ -36,7 +36,7 @@ const Request = ({ showName, getOrder, setNewOrder, newBreakItem, addRequest, se
     }
     
     const deleted = (id) => {
-        const deletedOrder = getOrder.filter ((item) => item.id !== id);
+        const deletedOrder = getOrder.filter ((item, index) => index !== id);
         setNewOrder(deletedOrder)
     }
 
@@ -46,14 +46,14 @@ const Request = ({ showName, getOrder, setNewOrder, newBreakItem, addRequest, se
                 <h3>Cliente: {showName}</h3>
             </div>
             {
-                getOrder.map(element =>
-                        <div className="containerOrder" key={element.Id} >
+                getOrder.map((element, index )=>
+                        <div className="containerOrder" key={index} >
                             {element.Quantity}
                             {element.Item}
                             <div className="containerPrice">
                                 {element.Us} {element.Price}
                             </div>
-                            <div><FontAwesomeIcon icon={faTrashAlt} onClick={() => deleted(element.id)}/></div>
+                            <div><FontAwesomeIcon icon={faTrashAlt} onClick={() => deleted(index)}/></div>
                         </div>
                         
                 )
