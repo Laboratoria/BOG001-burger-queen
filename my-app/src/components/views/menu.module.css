@@ -24,6 +24,11 @@
   background: #FFFFFF;
   border-radius: 55px 0px 0px 55px;
   --smooth-corners: 10;
-  padding: 2.5vw;
   display: flex;
+}
+
+.chooseFood{
+  height: 882px;
+  width: 50%;
+  padding: 7vw 0vh 2.5vw 2.5vw;
 }
