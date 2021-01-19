@@ -5,6 +5,7 @@ import { db } from '../firebase';
 
 const FirebaseKitchen = () => {
     const [completeOrder, setCompleteOrder] = useState([])
+    
     const getOrderToKitchen = () => {
         db.collection("order").onSnapshot((querySnapshot) => {
             const docs = [];
