@@ -1,5 +1,5 @@
 import React from "react";
-import { useForm } from 'react-hook-form'
+import { useForm } from 'react-hook-form';
 import menu from '../data/menu.json';
 import firebase from 'firebase/app';
 import 'firebase/firestore';

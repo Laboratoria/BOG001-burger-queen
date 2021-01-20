@@ -13,7 +13,7 @@ const NavWaiter = ()=>{
       <ul className={`${Style.navUlWaiter}`}>
         <Link to='/Menu'><img src={MenuIcon} alt="Menu view"/></Link>
         <Link to='/ReportOfOrderStatus'><img src={KitchenIcon} alt="Kitchen icon, state of order"/></Link>
-        <Link to='/'><img src={StockIcon} alt="Stock view"/></Link>
+        <Link to='/ReportOfStock'><img src={StockIcon} alt="Stock view"/></Link>
         <Link to='/'><img src={ReceiptIcon} alt="Receipt view"/></Link>
         <Link to='/'><img src={ExitIcon} alt="Receipt view"/></Link>
       </ul>
