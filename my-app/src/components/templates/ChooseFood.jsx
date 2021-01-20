@@ -1,7 +1,6 @@
 //Aquí iran las tabs https://www.youtube.com/watch?v=sYaV1jiykPk&ab_channel=AmitavRoy
 
 import React from 'react';
-import {Link} from 'react-router-dom';
 import Style from '../views/menu.module.css';
 import BreakfastOptions from '../organisms/BreakfastOptions'
 import LunchMealOptions from '../organisms/LunchMealOptions'
@@ -29,7 +28,6 @@ const ChooseFood = (props)=>{
   return(
     <div className={`${Style.chooseFood}`}>
       <MenuTabs data= {dataMenu}/>
-      <Link to='/'><img src='' alt=''/></Link>
     </div>
   )
 }

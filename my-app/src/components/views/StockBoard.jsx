@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import Style from './menu.module.css';
-import {Link} from 'react-router-dom';
 import NavChef from '../organisms/NavChef';
 import Clock from '../organisms/Clock';
 import ProfileBox from '../organisms/ProfileBox';
 import FormFoodStock from '../templates/FormFoodStock';
 import StockReport from '../templates/StockReport';
-import firebase from 'firebase/app';
+import LogoBox from '../molecules/Logo';
 import 'firebase/firestore';
 
 const StockBoard = ()=>{
@@ -31,7 +30,7 @@ const StockBoard = ()=>{
   return(
     <div className={`${Style.container}`}>
       <div className={`${Style.nav}`}>
-      <Link to='/'><img src='' alt=''/></Link>
+        <LogoBox />
         <ProfileBox />
         <NavChef />
         <Clock />

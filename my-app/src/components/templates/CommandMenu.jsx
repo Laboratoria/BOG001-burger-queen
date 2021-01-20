@@ -13,7 +13,7 @@ const CommandMenu = (props) => {
 
   db.collection("br-order").onSnapshot((querySnapshot) => {
     querySnapshot.forEach((doc) => {
-      console.log(`${doc.id} => ${doc.data().order.item}`);
+      //console.log(`${doc.id} => ${doc.data().order.item}`);
     });
   });
 
@@ -24,7 +24,7 @@ const CommandMenu = (props) => {
       price: 5
     })
     .then(function(docRef) {
-      console.log("Document written with ID: ", docRef.id);
+      //console.log("Document written with ID: ", docRef.id);
     })
     .catch(function(error) {
       console.log("Error adding document: ", error);

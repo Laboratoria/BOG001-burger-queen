@@ -8,7 +8,7 @@ import ExitIcon from '../atoms/assets/exit.png';
 const NavChef = ()=>{
   return(
     <nav className={`${Style.navBox}`}>
-      <ul>
+      <ul className={`${Style.navUlChef}`}>
         <Link to='/ToPrepare'><img src={KitchenIcon} alt="To prepare view"/></Link>
         <Link to='/StockBoard'><img src={StockIcon} alt="Stock view"/></Link>
         <Link to='/'><img src={ExitIcon} alt="Log out"/></Link>

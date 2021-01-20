@@ -7,6 +7,7 @@ import Menu from '../components/views/Menu';
 import ToPrepare from '../components/views/ToPrepare';
 import ReportOfOrderStatus from '../components/views/ReportOfOrderStatus';
 import StockBoard from '../components/views/StockBoard';
+import ReportOfStock from '../components/views/ReportOfStock';
 // import SignUp from '../views/SignUp';
 // import Error404 from '../views/Error404';
 
@@ -22,6 +23,7 @@ const Router = () => {
           <Route exact path='/Menu' component={Menu}/>
           <Route exact path='/ToPrepare' component={ToPrepare}/>
           <Route exact path='/ReportOfOrderStatus' component={ReportOfOrderStatus}/>
+          <Route exact path='/ReportOfStock' component={ReportOfStock}/>
           <Route exact path='/StockBoard' component={StockBoard}/>
         </Switch>
       </BrowserRouter>

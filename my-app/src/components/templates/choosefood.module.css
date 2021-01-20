@@ -1,3 +1,4 @@
+/*Styles of menu tabs*/
 
 .tabs{
   display: flex;
@@ -23,6 +24,27 @@
   font-weight: 700;
 }
 
-active{
-  color:blue;
+/*Styles of order's status*/
+
+.statusTabs{
+  width: 94%;
+  height: 882px;
+  padding: 7vw 0vh 2.5vw 2.5vw;
+}
+
+.statusContent{
+  height: 95%;
+  width: 38vw;
+}
+
+.orderCard{
+  height: 90px;
+  background-color: #E9E9E9;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  border: 0.5px solid #c0c0c0;
+}
+
+.orderTable{
+  margin: 1.8rem;
 }
