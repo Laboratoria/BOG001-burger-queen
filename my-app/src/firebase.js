@@ -1,5 +1,5 @@
-import firebase from 'firebase';
-import 'firebase/firestore'
+import firebase from 'firebase/app';
+import 'firebase/firestore';
 
 //Here is the configuration of firebase and initit app
 const firebaseConfig = {

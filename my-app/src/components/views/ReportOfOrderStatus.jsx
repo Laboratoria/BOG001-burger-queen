@@ -4,8 +4,35 @@ import Clock from '../organisms/Clock';
 import ProfileBox from '../organisms/ProfileBox';
 import NavWaiter from '../organisms/NavWaiter';
 import LogoBox from '../molecules/Logo';
+import OrderStatusTabs from '../organisms/OrderStatusTabs';
+import ToPrepareList from '../organisms/ToPrepareList';
+import PreparingList from '../organisms/PreparingList';
+import ToDeliverList from '../organisms/ToDeliverList';
 
-const ReportOfOrderStatus = ()=>{
+ // Buscar elevación del estado
+ const dataOrder = [
+  {
+  id: 1,
+  name: 'To Prepare',
+  content: () => <ToPrepareList />,
+  state: 'active'
+  },
+
+  {
+  id: 2,
+  name: 'Preparing',
+  content: () => <PreparingList />,
+  state: 'inactive'
+  },
+  {
+    id: 3,
+    name: 'To deliver',
+    content: () => <ToDeliverList />,
+    state: 'inactive'
+    },
+];
+const ReportOfOrderStatus = (props)=>{
+
   return(
     <div className={`${Style.container}`}>
       <div className={`${Style.nav}`}>
@@ -15,11 +42,7 @@ const ReportOfOrderStatus = ()=>{
         <Clock />
       </div>
       <div className={`${Style.menu}`}>
-        <div className={`${Style.choose}`}>
-          <h2>Order status data</h2>
-        </div>
-        <div className={`${Style.order}`}>
-        </div>
+        <OrderStatusTabs data={dataOrder}/>
       </div>
     </div>
   )

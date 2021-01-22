@@ -11,7 +11,7 @@ const StockReport = () => {
   const stock =
     db.collection("br-stock").onSnapshot((querySnapshot) => {
       querySnapshot.forEach((doc) => {
-        console.log(`${doc.id} => ${doc.data().stock}`);
+        //console.log(`${doc.id} => ${doc.data().stock}`);
       });
     });
     console.log(stock)
