@@ -35,7 +35,12 @@ const PreparingList = (props) =>{
     <div className={`${Style.statusContent}`}>
         {orders.map((order) => (
           <div className={`${Style.orderCard}`} key={order.id}>
-            <h3 className={`${Style.orderTable}`}>Table {order.table}</h3>
+            <div className={`${Style.tableBox}`}>
+              <h3 className={`${Style.dataTable}`}>Table {order.table}</h3>
+            </div>
+            <div className={`${Style.stateBoxWarning}`}>
+              <h4 className={`${Style.dataState}`}>{order.state}</h4>
+            </div>
           </div>
         ))}
     </div>

@@ -17,7 +17,7 @@ const ToDeliverList = (props) =>{
       (querySnapshot) => {
         const docs = [];
         querySnapshot.forEach(doc => {
-          if(doc.data().state === 'toDeliver'){
+          if(doc.data().state === 'to deliver'){
             docs.push({...doc.data(), id:doc.id})
           }
         });
@@ -35,7 +35,12 @@ const ToDeliverList = (props) =>{
     <div className={`${Style.statusContent}`}>
         {orders.map((order) => (
           <div className={`${Style.orderCard}`} key={order.id}>
-            <h3 className={`${Style.orderTable}`}>Table {order.table}</h3>
+            <div className={`${Style.tableBox}`}>
+              <h3 className={`${Style.dataTable}`}>Table {order.table}</h3>
+            </div>
+            <div className={`${Style.stateBoxFree}`}>
+              <h4 className={`${Style.dataState}`}>{order.state}</h4>
+            </div>
           </div>
         ))}
     </div>

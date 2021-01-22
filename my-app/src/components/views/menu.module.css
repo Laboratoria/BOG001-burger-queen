@@ -7,7 +7,7 @@
 
 .container{
   height: 100vh;
-  background-image: url(https://firebasestorage.googleapis.com/v0/b/burguer-queen-88.appspot.com/o/resources%2Fbackground-general.jpg?alt=media&token=3ea09b95-7d1b-4d20-942d-7d208f5f76ab);
+  background-image: url(https://firebasestorage.googleapis.com/v0/b/burguer-queen-88.appspot.com/o/resources%2Fbackground-general.jpg?alt=media&token=a9946544-2778-4c16-b2a6-bbaef1e884a5);
   background-size: cover;
   display: flex;
   flex-direction: row;
@@ -15,20 +15,20 @@
 }
 
 .nav{
-  width: 10vw;
+  width: 11.9vw;
 }
 
 .menu{
   height: 100vh;
-  width: 90vw;
-  background: #FFFFFF;
-  border-radius: 55px 0px 0px 55px;
-  --smooth-corners: 10;
+  width: 88.1vw;
+  background-image: url(https://firebasestorage.googleapis.com/v0/b/burguer-queen-88.appspot.com/o/resources%2Fsmooth-background.svg?alt=media&token=eef8bc0d-2253-412c-bcfd-f3c6fd07349d);
   display: flex;
+  background-repeat: no-repeat;
+  background-position: left;
 }
 
 .chooseFood{
   height: 882px;
   width: 50%;
-  padding: 7vw 0vh 2.5vw 2.5vw;
+  margin: 7vw 0vh 2.5vw 2.5vw;
 }

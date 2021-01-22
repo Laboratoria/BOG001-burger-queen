@@ -39,12 +39,52 @@
 
 .orderCard{
   height: 90px;
-  background-color: #E9E9E9;
   margin-bottom: 1.5rem;
-  border-radius: 8px;
-  border: 0.5px solid #c0c0c0;
+  display: flex;
+  justify-content: space-between;
 }
 
-.orderTable{
-  margin: 1.8rem;
+.tableBox{
+  width: 60%;
+  border: 0.5px solid #c0c0c0;
+  background-color: #E9E9E9;
+  border-radius: 8px 0px 0px 8px;
+  padding-top: 1.65rem;
+}
+
+.dataTable{
+  font-weight: 100;
+  margin-left: 34px;
+}
+
+.stateBoxDanger{
+  width: 40%;
+  border: 0.5px solid #c0c0c0;
+  background-color: #E9E9E9;
+  border-radius: 0px 8px 8px 0px;
+  padding-top: 1.65rem;
+  background: rgba(225, 99, 99, 0.2);
+}
+
+.stateBoxWarning{
+  width: 40%;
+  border: 0.5px solid #c0c0c0;
+  background-color: #E9E9E9;
+  border-radius: 0px 8px 8px 0px;
+  padding-top: 1.65rem;
+  background: rgba(255, 195, 0, 0.2);
+}
+
+.stateBoxFree{
+  width: 40%;
+  border: 0.5px solid #c0c0c0;
+  background-color: #E9E9E9;
+  border-radius: 0px 8px 8px 0px;
+  padding-top: 1.65rem;
+  background: rgba(107, 171, 25, 0.2);
+}
+
+.dataState{
+  text-align: center;
+  text-transform: uppercase;
 }
