@@ -25,7 +25,8 @@ const ToPrepareList = (props) =>{
       });
   }
 
-  const [orderDescription, setOrderDescription] = useState (['']);
+  const [orderData, setOrderData] = useState (['']);
+  const [orderItems, setOrderItems] = useState (['']);
 
   const loadOrderDescription = async (id) => {
     let idOrder = id;
@@ -39,7 +40,60 @@ const ToPrepareList = (props) =>{
           }
         });
         console.log(docsData)
-        setOrderDescription(docsData);
+        setOrderData(docsData);
+      });
+      db.collection("br-orders").onSnapshot(
+        (querySnapshot) => {
+          let docsItems = [];
+          const docItemLength = docsItems.map.length;
+          console.log(docItemLength);
+          let i;
+          let docItem = '';
+          /*
+          let index;
+          console.log(index)
+
+          for ( let i = 0 ; i < docItemLength ; i++) {
+            index += i;
+          }
+          */
+          for (i=0; i < docItemLength; i++) {
+            docItem += docsItems[i];
+            console.log(docItem)
+            console.log(docsItems)
+          }
+
+          querySnapshot.forEach(doc => {
+            if(doc.id === idOrder){
+              docsItems.push(doc.data().order[i]);
+            }
+          });
+          setOrderItems(docsItems);
+          console.log(docsItems)
+        });
+  }
+
+  function changeState (id) {
+    let idOrder = id;
+    let stateOfOrder = db.collection("br-orders").doc("state");
+    console.log (stateOfOrder)
+
+    db.collection("br-orders").onSnapshot(
+      (querySnapshot) => {
+        querySnapshot.forEach(doc => {
+          if(doc.id === idOrder){
+            return stateOfOrder.update({
+              state: 'preparing'
+            })
+            .then(function() {
+              console.log("Document successfully updated!");
+            })
+            .catch(function(error) {
+              // The document probably doesn't exist.
+              console.error("Error updating document: ", error);
+            });
+          }
+        });
       });
   }
 
@@ -59,11 +113,29 @@ const ToPrepareList = (props) =>{
             </div>
           </div>
         ))}
-        {orderDescription.map((order) => (
+        {orderData.map((order) => (
           <div key={order.id}>
             <h3>Table # {order.table}</h3>
             <p>{order.state}</p>
-            <button>Start</button>
+            <table>
+              <thead>
+                <tr>
+                  <th>Item</th>
+                  <th>Quantity.</th>
+                </tr>
+              </thead>
+              <tbody>
+              {orderItems.map((order, i) => {
+                return(
+                  <tr key={[i]}>
+                    <td>{order.item}</td>
+                    <td>{order.quantity}</td>
+                  </tr>
+                )
+              })}
+              </tbody>
+            </table>
+            <button onClick={changeState}>Start</button>
           </div>
         ))}
     </div>
