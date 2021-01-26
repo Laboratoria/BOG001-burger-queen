@@ -107,22 +107,22 @@ A continuación puedes ver los objetivos de aprendizaje de este proyecto:
 
 ### HTML y CSS
 
-* [ ] [Uso de HTML semántico.](https://developer.mozilla.org/en-US/docs/Glossary/Semantics#Semantics_in_HTML)
-* [ ] Uso de selectores de CSS.
-* [ ] Construir tu aplicación respetando el diseño realizado (maquetación).
-* [ ] [Uso de flexbox en CSS.](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
-* [ ] [Uso de Media Queries.](https://developer.mozilla.org/es/docs/CSS/Media_queries)
+* [x] [Uso de HTML semántico.](https://developer.mozilla.org/en-US/docs/Glossary/Semantics#Semantics_in_HTML)
+* [x] Uso de selectores de CSS.
+* [x] Construir tu aplicación respetando el diseño realizado (maquetación).
+* [x] [Uso de flexbox en CSS.](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+* [x] [Uso de Media Queries.](https://developer.mozilla.org/es/docs/CSS/Media_queries)
 
 ### JavaScript
 
-* [ ] Uso de condicionales (if-else | switch | operador ternario)
-* [ ] Uso de funciones (parámetros | argumentos | valor de retorno)
-* [ ] Manipular arrays (filter | map | sort | reduce)
+* [x] Uso de condicionales (if-else | switch | operador ternario)
+* [x] Uso de funciones (parámetros | argumentos | valor de retorno)
+* [x] Manipular arrays (filter | map | sort | reduce)
 * [ ] Manipular objects (key | value)
-* [ ] Uso ES modules ([`import`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)
+* [x] Uso ES modules ([`import`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)
 | [`export`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export))
 * [ ] Diferenciar entre expression y statements.
-* [ ] Diferenciar entre tipos de datos atómicos y estructurados.
+* [x] Diferenciar entre tipos de datos atómicos y estructurados.
 * [ ] [Uso de callbacks.](https://developer.mozilla.org/es/docs/Glossary/Callback_function)
 * [ ] [Consumo de Promesas.](https://scotch.io/tutorials/javascript-promises-for-dummies#toc-consuming-promises)
 
@@ -132,23 +132,23 @@ A continuación puedes ver los objetivos de aprendizaje de este proyecto:
 
 ### Estructura del código y guía de estilo
 
-* [ ] Organizar y dividir el código en módulos (Modularización)
-* [ ] Uso de identificadores descriptivos (Nomenclatura | Semántica)
-* [ ] Uso de linter (ESLINT)
+* [x] Organizar y dividir el código en módulos (Modularización)
+* [x] Uso de identificadores descriptivos (Nomenclatura | Semántica)
+* [x] Uso de linter (ESLINT)
 
 ### Git y Github
 
-* [ ] Uso de comandos de git (add | commit | pull | status | push)
-* [ ] Manejo de repositorios de GitHub (clone | fork | gh-pages)
-* [ ] Colaboración en Github (branches | pull requests | |tags)
-* [ ] Organización en Github (projects | issues | labels | milestones)
+* [x] Uso de comandos de git (add | commit | pull | status | push)
+* [x] Manejo de repositorios de GitHub (clone | fork | gh-pages)
+* [x] Colaboración en Github (branches | pull requests | |tags)
+* [x] Organización en Github (projects | issues | labels | milestones)
 
 ### Firebase
 
-* [ ] [Firestore.](https://firebase.google.com/docs/firestore)
-* [ ] [Firebase Auth.](https://firebase.google.com/docs/auth/web/start)
-* [ ] [Firebase security rules.](https://firebase.google.com/docs/rules)
-* [ ] Observadores. ([onAuthStateChanged](https://firebase.google.com/docs/auth/web/manage-users?hl=es#get_the_currently_signed-in_user)
+* [x] [Firestore.](https://firebase.google.com/docs/firestore)
+* [x] [Firebase Auth.](https://firebase.google.com/docs/auth/web/start)
+* [x] [Firebase security rules.](https://firebase.google.com/docs/rules)
+* [x] Observadores. ([onAuthStateChanged](https://firebase.google.com/docs/auth/web/manage-users?hl=es#get_the_currently_signed-in_user)
  | [onSnapshot](https://firebase.google.com/docs/firestore/query-data/listen#listen_to_multiple_documents_in_a_collection))
 
 ### Angular
@@ -164,23 +164,23 @@ A continuación puedes ver los objetivos de aprendizaje de este proyecto:
 
 ### React
 
-* [ ] [`JSX`](https://es.reactjs.org/docs/introducing-jsx.html)
-* [ ] [Componentes `class` y componentes `function`](https://es.reactjs.org/docs/components-and-props.html#function-and-class-components)
-* [ ] `props`
-* [ ] [Eventos en React.](https://es.reactjs.org/docs/handling-events.html)
-* [ ] [Listas y keys.](https://es.reactjs.org/docs/lists-and-keys.html)
+* [x] [`JSX`](https://es.reactjs.org/docs/introducing-jsx.html)
+* [x] [Componentes `class` y componentes `function`](https://es.reactjs.org/docs/components-and-props.html#function-and-class-components)
+* [x] `props`
+* [x] [Eventos en React.](https://es.reactjs.org/docs/handling-events.html)
+* [x] [Listas y keys.](https://es.reactjs.org/docs/lists-and-keys.html)
 * [ ] [Renderizado condicional.](https://es.reactjs.org/docs/conditional-rendering.html)
-* [ ] [Elevación de estados.](https://es.reactjs.org/docs/lifting-state-up.html)
-* [ ] [`hooks`](https://es.reactjs.org/docs/hooks-intro.html)
-* [ ] [`CSS` modules.](https://create-react-app.dev/docs/adding-a-css-modules-stylesheet)
-* [ ] [React Router.](https://reacttraining.com/react-router/web)
+* [x] [Elevación de estados.](https://es.reactjs.org/docs/lifting-state-up.html)
+* [x] [`hooks`](https://es.reactjs.org/docs/hooks-intro.html)
+* [x] [`CSS` modules.](https://create-react-app.dev/docs/adding-a-css-modules-stylesheet)
+* [x] [React Router.](https://reacttraining.com/react-router/web)
 
 ### UX
 
-* [ ] Diseñar la aplicación pensando y entendiendo al usuario.
-* [ ] Crear prototipos para obtener feedback e iterar.
+* [x] Diseñar la aplicación pensando y entendiendo al usuario.
+* [x] Crear prototipos para obtener feedback e iterar.
 * [ ] Aplicar los principios de diseño visual (contraste, alineación, jerarquía)
-* [ ] Planear y ejecutar tests de usabilidad.
+* [x] Planear y ejecutar tests de usabilidad.
 
 ## 4. Consideraciones generales
 

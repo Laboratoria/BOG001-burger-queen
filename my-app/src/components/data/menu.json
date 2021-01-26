@@ -1,0 +1,91 @@
+{
+  "menu":[
+    {
+      "breakfast":[
+        {
+          "option":"opt-br-1",
+          "item":"American Coffee",
+          "price":5
+        },
+        {
+          "option":"opt-br-2",
+          "item":"White Coffee",
+          "price":7
+        },
+        {
+          "option":"opt-br-3",
+          "item":"Ham & cheese sandwich",
+          "price":10
+        },
+        {
+          "option":"opt-br-4",
+          "item":"Natural fruit juice",
+          "price":7
+        }
+      ]
+    },
+    {
+      "lunch":[
+        {
+          "option":"opt-lch-1",
+          "item":"Simple Burger",
+          "price":10,
+          "type":[
+            "Simple",
+            "Double"
+          ]
+        },
+        {
+          "option":"opt-lch-2",
+          "item":"Double Burger",
+          "price":15,
+          "type":[
+            "Meat",
+            "Chicken",
+            "Veggie"
+          ]
+        },
+        {
+          "option":"opt-lch-3",
+          "item":"French fries",
+          "price":5
+        },
+        {
+          "option":"opt-lch-4",
+          "item":"Onion rings",
+          "price":5
+        },
+        {
+          "option":"opt-lch-5",
+          "item":"Water 500ml",
+          "price":5
+        },
+        {
+          "option":"opt-lch-6",
+          "item":"Water 750ml",
+          "price":7
+        },
+        {
+          "option":"opt-lch-7",
+          "item":"Soda 500ml",
+          "price":7
+        },
+        {
+          "option":"opt-lch-8",
+          "item":"Soda 750ml",
+          "price":10
+        },
+        {
+          "option":"opt-lch-9",
+          "item":"Cheese",
+          "price":1
+        },
+        {
+          "option":"opt-lch-10",
+          "item":"Egg",
+          "price":1
+        }
+      ]
+    }
+  ]
+}

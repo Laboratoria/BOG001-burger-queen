@@ -1,0 +1,23 @@
+.navBox{
+  width: 4vw;
+  height: 356px;
+  margin: auto;
+}
+
+.navUlWaiter{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navUlChef{
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
