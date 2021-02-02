@@ -31,6 +31,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatBadgeModule } from '@angular/material/badge';
+import { MatTableModule } from '@angular/material/table';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -63,6 +65,8 @@ import { MatBadgeModule } from '@angular/material/badge';
     MatGridListModule,
     MatBadgeModule,
     LuxonModule,
+    MatTableModule,
+    MatIconModule,
   ],
   providers: [MenuService],
   bootstrap: [AppComponent],

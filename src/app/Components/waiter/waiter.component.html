@@ -23,15 +23,17 @@
                 required
               />
             </mat-form-field>
-            <button mat-button type="button" (click)="showMenus()">
+            <button mat-button type="button" color="primary" (click)="showMenus()">
               Comenzar pedido
             </button>
           </div>
 
           <div *ngIf="showingMenus">
-            1. Seleccionar el menú
-            <button (click)="breakfast()">Desayunos</button>
-            <button (click)="lunches()">Almuerzos y cenas</button>
+            Seleccionar el menú
+            <button mat-raised-button color="primary" (click)="breakfast()">Desayunos</button>
+            <button mat-raised-button color="accent" (click)="lunches()">Almuerzos y cena</button>
+            <!-- <button (click)="breakfast()">Desayunos</button> -->
+            <!-- <button (click)="lunches()">Almuerzos y cenas</button> -->
           </div>
 
           <div *ngIf="showingBreakfasts">
@@ -51,7 +53,8 @@
           </div>
         </form>
       </div>
-      <div class="col-sm-4">
+      
+      <div class="col-sm-4 summary">
         <h1>Resumen del pedido</h1>
         <p><strong>Nombre del cliente: </strong>{{ customerName }}</p>
         <p><strong>N° de mesa: </strong> {{ tableNumber }}</p>
@@ -71,7 +74,8 @@
           </div>
         </div>
         <h2>Subtotal: {{ bill | currency }}</h2>
-        <button (click)="generateOrder()">Enviar pedido a cocina</button>
+        <!-- <button (click)="generateOrder()">Enviar pedido a cocina</button> -->
+        <button mat-raised-button color="primary" (click)="generateOrder()">Enviar pedido a cocina</button>
       </div>
     </div>
   </mat-tab>

@@ -4,7 +4,7 @@ import { Menu } from './Interfaces/menu.model';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.sass']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
   title = 'burger-queen';
@@ -110,5 +110,4 @@ export class AppComponent {
     console.log('item');
     console.log(id);
   }
-
 }

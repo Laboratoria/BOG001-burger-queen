@@ -1,11 +1,62 @@
 <app-add-item-form></app-add-item-form>
 
-<div *ngFor="let item of menu$">
-  <h3>{{ item.item }}</h3>
-  <h4>{{ item.price }}</h4>
+<!-- <div *ngFor="let item of menu$">
+  <h3>Producto: {{ item.item }}</h3>
+  <h4>Precio: {{ item.price }}</h4>
+  <h4>Menu: {{ item.time }}</h4>
+
   <button type="button" (click)="deleteItem(item.id)">Delete</button>
   <button type="button" (click)="updateItem(item.id)">Update</button>
 </div>
+
+<h1>next test</h1> -->
+
+<table mat-table [dataSource]="menu$" class="mat-elevation-z8">
+  <!-- Producto Column -->
+  <ng-container matColumnDef="item">
+    <th mat-header-cell *matHeaderCellDef>
+      <strong>Producto</strong>
+    </th>
+    <td mat-cell *matCellDef="let item">{{ item.item }}</td>
+  </ng-container>
+
+  <!-- Price Column -->
+  <ng-container matColumnDef="price">
+    <th mat-header-cell *matHeaderCellDef>Precio</th>
+    <td mat-cell *matCellDef="let item">{{ item.price }}</td>
+  </ng-container>
+
+  <!-- Time Column -->
+  <ng-container matColumnDef="time">
+    <th mat-header-cell *matHeaderCellDef>Menu</th>
+    <td mat-cell *matCellDef="let item">{{ item.time }}</td>
+  </ng-container>
+
+  <!-- Category Column -->
+  <ng-container matColumnDef="category">
+    <th mat-header-cell *matHeaderCellDef>Categoria</th>
+    <td mat-cell *matCellDef="let item">{{ item.category }}</td>
+  </ng-container>
+
+  <!-- Delete Column -->
+  <ng-container matColumnDef="delete">
+    <th mat-header-cell *matHeaderCellDef>Eliminar</th>
+    <td mat-cell *matCellDef="let item">
+      <button
+        type="button"
+        mat-icon-button
+        class="actions-btn"
+        aria-label="Boton de borrar"
+        (click)="deleteItem(item.id)"
+      >
+        <mat-icon>delete</mat-icon>
+      </button>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+</table>
 
 <!-- prueba de filtradooo -->
 <!-- <div *ngFor="let item of breakfasts$">
