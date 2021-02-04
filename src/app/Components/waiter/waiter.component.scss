@@ -1,14 +1,92 @@
-.mat-tab-group {
-  margin-bottom: 48px;
-}
+// .mat-tab-group {
+//   margin-bottom: 48px;
+// }
 
 .items-order {
   line-height: 40px;
 }
 
-.summary {
+.body-summary {
   background-color: #ebeaea;
   padding: 20px;
   align-content: center;
   align-items: center;
+}
+
+.menus {
+  text-align: center;
+
+  & button {
+    margin: 0 2px;
+  }
+}
+
+.fields-form {
+  margin: 15px;
+  text-align: center;
+}
+
+.btn-start-order button {
+  font-weight: bold;
+}
+
+.header-bar {
+  text-align: center;
+  background-color: #901111;
+  color: #e5e5e5;
+}
+
+.header-summary h1 {
+  margin-bottom: 0px;
+}
+
+.body-summary {
+  & p {
+    margin: 0px;
+    // text-align: right;
+  }
+
+  & .p-table {
+    margin-top: -20px;
+    margin-bottom: 15px;
+  }
+}
+
+.subtotal {
+  text-align: right;
+  margin: 10px 10px;
+}
+
+.centered-btn {
+  text-align: center;
+}
+
+.span-wine {
+  margin-right: 5px;
+  color: #901111;
+}
+
+li::marker {
+  color: #901111;
+}
+
+.ready-orders-container p {
+  line-height: 25px;
+  font-size: 14px;
+}
+
+.ready-orders-container li {
+  line-height: 20px;
+}
+
+#container_ready-orders {
+  background-color: #ebeaea !important;
+}
+
+.titles-card {
+  text-align: center;
+}
+
+.section-ready-orders {
+  padding: 12px;
 }

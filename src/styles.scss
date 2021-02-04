@@ -1,7 +1,78 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "@angular/material/theming";
+@include mat-core();
+
+$theme-colors: (
+  50: #161515,
+  100: #901111,
+  200: #e5e5e5,
+  300: #979797,
+  400: #f99b00,
+  contrast: (
+    50: #e5e5e5,
+    100: #e5e5e5,
+    200: #161515,
+    300: #161515,
+    400: #f99b00,
+  ),
+);
+
+$primary-theme-color: mat-palette($theme-colors, 100);
+$accent-theme-color: mat-palette($theme-colors, 50);
+$warn-theme-color: mat-palette($theme-colors, 400);
+
+$layout-theme-color: mat-light-theme(
+  $primary-theme-color,
+  $accent-theme-color,
+  $warn-theme-color
+);
+
+$custom-typography: mat-typography-config(
+  $font-family: "Cinzel Decorative",
+  $headline: mat-typography-level(18px, 48px, 700),
+  $body-1: mat-typography-level(14px, 50px, 600),
+);
+
+@include mat-base-typography($custom-typography);
+@include mat-checkbox-typography($custom-typography);
+@include angular-material-typography($custom-typography);
+
+@include angular-material-theme($layout-theme-color);
+
 * {
   margin: 0px;
   padding: 0px;
+}
+
+.mat-tab-label {
+  opacity: 1 !important;
+  padding-top: 25px !important;
+  font-weight: bold;
+}
+
+.mat-fab {
+  border-radius: 4px !important;
+  width: 30px !important;
+  height: 30px !important;
+  margin: 0 -8px !important;
+}
+
+.mat-fab .mat-button-wrapper {
+  padding: 0px !important;
+}
+
+.mat-card {
+  margin: 10px;
+  padding: 10px 16px !important;
+}
+
+.mat-card-title {
+  font-weight: bold;
+}
+
+.mat-tab-labels {
+  justify-content: center !important;
 }
 
 .product-grid {

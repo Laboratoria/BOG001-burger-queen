@@ -27,6 +27,7 @@ export class WaiterComponent implements OnInit {
   showingMenus: boolean = false;
   showingBreakfasts: boolean = false;
   showingLunches: boolean = false;
+  showingSummary: boolean = false;
   items$: Observable<Menu[]>;
   // customerName: string;
   // tableNumber: Number;
@@ -109,9 +110,18 @@ export class WaiterComponent implements OnInit {
     }
   }
 
+  summary() {
+    this.items$.forEach((element) => {
+      if (element.length >= 1) {
+        this.showingSummary = true;
+      } else this.showingSummary = false;
+    });
+  }
+
   //Funciones sección resumen de pedidos
   addWishes(item) {
     this.ordersService.addWishes(item);
+    this.summary();
   }
 
   removeWish(index) {

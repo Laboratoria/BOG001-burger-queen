@@ -33,6 +33,9 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatTableModule } from '@angular/material/table';
 import { MatIconModule } from '@angular/material/icon';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatMenuModule } from '@angular/material/menu';
 
 @NgModule({
   declarations: [
@@ -67,6 +70,9 @@ import { MatIconModule } from '@angular/material/icon';
     LuxonModule,
     MatTableModule,
     MatIconModule,
+    MatToolbarModule,
+    MatDividerModule,
+    MatMenuModule,
   ],
   providers: [MenuService],
   bootstrap: [AppComponent],
