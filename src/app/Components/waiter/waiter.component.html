@@ -2,9 +2,23 @@
 
 <p>
   <mat-toolbar color="primary">
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <button mat-icon-button class="example-icon" [matMenuTriggerFor]="menu">
       <mat-icon>menu</mat-icon>
     </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item routerLink="/home">
+        home
+      </button>
+      <button mat-menu-item routerLink="/mesero">
+        mesero
+      </button>
+      <button mat-menu-item routerLink="/cocina">
+        cocina
+      </button>
+      <button mat-menu-item routerLink="/administracion">
+        administración
+      </button>
+    </mat-menu>
     <span>mesero</span>
   </mat-toolbar>
 </p>
