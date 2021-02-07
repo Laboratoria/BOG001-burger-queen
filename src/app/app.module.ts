@@ -15,7 +15,6 @@ import { LuxonModule } from 'luxon-angular';
 
 import { MenuService } from './Services/menu.service';
 import { MenuComponent } from './Components/menu/menu.component';
-import { AddItemMenuComponent } from './Components/add-item-menu/add-item-menu.component';
 import { WaiterComponent } from './Components/waiter/waiter.component';
 import { KitchenComponent } from './Components/kitchen/kitchen.component';
 import { HomeComponent } from './Components/home/home.component';
@@ -41,7 +40,6 @@ import { MatMenuModule } from '@angular/material/menu';
   declarations: [
     AppComponent,
     MenuComponent,
-    AddItemMenuComponent,
     WaiterComponent,
     KitchenComponent,
     HomeComponent,

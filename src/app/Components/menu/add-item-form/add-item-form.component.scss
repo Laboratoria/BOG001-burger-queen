@@ -3,7 +3,7 @@
 }
 
 .shipping-card {
-  min-width: 120px;
+  min-width: 100px;
   margin: 20px auto;
 }
 
@@ -24,4 +24,17 @@
 
 .col:last-child {
   margin-right: 0;
+}
+
+.center {
+  text-align: center;
+}
+
+.quicksand {
+  font-family: "Quicksand", sans-serif;
+  font-size: 16px;
+}
+
+.title {
+  color: #901111;
 }

@@ -1,3 +1,26 @@
+<p>
+  <mat-toolbar color="primary">
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item routerLink="/home">
+        home
+      </button>
+      <button mat-menu-item routerLink="/mesero">
+        mesero
+      </button>
+      <button mat-menu-item routerLink="/cocina">
+        cocina
+      </button>
+      <button mat-menu-item routerLink="/administracion">
+        administración
+      </button>
+    </mat-menu>
+    <span>administración</span>
+  </mat-toolbar>
+</p>
+
 <app-add-item-form></app-add-item-form>
 
 <!-- <div *ngFor="let item of menu$">
@@ -42,13 +65,8 @@
   <ng-container matColumnDef="delete">
     <th mat-header-cell *matHeaderCellDef>Eliminar</th>
     <td mat-cell *matCellDef="let item">
-      <button
-        type="button"
-        mat-icon-button
-        class="actions-btn"
-        aria-label="Boton de borrar"
-        (click)="deleteItem(item.id)"
-      >
+      <button type="button" mat-icon-button class="actions-btn" aria-label="Boton de borrar"
+        (click)="deleteItem(item.id)">
         <mat-icon>delete</mat-icon>
       </button>
     </td>

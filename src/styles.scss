@@ -31,7 +31,7 @@ $layout-theme-color: mat-light-theme(
 $custom-typography: mat-typography-config(
   $font-family: "Cinzel Decorative",
   $headline: mat-typography-level(18px, 48px, 700),
-  $body-1: mat-typography-level(14px, 50px, 600),
+  $body-1: mat-typography-level(16px, 50px, 600),
 );
 
 @include mat-base-typography($custom-typography);
