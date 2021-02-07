@@ -1,7 +1,41 @@
-<div *ngFor="let order of orders$">
-  <h3>Mesa: {{ order.table }}</h3>
-  <div *ngFor="let item of order.items">
-    <h4>{{ item.item }}</h4>
-  </div>
-  <button (click)="addCompleteOrder(order, order.id)">Marcar como listo</button>
+<p>
+  <mat-toolbar color="primary">
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item routerLink="/home">
+        home
+      </button>
+      <button mat-menu-item routerLink="/mesero">
+        mesero
+      </button>
+      <button mat-menu-item routerLink="/cocina">
+        cocina
+      </button>
+      <button mat-menu-item routerLink="/administracion">
+        administración
+      </button>
+    </mat-menu>
+    <span>cocina</span>
+  </mat-toolbar>
+</p>
+
+<div class="center" *ngIf="orders$.length == 0">
+  <p class="quicksand">No hay pedidos en cocina</p>
+</div>
+
+<div [hidden]="orders$.length == 0">
+  <mat-card class="line-height">
+    <div *ngFor="let order of orders$">
+      <p class="quicksand right-align">Mesa: {{ order.table }}</p>
+      <div *ngFor="let item of order.items">
+        <p class="quicksand">{{ item.item }}</p>
+      </div>
+      <div class="center">
+        <button mat-raised-button color="primary" (click)="addCompleteOrder(order, order.id)">Marcar como
+          listo</button>
+      </div>
+    </div>
+  </mat-card>
 </div>

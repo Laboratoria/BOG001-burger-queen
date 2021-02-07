@@ -5,7 +5,7 @@ import Duration from 'luxon/src/duration.js';
 @Component({
   selector: 'app-kitchen',
   templateUrl: './kitchen.component.html',
-  styleUrls: ['./kitchen.component.sass'],
+  styleUrls: ['./kitchen.component.scss'],
 })
 export class KitchenComponent implements OnInit {
   public orders$;
