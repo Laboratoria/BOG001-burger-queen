@@ -1,11 +1,9 @@
-<div>
+<div class="container-form">
   <form [formGroup]="addItemForm" novalidate (ngSubmit)="addItem()">
     <mat-card>
-      <!-- <mat-card-header> -->
       <div class="center title">
         <p>agregar productos al menu</p>
       </div>
-      <!-- </mat-card-header> -->
       <mat-card-content>
         <div class="row">
           <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
@@ -51,20 +49,6 @@
           </div>
         </div>
 
-        <!-- <div class="row" *ngIf="!hasUnitNumber">
-        <div class="col">
-          <button mat-button type="button" (click)="hasUnitNumber = !hasUnitNumber">
-            + Add C/O, Apt, Suite, Unit
-          </button>
-        </div>
-      </div>
-      <div class="row" *ngIf="hasUnitNumber">
-        <div class="col">
-          <mat-form-field class="full-width">
-            <textarea matInput placeholder="Address 2" formControlName="address2"></textarea>
-          </mat-form-field>
-        </div>
-      </div> -->
       </mat-card-content>
       <mat-card-actions>
         <div class="center">

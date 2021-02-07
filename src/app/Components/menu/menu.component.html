@@ -1,41 +1,32 @@
-<p>
-  <mat-toolbar color="primary">
-    <button mat-icon-button [matMenuTriggerFor]="menu">
-      <mat-icon>menu</mat-icon>
-    </button>
-    <mat-menu #menu="matMenu">
-      <button mat-menu-item routerLink="/home">
-        home
+<div class="menu-mobile">
+  <p>
+    <mat-toolbar color="primary">
+      <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon>menu</mat-icon>
       </button>
-      <button mat-menu-item routerLink="/mesero">
-        mesero
-      </button>
-      <button mat-menu-item routerLink="/cocina">
-        cocina
-      </button>
-      <button mat-menu-item routerLink="/administracion">
-        administración
-      </button>
-    </mat-menu>
-    <span>administración</span>
-  </mat-toolbar>
-</p>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item routerLink="/home">
+          home
+        </button>
+        <button mat-menu-item routerLink="/mesero">
+          mesero
+        </button>
+        <button mat-menu-item routerLink="/cocina">
+          cocina
+        </button>
+        <button mat-menu-item routerLink="/administracion">
+          administración
+        </button>
+      </mat-menu>
+      <span>administración</span>
+    </mat-toolbar>
+  </p>
+</div>
 
 <app-add-item-form></app-add-item-form>
 
-<!-- <div *ngFor="let item of menu$">
-  <h3>Producto: {{ item.item }}</h3>
-  <h4>Precio: {{ item.price }}</h4>
-  <h4>Menu: {{ item.time }}</h4>
 
-  <button type="button" (click)="deleteItem(item.id)">Delete</button>
-  <button type="button" (click)="updateItem(item.id)">Update</button>
-</div>
-
-<h1>next test</h1> -->
-
-<table mat-table [dataSource]="menu$" class="mat-elevation-z8">
-  <!-- Producto Column -->
+<!--<table mat-table [dataSource]="menu$" class="mat-elevation-z8">
   <ng-container matColumnDef="item">
     <th mat-header-cell *matHeaderCellDef>
       <strong>Producto</strong>
@@ -43,27 +34,23 @@
     <td mat-cell *matCellDef="let item">{{ item.item }}</td>
   </ng-container>
 
-  <!-- Price Column -->
   <ng-container matColumnDef="price">
     <th mat-header-cell *matHeaderCellDef>Precio</th>
     <td mat-cell *matCellDef="let item">{{ item.price }}</td>
   </ng-container>
 
-  <!-- Time Column -->
   <ng-container matColumnDef="time">
     <th mat-header-cell *matHeaderCellDef>Menu</th>
     <td mat-cell *matCellDef="let item">{{ item.time }}</td>
   </ng-container>
 
-  <!-- Category Column -->
   <ng-container matColumnDef="category">
     <th mat-header-cell *matHeaderCellDef>Categoria</th>
     <td mat-cell *matCellDef="let item">{{ item.category }}</td>
   </ng-container>
 
-  <!-- Delete Column -->
   <ng-container matColumnDef="delete">
-    <th mat-header-cell *matHeaderCellDef>Eliminar</th>
+    <th mat-header-cell *matHeaderCellDef></th>
     <td mat-cell *matCellDef="let item">
       <button type="button" mat-icon-button class="actions-btn" aria-label="Boton de borrar"
         (click)="deleteItem(item.id)">
@@ -74,39 +61,40 @@
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
-</table>
+ </table>  -->
 
-<!-- prueba de filtradooo -->
-<!-- <div *ngFor="let item of breakfasts$">
-  <h3>{{ item.item }}</h3>
-  <h4>{{ item.price }}</h4>
-</div> -->
-<!-- <h3>{{menu.item}}</h3> -->
-<!-- <p>{{menu.price}}</p> -->
-<!-- <button (click)="addOrder()">Agregar al pedido</button> -->
+<div class="container-center">
+  <p>lista de productos</p>
+</div>
 
-<!-- <div class="list row">
-    <div class="col-md-6">
-        <h4>Menu List</h4>
-        <ul class="list-group">
-            <li class="list-group-item" *ngFor="let menu of menus; let i = index" [class.active]="i == currentIndex"
-                (click)="setActiveMenu(menu, i)">
-                {{ menu.item }}
-            </li>
-        </ul>
-    </div>
-    <div class="col-md-6">
-        <!-- <div *ngIf="currentTutorial"> -->
-<!-- <app-tutorial-details
-          (refreshList)="refreshList()"
-          [menu]="currentMenu"
-        ></app-tutorial-details> -->
-<!-- </div> -->
-
-<!-- <div *ngIf="!currentMenu">
-            <br />
-            <p>Please click on a Menu...</p>
+<div *ngFor="let item of menu$">
+  <mat-accordion class="example-headers-align" multi>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <div class="header-exp">
+          <div>
+            <mat-panel-title>
+              {{ item.item }}
+            </mat-panel-title>
+          </div>
+          <div>
+            <mat-panel-description>
+              {{ item.price | currency}}
+              <!-- <mat-icon>account_circle</mat-icon> -->
+            </mat-panel-description>
+          </div>
         </div>
-    </div>
-</div> -->
--->
+      </mat-expansion-panel-header>
+
+      <p><span class="wine">Menu: </span> {{ item.time }}</p>
+      <p><span class="wine">Categoria:</span> {{ item.category }}</p>
+      <div class="container-center">
+        <button type="button" mat-raised-button color="primary" class="btn" (click)="deleteItem(item.id)">
+          eliminar producto
+        </button>
+      </div>
+
+
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>

@@ -14,3 +14,61 @@ table {
   font-size: 14px;
   font-weight: bold;
 }
+
+* :not(.mat-icon) {
+  font-family: "Quicksand";
+  font-size: 14px;
+}
+
+.menu-mobile span {
+  font-family: "Cinzel Decorative";
+  font-size: 20px;
+}
+
+.example-headers-align .mat-expansion-panel-header-title,
+.example-headers-align .mat-expansion-panel-header-description {
+  flex-basis: 0;
+}
+
+.example-headers-align .mat-expansion-panel-header-description {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.example-headers-align .mat-form-field + .mat-form-field {
+  margin-left: 8px;
+}
+
+.mat-expansion-panel-header {
+  justify-content: space-between;
+}
+
+.header-exp {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.mat-expansion-panel p {
+  line-height: 20px;
+}
+
+.container-center {
+  text-align: center;
+
+  & .btn {
+    font-family: "Cinzel Decorative";
+  }
+
+  & p {
+    font-family: "Cinzel Decorative";
+    color: #901111;
+    font-size: 16px;
+  }
+}
+
+.wine {
+  color: #901111;
+  font-weight: 800;
+  margin-right: 8px;
+}

@@ -79,3 +79,22 @@ $custom-typography: mat-typography-config(
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
+
+.mat-expansion-panel {
+  color: #161515 !important;
+  font-weight: 400 !important;
+}
+
+.mat-expansion-panel-header-title {
+  color: #161515;
+  font-weight: 400;
+}
+
+.mat-expansion-panel-header-description {
+  color: #161515;
+  font-weight: 400;
+}
+
+.mat-expansion-panel-content {
+  font-weight: 400 !important;
+}
