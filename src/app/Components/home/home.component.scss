@@ -7,8 +7,9 @@ h1 {
   font-family: "Cinzel Decorative", cursive;
   font-weight: 900;
   // font-weight: bold;
-  font-size: 80px;
+  font-size: 35px;
   color: #e5e5e5;
+  line-height: 10px;
 }
 
 .row {
@@ -26,8 +27,9 @@ h1 {
   height: 100%;
 }
 
-.pablito {
+.text-cover {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -58,4 +60,10 @@ h1 {
   background-repeat: no-repeat;
   background-size: cover;
   height: 33.3333%;
+}
+
+#btn-start {
+  border: 1px solid #979797;
+  font-weight: 600;
+  margin-top: 60px;
 }

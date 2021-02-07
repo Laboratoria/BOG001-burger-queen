@@ -31,14 +31,15 @@
         <form [formGroup]="orderForm">
           <div class="fields-form">
             <div>
-              <mat-form-field class="full-width">
-                <input matInput [(ngModel)]="customerName" id="name" placeholder="nombre" formControlName="name"
-                  required />
+              <mat-form-field class="full-width quicksand">
+                <input class="quicksand" matInput [(ngModel)]="customerName" id="name" placeholder="Nombre"
+                  formControlName="name" required />
               </mat-form-field>
             </div>
             <div>
-              <mat-form-field class="full-width">
-                <input matInput placeholder="n° de mesa" formControlName="table" [(ngModel)]="tableNumber" required />
+              <mat-form-field class="full-width quicksand">
+                <input matInput class="quicksand" placeholder="N° de mesa" formControlName="table"
+                  [(ngModel)]="tableNumber" required />
               </mat-form-field>
             </div>
             <div class="btn-start-order">
@@ -49,7 +50,7 @@
           </div>
 
           <div *ngIf="showingMenus" class="menus">
-            <p> seleccione el menú </p>
+            <p class="quicksand"> Seleccione un menú </p>
             <button mat-raised-button color="primary" (click)="breakfast()">desayunos</button>
             <button mat-raised-button color="accent" (click)="lunches()">almuerzos y cenas</button>
             <!-- <button (click)="breakfast()">Desayunos</button> -->
@@ -59,7 +60,7 @@
           <div *ngIf="showingBreakfasts">
             <div *ngFor="let item of breakfasts$" name="break">
 
-              <mat-card class="example-card">
+              <mat-card class="quicksand">
                 <div class="row">
                   <div class="col-5">
                     <mat-card-title>{{ item.item }}</mat-card-title>
@@ -79,7 +80,7 @@
 
           <div *ngIf="showingLunches">
             <div *ngFor="let item of lunchesAndDinners$">
-              <mat-card>
+              <mat-card class="quicksand">
                 <div class="row">
                   <div class="col-5">
                     <mat-card-title>{{ item.item }}</mat-card-title>
@@ -104,14 +105,14 @@
           <h1>Resumen del pedido</h1>
         </div>
         <div class="col-sm-4 body-summary">
-          <p><span class="span-wine"> cliente: </span> {{ customerName }}</p>
-          <p class="p-table"><span class="span-wine"># mesa: </span> {{ tableNumber }}</p>
+          <p class="quicksand"><span class="span-wine"> Cliente: </span> {{ customerName }}</p>
+          <p class="p-table quicksand"><span class="span-wine"># Mesa: </span> {{ tableNumber }}</p>
 
           <!-- <div *ngIf="showingSummary"> -->
           <div *ngFor="let item of items$ | async; let i = index">
             <div class="row items-order">
-              <div class="col-6">{{ item.item }}</div>
-              <div class="col-4">
+              <div class="col-6 quicksand">{{ item.item }}</div>
+              <div class="col-4 quicksand">
                 {{ item.price | currency }}
               </div>
               <div class="col-1">
@@ -122,7 +123,7 @@
             </div>
           </div>
           <mat-divider> </mat-divider>
-          <h2 class="subtotal">subtotal: {{ bill | currency }}</h2>
+          <p class="subtotal quicksand ">Subtotal: {{ bill | currency }}</p>
           <!-- <button (click)="generateOrder()">Enviar pedido a cocina</button> -->
           <div class="centered-btn">
             <button mat-raised-button color="primary" (click)="generateOrder()">Enviar pedido a cocina</button>
@@ -140,21 +141,21 @@
 
       <div class="section-ready-orders">
         <mat-card class="ready-orders-container" id="container_ready-orders">
-          <!-- <mat-card-title> -->
           <div class="titles-card">
-            <h1>información de la orden</h1>
+            <h1 id="title-inf-order">información de la orden</h1>
           </div>
-          <p> <span class="span-wine">mesa: </span>{{ order.table }}</p>
-          <p> <span class="span-wine">cliente: </span>{{ order.name }}</p>
-          <p> <span class="span-wine">cuenta: </span>{{ order.bill | currency }}</p>
+          <!-- <mat-card-title> -->
+          <p> <span class="span-wine">Mesa: </span>{{ order.table }}</p>
+          <p> <span class="span-wine">Cliente: </span>{{ order.name }}</p>
+          <p> <span class="span-wine">Cuenta: </span>{{ order.bill | currency }}</p>
           <p>
-            <span class="span-wine">completado en: </span>{{ getDuration(order) | durationToFormat: "mm" }}
+            <span class="span-wine">Completado en: </span>{{ getDuration(order) | durationToFormat: "mm" }}
             <span class="span-wine">min y </span>{{ getDuration(order) | durationToFormat: "mm:ss" | slice: 3:5
             }}<span class="span-wine"> seg</span>
           </p>
           <mat-divider> </mat-divider>
           <div class="titles-card">
-            <h1>detalle de la entrega</h1>
+            <p>Detalle de la entrega</p>
           </div>
           <div *ngFor="let item of order.items">
             <ul>
