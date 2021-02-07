@@ -2,14 +2,12 @@ import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { MenuService } from '../../../Services/menu.service';
 
-
 @Component({
   selector: 'app-add-item-form',
   templateUrl: './add-item-form.component.html',
-  styleUrls: ['./add-item-form.component.css']
+  styleUrls: ['./add-item-form.component.scss'],
 })
 export class AddItemFormComponent {
-
   addItemForm = this.fb.group({
     item: [null, Validators.required],
     price: ['', Validators.required],
@@ -33,7 +31,7 @@ export class AddItemFormComponent {
     { name: 'Other', cod: 6 },
   ];
 
-  constructor(private fb: FormBuilder, private menuService: MenuService) { }
+  constructor(private fb: FormBuilder, private menuService: MenuService) {}
 
   clearForm(): void {
     this.addItemForm.reset({
@@ -50,19 +48,15 @@ export class AddItemFormComponent {
     const category = this.addItemForm.value.category;
     const time = this.addItemForm.value.time;
 
-    this.menuService.addItem(item, price, category, time)
-      .then(
-        () => {
-          alert('Item added successfully');
-        }
-      )
+    this.menuService
+      .addItem(item, price, category, time)
+      .then(() => {
+        alert('Item added successfully');
+      })
       .catch((err) => {
         alert('Error adding item: ' + err);
       });
 
     this.clearForm();
-
   }
-
 }
-
