@@ -20,9 +20,11 @@ table {
   font-size: 14px;
 }
 
-.menu-mobile span {
-  font-family: "Cinzel Decorative";
-  font-size: 20px;
+.menu-mobile {
+  & span {
+    font-family: "Cinzel Decorative";
+    font-size: 20px;
+  }
 }
 
 .example-headers-align .mat-expansion-panel-header-title,
@@ -71,4 +73,8 @@ table {
   color: #901111;
   font-weight: 800;
   margin-right: 8px;
+}
+
+.category-menu {
+  font-family: "Quicksand";
 }
