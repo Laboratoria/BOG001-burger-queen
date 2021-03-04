@@ -1,5 +1,6 @@
 <!-- <app-header></app-header> -->
 
+
 <p>
   <mat-toolbar color="primary">
     <button mat-icon-button class="example-icon" [matMenuTriggerFor]="menu">
@@ -27,7 +28,7 @@
 <mat-tab-group animationDuration="0ms">
   <mat-tab label="Crear Orden">
     <div class="row m-0">
-      <div class="col-sm-8">
+      <div class="col-sm-12 col-md-6 col-lg-6">
         <form [formGroup]="orderForm">
           <div class="fields-form">
             <div>
@@ -100,36 +101,42 @@
         </form>
       </div>
 
-      <div class="summary" *ngIf="showingSummary">
-        <div class="header-bar header-summary">
-          <h1>Resumen del pedido</h1>
-        </div>
-        <div class="col-sm-4 body-summary">
-          <p class="quicksand"><span class="span-wine"> Cliente: </span> {{ customerName }}</p>
-          <p class="p-table quicksand"><span class="span-wine"># Mesa: </span> {{ tableNumber }}</p>
+      <!-- <div class="row"> -->
+      <div class="col-sm-12 offset-md-1 col-md-5 offset-lg-1 col-lg-5 ">
 
-          <!-- <div *ngIf="showingSummary"> -->
-          <div *ngFor="let item of items$ | async; let i = index">
-            <div class="row items-order">
-              <div class="col-6 quicksand">{{ item.item }}</div>
-              <div class="col-4 quicksand">
-                {{ item.price | currency }}
-              </div>
-              <div class="col-1">
-                <button mat-icon-button (click)="removeWish(i)">
-                  <i class="far fa-trash-alt"></i>
-                </button>
+        <div class="summary" *ngIf="showingSummary">
+          <div class="header-bar header-summary">
+            <h1>Resumen del pedido</h1>
+          </div>
+          <div class="col-sm-12 col-md-12 col-lg-12 body-summary">
+            <p class="quicksand"><span class="span-wine"> Cliente: </span> {{ customerName }}</p>
+            <p class="p-table quicksand"><span class="span-wine"># Mesa: </span> {{ tableNumber }}</p>
+
+            <!-- <div *ngIf="showingSummary"> -->
+            <div *ngFor="let item of items$ | async; let i = index">
+              <div class="row items-order">
+                <div class="col-6 quicksand">{{ item.item }}</div>
+                <div class="col-4 quicksand">
+                  {{ item.price | currency }}
+                </div>
+                <div class="col-1">
+                  <button mat-icon-button (click)="removeWish(i)">
+                    <i class="far fa-trash-alt"></i>
+                  </button>
+                </div>
               </div>
             </div>
-          </div>
-          <mat-divider> </mat-divider>
-          <p class="subtotal quicksand ">Subtotal: {{ bill | currency }}</p>
-          <!-- <button (click)="generateOrder()">Enviar pedido a cocina</button> -->
-          <div class="centered-btn">
-            <button mat-raised-button color="primary" (click)="generateOrder()">Enviar pedido a cocina</button>
+            <mat-divider> </mat-divider>
+            <p class="subtotal quicksand ">Subtotal: {{ bill | currency }}</p>
+            <!-- <button (click)="generateOrder()">Enviar pedido a cocina</button> -->
+            <div class="centered-btn">
+              <button mat-raised-button color="primary" (click)="generateOrder()">Enviar pedido a cocina</button>
+            </div>
           </div>
         </div>
       </div>
+      <!-- </div> -->
+
     </div>
   </mat-tab>
 
@@ -139,40 +146,44 @@
     </ng-template>
     <div *ngFor="let order of ordersCompleted$; let i = index">
 
-      <div class="section-ready-orders">
-        <mat-card class="ready-orders-container" id="container_ready-orders">
-          <div class="titles-card">
-            <p id="title-inf-order">información de la orden</p>
-          </div>
-          <!-- <mat-card-title> -->
-          <p> <span class="span-wine">Mesa: </span>{{ order.table }}</p>
-          <p> <span class="span-wine">Cliente: </span>{{ order.name }}</p>
-          <p> <span class="span-wine">Cuenta: </span>{{ order.bill | currency }}</p>
-          <p>
-            <span class="span-wine">Completado en: </span>{{ getDuration(order) | durationToFormat: "mm" }}
-            <span class="span-wine">min y </span>{{ getDuration(order) | durationToFormat: "mm:ss" | slice: 3:5
-            }}<span class="span-wine"> seg</span>
-          </p>
-          <mat-divider> </mat-divider>
-          <div class="titles-card">
-            <p>Detalle de la entrega</p>
-          </div>
-          <div *ngFor="let item of order.items">
-            <ul>
-              <li>{{ item.item }}</li>
-            </ul>
-            <!-- <p>{{ item.item }}</p> -->
-          </div>
-          <div class="centered-btn">
-            <button mat-raised-button color="primary" (click)="updateStateDelivered(order.id, i)">
-              Marcar como entregada
-            </button>
-          </div>
-          <!-- </mat-card-title> -->
-          <!-- <button mat-fab color="primary" (click)="addWishes(item)">
+      <div class="col-sm-12 col-md-6 offset-md-3 col-lg-6 offset-lg-3">
+
+        <div class="section-ready-orders">
+          <mat-card class="ready-orders-container" id="container_ready-orders">
+            <div class="titles-card">
+              <p id="title-inf-order">información de la orden</p>
+            </div>
+            <!-- <mat-card-title> -->
+            <p> <span class="span-wine">Mesa: </span>{{ order.table }}</p>
+            <p> <span class="span-wine">Cliente: </span>{{ order.name }}</p>
+            <p> <span class="span-wine">Cuenta: </span>{{ order.bill | currency }}</p>
+            <p>
+              <span class="span-wine">Completado en: </span>{{ getDuration(order) | durationToFormat: "mm" }}
+              <span class="span-wine">min y </span>{{ getDuration(order) | durationToFormat: "mm:ss" | slice: 3:5
+              }}<span class="span-wine"> seg</span>
+            </p>
+            <mat-divider> </mat-divider>
+            <div class="titles-card">
+              <p>Detalle de la entrega</p>
+            </div>
+            <div *ngFor="let item of order.items">
+              <ul>
+                <li>{{ item.item }}</li>
+              </ul>
+              <!-- <p>{{ item.item }}</p> -->
+            </div>
+            <div class="centered-btn">
+              <button mat-raised-button color="primary" (click)="updateStateDelivered(order.id, i)">
+                Marcar como entregada
+              </button>
+            </div>
+            <!-- </mat-card-title> -->
+            <!-- <button mat-fab color="primary" (click)="addWishes(item)">
               <mat-icon class="material-icons"> add </mat-icon>
             </button> -->
-        </mat-card>
+          </mat-card>
+        </div>
+
       </div>
 
 

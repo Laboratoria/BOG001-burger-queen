@@ -9,6 +9,7 @@ $theme-colors: (
   200: #e5e5e5,
   300: #979797,
   400: #f99b00,
+  500: #332525,
   contrast: (
     50: #e5e5e5,
     100: #e5e5e5,
@@ -37,7 +38,6 @@ $custom-typography: mat-typography-config(
 @include mat-base-typography($custom-typography);
 @include mat-checkbox-typography($custom-typography);
 @include angular-material-typography($custom-typography);
-
 @include angular-material-theme($layout-theme-color);
 
 * {
