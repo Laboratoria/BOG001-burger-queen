@@ -113,6 +113,18 @@ A continuación puedes ver los objetivos de aprendizaje de este proyecto:
 * [ ] [`CSS` modules.](https://create-react-app.dev/docs/adding-a-css-modules-stylesheet)
 * [ ] [React Router.](https://reacttraining.com/react-router/web)
 
+###Angular
+
+ Components & templates.
+ Directivas estructurales (ngIf / ngFor)
+ @Input | @Ouput
+ Creación y uso de servicios.
+ Manejos de rutas.
+ Creación y uso Observables.
+ Uso de HttpClient.
+ Estilos de componentes (ngStyle / ngClass)
+
+
 ### UX
 
 * [ ] Diseñar la aplicación pensando y entendiendo al usuario.
