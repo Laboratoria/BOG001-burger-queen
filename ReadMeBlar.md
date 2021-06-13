@@ -7,6 +7,17 @@
 
 ***
 
+### Angular
+
+* [ ] [Components & templates.](https://angular.io/guide/architecture-components#introduction-to-components)
+* [ ] [Directivas estructurales (ngIf / ngFor)](https://angular.io/guide/template-syntax#built-in-structural-directives)
+* [ ] [@Input | @Ouput](https://angular.io/guide/component-interaction#component-interaction)
+* [ ] [Creación y uso de servicios.](https://angular.io/guide/architecture-services#providing-services)
+* [ ] [Manejos de rutas.](https://angular.io/guide/router)
+* [ ] [Creación y uso Observables.](https://angular.io/guide/observables-in-angular)
+* [ ] [Uso de HttpClient.](https://angular.io/guide/http)
+* [ ] [Estilos de componentes (ngStyle / ngClass)](https://angular.io/guide/template-syntax#built-in-directives)
+
 ## 1. Dailys
 01/12/2020 Lectura del README de Burger Queen. Checklist del arranque del proyecto. Checklist de los 
 objetivos de aprendizaje. Dibujar en papel los bocetos (de baja fidelidad) de las historias de usuario.
@@ -138,6 +149,18 @@ A continuación puedes ver los objetivos de aprendizaje de este proyecto:
 * [ ] [`hooks`](https://es.reactjs.org/docs/hooks-intro.html)
 * [ ] [`CSS` modules.](https://create-react-app.dev/docs/adding-a-css-modules-stylesheet)
 * [ ] [React Router.](https://reacttraining.com/react-router/web)
+
+###Angular
+
+ Components & templates.
+ Directivas estructurales (ngIf / ngFor)
+ @Input | @Ouput
+ Creación y uso de servicios.
+ Manejos de rutas.
+ Creación y uso Observables.
+ Uso de HttpClient.
+ Estilos de componentes (ngStyle / ngClass)
+
 
 ### UX
 
