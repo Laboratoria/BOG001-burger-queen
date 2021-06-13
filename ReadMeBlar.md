@@ -53,6 +53,32 @@ y cómo cada cambio sobre el estado se va a ir reflejando en la interfaz (por ej
 cada vez que agregamos un _producto_ a un _pedido_, la interfaz debe actualizar
 la lista del pedido y el total).
 
+minitareas que me asignó Lupe el 04/01/2021
+crear una lista de elementos cliqueables a partir del JSON de menú
+crear una lista de elementos que van apareciendo en la medida en que los voy cliqueando
+crear un elemento que totalice los precios
+maquetar la vista mesero
+estudiar los objetivos de aprendizaje
+
+estrategias que he aplicado:
+hacer el tutorial del tic tac toe
+escribir a mano el código del tic tac toe porque no entendí al 100% el tutorial práctico
+estudiar la documentación con los conceptos principales (copio, copio, copio en un cuaderno)
+en la documentación oficial React aparece un counter, ya forkeé el repositorio y lo voy a estudiar
+
+
+otras minitareas:
+hacer una página de inicio de la app, donde tengo 3 botones para seleccionar dónde voy a ir
+vista ask order
+vista cook order
+vista deliver order
+
+esto implica maquetar la vista que ya tengo prototipada, generar los botones y hacer un router para toda la app
+
+estrategias que pienso aplicar:
+
+https://midu.dev/react-hooks-introduccion-saca-todo-el-potencial-sin-class/
+
 A continuación puedes ver los objetivos de aprendizaje de este proyecto:
 
 ### HTML y CSS
@@ -102,11 +128,11 @@ A continuación puedes ver los objetivos de aprendizaje de este proyecto:
 
 ### React
 
-* [ ] [`JSX`](https://es.reactjs.org/docs/introducing-jsx.html)
-* [ ] [Componentes `class` y componentes `function`](https://es.reactjs.org/docs/components-and-props.html#function-and-class-components)
-* [ ] `props`
-* [ ] [Eventos en React.](https://es.reactjs.org/docs/handling-events.html)
-* [ ] [Listas y keys.](https://es.reactjs.org/docs/lists-and-keys.html)
+* [x] [`JSX`](https://es.reactjs.org/docs/introducing-jsx.html)
+* [x] [Componentes `class` y componentes `function`](https://es.reactjs.org/docs/components-and-props.html#function-and-class-components)
+* [x] `props`
+* [x] [Eventos en React.](https://es.reactjs.org/docs/handling-events.html)
+* [x] [Listas y keys.](https://es.reactjs.org/docs/lists-and-keys.html)
 * [ ] [Renderizado condicional.](https://es.reactjs.org/docs/conditional-rendering.html)
 * [ ] [Elevación de estados.](https://es.reactjs.org/docs/lifting-state-up.html)
 * [ ] [`hooks`](https://es.reactjs.org/docs/hooks-intro.html)
@@ -240,9 +266,12 @@ firebase deploy
 
 #### Recursos que me han servido
 
-* [Curso React Udemy por Bluuweb](https://bluuweb.github.io/react-udemy/)
-* [Aplicación CRUD React+Firestore+Hooks por Bluuweb](https://www.youtube.com/watch?v=8rLs-AGn4go)
-* [Curso React and Hooks por Bluuweb Youtube playlist](https://www.youtube.com/watch?v=Di4eAxkPNp0&list=PLPl81lqbj-4KswGEN6o4lF0cscQalpycD)
 * [React+Firebase CRUD por Fazt Youtube](https://www.youtube.com/watch?v=Y9-UkL6ent4&t=768s)
 * [Load and Render JSON Data into React Components](https://www.pluralsight.com/guides/load-and-render-json-data-into-react-components)
+* [https://github.com/arnab-datta/counter-app] aplicación counter-app (ejemplo en la documentación oficial React)
+* [https://www.linkedin.com/learning/react-esencial-2/react-la-libreria-de-javascript-para-interfaces-de-usuario?u=84303994] linkedin learning
+* [https://es.reactjs.org/docs/getting-started.html] documentación oficial de React
+* [https://es.reactjs.org/tutorial/tutorial.html] ejemplo práctico tic tac toe con React
+* [https://github.com/irvincnt/Carrito] carrito de compras con React (irvin contreras irvincnt)
+* [React práctico] (https://linkedin.com/learning/react-practico-interfaz-para-aplicacion-web-de-gestion-deportiva/presentacion-del-curso-react-practico-interfaz-para-aplicacion-web-de-gestion-deportiva?u=84303994)
 

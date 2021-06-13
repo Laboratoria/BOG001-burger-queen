@@ -1,4 +1,19 @@
+App {
+  background-color: #3E2723;
+  color:#FFE548;
+  font-family: 'Quicksand', sans-serif;
+  font-family: 'Poppins', sans-serif;
+}
 
+.main-page {
+  color:wheat;
+}
+
+.button-holder {
+  background-image: url('./assets/HU1.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
 
 .Bar {
   display: grid;
@@ -28,21 +43,40 @@
   grid-column: 11/12
 }
 
+.button {
+  background-color: orange;
+  color: black;
+}
+
+.container {
+  font-family: 'Poppins', sans-serif;
+}
+
+.cover {
+  text-align: center;
+}
+
+
 .takeOrder-container {
   display: grid;
   grid-template-columns: 12;
   align-self: start;
 }
 
+
 .menuBreakfast-container {
   display: grid;
   grid-template-columns: 12;
   grid-column: 1/6;
-  align-self: start;
-  padding-left: 4em;
-  padding-right: 4em;
-  margin-top: 4em;
-  color:#F3B69A;
+  color: white;
+  background-color:#B71C1C;
+}
+
+.menuTitle {
+  display: grid;
+  grid-template-columns: 12;
+  grid-column: 1/6;
+  color: white;
   background-color:#B71C1C;
 }
 
@@ -50,10 +84,6 @@
   display: grid;
   grid-template-columns: 12;
   grid-column: 7/12;
-  align-self: start;
-  padding-left: 4em;
-  padding-right: 4em;
-  margin-top: 4em;
   color:#F3B69A;
   background-color:#B71C1C;
 }
@@ -65,4 +95,10 @@
   margin-top: 4em;
   color: #FFE548;
   background-color: #3E2723;
+}
+
+.item{
+  color:orange;
+  border-color: red;
+  background-color:brown;
 }

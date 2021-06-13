@@ -1,16 +1,12 @@
-import React, { Fragment } from 'react'
-import Bar from './components/Bar'
-import MenuBreakfast from './components/MenuBreakfast'
-import './App.css'
+import React from 'react';
+import './App.css';
+import Cover from './components/Cover'
 
-const App = () => {
-
-  return (
-    <Fragment>
-    <Bar />
-    <MenuBreakfast />
-    </Fragment>
+function App(){
+  return(
+    <div className="container">
+      <Cover />
+    </div>
   )
 }
-
-export default App
+export default App;
