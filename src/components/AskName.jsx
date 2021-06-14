@@ -1,11 +1,11 @@
-import React, {useState} from 'react'
+import React, {useState} from 'react';
+import ShowName from './ShowName';
 
 const AskName = () => {
     const [name, setName] = useState('');
 
     const Validate = (event) => {
         event.preventDefault();
-        return(<h1>Hola {name}</h1>);
     }
 
     return (
@@ -15,6 +15,7 @@ const AskName = () => {
             <input className="inputName" type="text" placeholder="Ingresa tu nombre" onChange={(e)=>{setName(e.target.value)}}/>
             <input type="submit"/>
             </form>
+            <ShowName name={name} />
         </div>
     )
 }
