@@ -10,7 +10,7 @@ import {
   Switch
 } from "react-router-dom";
 
-const Cover = () => {
+const NavBar = () => {
   return (
     <div className="cover">
       <Router>
@@ -48,4 +48,4 @@ const Cover = () => {
   )
 }
 
-export default Cover
+export default NavBar

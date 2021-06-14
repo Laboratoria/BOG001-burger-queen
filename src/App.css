@@ -36,17 +36,18 @@
 .button {
   background-color: orange;
   color: black;
-  border-radius: 10px;
+  border-radius: 1%;
   font-family: inherit;
 }
 
-.cover{
+.main-page{
   background-image: url('./assets/HU1.jpg');
   background-repeat: no-repeat;
   background-size: 100%;
   width: 100%;
   height: 100%;
   font-family: inherit;
+  color:wheat;
 }
 
 .inputName{
@@ -59,9 +60,7 @@
   background-color:rgb(204, 112, 112);
 }
 
-.main-page {
-  color:wheat;
-}
+
 
 .menuBreakfast-container {
   display: grid;

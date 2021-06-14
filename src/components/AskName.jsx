@@ -15,7 +15,7 @@ const AskName = () => {
             <input className="inputName" type="text" placeholder="Ingresa tu nombre" onChange={(e)=>{setName(e.target.value)}}/>
             <input type="submit"/>
             </form>
-            <ShowName name={name} />
+            <ShowName show={props.name} />
         </div>
     )
 }
