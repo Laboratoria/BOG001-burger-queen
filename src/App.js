@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
-import Cover from './components/Cover'
+import AskName from './components/AskName';
 
 function App(){
   return(
-    <div className="container">
-      <Cover />
+    <div className="App">
+      <AskName />
     </div>
   )
 }

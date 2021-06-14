@@ -3,7 +3,7 @@ import React from 'react'
 const CookOrder = () => {
   return (
     <div>
-      <h3>Cook Order</h3>
+      <h1>Cook Order</h1>
     </div>
   )
 }

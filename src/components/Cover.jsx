@@ -15,16 +15,16 @@ const Cover = () => {
     <div className="cover">
       <Router>
         <div>
-          <button>
+          <button className="button">
             <Link to="/">Inicio</Link>
           </button>
-          <button>
+          <button className="button">
             <Link to="/askOrder">Tomar orden</Link>
           </button>
-          <button>
+          <button className="button">
             <Link to="/cookOrder">Ver cocina</Link>
           </button>
-          <button>
+          <button className="button">
             <Link to="/deliverOrder">Servir orden</Link>
           </button>
 

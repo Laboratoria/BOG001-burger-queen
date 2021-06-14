@@ -1,7 +1,5 @@
 import React from "react";
 import breakfast from "../data/breakfast.json";
-import "../App.css";
-
 
 export const MenuBreakfast = () => {
 
@@ -12,22 +10,8 @@ export const MenuBreakfast = () => {
         {breakfast.map((data, key) => {
           return (
             <div key={key}>
-              <button className="item">
-                {data.item +
-                  "  " +
-                  " $" +
-                  data.price}
-              </button>
-            </div>
-          );
-        })}
-      </div>
-      <div className="order-container">
-        <h1>Pedido</h1>
-        {breakfast.map((data, key) => {
-          return (
-            <div key={key}>
-              <button className="eraseItem"> - </button>
+              <button id={data.id} className="button"> + </button>
+              <button id={data.id} className="button"> - </button>
               {data.item +
                 "  " +
                 " $" +
@@ -35,9 +19,12 @@ export const MenuBreakfast = () => {
             </div>
           );
         })}
+      </div>
+      <div className="order-container">
+        <h1>Pedido</h1>
         <h1> </h1>
         <div className="totalOrder">Total: </div>
-        <button className="saveOrder"> ordenar </button>
+        <button className="button"> ordenar </button>
       </div>
     </div>
   );
