@@ -3,32 +3,34 @@
   text-align: center;
   background-color: #3E2723;
   color:#FFE548;
+  font-size: 1rem;
 }
 
-.Bar {
+.NavBar {
   display: grid;
-  grid-template-rows: 1;
+  grid-template-rows: 2;
   grid-template-columns: 12;
   vertical-align: middle;
   text-align: center;
   align-items: center;
   align-content: space-around;
-  height: 150px;
+  height: 100%;
   color:#FFFFFF;
   background-color:#FF6D00;
+  font-size: 1rem;
 }
 
-.barIcon{
+.BarHome{
   display: grid;
   grid-column: 1/2;
 }
 
-.barMenu{
+.BarMenu{
   display: grid;
   grid-column: 11/12
 }
 
-.barTitle{
+.BarTitle{
   display: grid;
   grid-column: 3/10;
 }
@@ -40,7 +42,7 @@
   font-family: inherit;
 }
 
-.main-page{
+.MainPage{
   background-image: url('./assets/HU1.jpg');
   background-repeat: no-repeat;
   background-size: 100%;
@@ -50,7 +52,7 @@
   color:wheat;
 }
 
-.inputName{
+.input-name{
   font-family: inherit;
 }
 

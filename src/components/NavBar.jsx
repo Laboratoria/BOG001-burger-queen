@@ -12,20 +12,20 @@ import {
 
 const NavBar = () => {
   return (
-    <div className="cover">
+    <div className="NavBar">
       <Router>
         <div>
           <button className="button">
-            <Link to="/">Inicio</Link>
+            <Link to="/"><i className="fas fa-home"></i></Link>
           </button>
           <button className="button">
-            <Link to="/askOrder">Tomar orden</Link>
+            <Link to="/askOrder"><i className="fas fa-clipboard-list"></i></Link>
           </button>
           <button className="button">
-            <Link to="/cookOrder">Ver cocina</Link>
+            <Link to="/cookOrder"><i className="fas fa-mitten"></i></Link>
           </button>
           <button className="button">
-            <Link to="/deliverOrder">Servir orden</Link>
+            <Link to="/deliverOrder"><i className="fas fa-hamburger"></i></Link>
           </button>
 
           <Switch>
