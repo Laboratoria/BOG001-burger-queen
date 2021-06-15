@@ -4,7 +4,7 @@ import MenuSupper from './MenuSupper';
 
 const SelectMenu = () => {
 
-  const [menu, setMenu] = useState('false');
+  const [menu, setMenu] = useState('');
 
   const Breakfast = () =>{
     setMenu(true);

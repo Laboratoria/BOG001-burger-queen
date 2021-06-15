@@ -14,7 +14,7 @@ const NavBar = () => {
   return (
     <div className="NavBar">
       <Router>
-        <div>
+        <div className="Buttonholder">
           <button className="button">
             <Link to="/"><i className="fas fa-home"></i></Link>
           </button>
@@ -27,6 +27,7 @@ const NavBar = () => {
           <button className="button">
             <Link to="/deliverOrder"><i className="fas fa-hamburger"></i></Link>
           </button>
+          </div>
 
           <Switch>
             <Route exact path="/">
@@ -42,7 +43,6 @@ const NavBar = () => {
               <DeliverOrder />
             </Route>
           </Switch>
-        </div>
       </Router>
     </div>
   )

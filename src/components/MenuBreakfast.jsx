@@ -1,7 +1,13 @@
-import React from "react";
+import React, {useState} from "react";
 import breakfast from "../data/breakfast.json";
 
-export const MenuBreakfast = () => {
+const MenuBreakfast = () => {
+
+  const [articles, setArticles] = useState([]);
+
+  const Aumentar = () =>{
+    setArticles(articles+1);
+  }
 
   return (
     <div className="takeOrder-container">
@@ -10,7 +16,7 @@ export const MenuBreakfast = () => {
         {breakfast.map((data, key) => {
           return (
             <div key={key}>
-              <button id={data.id} className="button"> + </button>
+              <button id={data.id} className="button" onClick={Aumentar}> + </button>
               <button id={data.id} className="button"> - </button>
               {data.item +
                 "  " +
@@ -22,8 +28,9 @@ export const MenuBreakfast = () => {
       </div>
       <div className="order-container">
         <h1>Pedido</h1>
-        <h1> </h1>
-        <div className="totalOrder">Total: </div>
+        {articles}
+        {data.id}
+        <div className="totalOrder">Total: {articles}</div>
         <button className="button"> ordenar </button>
       </div>
     </div>

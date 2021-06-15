@@ -6,6 +6,10 @@
   font-size: 1rem;
 }
 
+.Buttonholder{
+  font-size: 3rem;
+}
+
 .NavBar {
   display: grid;
   grid-template-rows: 2;
