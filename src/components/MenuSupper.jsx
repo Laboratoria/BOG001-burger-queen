@@ -1,6 +1,7 @@
 import React from "react";
 import supper from "../data/supper.json";
-export const MenuSupper = () => {
+
+const MenuSupper = () => {
   return (
     <>
       <div className="menuSupper-container">
