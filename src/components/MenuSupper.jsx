@@ -24,4 +24,4 @@ const MenuSupper = () => {
   );
 };
 
-export default MenuSupper;
+export default MenuSupper

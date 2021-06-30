@@ -10,10 +10,9 @@ const AskName = () => {
 
   return (
     <div>
-      <h1>¡Hola! ¿Cómo te llamas?</h1>
+      <p>¡Hola! ¿Cómo te llamas?</p>
       <form onSubmit={Validate}>
-        <input className="inputName" type="text" placeholder="Ingresa tu nombre" onChange={(e) => { setName(e.target.value) }} />
-        <input type="submit" />
+        <input className="inputName" type="text" placeholder="Ingresa tu nombre" onChange={(event) => { setName(event.target.value) }} />
       </form>
       <ShowName show={name}/>
     </div>

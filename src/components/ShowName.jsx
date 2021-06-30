@@ -3,7 +3,7 @@ import React from 'react'
 const ShowName = (props) => {
     return (
         <div>
-            <h1>Hola {props.show}</h1>
+            <p>Hola {props.show}</p>
         </div>
     )
 }

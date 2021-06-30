@@ -1,34 +1,34 @@
-import React, {useState} from "react";
+import React from "react";
 import breakfast from "../data/breakfast.json";
-import ListItem from './ListItem';
-
-const pedido = {
-  cliente: '',
-  productos: [
-    {
-      id: '100',
-      qty: 2,
-      price: 5,
-    },
-    {
-      id: '300',
-      qty: 1,
-      price: 7,
-    }
-  ]
-}
-
+import AskName from "./AskName";
 
 const MenuBreakfast = () => {
 
-  const [qty, setQty] = useState(0);
+  const order = [
+    {
+    client: '',
+    products:[ {
+      id: '100',
+      item: 'Hamburguesa simple res',
+      price: 10,
+    },
+    {
+      id: '300',
+      item: 'Jugo natural de fruta',
+      price: 5,
+    },
+  ]}];
 
-  const Aumentar = () =>{
-    setQty(qty+1);
+  const Aumentar = (event)=>{
+    console.log("Button ", event.target.id, " has been clicked")
   }
 
-  const Disminuir = () =>{
-    setQty(qty-1);
+  const Disminuir = (event) => {
+    console.log("Button ", event.target.id, " has been clicked")
+  }
+
+    const Eliminar = (event) => {
+      console.log("Button ", event.target.id, " has been clicked")
   }
 
   return (
@@ -40,6 +40,7 @@ const MenuBreakfast = () => {
             <div key={key}>
               <button id={data.id} className="button" onClick={Aumentar}> + </button>
               <button id={data.id} className="button" onClick={Disminuir}> - </button>
+              <button id={data.id} className="button" onClick={Eliminar}> x </button>
               {data.item +
                 "  " +
                 " $" +
@@ -51,19 +52,18 @@ const MenuBreakfast = () => {
       <div className="order-container">
         <h1>Pedido</h1>
         <div className="list-container">
-          {pedido.productos.map((item, index)=>{
+          {order.map((item, key)=>{
             return (
-              <div>
-              {item.id} - {item.qty} - {breakfast.find(elem => elem.id === item.id).item}
-              </div>
+              //<div key={key}>
+              //{key.id} - {item.id} - {item.qty} - {breakfast.find(elem => elem.id === item.id).item}
+              //</div>
+              <div><AskName /> </div>
             );
           })}
-          
         </div>
-        <div className="totalOrder">Total: 
-        <button className="button"> ordenar </button>
+        <div className="totalOrder">Total: </div>
+        <div><button className="button"> confirmar </button></div>
       </div>
-    </div>
     </div>
   );
 };
