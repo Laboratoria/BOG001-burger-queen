@@ -1,0 +1,111 @@
+.App{
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  background-color: #3E2723;
+  color:#FFE548;
+  font-size: 1rem;
+}
+
+.Buttonholder{
+  font-size: 3rem;
+}
+
+.NavBar {
+  display: grid;
+  grid-template-rows: 2;
+  grid-template-columns: 12;
+  vertical-align: middle;
+  text-align: center;
+  align-items: center;
+  align-content: space-around;
+  height: 100%;
+  color:#FFFFFF;
+  background-color:#FF6D00;
+  font-size: 1rem;
+}
+
+.BarHome{
+  display: grid;
+  grid-column: 1/2;
+}
+
+.BarMenu{
+  display: grid;
+  grid-column: 11/12
+}
+
+.BarTitle{
+  display: grid;
+  grid-column: 3/10;
+}
+
+.button {
+  background-color: orange;
+  color: black;
+  border-radius: 1%;
+  font-family: inherit;
+}
+
+.MainPage{
+  background-image: url('./assets/HU1.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 100%;
+  height: 100%;
+  font-family: inherit;
+  color:wheat;
+}
+
+.input-name{
+  font-family: inherit;
+}
+
+.item{
+  color:orange;
+  border-color: red;
+  background-color:rgb(204, 112, 112);
+}
+
+
+
+.menuBreakfast-container {
+  display: grid;
+  grid-template-columns: 12;
+  grid-column: 1/6;
+  color: white;
+  background-color:#dd7d7d;
+}
+
+.menuTitle {
+  display: grid;
+  grid-template-columns: 12;
+  grid-column: 1/6;
+  color: white;
+  background-color:#B71C1C;
+}
+
+.menuSupper-container {
+  text-align: left;
+  display: grid;
+  grid-template-columns: 12;
+  grid-column: 1/6;
+  padding-left: 4em;
+  padding-right: 4em;
+  margin-top: 4em;
+  color: #FFE548;
+  background-color: #3E2723;
+}
+
+.order-container {
+  display: grid;
+  grid-template-columns: 12;
+  grid-column: 7/12;
+  color:#F3B69A;
+  background-color:#B71C1C;
+}
+
+.takeOrder-container {
+  display: grid;
+  grid-template-columns: 12;
+  align-self: start;
+}
